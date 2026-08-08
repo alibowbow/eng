@@ -237,8 +237,8 @@ function PatternCardComponent({
     onActivate?.(pattern);
     if (practiceItem) onSpeak(pattern, practiceItem.english, pattern.id);
     else onSpeak(pattern, undefined, pattern.id);
-    if (answerIsHidden) onRevealChange?.(pattern.id, true);
-  }, [answerIsHidden, onActivate, onRevealChange, onSpeak, pattern, practiceItem?.english]);
+    if (answerIsHidden && mode !== "listening") onRevealChange?.(pattern.id, true);
+  }, [answerIsHidden, mode, onActivate, onRevealChange, onSpeak, pattern, practiceItem?.english]);
 
   const cycleVariation = useCallback(
     (kind: PracticeVariationKind) => {
@@ -288,8 +288,8 @@ function PatternCardComponent({
       pattern.id,
       { slow: true },
     );
-    if (answerIsHidden) onRevealChange?.(pattern.id, true);
-  }, [answerIsHidden, onActivate, onRevealChange, onSpeak, pattern, practiceItem?.english]);
+    if (answerIsHidden && mode !== "listening") onRevealChange?.(pattern.id, true);
+  }, [answerIsHidden, mode, onActivate, onRevealChange, onSpeak, pattern, practiceItem?.english]);
 
   const performRadialAction = useCallback(
     (direction: RadialDirection) => {
