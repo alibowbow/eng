@@ -112,7 +112,7 @@ describe("PatternCard", () => {
     act(() => vi.advanceTimersByTime(370));
     expect(document.querySelector(".sg-radial-menu")).toBeInTheDocument();
     expect(screen.getByText("대답")).toBeInTheDocument();
-    expect(screen.getByText("원문")).toBeInTheDocument();
+    expect(screen.getByText("천천히")).toBeInTheDocument();
     expect(screen.queryByText("예문")).not.toBeInTheDocument();
 
     fireEvent.pointerMove(answer, { pointerId: 2, pointerType: "touch", clientX: 150, clientY: 61 });
@@ -127,7 +127,7 @@ describe("PatternCard", () => {
     expect(document.querySelector(".sg-radial-menu")).not.toBeInTheDocument();
   });
 
-  it("drags up for a reply and down to return to the original sentence", () => {
+  it("drags up for a reply and down to replay the current sentence slowly", () => {
     vi.useFakeTimers();
     const pattern = makePattern();
     const onSpeak = vi.fn();
@@ -157,8 +157,13 @@ describe("PatternCard", () => {
     fireEvent.pointerMove(answer, { pointerId: 4, pointerType: "touch", clientX: 100, clientY: 104 });
     fireEvent.pointerUp(answer, { pointerId: 4, pointerType: "touch", clientX: 100, clientY: 104 });
     fireEvent.click(answer);
-    expect(onSpeak).toHaveBeenLastCalledWith(pattern, undefined, pattern.id);
-    expect(screen.getByText(pattern.english)).toBeInTheDocument();
+    expect(onSpeak).toHaveBeenLastCalledWith(
+      pattern,
+      pattern.replies[0].english,
+      pattern.id,
+      { slow: true },
+    );
+    expect(screen.getByText(pattern.replies[0].english)).toBeInTheDocument();
   });
 
   it("supports the same connection practice with arrow keys", () => {
@@ -188,6 +193,13 @@ describe("PatternCard", () => {
     expect(onSpeak).toHaveBeenLastCalledWith(related, undefined, pattern.id);
     fireEvent.keyDown(answer, { key: "ArrowUp" });
     expect(onSpeak).toHaveBeenLastCalledWith(related, related.replies[0].english, pattern.id);
+    fireEvent.keyDown(answer, { key: "ArrowDown" });
+    expect(onSpeak).toHaveBeenLastCalledWith(
+      related,
+      related.replies[0].english,
+      pattern.id,
+      { slow: true },
+    );
   });
 
   it("shows a distinct pattern formula but never repeats the same English sentence", () => {

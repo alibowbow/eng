@@ -55,6 +55,7 @@ export interface PatternCardProps {
     pattern: ConversationPattern,
     textOverride?: string,
     visualPatternId?: string,
+    options?: { slow?: boolean },
   ) => void;
   onOpenDetails?: (pattern: ConversationPattern) => void;
 }
@@ -273,14 +274,25 @@ function PatternCardComponent({
     onSpeak(pattern, undefined, pattern.id);
   }, [onActivate, onSpeak, pattern]);
 
+  const speakSlowly = useCallback(() => {
+    onActivate?.(pattern);
+    onSpeak(
+      activePattern,
+      practiceItem?.english,
+      pattern.id,
+      { slow: true },
+    );
+    if (answerIsHidden) onRevealChange?.(pattern.id, true);
+  }, [activePattern, answerIsHidden, onActivate, onRevealChange, onSpeak, pattern, practiceItem?.english]);
+
   const performRadialAction = useCallback(
     (direction: RadialDirection) => {
       if (direction === "left") cycleRelated(-1);
       else if (direction === "right") cycleRelated(1);
       else if (direction === "up") showReply();
-      else resetToOriginal();
+      else speakSlowly();
     },
-    [cycleRelated, resetToOriginal, showReply],
+    [cycleRelated, showReply, speakSlowly],
   );
 
   const startRadialGesture = useCallback(() => {
@@ -411,14 +423,14 @@ function PatternCardComponent({
         showReply();
       } else if (event.key === "ArrowDown") {
         event.preventDefault();
-        resetToOriginal();
+        speakSlowly();
       } else if (key === "r" || event.key === "Escape") {
         event.preventDefault();
         if (relatedIndex !== 0 || practiceOverride) resetToOriginal();
         else onRevealChange?.(pattern.id, false);
       }
     },
-    [cycleRelated, onRevealChange, pattern.id, practiceOverride, relatedIndex, resetToOriginal, showReply, speakCurrent],
+    [cycleRelated, onRevealChange, pattern.id, practiceOverride, relatedIndex, resetToOriginal, showReply, speakCurrent, speakSlowly],
   );
 
   const spokenLabel = english.replace(/[.!?]+$/g, "");
@@ -515,7 +527,7 @@ function PatternCardComponent({
           <span className="sg-sr-only">정답이 가려져 있습니다. 누르면 발음을 듣고 확인합니다.</span>
         ) : null}
         {selected ? (
-          <span id={instructionId} className="sg-sr-only">현재 선택된 카드입니다. 길게 누른 뒤 왼쪽이나 오른쪽으로 끌면 연관 표현, 위로 끌면 대답, 아래로 끌면 원문으로 돌아갑니다. 키보드에서는 같은 방향의 화살표 키를 사용합니다.</span>
+          <span id={instructionId} className="sg-sr-only">현재 선택된 카드입니다. 길게 누른 뒤 왼쪽이나 오른쪽으로 끌면 연관 표현, 위로 끌면 대답, 아래로 끌면 현재 문장을 천천히 듣습니다. 키보드에서는 같은 방향의 화살표 키를 사용합니다.</span>
         ) : null}
       </div>
 

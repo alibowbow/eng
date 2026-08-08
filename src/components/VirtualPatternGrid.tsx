@@ -77,6 +77,7 @@ export interface VirtualPatternGridProps {
     pattern: ConversationPattern,
     textOverride?: string,
     visualPatternId?: string,
+    options?: { slow?: boolean },
   ) => void;
   onOpenDetails?: (pattern: ConversationPattern) => void;
   initialScrollIndex?: number;

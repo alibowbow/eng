@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUp, Turtle } from "lucide-react";
 import type { CSSProperties } from "react";
 import { createPortal } from "react-dom";
 
@@ -18,7 +18,7 @@ const ACTIONS: ReadonlyArray<{
 }> = [
   { direction: "up", label: "대답", Icon: ArrowUp },
   { direction: "right", label: "다음", Icon: ArrowRight },
-  { direction: "down", label: "원문", Icon: ArrowDown },
+  { direction: "down", label: "천천히", Icon: Turtle },
   { direction: "left", label: "이전", Icon: ArrowLeft },
 ];
 

@@ -438,6 +438,7 @@ export function App() {
       pattern: ConversationPattern,
       textOverride?: string,
       visualPatternId = pattern.id,
+      options?: { slow?: boolean },
     ) => {
       stopContinuous();
       const token = speakingToken.current + 1;
@@ -448,6 +449,8 @@ export function App() {
         lang: pattern.audio?.lang || "en-US",
         audioUrl: textOverride ? undefined : pattern.audio?.audioUrl,
         slowAudioUrl: textOverride ? undefined : pattern.audio?.slowAudioUrl,
+        preferSlowAudio: options?.slow,
+        settings: options?.slow ? { rate: 0.72 } : undefined,
       });
       if (token === speakingToken.current && result === "unsupported") {
         pushToast("이 브라우저에서는 음성 재생을 사용할 수 없습니다.", "warning");
