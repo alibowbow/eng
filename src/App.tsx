@@ -160,10 +160,6 @@ export function App() {
     () => createRelatedPatternResolver(patterns, content?.packs ?? []),
     [content?.packs, patterns],
   );
-  const getRelatedPatterns = useCallback(
-    (pattern: ConversationPattern) => relatedPatternResolver.get(pattern),
-    [relatedPatternResolver],
-  );
 
   const dismissToast = useCallback((id: string) => {
     setToasts((current) => current.filter((item) => item.id !== id));
@@ -704,7 +700,6 @@ export function App() {
             speakingId={speakingId}
             autoScrollSpeaking={continuousActive && listeningSettings.autoScroll}
             onRevealChange={handleRevealChange}
-            getRelatedPatterns={getRelatedPatterns}
             onActivatePattern={handleActivatePattern}
             onSpeak={handleSpeak}
             onOpenDetails={handleOpenDetails}

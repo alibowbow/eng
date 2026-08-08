@@ -1,4 +1,9 @@
-import { ArrowLeft, ArrowRight, ArrowUp, Turtle } from "lucide-react";
+import {
+  MessageCircleReply,
+  MessageSquareQuote,
+  Replace,
+  Turtle,
+} from "lucide-react";
 import type { CSSProperties } from "react";
 import { createPortal } from "react-dom";
 
@@ -14,12 +19,12 @@ export interface RadialGestureMenuProps {
 const ACTIONS: ReadonlyArray<{
   direction: RadialDirection;
   label: string;
-  Icon: typeof ArrowUp;
+  Icon: typeof Replace;
 }> = [
-  { direction: "up", label: "대답", Icon: ArrowUp },
-  { direction: "right", label: "다음", Icon: ArrowRight },
+  { direction: "up", label: "대답", Icon: MessageCircleReply },
+  { direction: "right", label: "바꿔 말하기", Icon: MessageSquareQuote },
   { direction: "down", label: "천천히", Icon: Turtle },
-  { direction: "left", label: "이전", Icon: ArrowLeft },
+  { direction: "left", label: "단어 바꾸기", Icon: Replace },
 ];
 
 export function RadialGestureMenu({

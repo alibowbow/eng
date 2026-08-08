@@ -72,33 +72,27 @@ describe("PatternCard", () => {
     expect(container.querySelector(".sg-pattern-card__footer")).not.toBeInTheDocument();
   });
 
-  it("keeps controls hidden until hold, then drags right to a related pattern", () => {
+  it("keeps controls hidden until hold, locks scrolling, then paraphrases to the right", () => {
     vi.useFakeTimers();
     const pattern = makePattern();
-    const related = makePattern({
-      id: "pattern.002",
-      familyId: "family.002",
-      english: "I'm getting ready to leave.",
-      korean: "나갈 준비를 하고 있어.",
-      sortKey: "001.002",
-    });
     const onActivate = vi.fn();
     const onSpeak = vi.fn();
     function GestureHarness() {
       const [selected, setSelected] = useState(false);
       return (
-        <PatternCard
-          pattern={pattern}
-          mode="all"
-          density="comfortable"
-          selected={selected}
-          relatedPatterns={[{ pattern: related, label: "같은 기능" }]}
-          onActivate={(activatedPattern) => {
-            onActivate(activatedPattern);
-            setSelected(true);
-          }}
-          onSpeak={onSpeak}
-        />
+        <div className="sg-virtual-grid__scroller" style={{ overflow: "auto" }}>
+          <PatternCard
+            pattern={pattern}
+            mode="all"
+            density="comfortable"
+            selected={selected}
+            onActivate={(activatedPattern) => {
+              onActivate(activatedPattern);
+              setSelected(true);
+            }}
+            onSpeak={onSpeak}
+          />
+        </div>
       );
     }
     const { container } = render(<GestureHarness />);
@@ -113,7 +107,15 @@ describe("PatternCard", () => {
     expect(document.querySelector(".sg-radial-menu")).toBeInTheDocument();
     expect(screen.getByText("대답")).toBeInTheDocument();
     expect(screen.getByText("천천히")).toBeInTheDocument();
+    expect(screen.getByText("단어 바꾸기")).toBeInTheDocument();
+    expect(screen.getByText("바꿔 말하기")).toBeInTheDocument();
     expect(screen.queryByText("예문")).not.toBeInTheDocument();
+    const scroller = container.querySelector<HTMLElement>(".sg-virtual-grid__scroller")!;
+    expect(scroller).toHaveClass("is-gesture-locked");
+    expect(scroller.style.overflow).toBe("hidden");
+    const touchMove = new Event("touchmove", { bubbles: true, cancelable: true });
+    window.dispatchEvent(touchMove);
+    expect(touchMove.defaultPrevented).toBe(true);
 
     fireEvent.pointerMove(answer, { pointerId: 2, pointerType: "touch", clientX: 150, clientY: 61 });
     expect(document.querySelector(".sg-radial-menu__action.is-right.is-active")).toBeInTheDocument();
@@ -122,9 +124,11 @@ describe("PatternCard", () => {
 
     expect(onActivate).toHaveBeenCalledWith(pattern);
     expect(onSpeak).toHaveBeenCalledTimes(1);
-    expect(onSpeak).toHaveBeenCalledWith(related, undefined, pattern.id);
-    expect(screen.getByText(related.english)).toBeInTheDocument();
+    expect(onSpeak).toHaveBeenCalledWith(pattern, "I'm just getting ready to go.", pattern.id);
+    expect(screen.getByText("I'm just getting ready to go.")).toBeInTheDocument();
     expect(document.querySelector(".sg-radial-menu")).not.toBeInTheDocument();
+    expect(scroller).not.toHaveClass("is-gesture-locked");
+    expect(scroller.style.overflow).toBe("auto");
   });
 
   it("drags up for a reply and down to replay the current sentence slowly", () => {
@@ -166,15 +170,8 @@ describe("PatternCard", () => {
     expect(screen.getByText(pattern.replies[0].english)).toBeInTheDocument();
   });
 
-  it("supports the same connection practice with arrow keys", () => {
+  it("supports word swaps and paraphrases with arrow keys", () => {
     const pattern = makePattern();
-    const related = makePattern({
-      id: "pattern.002",
-      familyId: "family.002",
-      english: "I'm ready to go.",
-      korean: "갈 준비가 됐어.",
-      sortKey: "001.002",
-    });
     const onSpeak = vi.fn();
     render(
       <PatternCard
@@ -182,21 +179,22 @@ describe("PatternCard", () => {
         mode="all"
         density="comfortable"
         selected
-        relatedPatterns={[{ pattern: related, label: "같은 기능" }]}
         onActivate={vi.fn()}
         onSpeak={onSpeak}
       />,
     );
 
     const answer = screen.getByRole("button", { name: /발음 듣기$/ });
+    fireEvent.keyDown(answer, { key: "ArrowLeft" });
+    expect(onSpeak).toHaveBeenLastCalledWith(pattern, "I am about to leave.", pattern.id);
     fireEvent.keyDown(answer, { key: "ArrowRight" });
-    expect(onSpeak).toHaveBeenLastCalledWith(related, undefined, pattern.id);
+    expect(onSpeak).toHaveBeenLastCalledWith(pattern, "I'm just getting ready to go.", pattern.id);
     fireEvent.keyDown(answer, { key: "ArrowUp" });
-    expect(onSpeak).toHaveBeenLastCalledWith(related, related.replies[0].english, pattern.id);
+    expect(onSpeak).toHaveBeenLastCalledWith(pattern, pattern.replies[0].english, pattern.id);
     fireEvent.keyDown(answer, { key: "ArrowDown" });
     expect(onSpeak).toHaveBeenLastCalledWith(
-      related,
-      related.replies[0].english,
+      pattern,
+      pattern.replies[0].english,
       pattern.id,
       { slow: true },
     );

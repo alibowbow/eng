@@ -1,8 +1,8 @@
 import {
+  BookOpenText,
   Check,
   Circle,
   CircleDot,
-  Info,
   RotateCcw,
   Star,
 } from "lucide-react";
@@ -18,6 +18,10 @@ import {
 } from "react";
 import type { ConversationPattern } from "../content/schema";
 import {
+  buildPracticeVariationDeck,
+  type PracticeVariationKind,
+} from "../lib/practice-variations";
+import {
   RadialGestureMenu,
   type RadialDirection,
 } from "./RadialGestureMenu";
@@ -32,12 +36,6 @@ const LONG_PRESS_MS = 360;
 const GESTURE_TRIGGER_PX = 28;
 const GESTURE_VISUAL_DISTANCE_PX = 38;
 const RADIAL_SAFE_MARGIN_PX = 98;
-const EMPTY_RELATED_PATTERNS: readonly RelatedPatternCardItem[] = [];
-
-export interface RelatedPatternCardItem {
-  pattern: ConversationPattern;
-  label: string;
-}
 
 export interface PatternCardProps {
   pattern: ConversationPattern;
@@ -46,8 +44,6 @@ export interface PatternCardProps {
   progress?: PatternProgressView;
   revealed?: boolean;
   selected?: boolean;
-  relatedPatterns?: readonly RelatedPatternCardItem[];
-  resolveRelatedPatterns?: (pattern: ConversationPattern) => readonly RelatedPatternCardItem[];
   isSpeaking?: boolean;
   onRevealChange?: (patternId: string, revealed: boolean) => void;
   onActivate?: (pattern: ConversationPattern) => void;
@@ -69,7 +65,7 @@ interface PointerOrigin {
 }
 
 interface PracticeOverride {
-  kind: "reply";
+  kind: "reply" | PracticeVariationKind;
   index: number;
 }
 
@@ -116,6 +112,13 @@ function modulo(value: number, size: number) {
   return ((value % size) + size) % size;
 }
 
+function cardTone(pattern: ConversationPattern) {
+  const source = pattern.categoryIds[0] ?? pattern.familyId ?? pattern.id;
+  let hash = 0;
+  for (const character of source) hash = (hash * 31 + character.charCodeAt(0)) >>> 0;
+  return hash % 6;
+}
+
 function PatternCardComponent({
   pattern,
   mode,
@@ -123,8 +126,6 @@ function PatternCardComponent({
   progress,
   revealed = false,
   selected = false,
-  relatedPatterns = EMPTY_RELATED_PATTERNS,
-  resolveRelatedPatterns,
   isSpeaking = false,
   onRevealChange,
   onActivate,
@@ -137,38 +138,41 @@ function PatternCardComponent({
   const suppressNextClick = useRef(false);
   const gestureDirectionRef = useRef<RadialDirection | null>(null);
   const gestureActiveRef = useRef(false);
-  const resolvedRelatedRef = useRef<readonly RelatedPatternCardItem[]>(EMPTY_RELATED_PATTERNS);
+  const unlockGestureScrollRef = useRef<(() => void) | null>(null);
   const previousPatternId = useRef(pattern.id);
-  const [resolvedRelated, setResolvedRelated] = useState<readonly RelatedPatternCardItem[]>(EMPTY_RELATED_PATTERNS);
-  const [relatedIndex, setRelatedIndex] = useState(0);
   const [practiceOverride, setPracticeOverride] = useState<PracticeOverride | null>(null);
   const [radialGesture, setRadialGesture] = useState<RadialGestureState | null>(null);
   const mastery = masteryMeta(progress?.mastery);
-
-  const availableRelated = relatedPatterns.length > 0 ? relatedPatterns : resolvedRelated;
-  const deck = useMemo(
-    () => [
-      { pattern, label: "원문" },
-      ...availableRelated.filter((item) => item.pattern.id !== pattern.id),
-    ],
-    [availableRelated, pattern],
+  const variationDeck = useMemo(
+    () => buildPracticeVariationDeck(pattern),
+    [pattern],
   );
-  const effectiveRelatedIndex = selected ? relatedIndex : 0;
   const effectivePracticeOverride = selected ? practiceOverride : null;
-  const deckIndex = modulo(effectiveRelatedIndex, deck.length);
-  const activeDeckItem = deck[deckIndex] ?? deck[0];
-  const activePattern = activeDeckItem.pattern;
   const activeReply = effectivePracticeOverride?.kind === "reply"
-    ? activePattern.replies[modulo(effectivePracticeOverride.index, activePattern.replies.length)]
+    ? pattern.replies[modulo(effectivePracticeOverride.index, pattern.replies.length)]
     : undefined;
-  const practiceItem = activeReply;
-  const english = practiceItem?.english ?? activePattern.english;
-  const korean = practiceItem?.korean ?? activePattern.korean;
-  const practiceLabel = activeReply ? "이어지는 대답" : activeDeckItem.label;
+  const activeVariationLane = effectivePracticeOverride?.kind === "word-swap"
+    ? variationDeck.wordSwaps
+    : effectivePracticeOverride?.kind === "paraphrase"
+      ? variationDeck.paraphrases
+      : undefined;
+  const activeVariation = activeVariationLane && effectivePracticeOverride
+    ? activeVariationLane[modulo(effectivePracticeOverride.index, activeVariationLane.length)]
+    : undefined;
+  const practiceItem = activeReply ?? activeVariation;
+  const english = practiceItem?.english ?? pattern.english;
+  const korean = practiceItem?.korean ?? pattern.korean;
+  const practiceLabel = activeReply
+    ? "이어지는 대답"
+    : activeVariation?.kind === "word-swap"
+      ? "단어 바꾸기"
+      : activeVariation?.kind === "paraphrase"
+        ? "같은 뜻으로 바꿔 말하기"
+        : "원문";
   const englishVisible = mode === "all" || revealed || mode === "hide-korean";
   const koreanVisible = mode === "all" || revealed || mode === "hide-english";
   const answerIsHidden = !englishVisible || !koreanVisible;
-  const formula = practiceItem ? practiceLabel : activePattern.pattern;
+  const formula = practiceItem ? practiceLabel : pattern.pattern;
   const showPatternFormula = normalizeSentence(formula) !== normalizeSentence(english);
 
   const clearLongPress = useCallback(() => {
@@ -178,97 +182,83 @@ function PatternCardComponent({
     }
   }, []);
 
+  const unlockGestureScroll = useCallback(() => {
+    unlockGestureScrollRef.current?.();
+    unlockGestureScrollRef.current = null;
+  }, []);
+
   const closeRadialGesture = useCallback(() => {
     gestureActiveRef.current = false;
     gestureDirectionRef.current = null;
+    unlockGestureScroll();
     setRadialGesture(null);
-  }, []);
+  }, [unlockGestureScroll]);
 
   useEffect(
     () => () => {
       clearLongPress();
       gestureActiveRef.current = false;
       gestureDirectionRef.current = null;
+      unlockGestureScroll();
     },
-    [clearLongPress],
+    [clearLongPress, unlockGestureScroll],
   );
 
   useEffect(() => {
     if (previousPatternId.current === pattern.id) return;
     previousPatternId.current = pattern.id;
-    resolvedRelatedRef.current = EMPTY_RELATED_PATTERNS;
-    setResolvedRelated(EMPTY_RELATED_PATTERNS);
-    setRelatedIndex(0);
     setPracticeOverride(null);
     closeRadialGesture();
   }, [closeRadialGesture, pattern.id]);
 
   useEffect(() => {
-    if (relatedPatterns.length > 0) resolvedRelatedRef.current = relatedPatterns;
-  }, [relatedPatterns]);
-
-  useEffect(() => {
     if (!selected) {
-      setRelatedIndex(0);
       setPracticeOverride(null);
     }
   }, [selected]);
 
   const speakCurrent = useCallback(() => {
     onActivate?.(pattern);
-    if (practiceItem) onSpeak(activePattern, practiceItem.english, pattern.id);
-    else onSpeak(activePattern, undefined, pattern.id);
+    if (practiceItem) onSpeak(pattern, practiceItem.english, pattern.id);
+    else onSpeak(pattern, undefined, pattern.id);
     if (answerIsHidden) onRevealChange?.(pattern.id, true);
-  }, [activePattern, answerIsHidden, onActivate, onRevealChange, onSpeak, pattern, practiceItem?.english]);
+  }, [answerIsHidden, onActivate, onRevealChange, onSpeak, pattern, practiceItem?.english]);
 
-  const cycleRelated = useCallback(
-    (direction: 1 | -1) => {
-      const newlyResolved = deck.length <= 1
-        ? resolvedRelatedRef.current.length > 0
-          ? resolvedRelatedRef.current
-          : resolveRelatedPatterns?.(pattern) ?? []
-        : [];
-      if (newlyResolved.length > 0 && deck.length <= 1) {
-        resolvedRelatedRef.current = newlyResolved;
-        setResolvedRelated(newlyResolved);
-      }
-      const activeDeck = deck.length > 1
-        ? deck
-        : [
-            { pattern, label: "원문" },
-            ...newlyResolved.filter((item) => item.pattern.id !== pattern.id),
-          ];
-      if (activeDeck.length <= 1) {
+  const cycleVariation = useCallback(
+    (kind: PracticeVariationKind) => {
+      const lane = kind === "word-swap"
+        ? variationDeck.wordSwaps
+        : variationDeck.paraphrases;
+      if (lane.length === 0) {
         speakCurrent();
         return;
       }
-      const currentIndex = modulo(relatedIndex, activeDeck.length);
-      const nextIndex = modulo(currentIndex + direction, activeDeck.length);
-      const next = activeDeck[nextIndex];
-      setRelatedIndex(nextIndex);
-      setPracticeOverride(null);
+      const nextIndex = practiceOverride?.kind === kind
+        ? practiceOverride.index + 1
+        : 0;
+      const next = lane[modulo(nextIndex, lane.length)];
+      setPracticeOverride({ kind, index: nextIndex });
       onActivate?.(pattern);
-      onSpeak(next.pattern, undefined, pattern.id);
+      onSpeak(pattern, next.english, pattern.id);
       if (answerIsHidden) onRevealChange?.(pattern.id, true);
     },
-    [answerIsHidden, deck, onActivate, onRevealChange, onSpeak, pattern, relatedIndex, resolveRelatedPatterns, speakCurrent],
+    [answerIsHidden, onActivate, onRevealChange, onSpeak, pattern, practiceOverride, speakCurrent, variationDeck.paraphrases, variationDeck.wordSwaps],
   );
 
   const showReply = useCallback(() => {
-    if (activePattern.replies.length === 0) {
-      cycleRelated(1);
+    if (pattern.replies.length === 0) {
+      speakCurrent();
       return;
     }
     const nextIndex = practiceOverride?.kind === "reply" ? practiceOverride.index + 1 : 0;
-    const reply = activePattern.replies[modulo(nextIndex, activePattern.replies.length)];
+    const reply = pattern.replies[modulo(nextIndex, pattern.replies.length)];
     setPracticeOverride({ kind: "reply", index: nextIndex });
     onActivate?.(pattern);
-    onSpeak(activePattern, reply.english, pattern.id);
+    onSpeak(pattern, reply.english, pattern.id);
     if (answerIsHidden) onRevealChange?.(pattern.id, true);
-  }, [activePattern, answerIsHidden, cycleRelated, onActivate, onRevealChange, onSpeak, pattern, practiceOverride]);
+  }, [answerIsHidden, onActivate, onRevealChange, onSpeak, pattern, practiceOverride, speakCurrent]);
 
   const resetToOriginal = useCallback(() => {
-    setRelatedIndex(0);
     setPracticeOverride(null);
     onActivate?.(pattern);
     onSpeak(pattern, undefined, pattern.id);
@@ -277,23 +267,74 @@ function PatternCardComponent({
   const speakSlowly = useCallback(() => {
     onActivate?.(pattern);
     onSpeak(
-      activePattern,
+      pattern,
       practiceItem?.english,
       pattern.id,
       { slow: true },
     );
     if (answerIsHidden) onRevealChange?.(pattern.id, true);
-  }, [activePattern, answerIsHidden, onActivate, onRevealChange, onSpeak, pattern, practiceItem?.english]);
+  }, [answerIsHidden, onActivate, onRevealChange, onSpeak, pattern, practiceItem?.english]);
 
   const performRadialAction = useCallback(
     (direction: RadialDirection) => {
-      if (direction === "left") cycleRelated(-1);
-      else if (direction === "right") cycleRelated(1);
+      if (direction === "left") cycleVariation("word-swap");
+      else if (direction === "right") cycleVariation("paraphrase");
       else if (direction === "up") showReply();
       else speakSlowly();
     },
-    [cycleRelated, showReply, speakSlowly],
+    [cycleVariation, showReply, speakSlowly],
   );
+
+  const lockGestureScroll = useCallback(() => {
+    unlockGestureScroll();
+    const scroller = cardRef.current?.closest<HTMLElement>(".sg-virtual-grid__scroller") ?? null;
+    const lockedScrollTop = scroller?.scrollTop ?? 0;
+    const previous = scroller
+      ? {
+          overflow: scroller.style.overflow,
+          overscrollBehavior: scroller.style.overscrollBehavior,
+          scrollBehavior: scroller.style.scrollBehavior,
+          touchAction: scroller.style.touchAction,
+        }
+      : null;
+    const preventTouchScroll = (event: TouchEvent) => {
+      if (!gestureActiveRef.current) return;
+      event.preventDefault();
+    };
+    const pinScrollPosition = () => {
+      if (gestureActiveRef.current && scroller && scroller.scrollTop !== lockedScrollTop) {
+        scroller.scrollTop = lockedScrollTop;
+      }
+    };
+
+    document.documentElement.classList.add("sg-radial-gesture-open");
+    window.addEventListener("touchmove", preventTouchScroll, {
+      capture: true,
+      passive: false,
+    });
+    if (scroller && previous) {
+      scroller.classList.add("is-gesture-locked");
+      scroller.style.overflow = "hidden";
+      scroller.style.overscrollBehavior = "none";
+      scroller.style.scrollBehavior = "auto";
+      scroller.style.touchAction = "none";
+      scroller.addEventListener("scroll", pinScrollPosition, { passive: true });
+    }
+
+    unlockGestureScrollRef.current = () => {
+      document.documentElement.classList.remove("sg-radial-gesture-open");
+      window.removeEventListener("touchmove", preventTouchScroll, true);
+      if (scroller && previous) {
+        scroller.removeEventListener("scroll", pinScrollPosition);
+        scroller.classList.remove("is-gesture-locked");
+        scroller.style.overflow = previous.overflow;
+        scroller.style.overscrollBehavior = previous.overscrollBehavior;
+        scroller.style.scrollBehavior = previous.scrollBehavior;
+        scroller.style.touchAction = previous.touchAction;
+        scroller.scrollTop = lockedScrollTop;
+      }
+    };
+  }, [unlockGestureScroll]);
 
   const startRadialGesture = useCallback(() => {
     const origin = pointerOrigin.current;
@@ -303,12 +344,7 @@ function PatternCardComponent({
     suppressNextClick.current = true;
     gestureActiveRef.current = true;
     gestureDirectionRef.current = null;
-
-    if (relatedPatterns.length === 0 && resolvedRelatedRef.current.length === 0) {
-      const nextRelated = resolveRelatedPatterns?.(pattern) ?? EMPTY_RELATED_PATTERNS;
-      resolvedRelatedRef.current = nextRelated;
-      setResolvedRelated(nextRelated);
-    }
+    lockGestureScroll();
 
     const rect = cardRef.current?.getBoundingClientRect();
     const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
@@ -328,7 +364,7 @@ function PatternCardComponent({
     onActivate?.(pattern);
     setRadialGesture({ center, direction: null, drag: { x: 0, y: 0 } });
     navigator.vibrate?.(10);
-  }, [onActivate, pattern, relatedPatterns.length, resolveRelatedPatterns]);
+  }, [lockGestureScroll, onActivate, pattern]);
 
   const handlePointerDown = useCallback(
     (event: PointerEvent<HTMLDivElement>) => {
@@ -356,6 +392,7 @@ function PatternCardComponent({
       const deltaY = event.clientY - origin.y;
       if (origin.longPressed && gestureActiveRef.current) {
         event.preventDefault();
+        event.stopPropagation();
         const direction = radialDirection(deltaX, deltaY);
         const drag = radialDrag(deltaX, deltaY);
         gestureDirectionRef.current = direction;
@@ -414,10 +451,10 @@ function PatternCardComponent({
         speakCurrent();
       } else if (event.key === "ArrowLeft") {
         event.preventDefault();
-        cycleRelated(-1);
+        cycleVariation("word-swap");
       } else if (event.key === "ArrowRight") {
         event.preventDefault();
-        cycleRelated(1);
+        cycleVariation("paraphrase");
       } else if (event.key === "ArrowUp") {
         event.preventDefault();
         showReply();
@@ -426,11 +463,11 @@ function PatternCardComponent({
         speakSlowly();
       } else if (key === "r" || event.key === "Escape") {
         event.preventDefault();
-        if (relatedIndex !== 0 || practiceOverride) resetToOriginal();
+        if (practiceOverride) resetToOriginal();
         else onRevealChange?.(pattern.id, false);
       }
     },
-    [cycleRelated, onRevealChange, pattern.id, practiceOverride, relatedIndex, resetToOriginal, showReply, speakCurrent, speakSlowly],
+    [cycleVariation, onRevealChange, pattern.id, practiceOverride, resetToOriginal, showReply, speakCurrent, speakSlowly],
   );
 
   const spokenLabel = english.replace(/[.!?]+$/g, "");
@@ -441,11 +478,17 @@ function PatternCardComponent({
       : !koreanVisible
         ? `${english}. 발음을 듣고 가려진 뜻 보기`
         : `${spokenLabel}. 발음 듣기`;
-  const activeLabel = effectivePracticeOverride
-    ? practiceLabel
-    : `연결 ${deckIndex + 1}/${deck.length} · ${activeDeckItem.label}`;
-  const transformedLabel = effectivePracticeOverride || deckIndex > 0 ? activeLabel : null;
-  const taxonomyLabel = activePattern.tags.slice(0, 2).join(" · ");
+  const activeLaneLength = effectivePracticeOverride?.kind === "reply"
+    ? pattern.replies.length
+    : effectivePracticeOverride?.kind === "word-swap"
+      ? variationDeck.wordSwaps.length
+      : effectivePracticeOverride?.kind === "paraphrase"
+        ? variationDeck.paraphrases.length
+        : 0;
+  const transformedLabel = effectivePracticeOverride
+    ? `${practiceLabel} ${modulo(effectivePracticeOverride.index, Math.max(1, activeLaneLength)) + 1}/${Math.max(1, activeLaneLength)}`
+    : null;
+  const taxonomyLabel = pattern.tags.slice(0, 2).join(" · ");
   const toplineLabel = transformedLabel ?? (showPatternFormula ? formula : taxonomyLabel);
   const toplineLanguage = transformedLabel || !showPatternFormula ? "ko" : "en";
   const instructionId = `sg-pattern-${pattern.id}-instructions`;
@@ -455,8 +498,9 @@ function PatternCardComponent({
       ref={cardRef}
       className={`sg-pattern-card sg-density-${density}${revealed ? " is-revealed" : ""}${selected ? " is-selected" : ""}${isSpeaking ? " is-speaking" : ""}${progress?.due ? " is-due" : ""}${radialGesture ? " is-gesture-active" : ""}`}
       data-pattern-id={pattern.id}
+      data-card-tone={cardTone(pattern)}
       data-mastery={mastery.level}
-      data-practice-kind={practiceOverride?.kind ?? (deckIndex > 0 ? "related" : "base")}
+      data-practice-kind={practiceOverride?.kind ?? "base"}
     >
       <div className={`sg-pattern-card__topline${toplineLabel ? " has-label" : ""}`}>
         {toplineLabel ? (
@@ -480,11 +524,12 @@ function PatternCardComponent({
           <button
             type="button"
             className="sg-card-detail-button"
-            aria-label={`${english} 상세 보기`}
-            onClick={() => onOpenDetails?.(activePattern)}
+            aria-label={`${pattern.english} 상세 보기`}
+            onClick={() => onOpenDetails?.(pattern)}
             disabled={!onOpenDetails}
           >
-            <Info aria-hidden="true" />
+            <BookOpenText aria-hidden="true" />
+            <span>상세</span>
           </button>
         </span>
       </div>
@@ -527,7 +572,7 @@ function PatternCardComponent({
           <span className="sg-sr-only">정답이 가려져 있습니다. 누르면 발음을 듣고 확인합니다.</span>
         ) : null}
         {selected ? (
-          <span id={instructionId} className="sg-sr-only">현재 선택된 카드입니다. 길게 누른 뒤 왼쪽이나 오른쪽으로 끌면 연관 표현, 위로 끌면 대답, 아래로 끌면 현재 문장을 천천히 듣습니다. 키보드에서는 같은 방향의 화살표 키를 사용합니다.</span>
+          <span id={instructionId} className="sg-sr-only">현재 선택된 카드입니다. 길게 누른 뒤 왼쪽으로 끌면 단어를 바꾼 문장, 오른쪽으로 끌면 같은 뜻으로 바꿔 말한 문장, 위로 끌면 대답, 아래로 끌면 현재 문장을 천천히 듣습니다. 키보드에서는 같은 방향의 화살표 키를 사용합니다.</span>
         ) : null}
       </div>
 

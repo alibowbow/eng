@@ -11,7 +11,7 @@ import {
   type RefObject,
 } from "react";
 import type { ConversationPattern } from "../content/schema";
-import { PatternCard, type RelatedPatternCardItem } from "./PatternCard";
+import { PatternCard } from "./PatternCard";
 import type {
   DisplayMode,
   GridDensity,
@@ -71,7 +71,6 @@ export interface VirtualPatternGridProps {
   speakingId?: string;
   autoScrollSpeaking?: boolean;
   onRevealChange?: (patternId: string, revealed: boolean) => void;
-  getRelatedPatterns?: (pattern: ConversationPattern) => readonly RelatedPatternCardItem[];
   onActivatePattern?: (pattern: ConversationPattern) => void;
   onSpeak: (
     pattern: ConversationPattern,
@@ -96,7 +95,6 @@ function VirtualPatternGridComponent({
   speakingId,
   autoScrollSpeaking = true,
   onRevealChange,
-  getRelatedPatterns,
   onActivatePattern,
   onSpeak,
   onOpenDetails,
@@ -227,8 +225,6 @@ function VirtualPatternGridComponent({
                   progress={getProgress?.(pattern)}
                   revealed={activeRevealedIds.has(pattern.id)}
                   selected={selectedPatternId === pattern.id}
-                  relatedPatterns={selectedPatternId === pattern.id ? getRelatedPatterns?.(pattern) : undefined}
-                  resolveRelatedPatterns={getRelatedPatterns}
                   isSpeaking={speakingId === pattern.id}
                   onRevealChange={handleRevealChange}
                   onActivate={onActivatePattern}
