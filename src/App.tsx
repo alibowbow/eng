@@ -16,7 +16,6 @@ import { MobileNav } from "./components/MobileNav";
 import { PatternDetailDrawer } from "./components/PatternDetailDrawer";
 import {
   RandomSessionHeader,
-  RandomSessionResult,
   RandomSizePicker,
 } from "./components/RandomSession";
 import { SettingsPanel } from "./components/SettingsPanel";
@@ -24,7 +23,6 @@ import { VirtualPatternGrid } from "./components/VirtualPatternGrid";
 import {
   EMPTY_FILTERS,
   type AppView,
-  type Assessment,
   type DisplayMode,
   type FilterOption,
   type FilterState,
@@ -47,20 +45,17 @@ import {
   importBackup,
   resetLearningData,
   resetSettings,
-  saveProgress,
   saveSettings,
   type AppSettings,
   type GridPosition,
   type PersonalNote,
 } from "./lib/db";
 import { sampleUniqueBy } from "./lib/random";
-import { applyReviewResult, isReviewDue, toReviewSchedule } from "./lib/review";
+import { isReviewDue } from "./lib/review";
 import { searchPatterns, type MasteryFilter } from "./lib/search";
 
 interface RandomSessionState {
   patterns: ConversationPattern[];
-  answers: Map<string, Assessment>;
-  requestedCount: number;
 }
 
 const NEW_WINDOW_MS = 14 * 86_400_000;
@@ -87,19 +82,9 @@ function unmapDensity(value: GridDensity): AppSettings["gridDensity"] {
   return value === "comfortable" ? "default" : value;
 }
 
-function assessmentFromRating(rating?: LearningProgress["lastRating"]): Assessment | undefined {
-  if (rating === "unknown") return "again";
-  if (rating === "unsure") return "hard";
-  if (rating === "known") return "easy";
-  return undefined;
-}
-
 function masteryFilter(value: string): MasteryFilter | undefined {
   const mapping: Record<string, MasteryFilter> = {
     unseen: "unlearned",
-    again: "unknown",
-    hard: "unsure",
-    easy: "known",
     mastered: "mastered",
   };
   return mapping[value];
@@ -154,7 +139,6 @@ export function App() {
   const [clock, setClock] = useState(() => Date.now());
   const toastTimers = useRef(new Map<string, number>());
   const scrollSaveTimer = useRef<number | undefined>(undefined);
-  const revealStartedAt = useRef(new Map<string, number>());
   const speakingToken = useRef(0);
   const pwaRegistered = useRef(false);
 
@@ -409,7 +393,6 @@ export function App() {
       const progress = progressById.get(pattern.id);
       return {
         mastery: progress?.mastery ?? 0,
-        lastRating: assessmentFromRating(progress?.lastRating),
         due: isReviewDue(progress, clock),
         bookmarked: favoriteIds.has(pattern.id),
         isNew: Boolean(
@@ -434,13 +417,8 @@ export function App() {
   const handleRevealChange = useCallback((patternId: string, revealed: boolean) => {
     setRevealedIds((current) => {
       const next = new Set(current);
-      if (revealed) {
-        next.add(patternId);
-        revealStartedAt.current.set(patternId, performance.now());
-      } else {
-        next.delete(patternId);
-        revealStartedAt.current.delete(patternId);
-      }
+      if (revealed) next.add(patternId);
+      else next.delete(patternId);
       return next;
     });
   }, []);
@@ -463,39 +441,6 @@ export function App() {
       }
     },
     [pushToast, speak, stopContinuous],
-  );
-
-  const handleAssess = useCallback(
-    (pattern: ConversationPattern, assessment: Assessment) => {
-      const startedAt = revealStartedAt.current.get(pattern.id);
-      const responseTimeMs = startedAt === undefined ? 0 : Math.max(0, performance.now() - startedAt);
-      const rating = assessment === "easy" ? "known" : assessment === "hard" ? "unsure" : "unknown";
-      const previous = progressById.get(pattern.id);
-      const next = applyReviewResult(previous, rating, { patternId: pattern.id, responseTimeMs });
-      setProgressById((current) => {
-        const updated = new Map(current);
-        updated.set(pattern.id, next);
-        return updated;
-      });
-      void saveProgress(next);
-      const schedule = toReviewSchedule(next);
-      if (schedule) void db.put("reviewSchedule", schedule);
-      setRevealedIds((current) => {
-        const updated = new Set(current);
-        updated.delete(pattern.id);
-        return updated;
-      });
-      revealStartedAt.current.delete(pattern.id);
-      if (view === "random") {
-        setRandomSession((session) => {
-          if (!session) return session;
-          const answers = new Map(session.answers);
-          answers.set(pattern.id, assessment);
-          return { ...session, answers };
-        });
-      }
-    },
-    [progressById, view],
   );
 
   const handleToggleFavorite = useCallback(
@@ -562,7 +507,7 @@ export function App() {
         pushToast("현재 범위에는 연습할 표현이 없습니다.", "warning");
         return;
       }
-      setRandomSession({ patterns: selected, answers: new Map(), requestedCount: count });
+      setRandomSession({ patterns: selected });
       setView("random");
       setRevealedIds(new Set());
       stopContinuous();
@@ -694,17 +639,6 @@ export function App() {
     ),
     [clock, patterns, progressById],
   );
-  const randomAnswered = randomSession?.answers.size ?? 0;
-  const randomComplete = Boolean(randomSession?.patterns.length && randomAnswered >= randomSession.patterns.length);
-  const randomCounts = useMemo(
-    () => randomSession
-      ? [...randomSession.answers.values()].reduce(
-          (counts, rating) => ({ ...counts, [rating]: counts[rating] + 1 }),
-          { again: 0, hard: 0, easy: 0 },
-        )
-      : { again: 0, hard: 0, easy: 0 },
-    [randomSession],
-  );
   const currentListeningPattern = continuousState.currentId
     ? patternById.get(continuousState.currentId)
     : undefined;
@@ -735,11 +669,9 @@ export function App() {
       />
 
       <main id="main-grid" className="sg-main">
-        {view === "random" && randomSession && !randomComplete ? (
+        {view === "random" && randomSession ? (
           <RandomSessionHeader
-            currentIndex={Math.min(randomAnswered, randomSession.patterns.length - 1)}
             total={randomSession.patterns.length}
-            answeredCount={randomAnswered}
             onExit={exitRandom}
           />
         ) : null}
@@ -749,22 +681,7 @@ export function App() {
         {!loading && !loadError && view === "random" && !randomSession ? (
           <RandomSizePicker availableCount={filteredPatterns.length} onStart={(count) => startRandom(count, filteredPatterns)} />
         ) : null}
-        {!loading && !loadError && randomComplete && randomSession ? (
-          <RandomSessionResult
-            total={randomSession.patterns.length}
-            counts={randomCounts}
-            onRetryMissed={() => {
-              const missed = randomSession.patterns.filter((pattern) => {
-                const answer = randomSession.answers.get(pattern.id);
-                return answer === "again" || answer === "hard";
-              });
-              startRandom(missed.length, missed);
-            }}
-            onRestart={() => startRandom(randomSession.requestedCount, filteredPatterns)}
-            onExit={exitRandom}
-          />
-        ) : null}
-        {!loading && !loadError && !(view === "random" && (!randomSession || randomComplete)) ? (
+        {!loading && !loadError && !(view === "random" && !randomSession) ? (
           <VirtualPatternGrid
             patterns={displayedPatterns}
             mode={mode}
@@ -775,7 +692,6 @@ export function App() {
             autoScrollSpeaking={listeningSettings.autoScroll}
             onRevealChange={handleRevealChange}
             onSpeak={(pattern) => void handleSpeak(pattern)}
-            onAssess={handleAssess}
             onToggleFavorite={handleToggleFavorite}
             onOpenDetails={handleOpenDetails}
             initialScrollIndex={initialScrollIndex}

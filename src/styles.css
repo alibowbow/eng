@@ -127,11 +127,9 @@ input[type="range"]:not(:disabled) {
 
 .sg-main > .sg-loading-grid,
 .sg-main > .sg-empty-state,
-.sg-main > .sg-session-result,
 .sg-main > .sg-random-picker,
 .sg-app__main > .sg-loading-grid,
 .sg-app__main > .sg-empty-state,
-.sg-app__main > .sg-session-result,
 .sg-app__main > .sg-random-picker {
   flex: 0 0 auto;
 }
@@ -686,58 +684,6 @@ input[type="range"]:not(:disabled) {
   font-weight: 650;
 }
 
-.sg-assessment {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 5px;
-  padding: 0 10px 8px;
-}
-
-.sg-assessment button {
-  display: inline-flex;
-  min-width: 0;
-  min-height: 36px;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  border: 1px solid var(--sg-line);
-  border-radius: 7px;
-  background: var(--sg-surface-strong);
-  color: var(--sg-ink-soft);
-  font-size: 0.7rem;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.sg-assessment button span {
-  display: inline-grid;
-  width: 17px;
-  height: 17px;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--sg-canvas-deep);
-  color: var(--sg-muted);
-  font-size: 0.62rem;
-}
-
-.sg-assessment button.is-again:hover {
-  border-color: color-mix(in srgb, var(--sg-danger) 48%, var(--sg-line));
-  background: var(--sg-danger-soft);
-  color: var(--sg-danger);
-}
-
-.sg-assessment button.is-hard:hover {
-  border-color: color-mix(in srgb, var(--sg-amber) 52%, var(--sg-line));
-  background: var(--sg-amber-soft);
-  color: var(--sg-amber);
-}
-
-.sg-assessment button.is-easy:hover {
-  border-color: color-mix(in srgb, var(--sg-sage) 48%, var(--sg-line));
-  background: var(--sg-sage-soft);
-  color: var(--sg-sage);
-}
-
 .sg-pattern-card__footer {
   display: grid;
   min-height: 43px;
@@ -870,22 +816,6 @@ input[type="range"]:not(:disabled) {
 .sg-density-overview .sg-card-action svg {
   width: 15px;
   height: 15px;
-}
-
-.sg-density-overview .sg-assessment {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  padding: 0 6px 4px;
-}
-
-.sg-density-overview .sg-assessment button {
-  min-height: 28px;
-  padding: 0;
-  font-size: 0;
-}
-
-.sg-density-overview .sg-assessment button span {
-  font-size: 0.6rem;
 }
 
 /* Sheets and dialogs */
@@ -1637,7 +1567,7 @@ input[type="range"]:not(:disabled) {
 .sg-session-header {
   display: grid;
   min-height: 58px;
-  grid-template-columns: auto auto minmax(100px, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
   gap: 12px;
   padding: 7px 12px;
@@ -1662,65 +1592,11 @@ input[type="range"]:not(:disabled) {
   font-size: 0.84rem;
 }
 
-.sg-session-header__title span,
-.sg-session-header__answered {
+.sg-session-header__title span {
   color: var(--sg-muted);
   font-size: 0.7rem;
   font-variant-numeric: tabular-nums;
 }
-
-.sg-session-progress {
-  height: 5px;
-  overflow: hidden;
-  border-radius: 3px;
-  background: var(--sg-canvas-deep);
-}
-
-.sg-session-progress i {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
-  background: var(--sg-accent);
-  transition: width 220ms var(--sg-ease);
-}
-
-.sg-session-result {
-  width: min(100% - 32px, 520px);
-  margin: clamp(24px, 8vh, 72px) auto;
-  padding: 30px;
-  border: 1px solid var(--sg-line);
-  border-radius: var(--sg-radius-lg);
-  background: var(--sg-surface-strong);
-  box-shadow: var(--sg-shadow-card);
-  text-align: center;
-}
-
-.sg-session-result__icon {
-  display: grid;
-  width: 48px;
-  height: 48px;
-  margin: 0 auto 13px;
-  place-items: center;
-  border-radius: 15px;
-  background: var(--sg-sage-soft);
-  color: var(--sg-sage);
-}
-
-.sg-session-result__icon svg {
-  width: 25px;
-  height: 25px;
-  stroke-width: 2.4;
-}
-
-.sg-eyebrow {
-  margin: 0 0 4px;
-  color: var(--sg-accent-deep);
-  font-size: 0.65rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-}
-
-.sg-session-result h2,
 .sg-random-picker h2 {
   margin: 0;
   color: var(--sg-ink);
@@ -1729,52 +1605,11 @@ input[type="range"]:not(:disabled) {
   letter-spacing: -0.035em;
 }
 
-.sg-session-result > p:not(.sg-eyebrow),
 .sg-random-picker > div > p {
   margin: 7px 0 0;
   color: var(--sg-muted);
   font-size: 0.8rem;
   line-height: 1.5;
-}
-
-.sg-session-scores {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
-  margin: 24px 0;
-}
-
-.sg-session-scores div {
-  display: flex;
-  min-width: 0;
-  flex-direction: column-reverse;
-  gap: 5px;
-  border: 1px solid var(--sg-line);
-  border-radius: 10px;
-  padding: 12px 6px;
-  background: var(--sg-canvas);
-}
-
-.sg-session-scores dt {
-  color: var(--sg-muted);
-  font-size: 0.68rem;
-}
-
-.sg-session-scores dd {
-  margin: 0;
-  color: var(--sg-ink);
-  font-size: 1.55rem;
-  font-weight: 780;
-  font-variant-numeric: tabular-nums;
-}
-
-.sg-session-scores .is-easy dd { color: var(--sg-sage); }
-.sg-session-scores .is-hard dd { color: var(--sg-amber); }
-.sg-session-scores .is-again dd { color: var(--sg-danger); }
-
-.sg-session-result__actions {
-  display: grid;
-  gap: 8px;
 }
 
 .sg-random-picker {
@@ -2364,19 +2199,6 @@ input[type="range"]:not(:disabled) {
     flex-basis: 42px;
   }
 
-  .sg-assessment {
-    gap: 3px;
-    padding-inline: 7px;
-  }
-
-  .sg-assessment button {
-    min-height: 40px;
-    padding: 0 3px;
-    font-size: 0.62rem;
-  }
-
-  .sg-assessment button span { display: none; }
-
   .sg-density-large .sg-pattern-card { min-height: 260px; }
   .sg-density-compact .sg-pattern-card { min-height: 176px; }
   .sg-density-overview .sg-pattern-card { min-height: 128px; }
@@ -2440,16 +2262,7 @@ input[type="range"]:not(:disabled) {
   }
 
   .sg-session-header {
-    grid-template-columns: auto auto 1fr;
     gap: 7px;
-  }
-
-  .sg-session-header__answered { display: none; }
-
-  .sg-session-result {
-    width: calc(100% - 20px);
-    margin-block: 14px;
-    padding: 24px 16px;
   }
 
   .sg-random-picker {
@@ -2575,8 +2388,6 @@ input[type="range"]:not(:disabled) {
   .sg-mastery-mark { width: 17px; height: 17px; }
   .sg-detail-action { display: none; }
   .sg-pattern-card__footer { grid-template-columns: 1fr auto; }
-  .sg-session-scores { gap: 5px; }
-  .sg-session-scores dt { font-size: 0.62rem; }
   .sg-random-picker__custom { grid-template-columns: 1fr auto; }
   .sg-random-picker__custom label { grid-column: 1 / -1; }
   .sg-listening-controller__now > span { display: none; }

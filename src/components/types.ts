@@ -7,12 +7,10 @@ export type DisplayMode =
   | "listening";
 
 export type GridDensity = "large" | "comfortable" | "compact" | "overview";
-export type Assessment = "again" | "hard" | "easy";
 export type AppView = "grid" | "random" | "review" | "saved";
 
 export interface PatternProgressView {
   mastery: number;
-  lastRating?: Assessment;
   due?: boolean;
   bookmarked?: boolean;
   isNew?: boolean;
@@ -62,7 +60,6 @@ export interface VoiceOption {
 
 export interface PatternActionProps {
   onSpeak: (pattern: ConversationPattern) => void;
-  onAssess?: (pattern: ConversationPattern, assessment: Assessment) => void;
   onToggleFavorite?: (pattern: ConversationPattern) => void;
   onOpenDetails?: (pattern: ConversationPattern) => void;
 }

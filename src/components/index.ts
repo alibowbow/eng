@@ -20,12 +20,10 @@ export {
 } from "./PatternDetailDrawer";
 export {
   RandomSessionHeader,
-  RandomSessionResult,
   RandomSizePicker,
 } from "./RandomSession";
 export type {
   RandomSessionHeaderProps,
-  RandomSessionResultProps,
   RandomSizePickerProps,
 } from "./RandomSession";
 export { SettingsPanel, type SettingsPanelProps } from "./SettingsPanel";
@@ -36,7 +34,6 @@ export {
 export { EMPTY_FILTERS } from "./types";
 export type {
   AppView,
-  Assessment,
   DisplayMode,
   FilterOption,
   FilterState,

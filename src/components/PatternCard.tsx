@@ -20,7 +20,6 @@ import {
 } from "react";
 import type { ConversationPattern } from "../content/schema";
 import type {
-  Assessment,
   DisplayMode,
   GridDensity,
   PatternProgressView,
@@ -38,7 +37,6 @@ export interface PatternCardProps {
   isSpeaking?: boolean;
   onRevealChange?: (revealed: boolean) => void;
   onSpeak: (pattern: ConversationPattern) => void;
-  onAssess?: (pattern: ConversationPattern, assessment: Assessment) => void;
   onToggleFavorite?: (pattern: ConversationPattern) => void;
   onOpenDetails?: (pattern: ConversationPattern) => void;
 }
@@ -48,6 +46,7 @@ interface PointerOrigin {
   y: number;
   pointerId: number;
   longPressed: boolean;
+  moved: boolean;
 }
 
 function masteryMeta(mastery = 0) {
@@ -55,6 +54,15 @@ function masteryMeta(mastery = 0) {
   if (mastery >= 4) return { label: "익힘", Icon: Check, level: "known" };
   if (mastery >= 2) return { label: "학습 중", Icon: CircleDot, level: "learning" };
   return { label: "미학습", Icon: Circle, level: "new" };
+}
+
+function normalizeSentence(value: string) {
+  return value
+    .trim()
+    .toLocaleLowerCase("en-US")
+    .replace(/[’]/g, "'")
+    .replace(/[.!?]+$/g, "")
+    .replace(/\s+/g, " ");
 }
 
 function PatternCardComponent({
@@ -66,17 +74,17 @@ function PatternCardComponent({
   isSpeaking = false,
   onRevealChange,
   onSpeak,
-  onAssess,
   onToggleFavorite,
   onOpenDetails,
 }: PatternCardProps) {
   const pointerOrigin = useRef<PointerOrigin | null>(null);
   const longPressTimer = useRef<number | undefined>(undefined);
+  const suppressNextClick = useRef(false);
   const mastery = masteryMeta(progress?.mastery);
   const englishVisible = mode === "all" || revealed || mode === "hide-korean";
   const koreanVisible = mode === "all" || revealed || mode === "hide-english";
   const answerIsHidden = !englishVisible || !koreanVisible;
-  const assessmentVisible = revealed && Boolean(onAssess);
+  const showPatternFormula = normalizeSentence(pattern.pattern) !== normalizeSentence(pattern.english);
 
   const clearLongPress = useCallback(() => {
     if (longPressTimer.current !== undefined) {
@@ -87,18 +95,21 @@ function PatternCardComponent({
 
   useEffect(() => clearLongPress, [clearLongPress]);
 
-  const toggleReveal = useCallback(() => {
-    onRevealChange?.(!revealed);
-  }, [onRevealChange, revealed]);
+  const activateCard = useCallback(() => {
+    onSpeak(pattern);
+    if (answerIsHidden) onRevealChange?.(true);
+  }, [answerIsHidden, onRevealChange, onSpeak, pattern]);
 
   const handlePointerDown = useCallback(
     (event: PointerEvent<HTMLDivElement>) => {
       if (event.pointerType === "mouse" && event.button !== 0) return;
+      suppressNextClick.current = false;
       pointerOrigin.current = {
         x: event.clientX,
         y: event.clientY,
         pointerId: event.pointerId,
         longPressed: false,
+        moved: false,
       };
       clearLongPress();
       if (onOpenDetails) {
@@ -106,6 +117,7 @@ function PatternCardComponent({
           const origin = pointerOrigin.current;
           if (!origin) return;
           origin.longPressed = true;
+          suppressNextClick.current = true;
           onOpenDetails(pattern);
         }, LONG_PRESS_MS);
       }
@@ -118,7 +130,10 @@ function PatternCardComponent({
       const origin = pointerOrigin.current;
       if (!origin || origin.pointerId !== event.pointerId) return;
       const distance = Math.hypot(event.clientX - origin.x, event.clientY - origin.y);
-      if (distance > TAP_DISTANCE_PX) clearLongPress();
+      if (distance > TAP_DISTANCE_PX) {
+        origin.moved = true;
+        clearLongPress();
+      }
     },
     [clearLongPress],
   );
@@ -128,38 +143,45 @@ function PatternCardComponent({
       const origin = pointerOrigin.current;
       clearLongPress();
       pointerOrigin.current = null;
-      if (!origin || origin.pointerId !== event.pointerId || origin.longPressed) return;
+      if (!origin || origin.pointerId !== event.pointerId) return;
       const distance = Math.hypot(event.clientX - origin.x, event.clientY - origin.y);
-      if (distance <= TAP_DISTANCE_PX) toggleReveal();
+      suppressNextClick.current = origin.longPressed || origin.moved || distance > TAP_DISTANCE_PX;
     },
-    [clearLongPress, toggleReveal],
+    [clearLongPress],
   );
+
+  const handleClick = useCallback(() => {
+    if (suppressNextClick.current) {
+      suppressNextClick.current = false;
+      return;
+    }
+    activateCard();
+  }, [activateCard]);
 
   const handleKeyDown = useCallback(
     (event: KeyboardEvent<HTMLDivElement>) => {
       const key = event.key.toLowerCase();
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
-        toggleReveal();
+        activateCard();
       } else if (key === "r") {
         event.preventDefault();
         onRevealChange?.(false);
       } else if (key === "p") {
         event.preventDefault();
         onSpeak(pattern);
-      } else if (revealed && onAssess && ["1", "2", "3"].includes(event.key)) {
-        event.preventDefault();
-        const rating: Assessment =
-          event.key === "1" ? "again" : event.key === "2" ? "hard" : "easy";
-        onAssess(pattern, rating);
       }
     },
-    [onAssess, onRevealChange, onSpeak, pattern, revealed, toggleReveal],
+    [activateCard, onRevealChange, onSpeak, pattern],
   );
 
-  const revealLabel = answerIsHidden
-    ? `${pattern.korean}. 정답 보기`
-    : `${pattern.english}. ${pattern.korean}. ${revealed ? "다시 가리기" : "학습 판정 열기"}`;
+  const revealLabel = mode === "listening"
+    ? "영어 발음을 듣고 정답 보기"
+    : !englishVisible
+      ? `${pattern.korean}. 영어 발음을 듣고 정답 보기`
+      : !koreanVisible
+        ? `${pattern.english}. 발음을 듣고 가려진 뜻 보기`
+        : `${pattern.english}. 발음 듣기`;
 
   return (
     <article
@@ -168,9 +190,13 @@ function PatternCardComponent({
       data-mastery={mastery.level}
     >
       <div className="sg-pattern-card__topline">
-        <p className="sg-pattern-card__formula" lang="en">
-          {pattern.pattern}
-        </p>
+        {showPatternFormula ? (
+          <p className="sg-pattern-card__formula" lang="en">
+            {pattern.pattern}
+          </p>
+        ) : (
+          <span aria-hidden="true" />
+        )}
         <span className="sg-pattern-card__signals">
           {progress?.isNew ? (
             <span className="sg-mini-signal is-new" title="새로 추가됨">
@@ -196,7 +222,8 @@ function PatternCardComponent({
         role="button"
         tabIndex={0}
         aria-label={revealLabel}
-        aria-expanded={revealed}
+        aria-expanded={mode === "all" ? undefined : !answerIsHidden}
+        onClick={handleClick}
         onKeyDown={handleKeyDown}
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
@@ -204,6 +231,7 @@ function PatternCardComponent({
         onPointerCancel={() => {
           clearLongPress();
           pointerOrigin.current = null;
+          suppressNextClick.current = true;
         }}
       >
         {englishVisible ? (
@@ -226,23 +254,9 @@ function PatternCardComponent({
           </div>
         )}
         {answerIsHidden ? (
-          <span className="sg-sr-only">정답이 가려져 있습니다. 누르면 확인합니다.</span>
+          <span className="sg-sr-only">정답이 가려져 있습니다. 누르면 발음을 듣고 확인합니다.</span>
         ) : null}
       </div>
-
-      {assessmentVisible ? (
-        <div className="sg-assessment" aria-label="학습 결과 선택">
-          <button type="button" className="is-again" onClick={() => onAssess?.(pattern, "again")}>
-            <span aria-hidden="true">1</span> 몰랐음
-          </button>
-          <button type="button" className="is-hard" onClick={() => onAssess?.(pattern, "hard")}>
-            <span aria-hidden="true">2</span> 애매함
-          </button>
-          <button type="button" className="is-easy" onClick={() => onAssess?.(pattern, "easy")}>
-            <span aria-hidden="true">3</span> 알았음
-          </button>
-        </div>
-      ) : null}
 
       <div className="sg-pattern-card__footer">
         <button

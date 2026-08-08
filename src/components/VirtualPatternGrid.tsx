@@ -13,7 +13,6 @@ import {
 import type { ConversationPattern } from "../content/schema";
 import { PatternCard } from "./PatternCard";
 import type {
-  Assessment,
   DisplayMode,
   GridDensity,
   PatternProgressView,
@@ -72,7 +71,6 @@ export interface VirtualPatternGridProps {
   autoScrollSpeaking?: boolean;
   onRevealChange?: (patternId: string, revealed: boolean) => void;
   onSpeak: (pattern: ConversationPattern) => void;
-  onAssess?: (pattern: ConversationPattern, assessment: Assessment) => void;
   onToggleFavorite?: (pattern: ConversationPattern) => void;
   onOpenDetails?: (pattern: ConversationPattern) => void;
   initialScrollIndex?: number;
@@ -91,7 +89,6 @@ function VirtualPatternGridComponent({
   autoScrollSpeaking = true,
   onRevealChange,
   onSpeak,
-  onAssess,
   onToggleFavorite,
   onOpenDetails,
   initialScrollIndex = 0,
@@ -222,7 +219,6 @@ function VirtualPatternGridComponent({
                     handleRevealChange(pattern.id, nextRevealed)
                   }
                   onSpeak={onSpeak}
-                  onAssess={onAssess}
                   onToggleFavorite={onToggleFavorite}
                   onOpenDetails={onOpenDetails}
                 />

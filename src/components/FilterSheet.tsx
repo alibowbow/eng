@@ -27,9 +27,6 @@ const REGISTER_OPTIONS: FilterOption[] = [
 
 const MASTERY_OPTIONS: FilterOption[] = [
   { id: "unseen", label: "미학습" },
-  { id: "again", label: "몰랐음" },
-  { id: "hard", label: "애매함" },
-  { id: "easy", label: "알았음" },
   { id: "mastered", label: "완전 숙달" },
 ];
 
