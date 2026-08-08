@@ -818,7 +818,7 @@ export function App() {
               heroSrc={`${import.meta.env.BASE_URL}assets/saygrid-learning-cards.webp`}
               onContinue={() => openGrid(resumeIndex, resumePatternId)}
               onOpenGrid={() => openGrid(0)}
-              onRandom={() => startRandom(20)}
+              onRandom={() => startRandom(50)}
               onReview={() => handleViewChange("review")}
               onSettings={() => setSettingsOpen(true)}
             />

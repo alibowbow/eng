@@ -92,9 +92,9 @@ function AppToolbarComponent({
           </div>
 
           <div className="sg-toolbar__actions">
-            <button type="button" className="sg-toolbar-button" onClick={() => onRandom(20)}>
+            <button type="button" className="sg-toolbar-button" onClick={() => onRandom(50)}>
               <Shuffle aria-hidden="true" />
-              <span>랜덤 20</span>
+              <span>랜덤 50</span>
             </button>
             <button type="button" className="sg-toolbar-button" onClick={onReview}>
               <Clock3 aria-hidden="true" />

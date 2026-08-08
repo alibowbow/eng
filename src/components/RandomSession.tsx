@@ -30,7 +30,7 @@ export interface RandomSizePickerProps {
 }
 
 export function RandomSizePicker({ onStart, availableCount }: RandomSizePickerProps) {
-  const [customCount, setCustomCount] = useState(20);
+  const [customCount, setCustomCount] = useState(50);
   const sizes = [8, 20, 50, 100];
   return (
     <section className="sg-random-picker" aria-labelledby="random-picker-title">
