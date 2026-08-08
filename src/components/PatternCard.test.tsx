@@ -75,7 +75,116 @@ describe("PatternCard", () => {
     expect(onSpeak).toHaveBeenCalledWith(pattern, undefined, pattern.id);
   });
 
-  it("keeps vertical scrolling unlocked during hold-and-drag, then paraphrases to the right", () => {
+  it("toggles its favorite without speaking, selecting, opening details, or starting a long press", () => {
+    vi.useFakeTimers();
+    const pattern = makePattern();
+    const onFavoriteChange = vi.fn();
+    const onSpeak = vi.fn();
+    const onActivate = vi.fn();
+    const onOpenDetails = vi.fn();
+    const onOuterPointerDown = vi.fn();
+    const onOuterClick = vi.fn();
+
+    function FavoriteHarness() {
+      const [favorite, setFavorite] = useState(false);
+      return (
+        <div onPointerDown={onOuterPointerDown} onClick={onOuterClick}>
+          <PatternCard
+            pattern={pattern}
+            mode="all"
+            density="comfortable"
+            favorite={favorite}
+            onFavoriteChange={(patternId, nextFavorite) => {
+              onFavoriteChange(patternId, nextFavorite);
+              setFavorite(nextFavorite);
+            }}
+            onActivate={onActivate}
+            onSpeak={onSpeak}
+            onOpenDetails={onOpenDetails}
+          />
+        </div>
+      );
+    }
+
+    render(<FavoriteHarness />);
+    const addFavorite = screen.getByRole("button", { name: /즐겨찾기 추가$/ });
+    expect(addFavorite).toHaveAttribute("aria-pressed", "false");
+
+    fireEvent.pointerDown(addFavorite, {
+      pointerId: 20,
+      pointerType: "touch",
+      clientX: 180,
+      clientY: 10,
+    });
+    act(() => vi.advanceTimersByTime(400));
+    fireEvent.pointerUp(addFavorite, {
+      pointerId: 20,
+      pointerType: "touch",
+      clientX: 180,
+      clientY: 10,
+    });
+    fireEvent.click(addFavorite);
+
+    expect(onFavoriteChange).toHaveBeenLastCalledWith(pattern.id, true);
+    expect(screen.getByRole("button", { name: /즐겨찾기 해제$/ })).toHaveAttribute(
+      "aria-pressed",
+      "true",
+    );
+    expect(document.querySelector(".sg-radial-menu")).not.toBeInTheDocument();
+    expect(onSpeak).not.toHaveBeenCalled();
+    expect(onActivate).not.toHaveBeenCalled();
+    expect(onOpenDetails).not.toHaveBeenCalled();
+    expect(onOuterPointerDown).not.toHaveBeenCalled();
+    expect(onOuterClick).not.toHaveBeenCalled();
+
+    fireEvent.click(screen.getByRole("button", { name: /즐겨찾기 해제$/ }));
+    expect(onFavoriteChange).toHaveBeenLastCalledWith(pattern.id, false);
+    expect(screen.getByRole("button", { name: /즐겨찾기 추가$/ })).toHaveAttribute(
+      "aria-pressed",
+      "false",
+    );
+  });
+
+  it("keeps ordinary vertical scrolling native before the long press activates", () => {
+    vi.useFakeTimers();
+    const pattern = makePattern();
+    render(
+      <PatternCard
+        pattern={pattern}
+        mode="all"
+        density="comfortable"
+        onSpeak={vi.fn()}
+      />,
+    );
+
+    const answer = screen.getByRole("button", { name: /발음 듣기$/ });
+    fireEvent.pointerDown(answer, {
+      pointerId: 2,
+      pointerType: "touch",
+      clientX: 100,
+      clientY: 60,
+    });
+    const nativeTouchMove = new Event("touchmove", { bubbles: true, cancelable: true });
+    window.dispatchEvent(nativeTouchMove);
+    expect(nativeTouchMove.defaultPrevented).toBe(false);
+    expect(fireEvent.pointerMove(answer, {
+      pointerId: 2,
+      pointerType: "touch",
+      clientX: 100,
+      clientY: 84,
+    })).toBe(true);
+
+    act(() => vi.advanceTimersByTime(370));
+    expect(document.querySelector(".sg-radial-menu")).not.toBeInTheDocument();
+    fireEvent.pointerUp(answer, {
+      pointerId: 2,
+      pointerType: "touch",
+      clientX: 100,
+      clientY: 84,
+    });
+  });
+
+  it("claims page scrolling only after activation, then paraphrases to the right", () => {
     vi.useFakeTimers();
     const pattern = makePattern();
     const onActivate = vi.fn();
@@ -105,7 +214,10 @@ describe("PatternCard", () => {
     expect(container.querySelector(".sg-gesture-rail")).not.toBeInTheDocument();
     expect(document.querySelector(".sg-radial-menu")).not.toBeInTheDocument();
 
-    fireEvent.pointerDown(answer, { pointerId: 2, pointerType: "touch", clientX: 100, clientY: 60 });
+    fireEvent.pointerDown(answer, { pointerId: 3, pointerType: "touch", clientX: 100, clientY: 60 });
+    const beforeActivation = new Event("touchmove", { bubbles: true, cancelable: true });
+    window.dispatchEvent(beforeActivation);
+    expect(beforeActivation.defaultPrevented).toBe(false);
     act(() => vi.advanceTimersByTime(370));
     expect(document.querySelector(".sg-radial-menu")).toBeInTheDocument();
     expect(screen.getByText("대답")).toBeInTheDocument();
@@ -120,16 +232,14 @@ describe("PatternCard", () => {
     expect(scroller.style.scrollBehavior).toBe("");
     expect(scroller.style.touchAction).toBe("");
     expect(document.documentElement).not.toHaveClass("sg-radial-gesture-open");
-    const touchMove = new Event("touchmove", { bubbles: true, cancelable: true });
-    window.dispatchEvent(touchMove);
-    expect(touchMove.defaultPrevented).toBe(false);
+    const activeTouchMove = new Event("touchmove", { bubbles: true, cancelable: true });
+    window.dispatchEvent(activeTouchMove);
+    expect(activeTouchMove.defaultPrevented).toBe(true);
     scroller.scrollTop = 64;
-    fireEvent.scroll(scroller);
-    expect(scroller.scrollTop).toBe(64);
 
-    fireEvent.pointerMove(answer, { pointerId: 2, pointerType: "touch", clientX: 150, clientY: 61 });
+    expect(fireEvent.pointerMove(answer, { pointerId: 3, pointerType: "touch", clientX: 150, clientY: 61 })).toBe(false);
     expect(document.querySelector(".sg-radial-menu__action.is-right.is-active")).toBeInTheDocument();
-    fireEvent.pointerUp(answer, { pointerId: 2, pointerType: "touch", clientX: 150, clientY: 61 });
+    fireEvent.pointerUp(answer, { pointerId: 3, pointerType: "touch", clientX: 150, clientY: 61 });
     fireEvent.click(answer);
 
     expect(onActivate).toHaveBeenCalledWith(pattern);
@@ -140,6 +250,9 @@ describe("PatternCard", () => {
     expect(scroller).not.toHaveClass("is-gesture-locked");
     expect(scroller.style.overflow).toBe("auto");
     expect(scroller.scrollTop).toBe(64);
+    const afterCompletion = new Event("touchmove", { bubbles: true, cancelable: true });
+    window.dispatchEvent(afterCompletion);
+    expect(afterCompletion.defaultPrevented).toBe(false);
   });
 
   it("drags up for a reply and down to replay the current sentence slowly", () => {
@@ -158,19 +271,21 @@ describe("PatternCard", () => {
     );
 
     let answer = screen.getByRole("button", { name: /발음 듣기$/ });
-    fireEvent.pointerDown(answer, { pointerId: 3, pointerType: "touch", clientX: 100, clientY: 80 });
+    fireEvent.pointerDown(answer, { pointerId: 4, pointerType: "touch", clientX: 100, clientY: 80 });
     act(() => vi.advanceTimersByTime(370));
-    fireEvent.pointerMove(answer, { pointerId: 3, pointerType: "touch", clientX: 100, clientY: 36 });
-    fireEvent.pointerUp(answer, { pointerId: 3, pointerType: "touch", clientX: 100, clientY: 36 });
+    expect(fireEvent.pointerMove(answer, { pointerId: 4, pointerType: "touch", clientX: 100, clientY: 36 })).toBe(false);
+    expect(document.querySelector(".sg-radial-menu__action.is-up.is-active")).toBeInTheDocument();
+    fireEvent.pointerUp(answer, { pointerId: 4, pointerType: "touch", clientX: 100, clientY: 36 });
     fireEvent.click(answer);
     expect(onSpeak).toHaveBeenLastCalledWith(pattern, pattern.replies[0].english, pattern.id);
     expect(screen.getByText(pattern.replies[0].english)).toBeInTheDocument();
 
     answer = screen.getByRole("button", { name: /발음 듣기$/ });
-    fireEvent.pointerDown(answer, { pointerId: 4, pointerType: "touch", clientX: 100, clientY: 60 });
+    fireEvent.pointerDown(answer, { pointerId: 5, pointerType: "touch", clientX: 100, clientY: 60 });
     act(() => vi.advanceTimersByTime(370));
-    fireEvent.pointerMove(answer, { pointerId: 4, pointerType: "touch", clientX: 100, clientY: 104 });
-    fireEvent.pointerUp(answer, { pointerId: 4, pointerType: "touch", clientX: 100, clientY: 104 });
+    expect(fireEvent.pointerMove(answer, { pointerId: 5, pointerType: "touch", clientX: 100, clientY: 104 })).toBe(false);
+    expect(document.querySelector(".sg-radial-menu__action.is-down.is-active")).toBeInTheDocument();
+    fireEvent.pointerUp(answer, { pointerId: 5, pointerType: "touch", clientX: 100, clientY: 104 });
     fireEvent.click(answer);
     expect(onSpeak).toHaveBeenLastCalledWith(
       pattern,
@@ -181,8 +296,101 @@ describe("PatternCard", () => {
     expect(screen.getByText(pattern.replies[0].english)).toBeInTheDocument();
   });
 
-  it("supports word swaps and paraphrases with arrow keys", () => {
+  it("releases temporary touch ownership on cancellation and unmount", () => {
+    vi.useFakeTimers();
     const pattern = makePattern();
+    const { unmount } = render(
+      <PatternCard
+        pattern={pattern}
+        mode="all"
+        density="comfortable"
+        onSpeak={vi.fn()}
+      />,
+    );
+
+    const answer = screen.getByRole("button", { name: /발음 듣기$/ });
+    fireEvent.pointerDown(answer, { pointerId: 6, pointerType: "touch", clientX: 100, clientY: 60 });
+    act(() => vi.advanceTimersByTime(370));
+    const whileActive = new Event("touchmove", { bubbles: true, cancelable: true });
+    window.dispatchEvent(whileActive);
+    expect(whileActive.defaultPrevented).toBe(true);
+
+    fireEvent.pointerCancel(answer, { pointerId: 6, pointerType: "touch" });
+    const afterCancel = new Event("touchmove", { bubbles: true, cancelable: true });
+    window.dispatchEvent(afterCancel);
+    expect(afterCancel.defaultPrevented).toBe(false);
+
+    fireEvent.pointerDown(answer, { pointerId: 7, pointerType: "touch", clientX: 100, clientY: 60 });
+    act(() => vi.advanceTimersByTime(370));
+    unmount();
+    const afterUnmount = new Event("touchmove", { bubbles: true, cancelable: true });
+    window.dispatchEvent(afterUnmount);
+    expect(afterUnmount.defaultPrevented).toBe(false);
+  });
+
+  it("keeps one pointer as owner until that pointer finishes", () => {
+    vi.useFakeTimers();
+    const pattern = makePattern();
+    render(
+      <PatternCard
+        pattern={pattern}
+        mode="all"
+        density="comfortable"
+        onSpeak={vi.fn()}
+        onFavoriteChange={vi.fn()}
+      />,
+    );
+
+    const answer = screen.getByRole("button", { name: /발음 듣기$/ });
+    fireEvent.pointerDown(answer, { pointerId: 8, pointerType: "touch", clientX: 100, clientY: 60 });
+    act(() => vi.advanceTimersByTime(370));
+    fireEvent.pointerDown(answer, { pointerId: 9, pointerType: "touch", clientX: 130, clientY: 80 });
+    fireEvent.pointerUp(answer, { pointerId: 9, pointerType: "touch", clientX: 130, clientY: 80 });
+    const favorite = screen.getByRole("button", { name: /즐겨찾기 추가$/ });
+    fireEvent.pointerDown(favorite, { pointerId: 10, pointerType: "touch" });
+    fireEvent.pointerUp(favorite, { pointerId: 10, pointerType: "touch" });
+
+    const afterForeignPointer = new Event("touchmove", { bubbles: true, cancelable: true });
+    window.dispatchEvent(afterForeignPointer);
+    expect(afterForeignPointer.defaultPrevented).toBe(true);
+    expect(document.querySelector(".sg-radial-menu")).toBeInTheDocument();
+
+    fireEvent.pointerUp(answer, { pointerId: 8, pointerType: "touch", clientX: 100, clientY: 60 });
+    const afterOwnerFinishes = new Event("touchmove", { bubbles: true, cancelable: true });
+    window.dispatchEvent(afterOwnerFinishes);
+    expect(afterOwnerFinishes.defaultPrevented).toBe(false);
+    expect(document.querySelector(".sg-radial-menu")).not.toBeInTheDocument();
+  });
+
+  it("releases touch ownership when the active pointer loses capture", () => {
+    vi.useFakeTimers();
+    const pattern = makePattern();
+    render(
+      <PatternCard
+        pattern={pattern}
+        mode="all"
+        density="comfortable"
+        onSpeak={vi.fn()}
+      />,
+    );
+
+    const answer = screen.getByRole("button", { name: /발음 듣기$/ });
+    fireEvent.pointerDown(answer, { pointerId: 10, pointerType: "touch", clientX: 100, clientY: 60 });
+    act(() => vi.advanceTimersByTime(370));
+    fireEvent.lostPointerCapture(answer, { pointerId: 10, pointerType: "touch" });
+
+    const afterCaptureLoss = new Event("touchmove", { bubbles: true, cancelable: true });
+    window.dispatchEvent(afterCaptureLoss);
+    expect(afterCaptureLoss.defaultPrevented).toBe(false);
+    expect(document.querySelector(".sg-radial-menu")).not.toBeInTheDocument();
+  });
+
+  it("supports word swaps and paraphrases with arrow keys", () => {
+    const pattern = makePattern({
+      english: "Do you have a minute?",
+      korean: "잠깐 시간 있어?",
+      pattern: "Do you have + time?",
+    });
     const onSpeak = vi.fn();
     render(
       <PatternCard
@@ -197,9 +405,9 @@ describe("PatternCard", () => {
 
     const answer = screen.getByRole("button", { name: /발음 듣기$/ });
     fireEvent.keyDown(answer, { key: "ArrowLeft" });
-    expect(onSpeak).toHaveBeenLastCalledWith(pattern, "I am about to leave.", pattern.id);
+    expect(onSpeak).toHaveBeenLastCalledWith(pattern, "Do you have a moment?", pattern.id);
     fireEvent.keyDown(answer, { key: "ArrowRight" });
-    expect(onSpeak).toHaveBeenLastCalledWith(pattern, "I'm just getting ready to go.", pattern.id);
+    expect(onSpeak).toHaveBeenLastCalledWith(pattern, "Have you got a moment?", pattern.id);
     fireEvent.keyDown(answer, { key: "ArrowUp" });
     expect(onSpeak).toHaveBeenLastCalledWith(pattern, pattern.replies[0].english, pattern.id);
     fireEvent.keyDown(answer, { key: "ArrowDown" });

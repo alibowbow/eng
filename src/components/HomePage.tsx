@@ -1,6 +1,5 @@
 import {
   ArrowRight,
-  BookOpenCheck,
   Grid3X3,
   Settings,
   Shuffle,
@@ -9,13 +8,11 @@ import {
 export interface HomePageProps {
   totalCount: number;
   learnedCount: number;
-  dueCount: number;
   continueIndex: number;
   heroSrc: string;
   onContinue: () => void;
   onOpenGrid: () => void;
   onRandom: () => void;
-  onReview: () => void;
   onSettings: () => void;
 }
 
@@ -28,18 +25,16 @@ function normalizeCount(value: number) {
 export function HomePage({
   totalCount,
   learnedCount,
-  dueCount,
   continueIndex,
   heroSrc,
   onContinue,
   onOpenGrid,
   onRandom,
-  onReview,
   onSettings,
 }: HomePageProps) {
   const safeTotalCount = normalizeCount(totalCount);
   const safeLearnedCount = Math.min(normalizeCount(learnedCount), safeTotalCount);
-  const safeDueCount = Math.min(normalizeCount(dueCount), safeTotalCount);
+  const safeRemainingCount = safeTotalCount - safeLearnedCount;
   const safeContinueIndex =
     safeTotalCount === 0
       ? 0
@@ -134,8 +129,8 @@ export function HomePage({
                 <dd>{COUNT_FORMATTER.format(safeLearnedCount)}</dd>
               </div>
               <div>
-                <dt>오늘 복습</dt>
-                <dd>{COUNT_FORMATTER.format(safeDueCount)}</dd>
+                <dt>남은 패턴</dt>
+                <dd>{COUNT_FORMATTER.format(safeRemainingCount)}</dd>
               </div>
             </dl>
           </div>
@@ -151,17 +146,13 @@ export function HomePage({
               </span>
               <ArrowRight aria-hidden="true" />
             </button>
-            <button type="button" className="sg-home__quick-action" onClick={onReview}>
+            <button type="button" className="sg-home__quick-action" onClick={onSettings}>
               <span className="sg-home__quick-icon" aria-hidden="true">
-                <BookOpenCheck />
+                <Settings />
               </span>
               <span>
-                <strong>오늘의 복습</strong>
-                <small>
-                  {safeDueCount > 0
-                    ? `${COUNT_FORMATTER.format(safeDueCount)}개가 기다리고 있어요`
-                    : "오늘 예정된 복습을 확인해요"}
-                </small>
+                <strong>학습 환경</strong>
+                <small>음성과 화면을 나에게 맞추기</small>
               </span>
               <ArrowRight aria-hidden="true" />
             </button>

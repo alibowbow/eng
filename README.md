@@ -50,7 +50,7 @@ public/content/          manifest와 배포되는 JSON 콘텐츠 팩
 src/content/             스키마, 검증, 로더, 마이그레이션
 src/components/          가상 그리드와 학습 UI
 src/hooks/               TTS와 연속 듣기 컨트롤러
-src/lib/                 IndexedDB, 검색, 랜덤, 복습 로직
+src/lib/                 IndexedDB, 검색, 랜덤, 학습 기록 로직
 scripts/                 콘텐츠 제작·검수 CLI
 docs/                    콘텐츠 작성·스키마·업데이트 안내
 ```

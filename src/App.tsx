@@ -41,19 +41,20 @@ import {
   db,
   deleteAllData,
   exportBackup,
+  getFavoriteIds,
   getProgressMap,
   getSettings,
   importBackup,
   resetLearningData,
   resetSettings,
   saveSettings,
+  setFavorite as persistFavorite,
   type AppSettings,
   type GridPosition,
   type PersonalNote,
 } from "./lib/db";
 import { sampleUniqueBy } from "./lib/random";
 import { createRelatedPatternResolver } from "./lib/related";
-import { isReviewDue } from "./lib/review";
 import { searchPatterns, type MasteryFilter } from "./lib/search";
 
 interface RandomSessionState {
@@ -81,10 +82,14 @@ const DEFAULT_LISTENING_SETTINGS: ListeningSettings = {
 function viewFromLocation(): AppView {
   const hash = window.location.hash;
   if (hash.startsWith("#pattern=")) return "grid";
-  if (hash === "#grid" || hash === "#random" || hash === "#review") {
+  if (hash === "#grid" || hash === "#random") {
     return hash.slice(1) as AppView;
   }
   return "home";
+}
+
+function isAppView(value: unknown): value is AppView {
+  return value === "home" || value === "grid" || value === "random";
 }
 
 function patternIdFromLocation(): string | undefined {
@@ -128,7 +133,7 @@ function countActiveFilters(filters: FilterState) {
     filters.cefr.length +
     filters.register.length +
     filters.mastery.length +
-    Number(filters.reviewDueOnly) +
+    Number(filters.favoritesOnly) +
     Number(filters.newOnly) +
     Number(Boolean(filters.query.trim()))
   );
@@ -156,6 +161,7 @@ export function App() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [revealedIds, setRevealedIds] = useState<ReadonlySet<string>>(() => new Set());
   const [progressById, setProgressById] = useState<Map<string, LearningProgress>>(() => new Map());
+  const [favoriteIds, setFavoriteIds] = useState<ReadonlySet<string>>(() => new Set());
   const [notesById, setNotesById] = useState<Map<string, string>>(() => new Map());
   const [activePatternId, setActivePatternId] = useState<string | null>(null);
   const [selectedPatternId, setSelectedPatternId] = useState<string | null>(null);
@@ -177,6 +183,7 @@ export function App() {
   const scrollSaveTimer = useRef<number | undefined>(undefined);
   const speakingToken = useRef(0);
   const pwaRegistered = useRef(false);
+  const favoriteMutationVersion = useRef(new Map<string, number>());
 
   const {
     voices,
@@ -224,15 +231,17 @@ export function App() {
     setLoading(true);
     setLoadError(null);
     try {
-      const [loadedContent, progress, settings, notes, position] = await Promise.all([
+      const [loadedContent, progress, favorites, settings, notes, position] = await Promise.all([
         loadContent({ includeOptional: true }),
         getProgressMap(),
+        getFavoriteIds(),
         getSettings(),
         db.getAll("personalNotes"),
         db.get("lastGridPosition", "main"),
       ]);
       setContent(loadedContent);
       setProgressById(progress);
+      setFavoriteIds(favorites);
       setNotesById(new Map(notes.map((record) => [record.patternId, record.text])));
       setMode(settings.hideMode);
       setDensity(mapDensity(settings.gridDensity));
@@ -351,7 +360,7 @@ export function App() {
   useEffect(() => {
     const handlePopState = (event: PopStateEvent) => {
       const state = event.state as SayGridHistoryState | null;
-      const nextView = state?.saygridView ?? viewFromLocation();
+      const nextView = isAppView(state?.saygridView) ? state.saygridView : viewFromLocation();
       const patternId = state?.saygridPatternId ?? patternIdFromLocation();
       setView(nextView);
       setSelectedPatternId(patternId ?? null);
@@ -378,7 +387,6 @@ export function App() {
 
   const filteredPatterns = useMemo(() => {
     const mastery = filters.mastery.map(masteryFilter).filter(Boolean) as MasteryFilter[];
-    if (filters.reviewDueOnly && !mastery.includes("due")) mastery.push("due");
     return searchPatterns(patterns, {
       query: deferredQuery,
       filters: {
@@ -387,21 +395,17 @@ export function App() {
         cefr: filters.cefr as ConversationPattern["cefr"][],
         register: filters.register as ConversationPattern["register"],
         mastery,
+        favoritesOnly: filters.favoritesOnly,
         newOnly: filters.newOnly,
       },
       progressById,
       notesById,
-      now: clock,
+      favoriteIds,
       newSince: clock - NEW_WINDOW_MS,
     });
-  }, [clock, deferredQuery, filters, notesById, patterns, progressById]);
+  }, [clock, deferredQuery, favoriteIds, filters, notesById, patterns, progressById]);
 
-  const duePatterns = useMemo(
-    () => filteredPatterns.filter((pattern) => isReviewDue(progressById.get(pattern.id), clock)),
-    [clock, filteredPatterns, progressById],
-  );
-  const scopedPatterns = view === "review" ? duePatterns : filteredPatterns;
-  const displayedPatterns = view === "random" && randomSession ? randomSession.patterns : scopedPatterns;
+  const displayedPatterns = view === "random" && randomSession ? randomSession.patterns : filteredPatterns;
 
   const categoryOptions = useMemo<FilterOption[]>(() => {
     if (content?.manifest.categories.length) {
@@ -464,7 +468,6 @@ export function App() {
       const progress = progressById.get(pattern.id);
       next.set(pattern.id, {
         mastery: progress?.mastery ?? 0,
-        due: isReviewDue(progress, clock),
         isNew: Boolean(
           pattern.releasedAt && new Date(pattern.releasedAt).getTime() >= clock - NEW_WINDOW_MS,
         ),
@@ -589,8 +592,56 @@ export function App() {
     [pushToast],
   );
 
+  const handleFavoriteChange = useCallback(
+    (patternId: string, favorite: boolean) => {
+      const mutationVersion = (favoriteMutationVersion.current.get(patternId) ?? 0) + 1;
+      favoriteMutationVersion.current.set(patternId, mutationVersion);
+      setFavoriteIds((current) => {
+        const next = new Set(current);
+        if (favorite) next.add(patternId);
+        else next.delete(patternId);
+        return next;
+      });
+      void persistFavorite(patternId, favorite).catch(() => {
+        if (favoriteMutationVersion.current.get(patternId) !== mutationVersion) return;
+        setFavoriteIds((current) => {
+          if (current.has(patternId) !== favorite) return current;
+          const next = new Set(current);
+          if (favorite) next.delete(patternId);
+          else next.add(patternId);
+          return next;
+        });
+        pushToast("즐겨찾기를 저장하지 못했습니다.", "error");
+      });
+    },
+    [pushToast],
+  );
+
+  const handleToggleFavoritesOnly = useCallback(() => {
+    setFilters((current) => ({
+      ...current,
+      favoritesOnly: !current.favoritesOnly,
+    }));
+    setInitialScrollPatternId(undefined);
+    setInitialScrollIndex(0);
+    setVisibleStartIndex(0);
+    setScrollRestoreVersion((current) => current + 1);
+    setActivePatternId(null);
+    setRevealedIds(new Set());
+    if (view === "random") {
+      setRandomSession(null);
+      setView("grid");
+      stopContinuous();
+      window.history.pushState(
+        { saygridView: "grid" } satisfies SayGridHistoryState,
+        "",
+        viewHash("grid"),
+      );
+    }
+  }, [stopContinuous, view]);
+
   const startRandom = useCallback(
-    (count: number, source: readonly ConversationPattern[] = scopedPatterns) => {
+    (count: number, source: readonly ConversationPattern[] = filteredPatterns) => {
       const selected = sampleUniqueBy(source, count, (pattern) => pattern.id);
       if (!selected.length) {
         pushToast("현재 범위에는 연습할 표현이 없습니다.", "warning");
@@ -611,7 +662,7 @@ export function App() {
         viewHash("random"),
       );
     },
-    [pushToast, scopedPatterns, stopContinuous],
+    [filteredPatterns, pushToast, stopContinuous],
   );
 
   const exitRandom = useCallback(() => {
@@ -759,7 +810,7 @@ export function App() {
   }, [pushToast]);
 
   const handleResetLearning = useCallback(async () => {
-    if (!window.confirm("진도, 복습 일정과 메모를 모두 지울까요? 이 작업은 되돌릴 수 없습니다.")) return;
+    if (!window.confirm("학습 진도와 메모를 모두 지울까요? 이 작업은 되돌릴 수 없습니다.")) return;
     await resetLearningData();
     setProgressById(new Map());
     setNotesById(new Map());
@@ -782,12 +833,9 @@ export function App() {
     [displayedPatterns, revealedIds],
   );
   const selectedPattern = selectedPatternId ? patternById.get(selectedPatternId) ?? null : null;
-  const dueCount = useMemo(
-    () => patterns.reduce(
-      (count, pattern) => count + Number(isReviewDue(progressById.get(pattern.id), clock)),
-      0,
-    ),
-    [clock, patterns, progressById],
+  const favoriteCount = useMemo(
+    () => patterns.reduce((count, pattern) => count + Number(favoriteIds.has(pattern.id)), 0),
+    [favoriteIds, patterns],
   );
   const learnedCount = useMemo(
     () => patterns.reduce(
@@ -813,13 +861,11 @@ export function App() {
             <HomePage
               totalCount={patterns.length}
               learnedCount={learnedCount}
-              dueCount={dueCount}
               continueIndex={resumeIndex}
               heroSrc={`${import.meta.env.BASE_URL}assets/saygrid-learning-cards.webp`}
               onContinue={() => openGrid(resumeIndex, resumePatternId)}
               onOpenGrid={() => openGrid(0)}
               onRandom={() => startRandom(50)}
-              onReview={() => handleViewChange("review")}
               onSettings={() => setSettingsOpen(true)}
             />
           ) : null}
@@ -832,12 +878,13 @@ export function App() {
             density={density}
             onDensityChange={handleDensityChange}
             totalCount={displayedPatterns.length}
-            dueCount={dueCount}
+            favoriteCount={favoriteCount}
+            favoritesOnly={filters.favoritesOnly}
             activeFilterCount={countActiveFilters(filters)}
             onSearch={() => setFilterOpen(true)}
             onFilters={() => setFilterOpen(true)}
             onRandom={(count) => startRandom(count)}
-            onReview={() => handleViewChange("review")}
+            onToggleFavoritesOnly={handleToggleFavoritesOnly}
             onSettings={() => setSettingsOpen(true)}
             onHome={() => handleViewChange("home")}
             allRevealed={allRevealed}
@@ -875,6 +922,7 @@ export function App() {
                 mode={mode}
                 density={density}
                 getProgress={getProgressView}
+                favoriteIds={favoriteIds}
                 revealedIds={revealedIds}
                 selectedPatternId={activePatternId ?? undefined}
                 speakingId={speakingId}
@@ -883,13 +931,14 @@ export function App() {
                 onActivatePattern={handleActivatePattern}
                 onSpeak={handleSpeak}
                 onOpenDetails={handleOpenDetails}
+                onFavoriteChange={handleFavoriteChange}
                 initialScrollIndex={initialScrollIndex}
                 initialScrollPatternId={initialScrollPatternId}
                 onVisibleRangeChange={handleVisibleRangeChange}
                 emptyState={
                   <EmptyState
-                    title={view === "review" ? "지금 복습할 표현이 없어요" : undefined}
-                    description={view === "review" ? "다음 복습 시간이 되면 여기에 자동으로 모입니다." : undefined}
+                    title={filters.favoritesOnly ? "즐겨찾기한 표현이 없어요" : undefined}
+                    description={filters.favoritesOnly ? "카드 우측 상단의 별을 눌러 표현을 모아보세요." : undefined}
                     actionLabel="전체 그리드 보기"
                     onAction={() => {
                       setFilters({ ...EMPTY_FILTERS });

@@ -7,11 +7,10 @@ export type DisplayMode =
   | "listening";
 
 export type GridDensity = "large" | "comfortable" | "compact" | "overview";
-export type AppView = "home" | "grid" | "random" | "review";
+export type AppView = "home" | "grid" | "random";
 
 export interface PatternProgressView {
   mastery: number;
-  due?: boolean;
   isNew?: boolean;
 }
 
@@ -28,7 +27,7 @@ export interface FilterState {
   cefr: string[];
   register: string[];
   mastery: string[];
-  reviewDueOnly: boolean;
+  favoritesOnly: boolean;
   newOnly: boolean;
 }
 
@@ -68,6 +67,6 @@ export const EMPTY_FILTERS: Readonly<FilterState> = Object.freeze({
   cefr: [],
   register: [],
   mastery: [],
-  reviewDueOnly: false,
+  favoritesOnly: false,
   newOnly: false,
 });

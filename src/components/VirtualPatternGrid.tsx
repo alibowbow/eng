@@ -103,6 +103,7 @@ export interface VirtualPatternGridProps {
   mode: DisplayMode;
   density: GridDensity;
   getProgress?: (pattern: ConversationPattern) => PatternProgressView | undefined;
+  favoriteIds?: ReadonlySet<string>;
   revealedIds?: ReadonlySet<string>;
   selectedPatternId?: string;
   speakingId?: string;
@@ -116,6 +117,7 @@ export interface VirtualPatternGridProps {
     options?: { slow?: boolean },
   ) => void;
   onOpenDetails?: (pattern: ConversationPattern) => void;
+  onFavoriteChange?: (patternId: string, favorite: boolean) => void;
   initialScrollIndex?: number;
   initialScrollPatternId?: string;
   onVisibleRangeChange?: (startIndex: number, endIndex: number) => void;
@@ -128,6 +130,7 @@ function VirtualPatternGridComponent({
   mode,
   density,
   getProgress,
+  favoriteIds,
   revealedIds,
   selectedPatternId,
   speakingId,
@@ -136,6 +139,7 @@ function VirtualPatternGridComponent({
   onActivatePattern,
   onSpeak,
   onOpenDetails,
+  onFavoriteChange,
   initialScrollIndex = 0,
   onVisibleRangeChange,
   emptyState,
@@ -388,6 +392,7 @@ function VirtualPatternGridComponent({
                   mode={mode}
                   density={density}
                   progress={getProgress?.(pattern)}
+                  favorite={favoriteIds?.has(pattern.id)}
                   revealed={activeRevealedIds.has(pattern.id)}
                   selected={selectedPatternId === pattern.id}
                   isSpeaking={speakingId === pattern.id}
@@ -395,6 +400,7 @@ function VirtualPatternGridComponent({
                   onActivate={onActivatePattern}
                   onSpeak={onSpeak}
                   onOpenDetails={onOpenDetails}
+                  onFavoriteChange={onFavoriteChange}
                 />
               ))}
             </div>

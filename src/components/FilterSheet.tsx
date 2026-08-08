@@ -1,4 +1,4 @@
-import { Check, Filter, Search, SlidersHorizontal, X } from "lucide-react";
+import { Check, Filter, Search, SlidersHorizontal, Star, X } from "lucide-react";
 import { memo, useEffect, useMemo, useRef, useState } from "react";
 import { OverlaySheet } from "./OverlaySheet";
 import { EMPTY_FILTERS, type FilterOption, type FilterState } from "./types";
@@ -41,7 +41,7 @@ function activeFilterCount(filters: FilterState) {
     filters.cefr.length +
     filters.register.length +
     filters.mastery.length +
-    Number(filters.reviewDueOnly) +
+    Number(filters.favoritesOnly) +
     Number(filters.newOnly)
   );
 }
@@ -161,23 +161,27 @@ function FilterSheetComponent({
 
       <div className="sg-filter-quick" aria-label="빠른 필터">
         <SlidersHorizontal aria-hidden="true" />
-        {(
-          [
-            ["reviewDueOnly", "복습 예정"],
-            ["newOnly", "새 표현"],
-          ] as const
-        ).map(([key, label]) => (
-          <button
-            key={key}
-            type="button"
-            className={draft[key] ? "is-selected" : undefined}
-            aria-pressed={draft[key]}
-            onClick={() => setDraft((current) => ({ ...current, [key]: !current[key] }))}
-          >
-            {draft[key] ? <Check aria-hidden="true" /> : null}
-            {label}
-          </button>
-        ))}
+        <button
+          type="button"
+          className={`sg-filter-favorite${draft.favoritesOnly ? " is-selected" : ""}`}
+          aria-pressed={draft.favoritesOnly}
+          onClick={() => setDraft((current) => ({
+            ...current,
+            favoritesOnly: !current.favoritesOnly,
+          }))}
+        >
+          {draft.favoritesOnly ? <Check aria-hidden="true" /> : <Star aria-hidden="true" />}
+          즐겨찾기
+        </button>
+        <button
+          type="button"
+          className={draft.newOnly ? "is-selected" : undefined}
+          aria-pressed={draft.newOnly}
+          onClick={() => setDraft((current) => ({ ...current, newOnly: !current.newOnly }))}
+        >
+          {draft.newOnly ? <Check aria-hidden="true" /> : null}
+          새 표현
+        </button>
       </div>
 
       <ChipGroup
