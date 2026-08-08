@@ -5,6 +5,7 @@ import {
   Filter,
   Grid3X3,
   Headphones,
+  Home,
   Languages,
   RefreshCw,
   Search,
@@ -26,11 +27,10 @@ export interface AppToolbarProps {
   onFilters: () => void;
   onRandom: (count: number) => void;
   onReview: () => void;
-  onListening: () => void;
   onSettings: () => void;
+  onHome: () => void;
   allRevealed?: boolean;
   onToggleRevealAll?: () => void;
-  isListening?: boolean;
 }
 
 const MODE_OPTIONS: Array<{
@@ -57,23 +57,22 @@ function AppToolbarComponent({
   onFilters,
   onRandom,
   onReview,
-  onListening,
   onSettings,
+  onHome,
   allRevealed = false,
   onToggleRevealAll,
-  isListening = false,
 }: AppToolbarProps) {
   return (
     <header className="sg-toolbar">
       <div className="sg-toolbar__primary">
-        <a className="sg-wordmark" href="#main-grid" aria-label="SayGrid 그리드로 이동">
+        <button className="sg-wordmark" type="button" onClick={onHome} aria-label="SayGrid 홈으로 이동">
           <span className="sg-wordmark__mark" aria-hidden="true">
             {Array.from({ length: 9 }, (_, index) => (
               <i key={index} />
             ))}
           </span>
           <span>SayGrid</span>
-        </a>
+        </button>
 
         <div className="sg-toolbar__rail">
           <div className="sg-mode-switch" role="group" aria-label="가리기 모드">
@@ -114,20 +113,14 @@ function AppToolbarComponent({
                 <b aria-label={`적용된 필터 ${activeFilterCount}개`}>{activeFilterCount}</b>
               ) : null}
             </button>
-            <button
-              type="button"
-              className={`sg-toolbar-button${isListening ? " is-active" : ""}`}
-              aria-pressed={isListening}
-              onClick={onListening}
-            >
-              <Headphones aria-hidden="true" />
-              <span>연속 듣기</span>
-            </button>
           </div>
         </div>
       </div>
 
       <div className="sg-toolbar__secondary">
+        <button type="button" className="sg-icon-button" aria-label="홈으로 이동" onClick={onHome}>
+          <Home aria-hidden="true" />
+        </button>
         <p className="sg-result-count" aria-live="polite">
           <strong>{totalCount.toLocaleString("ko-KR")}</strong>
           <span>개 패턴</span>

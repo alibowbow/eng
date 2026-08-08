@@ -8,6 +8,15 @@ export type {
 } from "./FeedbackStates";
 export { FilterSheet, type FilterSheetProps } from "./FilterSheet";
 export {
+  GridNavigator,
+  GRID_SECTION_SIZE,
+  getSectionBounds,
+  getSectionChips,
+  type GridNavigatorProps,
+  type GridSection,
+} from "./GridNavigator";
+export { HomePage, type HomePageProps } from "./HomePage";
+export {
   ListeningController,
   type ListeningControllerProps,
 } from "./ListeningController";

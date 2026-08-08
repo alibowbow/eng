@@ -4,6 +4,7 @@ import {
   startTransition,
   useCallback,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -32,12 +33,48 @@ const ESTIMATED_ROW_HEIGHT: Record<GridDensity, number> = {
   overview: 86,
 };
 
-function getColumnCount(width: number, density: GridDensity) {
+const MOBILE_LAYOUT_BREAKPOINT = 720;
+
+function getGridGap(width: number) {
+  return width > 0 && width <= MOBILE_LAYOUT_BREAKPOINT ? 12 : 16;
+}
+
+export function getColumnCount(width: number, density: GridDensity) {
   if (width <= 0) return 2;
-  const gap = width < 600 ? 6 : 8;
+  const gap = getGridGap(width);
   const calculated = Math.floor((width + gap) / (MIN_COLUMN_WIDTH[density] + gap));
   const mobileMinimum = width < 520 ? 2 : 1;
   return Math.max(mobileMinimum, Math.min(9, calculated));
+}
+
+function getRowHeight(density: GridDensity) {
+  // These are the largest card heights for each density. Mobile CSS makes
+  // cards a few pixels shorter, so using the maximum remains overlap-safe even
+  // when the scroller width and the viewport media query cross at different
+  // points (for example, inside a split layout).
+  return ESTIMATED_ROW_HEIGHT[density];
+}
+
+export function resolveInitialScrollIndex(
+  patterns: readonly ConversationPattern[],
+  initialScrollIndex: number,
+  initialScrollPatternId?: string,
+) {
+  if (patterns.length === 0) return null;
+
+  if (initialScrollPatternId) {
+    const matchedIndex = patterns.findIndex(
+      (pattern) => pattern.id === initialScrollPatternId,
+    );
+    // A saved full-grid anchor may not exist in a filtered or random list.
+    // Starting at zero is predictable; clamping its old full-list index is not.
+    return matchedIndex >= 0 ? matchedIndex : 0;
+  }
+
+  const finiteIndex = Number.isFinite(initialScrollIndex)
+    ? Math.floor(initialScrollIndex)
+    : 0;
+  return Math.min(patterns.length - 1, Math.max(0, finiteIndex));
 }
 
 function useElementWidth(elementRef: RefObject<HTMLElement | null>) {
@@ -80,6 +117,7 @@ export interface VirtualPatternGridProps {
   ) => void;
   onOpenDetails?: (pattern: ConversationPattern) => void;
   initialScrollIndex?: number;
+  initialScrollPatternId?: string;
   onVisibleRangeChange?: (startIndex: number, endIndex: number) => void;
   emptyState?: ReactNode;
   ariaLabel?: string;
@@ -102,11 +140,26 @@ function VirtualPatternGridComponent({
   onVisibleRangeChange,
   emptyState,
   ariaLabel = "영어 회화 패턴 그리드",
+  initialScrollPatternId,
 }: VirtualPatternGridProps) {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const autoScrollPausedUntil = useRef(0);
   const initialScrollApplied = useRef(false);
+  const canReportVisibleRange = useRef(false);
+  const restorationTargetRow = useRef<number | null>(null);
+  const restorationTargetPatternIndex = useRef<number | null>(null);
+  const restoreIdentityRef = useRef("");
+  const lastVisibleStartIndex = useRef<number | null>(null);
+  const previousLayout = useRef<{
+    columns: number;
+    dataIdentity: string;
+    gap: number;
+    rowHeight: number;
+  } | null>(null);
+  const [restorationReadyVersion, markRestorationReady] = useState(0);
   const width = useElementWidth(scrollerRef);
+  const gap = getGridGap(width);
+  const rowHeight = getRowHeight(density);
   const columns = getColumnCount(width, density);
   const rowCount = Math.ceil(patterns.length / columns);
   const [internalRevealed, setInternalRevealed] = useState<ReadonlySet<string>>(
@@ -116,9 +169,9 @@ function VirtualPatternGridComponent({
   const rowVirtualizer = useVirtualizer({
     count: rowCount,
     getScrollElement: () => scrollerRef.current,
-    estimateSize: () => ESTIMATED_ROW_HEIGHT[density],
+    estimateSize: () => rowHeight,
     overscan: 4,
-    gap: width < 600 ? 6 : 8,
+    gap,
     getItemKey: (rowIndex) => {
       const firstPattern = patterns[rowIndex * columns];
       return firstPattern?.id ?? rowIndex;
@@ -127,46 +180,155 @@ function VirtualPatternGridComponent({
 
   const virtualRows = rowVirtualizer.getVirtualItems();
   const activeRevealedIds = revealedIds ?? internalRevealed;
+  const patternIdentity = useMemo(
+    () => patterns.map((pattern) => pattern.id).join("\u001f"),
+    [patterns],
+  );
+  const patternIndexById = useMemo(
+    () => new Map(patterns.map((pattern, index) => [pattern.id, index])),
+    [patterns],
+  );
+  const restoreIdentity = `${patternIdentity}\u001e${initialScrollPatternId ?? ""}\u001e${initialScrollIndex}`;
 
-  useEffect(() => {
+  if (restoreIdentityRef.current !== restoreIdentity) {
+    restoreIdentityRef.current = restoreIdentity;
+    initialScrollApplied.current = false;
+    canReportVisibleRange.current = false;
+    restorationTargetRow.current = null;
+    restorationTargetPatternIndex.current = null;
+    lastVisibleStartIndex.current = null;
+  }
+
+  useLayoutEffect(() => {
+    const nextLayout = { columns, dataIdentity: patternIdentity, gap, rowHeight };
+    const previous = previousLayout.current;
+    previousLayout.current = nextLayout;
+    if (
+      previous &&
+      previous.columns === columns &&
+      previous.dataIdentity === patternIdentity &&
+      previous.gap === gap &&
+      previous.rowHeight === rowHeight
+    ) {
+      return;
+    }
+
+    const anchorIndex = lastVisibleStartIndex.current;
     rowVirtualizer.measure();
-  }, [columns, density, rowVirtualizer]);
+    if (
+      anchorIndex !== null &&
+      initialScrollApplied.current &&
+      canReportVisibleRange.current
+    ) {
+      const targetRow = Math.floor(anchorIndex / columns);
+      canReportVisibleRange.current = false;
+      restorationTargetRow.current = targetRow;
+      restorationTargetPatternIndex.current = anchorIndex;
+      rowVirtualizer.scrollToIndex(targetRow, {
+        align: "start",
+        behavior: "auto",
+      });
+    }
+  }, [columns, gap, patternIdentity, rowHeight, rowVirtualizer]);
 
   useEffect(() => {
-    if (initialScrollApplied.current || width <= 0 || patterns.length === 0) return;
+    if (initialScrollApplied.current || width <= 0 || patterns.length === 0) {
+      return;
+    }
+
+    const initialPatternIndex = resolveInitialScrollIndex(
+      patterns,
+      initialScrollIndex,
+      initialScrollPatternId,
+    );
+    if (initialPatternIndex === null) return;
+
+    const targetRow = Math.floor(initialPatternIndex / columns);
     initialScrollApplied.current = true;
-    if (initialScrollIndex <= 0) return;
-    rowVirtualizer.scrollToIndex(Math.floor(initialScrollIndex / columns), {
+    restorationTargetRow.current = targetRow;
+    restorationTargetPatternIndex.current = initialPatternIndex;
+    rowVirtualizer.scrollToIndex(targetRow, {
       align: "start",
+      behavior: "auto",
     });
-  }, [columns, initialScrollIndex, patterns.length, rowVirtualizer, width]);
+  }, [
+    columns,
+    initialScrollIndex,
+    initialScrollPatternId,
+    patternIdentity,
+    patterns,
+    rowVirtualizer,
+    width,
+  ]);
+
+  const visibleStartRow = rowVirtualizer.range?.startIndex;
+  const visibleEndRow = rowVirtualizer.range?.endIndex;
 
   useEffect(() => {
-    if (!speakingId || !autoScrollSpeaking || Date.now() < autoScrollPausedUntil.current) return;
-    const patternIndex = patterns.findIndex((pattern) => pattern.id === speakingId);
-    if (patternIndex < 0) return;
+    const targetRow = restorationTargetRow.current;
+    if (
+      canReportVisibleRange.current ||
+      targetRow === null ||
+      visibleStartRow === undefined ||
+      visibleEndRow === undefined ||
+      (visibleStartRow !== targetRow &&
+        !(visibleEndRow === rowCount - 1 && targetRow >= visibleStartRow))
+    ) {
+      return;
+    }
+
+    canReportVisibleRange.current = true;
+    markRestorationReady((current) => current + 1);
+  }, [rowCount, visibleEndRow, visibleStartRow]);
+
+  useEffect(() => {
+    if (
+      !canReportVisibleRange.current ||
+      !speakingId ||
+      !autoScrollSpeaking ||
+      Date.now() < autoScrollPausedUntil.current
+    ) {
+      return;
+    }
+    const patternIndex = patternIndexById.get(speakingId);
+    if (patternIndex === undefined) return;
     rowVirtualizer.scrollToIndex(Math.floor(patternIndex / columns), {
       align: "auto",
       behavior: "smooth",
     });
-  }, [autoScrollSpeaking, columns, patterns, rowVirtualizer, speakingId]);
+  }, [
+    autoScrollSpeaking,
+    columns,
+    patternIndexById,
+    restorationReadyVersion,
+    rowVirtualizer,
+    speakingId,
+  ]);
 
   const pauseAutoScroll = useCallback(() => {
     autoScrollPausedUntil.current = Date.now() + 5_000;
   }, []);
 
   const visibleRange = useMemo(() => {
-    const firstRow = virtualRows.at(0)?.index;
-    const lastRow = virtualRows.at(-1)?.index;
-    if (firstRow === undefined || lastRow === undefined) return null;
+    if (visibleStartRow === undefined || visibleEndRow === undefined) return null;
     return {
-      start: firstRow * columns,
-      end: Math.min(patterns.length - 1, (lastRow + 1) * columns - 1),
+      start: visibleStartRow * columns,
+      end: Math.min(patterns.length - 1, (visibleEndRow + 1) * columns - 1),
     };
-  }, [columns, patterns.length, virtualRows]);
+  }, [columns, patterns.length, visibleEndRow, visibleStartRow]);
 
   useEffect(() => {
-    if (visibleRange) onVisibleRangeChange?.(visibleRange.start, visibleRange.end);
+    if (!canReportVisibleRange.current || !visibleRange) return;
+    const restoredIndex = restorationTargetPatternIndex.current;
+    const start =
+      restoredIndex !== null &&
+      restoredIndex >= visibleRange.start &&
+      restoredIndex <= visibleRange.end
+        ? restoredIndex
+        : visibleRange.start;
+    restorationTargetPatternIndex.current = null;
+    lastVisibleStartIndex.current = start;
+    onVisibleRangeChange?.(start, visibleRange.end);
   }, [onVisibleRangeChange, visibleRange]);
 
   const handleRevealChange = useCallback(
@@ -197,10 +359,11 @@ function VirtualPatternGridComponent({
       tabIndex={-1}
       onWheel={pauseAutoScroll}
       onTouchMove={pauseAutoScroll}
+      style={{ scrollBehavior: "auto" }}
     >
       <div
         className="sg-virtual-grid__canvas"
-        style={{ height: `${rowVirtualizer.getTotalSize()}px` }}
+        style={{ height: `${rowVirtualizer.getTotalSize() + gap * 2}px` }}
       >
         {virtualRows.map((virtualRow) => {
           const rowStart = virtualRow.index * columns;
@@ -208,12 +371,14 @@ function VirtualPatternGridComponent({
           return (
             <div
               key={virtualRow.key}
-              ref={rowVirtualizer.measureElement}
               className="sg-virtual-grid__row"
               data-index={virtualRow.index}
               style={{
                 gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
-                transform: `translateY(${virtualRow.start}px)`,
+                gap: `${gap}px`,
+                paddingInline: `${gap}px`,
+                paddingTop: 0,
+                transform: `translate3d(0, ${virtualRow.start + gap}px, 0)`,
               }}
             >
               {rowPatterns.map((pattern) => (

@@ -11,6 +11,8 @@ import { registerSW } from "virtual:pwa-register";
 import { AppToolbar } from "./components/AppToolbar";
 import { EmptyState, ErrorState, LoadingGrid, ToastRegion } from "./components/FeedbackStates";
 import { FilterSheet } from "./components/FilterSheet";
+import { GridNavigator } from "./components/GridNavigator";
+import { HomePage } from "./components/HomePage";
 import { ListeningController } from "./components/ListeningController";
 import { PatternDetailDrawer } from "./components/PatternDetailDrawer";
 import {
@@ -58,6 +60,12 @@ interface RandomSessionState {
   patterns: ConversationPattern[];
 }
 
+interface SayGridHistoryState {
+  saygridView?: AppView;
+  saygridPatternId?: string;
+  randomPatternIds?: string[];
+}
+
 const NEW_WINDOW_MS = 14 * 86_400_000;
 const EMPTY_PATTERNS: ConversationPattern[] = [];
 const DEFAULT_LISTENING_SETTINGS: ListeningSettings = {
@@ -69,6 +77,29 @@ const DEFAULT_LISTENING_SETTINGS: ListeningSettings = {
   highContrast: false,
   reduceMotion: false,
 };
+
+function viewFromLocation(): AppView {
+  const hash = window.location.hash;
+  if (hash.startsWith("#pattern=")) return "grid";
+  if (hash === "#grid" || hash === "#random" || hash === "#review") {
+    return hash.slice(1) as AppView;
+  }
+  return "home";
+}
+
+function patternIdFromLocation(): string | undefined {
+  const match = window.location.hash.match(/^#pattern=(.+)$/);
+  if (!match) return undefined;
+  try {
+    return decodeURIComponent(match[1]);
+  } catch {
+    return match[1];
+  }
+}
+
+function viewHash(view: AppView) {
+  return `#${view}`;
+}
 
 function makeToastId() {
   return `toast-${Date.now()}-${Math.random().toString(36).slice(2)}`;
@@ -119,7 +150,7 @@ export function App() {
   const [loading, setLoading] = useState(true);
   const [mode, setMode] = useState<DisplayMode>("all");
   const [density, setDensity] = useState<GridDensity>("comfortable");
-  const [view, setView] = useState<AppView>("grid");
+  const [view, setView] = useState<AppView>(viewFromLocation);
   const [filters, setFilters] = useState<FilterState>(() => ({ ...EMPTY_FILTERS }));
   const [filterOpen, setFilterOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
@@ -131,7 +162,11 @@ export function App() {
   const [speakingPatternId, setSpeakingPatternId] = useState<string | null>(null);
   const [randomSession, setRandomSession] = useState<RandomSessionState | null>(null);
   const [initialScrollIndex, setInitialScrollIndex] = useState(0);
+  const [initialScrollPatternId, setInitialScrollPatternId] = useState<string | undefined>();
   const [scrollRestoreVersion, setScrollRestoreVersion] = useState(0);
+  const [visibleStartIndex, setVisibleStartIndex] = useState(0);
+  const [resumeIndex, setResumeIndex] = useState(0);
+  const [resumePatternId, setResumePatternId] = useState<string | undefined>();
   const [toasts, setToasts] = useState<ToastItem[]>([]);
   const [listeningSettings, setListeningSettings] = useState<ListeningSettings>(
     DEFAULT_LISTENING_SETTINGS,
@@ -211,14 +246,30 @@ export function App() {
         reduceMotion: settings.reducedMotion,
       });
       let restoredIndex = 0;
+      let restoredPatternId: string | undefined;
       if (position?.anchorPatternId) {
         const anchorIndex = loadedContent.patterns.findIndex(
           (pattern) => pattern.id === position.anchorPatternId,
         );
-        if (anchorIndex >= 0) restoredIndex = anchorIndex;
+        if (anchorIndex >= 0) {
+          restoredIndex = anchorIndex;
+          restoredPatternId = position.anchorPatternId;
+        }
       }
       setInitialScrollIndex(restoredIndex);
+      const locationView = viewFromLocation();
+      setInitialScrollPatternId(
+        locationView === "grid" || locationView === "home" ? restoredPatternId : undefined,
+      );
+      setResumeIndex(restoredIndex);
+      setResumePatternId(restoredPatternId);
+      setVisibleStartIndex(restoredIndex);
       setScrollRestoreVersion((current) => current + 1);
+      const linkedPatternId = patternIdFromLocation();
+      if (linkedPatternId && loadedContent.patterns.some((pattern) => pattern.id === linkedPatternId)) {
+        setSelectedPatternId(linkedPatternId);
+        setView("grid");
+      }
       loadedContent.errors.forEach((message) => pushToast(message, "warning"));
       if (loadedContent.updates.newPatternCount > 0) {
         pushToast(
@@ -299,12 +350,31 @@ export function App() {
 
   useEffect(() => {
     const handlePopState = (event: PopStateEvent) => {
-      const patternId = (event.state as { saygridPatternId?: string } | null)?.saygridPatternId;
+      const state = event.state as SayGridHistoryState | null;
+      const nextView = state?.saygridView ?? viewFromLocation();
+      const patternId = state?.saygridPatternId ?? patternIdFromLocation();
+      setView(nextView);
       setSelectedPatternId(patternId ?? null);
+      setActivePatternId(null);
+      setRevealedIds(new Set());
+      if (nextView === "grid") {
+        setInitialScrollPatternId(resumePatternId);
+        setInitialScrollIndex(resumeIndex);
+        setVisibleStartIndex(resumeIndex);
+        setScrollRestoreVersion((current) => current + 1);
+      }
+      if (nextView === "random" && state?.randomPatternIds?.length) {
+        const restored = state.randomPatternIds
+          .map((id) => patternById.get(id))
+          .filter((pattern): pattern is ConversationPattern => Boolean(pattern));
+        setRandomSession(restored.length ? { patterns: restored } : null);
+      } else if (nextView !== "random") {
+        setRandomSession(null);
+      }
     };
     window.addEventListener("popstate", handlePopState);
     return () => window.removeEventListener("popstate", handlePopState);
-  }, []);
+  }, [patternById, resumeIndex, resumePatternId]);
 
   const filteredPatterns = useMemo(() => {
     const mastery = filters.mastery.map(masteryFilter).filter(Boolean) as MasteryFilter[];
@@ -464,11 +534,19 @@ export function App() {
 
   const handleOpenDetails = useCallback((pattern: ConversationPattern) => {
     setSelectedPatternId(pattern.id);
-    window.history.pushState({ saygridPatternId: pattern.id }, "", `#pattern=${encodeURIComponent(pattern.id)}`);
-  }, []);
+    window.history.pushState(
+      {
+        saygridView: view,
+        saygridPatternId: pattern.id,
+        randomPatternIds: randomSession?.patterns.map((item) => item.id),
+      } satisfies SayGridHistoryState,
+      "",
+      `#pattern=${encodeURIComponent(pattern.id)}`,
+    );
+  }, [randomSession?.patterns, view]);
 
   const handleCloseDetails = useCallback(() => {
-    if ((window.history.state as { saygridPatternId?: string } | null)?.saygridPatternId) {
+    if ((window.history.state as SayGridHistoryState | null)?.saygridPatternId) {
       window.history.back();
     } else {
       setSelectedPatternId(null);
@@ -477,8 +555,16 @@ export function App() {
 
   const handleSelectRelated = useCallback((patternId: string) => {
     setSelectedPatternId(patternId);
-    window.history.replaceState({ saygridPatternId: patternId }, "", `#pattern=${encodeURIComponent(patternId)}`);
-  }, []);
+    window.history.replaceState(
+      {
+        saygridView: view,
+        saygridPatternId: patternId,
+        randomPatternIds: randomSession?.patterns.map((item) => item.id),
+      } satisfies SayGridHistoryState,
+      "",
+      `#pattern=${encodeURIComponent(patternId)}`,
+    );
+  }, [randomSession?.patterns, view]);
 
   const handleSaveNote = useCallback(
     (patternId: string, text: string) => {
@@ -512,9 +598,18 @@ export function App() {
       }
       setRandomSession({ patterns: selected });
       setView("random");
+      setInitialScrollPatternId(undefined);
+      setInitialScrollIndex(0);
+      setVisibleStartIndex(0);
+      setScrollRestoreVersion((current) => current + 1);
       setActivePatternId(null);
       setRevealedIds(new Set());
       stopContinuous();
+      window.history.pushState(
+        { saygridView: "random", randomPatternIds: selected.map((pattern) => pattern.id) } satisfies SayGridHistoryState,
+        "",
+        viewHash("random"),
+      );
     },
     [pushToast, scopedPatterns, stopContinuous],
   );
@@ -522,26 +617,76 @@ export function App() {
   const exitRandom = useCallback(() => {
     setRandomSession(null);
     setView("grid");
+    setInitialScrollPatternId(resumePatternId);
+    setInitialScrollIndex(resumeIndex);
+    setVisibleStartIndex(resumeIndex);
+    setScrollRestoreVersion((current) => current + 1);
     setActivePatternId(null);
     setRevealedIds(new Set());
     stopContinuous();
-  }, [stopContinuous]);
+    window.history.pushState({ saygridView: "grid" } satisfies SayGridHistoryState, "", viewHash("grid"));
+  }, [resumeIndex, resumePatternId, stopContinuous]);
 
   const handleViewChange = useCallback(
     (nextView: AppView) => {
       if (nextView !== "random") setRandomSession(null);
       setView(nextView);
+      if (nextView === "home") {
+        setInitialScrollPatternId(resumePatternId);
+        setInitialScrollIndex(resumeIndex);
+        setVisibleStartIndex(resumeIndex);
+      } else if (nextView !== "grid") {
+        setInitialScrollPatternId(undefined);
+        setInitialScrollIndex(0);
+        setVisibleStartIndex(0);
+        setScrollRestoreVersion((current) => current + 1);
+      }
       setActivePatternId(null);
       setRevealedIds(new Set());
       stopContinuous();
+      window.history.pushState(
+        { saygridView: nextView } satisfies SayGridHistoryState,
+        "",
+        viewHash(nextView),
+      );
     },
-    [stopContinuous],
+    [resumeIndex, resumePatternId, stopContinuous],
   );
+
+  const openGrid = useCallback(
+    (index: number, patternId?: string) => {
+      const safeIndex = Math.max(0, Math.min(patterns.length - 1, index));
+      setRandomSession(null);
+      setView("grid");
+      setInitialScrollPatternId(patternId);
+      setInitialScrollIndex(safeIndex);
+      setVisibleStartIndex(safeIndex);
+      setScrollRestoreVersion((current) => current + 1);
+      setActivePatternId(null);
+      setRevealedIds(new Set());
+      stopContinuous();
+      window.history.pushState({ saygridView: "grid" } satisfies SayGridHistoryState, "", viewHash("grid"));
+    },
+    [patterns.length, stopContinuous],
+  );
+
+  const handleGridNavigate = useCallback((index: number) => {
+    const safeIndex = Math.max(0, Math.min(displayedPatterns.length - 1, index));
+    setInitialScrollPatternId(undefined);
+    setInitialScrollIndex(safeIndex);
+    setVisibleStartIndex(safeIndex);
+    setScrollRestoreVersion((current) => current + 1);
+  }, [displayedPatterns.length]);
 
   const handleVisibleRangeChange = useCallback(
     (startIndex: number) => {
+      setVisibleStartIndex(startIndex);
       const anchor = displayedPatterns[startIndex];
       if (!anchor) return;
+      if (view !== "grid") return;
+      const canonicalIndex = patterns.findIndex((pattern) => pattern.id === anchor.id);
+      if (canonicalIndex >= 0) setResumeIndex(canonicalIndex);
+      setResumePatternId(anchor.id);
       if (scrollSaveTimer.current !== undefined) window.clearTimeout(scrollSaveTimer.current);
       scrollSaveTimer.current = window.setTimeout(() => {
         const position: GridPosition = {
@@ -554,7 +699,7 @@ export function App() {
         void db.put("lastGridPosition", position);
       }, 300);
     },
-    [displayedPatterns, filters, view],
+    [displayedPatterns, filters, patterns, view],
   );
 
   const handleListeningToggle = useCallback(() => {
@@ -644,6 +789,13 @@ export function App() {
     ),
     [clock, patterns, progressById],
   );
+  const learnedCount = useMemo(
+    () => patterns.reduce(
+      (count, pattern) => count + Number((progressById.get(pattern.id)?.mastery ?? 0) > 0),
+      0,
+    ),
+    [patterns, progressById],
+  );
   const currentListeningPattern = continuousState.currentId
     ? patternById.get(continuousState.currentId)
     : undefined;
@@ -653,73 +805,103 @@ export function App() {
 
   return (
     <div className="sg-app" data-view={view}>
-      <AppToolbar
-        mode={mode}
-        onModeChange={handleModeChange}
-        density={density}
-        onDensityChange={handleDensityChange}
-        totalCount={displayedPatterns.length}
-        dueCount={dueCount}
-        activeFilterCount={countActiveFilters(filters)}
-        onSearch={() => setFilterOpen(true)}
-        onFilters={() => setFilterOpen(true)}
-        onRandom={(count) => startRandom(count)}
-        onReview={() => handleViewChange("review")}
-        onListening={handleListeningToggle}
-        onSettings={() => setSettingsOpen(true)}
-        allRevealed={allRevealed}
-        onToggleRevealAll={() => {
-          if (allRevealed) setRevealedIds(new Set());
-          else setRevealedIds(new Set(displayedPatterns.map((pattern) => pattern.id)));
-        }}
-        isListening={continuousActive}
-      />
-
-      <main id="main-grid" className="sg-main">
-        {view === "random" && randomSession ? (
-          <RandomSessionHeader
-            total={randomSession.patterns.length}
-            onExit={exitRandom}
-          />
-        ) : null}
-
-        {loading ? <LoadingGrid /> : null}
-        {!loading && loadError ? <ErrorState description={loadError} onRetry={() => void hydrate()} /> : null}
-        {!loading && !loadError && view === "random" && !randomSession ? (
-          <RandomSizePicker availableCount={filteredPatterns.length} onStart={(count) => startRandom(count, filteredPatterns)} />
-        ) : null}
-        {!loading && !loadError && !(view === "random" && !randomSession) ? (
-          <VirtualPatternGrid
-            key={scrollRestoreVersion}
-            patterns={displayedPatterns}
+      {view === "home" ? (
+        <div className="sg-home-shell">
+          {loading ? <LoadingGrid /> : null}
+          {!loading && loadError ? <ErrorState description={loadError} onRetry={() => void hydrate()} /> : null}
+          {!loading && !loadError ? (
+            <HomePage
+              totalCount={patterns.length}
+              learnedCount={learnedCount}
+              dueCount={dueCount}
+              continueIndex={resumeIndex}
+              heroSrc={`${import.meta.env.BASE_URL}assets/saygrid-learning-cards.webp`}
+              onContinue={() => openGrid(resumeIndex, resumePatternId)}
+              onOpenGrid={() => openGrid(0)}
+              onRandom={() => startRandom(20)}
+              onReview={() => handleViewChange("review")}
+              onSettings={() => setSettingsOpen(true)}
+            />
+          ) : null}
+        </div>
+      ) : (
+        <>
+          <AppToolbar
             mode={mode}
+            onModeChange={handleModeChange}
             density={density}
-            getProgress={getProgressView}
-            revealedIds={revealedIds}
-            selectedPatternId={activePatternId ?? undefined}
-            speakingId={speakingId}
-            autoScrollSpeaking={continuousActive && listeningSettings.autoScroll}
-            onRevealChange={handleRevealChange}
-            onActivatePattern={handleActivatePattern}
-            onSpeak={handleSpeak}
-            onOpenDetails={handleOpenDetails}
-            initialScrollIndex={initialScrollIndex}
-            onVisibleRangeChange={handleVisibleRangeChange}
-            emptyState={
-              <EmptyState
-                title={view === "review" ? "지금 복습할 표현이 없어요" : undefined}
-                description={view === "review" ? "다음 복습 시간이 되면 여기에 자동으로 모입니다." : undefined}
-                actionLabel="전체 그리드 보기"
-                onAction={() => {
-                  setFilters({ ...EMPTY_FILTERS });
-                  setView("grid");
-                  setActivePatternId(null);
-                }}
-              />
-            }
+            onDensityChange={handleDensityChange}
+            totalCount={displayedPatterns.length}
+            dueCount={dueCount}
+            activeFilterCount={countActiveFilters(filters)}
+            onSearch={() => setFilterOpen(true)}
+            onFilters={() => setFilterOpen(true)}
+            onRandom={(count) => startRandom(count)}
+            onReview={() => handleViewChange("review")}
+            onSettings={() => setSettingsOpen(true)}
+            onHome={() => handleViewChange("home")}
+            allRevealed={allRevealed}
+            onToggleRevealAll={() => {
+              if (allRevealed) setRevealedIds(new Set());
+              else setRevealedIds(new Set(displayedPatterns.map((pattern) => pattern.id)));
+            }}
           />
-        ) : null}
-      </main>
+
+          <main id="main-grid" className="sg-main">
+            {view === "grid" ? (
+              <GridNavigator
+                totalCount={displayedPatterns.length}
+                activeIndex={visibleStartIndex}
+                onNavigate={handleGridNavigate}
+              />
+            ) : null}
+
+            {view === "random" && randomSession ? (
+              <RandomSessionHeader
+                total={randomSession.patterns.length}
+                onExit={exitRandom}
+              />
+            ) : null}
+
+            {loading ? <LoadingGrid /> : null}
+            {!loading && loadError ? <ErrorState description={loadError} onRetry={() => void hydrate()} /> : null}
+            {!loading && !loadError && view === "random" && !randomSession ? (
+              <RandomSizePicker availableCount={filteredPatterns.length} onStart={(count) => startRandom(count, filteredPatterns)} />
+            ) : null}
+            {!loading && !loadError && !(view === "random" && !randomSession) ? (
+              <VirtualPatternGrid
+                key={`${view}-${displayedPatterns.length}-${scrollRestoreVersion}`}
+                patterns={displayedPatterns}
+                mode={mode}
+                density={density}
+                getProgress={getProgressView}
+                revealedIds={revealedIds}
+                selectedPatternId={activePatternId ?? undefined}
+                speakingId={speakingId}
+                autoScrollSpeaking={continuousActive && listeningSettings.autoScroll}
+                onRevealChange={handleRevealChange}
+                onActivatePattern={handleActivatePattern}
+                onSpeak={handleSpeak}
+                onOpenDetails={handleOpenDetails}
+                initialScrollIndex={initialScrollIndex}
+                initialScrollPatternId={initialScrollPatternId}
+                onVisibleRangeChange={handleVisibleRangeChange}
+                emptyState={
+                  <EmptyState
+                    title={view === "review" ? "지금 복습할 표현이 없어요" : undefined}
+                    description={view === "review" ? "다음 복습 시간이 되면 여기에 자동으로 모입니다." : undefined}
+                    actionLabel="전체 그리드 보기"
+                    onAction={() => {
+                      setFilters({ ...EMPTY_FILTERS });
+                      openGrid(0);
+                    }}
+                  />
+                }
+              />
+            ) : null}
+          </main>
+        </>
+      )}
 
       {continuousState.status !== "idle" && continuousState.status !== "stopped" ? (
         <ListeningController
@@ -746,7 +928,10 @@ export function App() {
         situations={situationOptions}
         onChange={(next) => startTransition(() => setFilters(next))}
         onApply={(next) => {
+          setInitialScrollPatternId(undefined);
           setInitialScrollIndex(0);
+          setVisibleStartIndex(0);
+          setScrollRestoreVersion((current) => current + 1);
           setActivePatternId(null);
           startTransition(() => setFilters(next));
         }}

@@ -57,7 +57,7 @@ export default defineConfig(({ mode }) => {
           skipWaiting: false,
           navigateFallback: 'index.html',
           // Content JSON is versioned and cached pack-by-pack below, not bulk-preloaded.
-          globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+          globPatterns: ['**/*.{js,css,html,ico,png,webp,svg,woff2}'],
           runtimeCaching: [
             {
               urlPattern: ({ url }) => url.pathname.includes('/content/packs/'),
