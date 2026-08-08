@@ -19,22 +19,22 @@ import type {
 } from "./types";
 
 const MIN_COLUMN_WIDTH: Record<GridDensity, number> = {
-  large: 268,
-  comfortable: 208,
-  compact: 172,
-  overview: 136,
+  large: 248,
+  comfortable: 188,
+  compact: 158,
+  overview: 130,
 };
 
 const ESTIMATED_ROW_HEIGHT: Record<GridDensity, number> = {
-  large: 212,
-  comfortable: 168,
-  compact: 142,
-  overview: 116,
+  large: 156,
+  comfortable: 116,
+  compact: 100,
+  overview: 86,
 };
 
 function getColumnCount(width: number, density: GridDensity) {
   if (width <= 0) return 2;
-  const gap = width < 600 ? 8 : 10;
+  const gap = width < 600 ? 6 : 8;
   const calculated = Math.floor((width + gap) / (MIN_COLUMN_WIDTH[density] + gap));
   const mobileMinimum = width < 520 ? 2 : 1;
   return Math.max(mobileMinimum, Math.min(9, calculated));
@@ -119,7 +119,7 @@ function VirtualPatternGridComponent({
     getScrollElement: () => scrollerRef.current,
     estimateSize: () => ESTIMATED_ROW_HEIGHT[density],
     overscan: 4,
-    gap: width < 600 ? 8 : 10,
+    gap: width < 600 ? 6 : 8,
     getItemKey: (rowIndex) => {
       const firstPattern = patterns[rowIndex * columns];
       return firstPattern?.id ?? rowIndex;

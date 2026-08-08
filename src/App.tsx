@@ -12,7 +12,6 @@ import { AppToolbar } from "./components/AppToolbar";
 import { EmptyState, ErrorState, LoadingGrid, ToastRegion } from "./components/FeedbackStates";
 import { FilterSheet } from "./components/FilterSheet";
 import { ListeningController } from "./components/ListeningController";
-import { MobileNav } from "./components/MobileNav";
 import { PatternDetailDrawer } from "./components/PatternDetailDrawer";
 import {
   RandomSessionHeader,
@@ -742,7 +741,6 @@ export function App() {
         />
       ) : null}
 
-      <MobileNav value={view} onChange={handleViewChange} reviewCount={dueCount} />
       <FilterSheet
         open={filterOpen}
         value={filters}

@@ -1,14 +1,9 @@
 import {
-  ArrowDown,
-  ArrowUp,
   Check,
-  ChevronLeft,
-  ChevronRight,
   Circle,
   CircleDot,
   Info,
   RotateCcw,
-  Sparkles,
   Star,
 } from "lucide-react";
 import {
@@ -22,6 +17,10 @@ import {
   type PointerEvent,
 } from "react";
 import type { ConversationPattern } from "../content/schema";
+import {
+  RadialGestureMenu,
+  type RadialDirection,
+} from "./RadialGestureMenu";
 import type {
   DisplayMode,
   GridDensity,
@@ -29,8 +28,10 @@ import type {
 } from "./types";
 
 const TAP_DISTANCE_PX = 9;
-const SWIPE_DISTANCE_PX = 42;
-const LONG_PRESS_MS = 520;
+const LONG_PRESS_MS = 360;
+const GESTURE_TRIGGER_PX = 28;
+const GESTURE_VISUAL_DISTANCE_PX = 38;
+const RADIAL_SAFE_MARGIN_PX = 98;
 const EMPTY_RELATED_PATTERNS: readonly RelatedPatternCardItem[] = [];
 
 export interface RelatedPatternCardItem {
@@ -67,8 +68,31 @@ interface PointerOrigin {
 }
 
 interface PracticeOverride {
-  kind: "reply" | "example";
+  kind: "reply";
   index: number;
+}
+
+interface RadialGestureState {
+  center: { x: number; y: number };
+  direction: RadialDirection | null;
+  drag: { x: number; y: number };
+}
+
+function clamp(value: number, minimum: number, maximum: number) {
+  return Math.min(Math.max(value, minimum), maximum);
+}
+
+function radialDirection(deltaX: number, deltaY: number): RadialDirection | null {
+  if (Math.hypot(deltaX, deltaY) < GESTURE_TRIGGER_PX) return null;
+  if (Math.abs(deltaX) > Math.abs(deltaY)) return deltaX > 0 ? "right" : "left";
+  return deltaY > 0 ? "down" : "up";
+}
+
+function radialDrag(deltaX: number, deltaY: number) {
+  const distance = Math.hypot(deltaX, deltaY);
+  if (distance === 0) return { x: 0, y: 0 };
+  const scale = Math.min(1, GESTURE_VISUAL_DISTANCE_PX / distance);
+  return { x: deltaX * scale, y: deltaY * scale };
 }
 
 function masteryMeta(mastery = 0) {
@@ -106,14 +130,18 @@ function PatternCardComponent({
   onSpeak,
   onOpenDetails,
 }: PatternCardProps) {
+  const cardRef = useRef<HTMLElement>(null);
   const pointerOrigin = useRef<PointerOrigin | null>(null);
   const longPressTimer = useRef<number | undefined>(undefined);
   const suppressNextClick = useRef(false);
+  const gestureDirectionRef = useRef<RadialDirection | null>(null);
+  const gestureActiveRef = useRef(false);
   const resolvedRelatedRef = useRef<readonly RelatedPatternCardItem[]>(EMPTY_RELATED_PATTERNS);
   const previousPatternId = useRef(pattern.id);
   const [resolvedRelated, setResolvedRelated] = useState<readonly RelatedPatternCardItem[]>(EMPTY_RELATED_PATTERNS);
   const [relatedIndex, setRelatedIndex] = useState(0);
   const [practiceOverride, setPracticeOverride] = useState<PracticeOverride | null>(null);
+  const [radialGesture, setRadialGesture] = useState<RadialGestureState | null>(null);
   const mastery = masteryMeta(progress?.mastery);
 
   const availableRelated = relatedPatterns.length > 0 ? relatedPatterns : resolvedRelated;
@@ -132,17 +160,10 @@ function PatternCardComponent({
   const activeReply = effectivePracticeOverride?.kind === "reply"
     ? activePattern.replies[modulo(effectivePracticeOverride.index, activePattern.replies.length)]
     : undefined;
-  const activeExample = effectivePracticeOverride?.kind === "example"
-    ? activePattern.examples[modulo(effectivePracticeOverride.index, activePattern.examples.length)]
-    : undefined;
-  const practiceItem = activeReply ?? activeExample;
+  const practiceItem = activeReply;
   const english = practiceItem?.english ?? activePattern.english;
   const korean = practiceItem?.korean ?? activePattern.korean;
-  const practiceLabel = activeReply
-    ? "이어지는 대답"
-    : activeExample
-      ? `실전 예문 ${modulo(effectivePracticeOverride?.index ?? 0, activePattern.examples.length) + 1}/${activePattern.examples.length}`
-      : activeDeckItem.label;
+  const practiceLabel = activeReply ? "이어지는 대답" : activeDeckItem.label;
   const englishVisible = mode === "all" || revealed || mode === "hide-korean";
   const koreanVisible = mode === "all" || revealed || mode === "hide-english";
   const answerIsHidden = !englishVisible || !koreanVisible;
@@ -156,7 +177,20 @@ function PatternCardComponent({
     }
   }, []);
 
-  useEffect(() => clearLongPress, [clearLongPress]);
+  const closeRadialGesture = useCallback(() => {
+    gestureActiveRef.current = false;
+    gestureDirectionRef.current = null;
+    setRadialGesture(null);
+  }, []);
+
+  useEffect(
+    () => () => {
+      clearLongPress();
+      gestureActiveRef.current = false;
+      gestureDirectionRef.current = null;
+    },
+    [clearLongPress],
+  );
 
   useEffect(() => {
     if (previousPatternId.current === pattern.id) return;
@@ -165,7 +199,8 @@ function PatternCardComponent({
     setResolvedRelated(EMPTY_RELATED_PATTERNS);
     setRelatedIndex(0);
     setPracticeOverride(null);
-  }, [pattern.id]);
+    closeRadialGesture();
+  }, [closeRadialGesture, pattern.id]);
 
   useEffect(() => {
     if (relatedPatterns.length > 0) resolvedRelatedRef.current = relatedPatterns;
@@ -231,25 +266,57 @@ function PatternCardComponent({
     if (answerIsHidden) onRevealChange?.(pattern.id, true);
   }, [activePattern, answerIsHidden, cycleRelated, onActivate, onRevealChange, onSpeak, pattern, practiceOverride]);
 
-  const showExample = useCallback(() => {
-    if (activePattern.examples.length === 0) {
-      cycleRelated(1);
-      return;
-    }
-    const nextIndex = practiceOverride?.kind === "example" ? practiceOverride.index + 1 : 0;
-    const example = activePattern.examples[modulo(nextIndex, activePattern.examples.length)];
-    setPracticeOverride({ kind: "example", index: nextIndex });
-    onActivate?.(pattern);
-    onSpeak(activePattern, example.english, pattern.id);
-    if (answerIsHidden) onRevealChange?.(pattern.id, true);
-  }, [activePattern, answerIsHidden, cycleRelated, onActivate, onRevealChange, onSpeak, pattern, practiceOverride]);
-
   const resetToOriginal = useCallback(() => {
     setRelatedIndex(0);
     setPracticeOverride(null);
     onActivate?.(pattern);
     onSpeak(pattern, undefined, pattern.id);
   }, [onActivate, onSpeak, pattern]);
+
+  const performRadialAction = useCallback(
+    (direction: RadialDirection) => {
+      if (direction === "left") cycleRelated(-1);
+      else if (direction === "right") cycleRelated(1);
+      else if (direction === "up") showReply();
+      else resetToOriginal();
+    },
+    [cycleRelated, resetToOriginal, showReply],
+  );
+
+  const startRadialGesture = useCallback(() => {
+    const origin = pointerOrigin.current;
+    if (!origin || origin.moved) return;
+
+    origin.longPressed = true;
+    suppressNextClick.current = true;
+    gestureActiveRef.current = true;
+    gestureDirectionRef.current = null;
+
+    if (relatedPatterns.length === 0 && resolvedRelatedRef.current.length === 0) {
+      const nextRelated = resolveRelatedPatterns?.(pattern) ?? EMPTY_RELATED_PATTERNS;
+      resolvedRelatedRef.current = nextRelated;
+      setResolvedRelated(nextRelated);
+    }
+
+    const rect = cardRef.current?.getBoundingClientRect();
+    const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    const toolbarBottom = document.querySelector(".sg-toolbar")?.getBoundingClientRect().bottom ?? 0;
+    const naturalX = rect && rect.width > 0 ? rect.left + rect.width / 2 : origin.x;
+    const naturalY = rect && rect.height > 0 ? rect.top + rect.height / 2 : origin.y;
+    const center = {
+      x: clamp(naturalX, RADIAL_SAFE_MARGIN_PX, viewportWidth - RADIAL_SAFE_MARGIN_PX),
+      y: clamp(
+        naturalY,
+        Math.max(RADIAL_SAFE_MARGIN_PX, toolbarBottom + 94),
+        viewportHeight - RADIAL_SAFE_MARGIN_PX,
+      ),
+    };
+
+    onActivate?.(pattern);
+    setRadialGesture({ center, direction: null, drag: { x: 0, y: 0 } });
+    navigator.vibrate?.(10);
+  }, [onActivate, pattern, relatedPatterns.length, resolveRelatedPatterns]);
 
   const handlePointerDown = useCallback(
     (event: PointerEvent<HTMLDivElement>) => {
@@ -264,24 +331,27 @@ function PatternCardComponent({
         moved: false,
       };
       clearLongPress();
-      if (onOpenDetails) {
-        longPressTimer.current = window.setTimeout(() => {
-          const origin = pointerOrigin.current;
-          if (!origin) return;
-          origin.longPressed = true;
-          suppressNextClick.current = true;
-          onOpenDetails(activePattern);
-        }, LONG_PRESS_MS);
-      }
+      longPressTimer.current = window.setTimeout(startRadialGesture, LONG_PRESS_MS);
     },
-    [activePattern, clearLongPress, onOpenDetails],
+    [clearLongPress, startRadialGesture],
   );
 
   const handlePointerMove = useCallback(
     (event: PointerEvent<HTMLDivElement>) => {
       const origin = pointerOrigin.current;
       if (!origin || origin.pointerId !== event.pointerId) return;
-      const distance = Math.hypot(event.clientX - origin.x, event.clientY - origin.y);
+      const deltaX = event.clientX - origin.x;
+      const deltaY = event.clientY - origin.y;
+      if (origin.longPressed && gestureActiveRef.current) {
+        event.preventDefault();
+        const direction = radialDirection(deltaX, deltaY);
+        const drag = radialDrag(deltaX, deltaY);
+        gestureDirectionRef.current = direction;
+        setRadialGesture((current) => current ? { ...current, direction, drag } : current);
+        return;
+      }
+
+      const distance = Math.hypot(deltaX, deltaY);
       if (distance > TAP_DISTANCE_PX) {
         origin.moved = true;
         clearLongPress();
@@ -296,18 +366,25 @@ function PatternCardComponent({
       clearLongPress();
       pointerOrigin.current = null;
       if (!origin || origin.pointerId !== event.pointerId) return;
-      const deltaX = event.clientX - origin.x;
-      const deltaY = event.clientY - origin.y;
-      const horizontalSwipe = Math.abs(deltaX) >= SWIPE_DISTANCE_PX && Math.abs(deltaX) > Math.abs(deltaY) * 1.2;
-      if (horizontalSwipe) {
+      if (origin.longPressed) {
+        event.preventDefault();
         suppressNextClick.current = true;
-        cycleRelated(deltaX < 0 ? 1 : -1);
+        const direction = gestureDirectionRef.current;
+        closeRadialGesture();
+        if (direction) performRadialAction(direction);
         return;
       }
-      suppressNextClick.current = origin.longPressed || origin.moved;
+      suppressNextClick.current = origin.moved;
     },
-    [clearLongPress, cycleRelated],
+    [clearLongPress, closeRadialGesture, performRadialAction],
   );
+
+  const cancelPointerGesture = useCallback(() => {
+    clearLongPress();
+    pointerOrigin.current = null;
+    suppressNextClick.current = true;
+    closeRadialGesture();
+  }, [clearLongPress, closeRadialGesture]);
 
   const handleClick = useCallback(() => {
     if (suppressNextClick.current) {
@@ -334,14 +411,14 @@ function PatternCardComponent({
         showReply();
       } else if (event.key === "ArrowDown") {
         event.preventDefault();
-        showExample();
+        resetToOriginal();
       } else if (key === "r" || event.key === "Escape") {
         event.preventDefault();
         if (relatedIndex !== 0 || practiceOverride) resetToOriginal();
         else onRevealChange?.(pattern.id, false);
       }
     },
-    [cycleRelated, onRevealChange, pattern.id, practiceOverride, relatedIndex, resetToOriginal, showExample, showReply, speakCurrent],
+    [cycleRelated, onRevealChange, pattern.id, practiceOverride, relatedIndex, resetToOriginal, showReply, speakCurrent],
   );
 
   const spokenLabel = english.replace(/[.!?]+$/g, "");
@@ -355,38 +432,39 @@ function PatternCardComponent({
   const activeLabel = effectivePracticeOverride
     ? practiceLabel
     : `연결 ${deckIndex + 1}/${deck.length} · ${activeDeckItem.label}`;
+  const transformedLabel = effectivePracticeOverride || deckIndex > 0 ? activeLabel : null;
+  const taxonomyLabel = activePattern.tags.slice(0, 2).join(" · ");
+  const toplineLabel = transformedLabel ?? (showPatternFormula ? formula : taxonomyLabel);
+  const toplineLanguage = transformedLabel || !showPatternFormula ? "ko" : "en";
   const instructionId = `sg-pattern-${pattern.id}-instructions`;
 
   return (
     <article
-      className={`sg-pattern-card sg-density-${density}${revealed ? " is-revealed" : ""}${selected ? " is-selected" : ""}${isSpeaking ? " is-speaking" : ""}${progress?.due ? " is-due" : ""}`}
+      ref={cardRef}
+      className={`sg-pattern-card sg-density-${density}${revealed ? " is-revealed" : ""}${selected ? " is-selected" : ""}${isSpeaking ? " is-speaking" : ""}${progress?.due ? " is-due" : ""}${radialGesture ? " is-gesture-active" : ""}`}
       data-pattern-id={pattern.id}
       data-mastery={mastery.level}
       data-practice-kind={practiceOverride?.kind ?? (deckIndex > 0 ? "related" : "base")}
     >
-      <div className={`sg-pattern-card__topline${showPatternFormula || selected ? " has-label" : ""}`}>
-        {showPatternFormula || selected ? (
-          <p className="sg-pattern-card__formula" lang={practiceItem ? "ko" : "en"}>
-            {showPatternFormula ? formula : activeLabel}
+      <div className={`sg-pattern-card__topline${toplineLabel ? " has-label" : ""}`}>
+        {toplineLabel ? (
+          <p className={`sg-pattern-card__formula${transformedLabel ? " is-context" : ""}`} lang={toplineLanguage}>
+            {toplineLabel}
           </p>
         ) : null}
         <span className="sg-pattern-card__signals">
-          {progress?.isNew ? (
-            <span className="sg-mini-signal is-new" title="새로 추가됨">
-              <Sparkles aria-hidden="true" />
-              <span className="sg-sr-only">새 표현</span>
-            </span>
-          ) : null}
           {progress?.due ? (
             <span className="sg-mini-signal is-due" title="복습 예정">
               <RotateCcw aria-hidden="true" />
               <span className="sg-sr-only">복습 예정</span>
             </span>
           ) : null}
-          <span className={`sg-mastery-mark is-${mastery.level}`} title={mastery.label}>
-            <mastery.Icon aria-hidden="true" />
-            <span className="sg-sr-only">숙련 상태: {mastery.label}</span>
-          </span>
+          {mastery.level !== "new" ? (
+            <span className={`sg-mastery-mark is-${mastery.level}`} title={mastery.label}>
+              <mastery.Icon aria-hidden="true" />
+              <span className="sg-sr-only">숙련 상태: {mastery.label}</span>
+            </span>
+          ) : null}
           <button
             type="button"
             className="sg-card-detail-button"
@@ -411,11 +489,8 @@ function PatternCardComponent({
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
-        onPointerCancel={() => {
-          clearLongPress();
-          pointerOrigin.current = null;
-          suppressNextClick.current = true;
-        }}
+        onPointerCancel={cancelPointerGesture}
+        onContextMenu={(event) => event.preventDefault()}
       >
         {englishVisible ? (
           <p className="sg-pattern-card__english" lang="en">
@@ -440,42 +515,17 @@ function PatternCardComponent({
           <span className="sg-sr-only">정답이 가려져 있습니다. 누르면 발음을 듣고 확인합니다.</span>
         ) : null}
         {selected ? (
-          <span id={instructionId} className="sg-sr-only">현재 선택된 카드입니다. 좌우 스와이프 또는 화살표로 연관 표현, 위 화살표로 대답, 아래 화살표로 예문을 듣습니다.</span>
+          <span id={instructionId} className="sg-sr-only">현재 선택된 카드입니다. 길게 누른 뒤 왼쪽이나 오른쪽으로 끌면 연관 표현, 위로 끌면 대답, 아래로 끌면 원문으로 돌아갑니다. 키보드에서는 같은 방향의 화살표 키를 사용합니다.</span>
         ) : null}
       </div>
 
-      {selected && deck.length > 1 ? (
-        <>
-          <button
-            type="button"
-            className="sg-related-edge is-previous"
-            aria-label="이전 연결 표현"
-            onClick={() => cycleRelated(-1)}
-          >
-            <ChevronLeft aria-hidden="true" />
-          </button>
-          <button
-            type="button"
-            className="sg-related-edge is-next"
-            aria-label="다음 연결 표현"
-            onClick={() => cycleRelated(1)}
-          >
-            <ChevronRight aria-hidden="true" />
-          </button>
-        </>
-      ) : null}
-
-      {selected ? (
-        <div className="sg-gesture-rail" aria-label="연결 연습 바로가기">
-          <button type="button" onClick={showReply}>
-            <ArrowUp aria-hidden="true" />
-            <span>대답</span>
-          </button>
-          <button type="button" onClick={showExample}>
-            <ArrowDown aria-hidden="true" />
-            <span>예문</span>
-          </button>
-        </div>
+      {radialGesture ? (
+        <RadialGestureMenu
+          open
+          center={radialGesture.center}
+          activeDirection={radialGesture.direction}
+          drag={radialGesture.drag}
+        />
       ) : null}
     </article>
   );

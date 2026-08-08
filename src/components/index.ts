@@ -11,7 +11,6 @@ export {
   ListeningController,
   type ListeningControllerProps,
 } from "./ListeningController";
-export { MobileNav, type MobileNavProps } from "./MobileNav";
 export { OverlaySheet, type OverlaySheetProps } from "./OverlaySheet";
 export { PatternCard, type PatternCardProps } from "./PatternCard";
 export {

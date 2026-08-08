@@ -1,14 +1,16 @@
 // @vitest-environment jsdom
 
 import "@testing-library/jest-dom/vitest";
-import { cleanup, fireEvent, render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { act, cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { useState } from "react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { makePattern } from "../test/fixtures";
 import { PatternCard } from "./PatternCard";
 
-afterEach(cleanup);
+afterEach(() => {
+  vi.useRealTimers();
+  cleanup();
+});
 
 describe("PatternCard", () => {
   it("reveals, selects, and speaks a hidden answer with one deliberate tap", () => {
@@ -70,7 +72,8 @@ describe("PatternCard", () => {
     expect(container.querySelector(".sg-pattern-card__footer")).not.toBeInTheDocument();
   });
 
-  it("swipes horizontally to a related pattern and suppresses the trailing click", () => {
+  it("keeps controls hidden until hold, then drags right to a related pattern", () => {
+    vi.useFakeTimers();
     const pattern = makePattern();
     const related = makePattern({
       id: "pattern.002",
@@ -81,7 +84,7 @@ describe("PatternCard", () => {
     });
     const onActivate = vi.fn();
     const onSpeak = vi.fn();
-    function SwipeHarness() {
+    function GestureHarness() {
       const [selected, setSelected] = useState(false);
       return (
         <PatternCard
@@ -98,22 +101,34 @@ describe("PatternCard", () => {
         />
       );
     }
-    render(<SwipeHarness />);
+    const { container } = render(<GestureHarness />);
 
     const answer = screen.getByRole("button", { name: /발음 듣기$/ });
-    fireEvent.pointerDown(answer, { pointerId: 2, pointerType: "touch", clientX: 110, clientY: 50 });
-    fireEvent.pointerMove(answer, { pointerId: 2, pointerType: "touch", clientX: 62, clientY: 52 });
-    fireEvent.pointerUp(answer, { pointerId: 2, pointerType: "touch", clientX: 45, clientY: 52 });
+    expect(container.querySelector(".sg-related-edge")).not.toBeInTheDocument();
+    expect(container.querySelector(".sg-gesture-rail")).not.toBeInTheDocument();
+    expect(document.querySelector(".sg-radial-menu")).not.toBeInTheDocument();
+
+    fireEvent.pointerDown(answer, { pointerId: 2, pointerType: "touch", clientX: 100, clientY: 60 });
+    act(() => vi.advanceTimersByTime(370));
+    expect(document.querySelector(".sg-radial-menu")).toBeInTheDocument();
+    expect(screen.getByText("대답")).toBeInTheDocument();
+    expect(screen.getByText("원문")).toBeInTheDocument();
+    expect(screen.queryByText("예문")).not.toBeInTheDocument();
+
+    fireEvent.pointerMove(answer, { pointerId: 2, pointerType: "touch", clientX: 150, clientY: 61 });
+    expect(document.querySelector(".sg-radial-menu__action.is-right.is-active")).toBeInTheDocument();
+    fireEvent.pointerUp(answer, { pointerId: 2, pointerType: "touch", clientX: 150, clientY: 61 });
     fireEvent.click(answer);
 
     expect(onActivate).toHaveBeenCalledWith(pattern);
     expect(onSpeak).toHaveBeenCalledTimes(1);
     expect(onSpeak).toHaveBeenCalledWith(related, undefined, pattern.id);
     expect(screen.getByText(related.english)).toBeInTheDocument();
+    expect(document.querySelector(".sg-radial-menu")).not.toBeInTheDocument();
   });
 
-  it("uses the selected gesture rail for a reply and an example", async () => {
-    const user = userEvent.setup();
+  it("drags up for a reply and down to return to the original sentence", () => {
+    vi.useFakeTimers();
     const pattern = makePattern();
     const onSpeak = vi.fn();
     render(
@@ -127,13 +142,23 @@ describe("PatternCard", () => {
       />,
     );
 
-    await user.click(screen.getByRole("button", { name: "대답" }));
+    let answer = screen.getByRole("button", { name: /발음 듣기$/ });
+    fireEvent.pointerDown(answer, { pointerId: 3, pointerType: "touch", clientX: 100, clientY: 80 });
+    act(() => vi.advanceTimersByTime(370));
+    fireEvent.pointerMove(answer, { pointerId: 3, pointerType: "touch", clientX: 100, clientY: 36 });
+    fireEvent.pointerUp(answer, { pointerId: 3, pointerType: "touch", clientX: 100, clientY: 36 });
+    fireEvent.click(answer);
     expect(onSpeak).toHaveBeenLastCalledWith(pattern, pattern.replies[0].english, pattern.id);
     expect(screen.getByText(pattern.replies[0].english)).toBeInTheDocument();
 
-    await user.click(screen.getByRole("button", { name: "예문" }));
-    expect(onSpeak).toHaveBeenLastCalledWith(pattern, pattern.examples[0].english, pattern.id);
-    expect(screen.getByText(pattern.examples[0].english)).toBeInTheDocument();
+    answer = screen.getByRole("button", { name: /발음 듣기$/ });
+    fireEvent.pointerDown(answer, { pointerId: 4, pointerType: "touch", clientX: 100, clientY: 60 });
+    act(() => vi.advanceTimersByTime(370));
+    fireEvent.pointerMove(answer, { pointerId: 4, pointerType: "touch", clientX: 100, clientY: 104 });
+    fireEvent.pointerUp(answer, { pointerId: 4, pointerType: "touch", clientX: 100, clientY: 104 });
+    fireEvent.click(answer);
+    expect(onSpeak).toHaveBeenLastCalledWith(pattern, undefined, pattern.id);
+    expect(screen.getByText(pattern.english)).toBeInTheDocument();
   });
 
   it("supports the same connection practice with arrow keys", () => {
