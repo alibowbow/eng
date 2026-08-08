@@ -1,9 +1,9 @@
 import {
+  BadgeCheck,
   BookOpenText,
   Check,
   Circle,
   CircleDot,
-  RotateCcw,
   Star,
 } from "lucide-react";
 import {
@@ -14,6 +14,7 @@ import {
   useRef,
   useState,
   type KeyboardEvent,
+  type MouseEvent,
   type PointerEvent,
 } from "react";
 import type { ConversationPattern } from "../content/schema";
@@ -45,6 +46,7 @@ export interface PatternCardProps {
   revealed?: boolean;
   selected?: boolean;
   isSpeaking?: boolean;
+  favorite?: boolean;
   onRevealChange?: (patternId: string, revealed: boolean) => void;
   onActivate?: (pattern: ConversationPattern) => void;
   onSpeak: (
@@ -54,6 +56,7 @@ export interface PatternCardProps {
     options?: { slow?: boolean },
   ) => void;
   onOpenDetails?: (pattern: ConversationPattern) => void;
+  onFavoriteChange?: (patternId: string, favorite: boolean) => void;
 }
 
 interface PointerOrigin {
@@ -117,7 +120,7 @@ function radialDrag(deltaX: number, deltaY: number) {
 }
 
 function masteryMeta(mastery = 0) {
-  if (mastery >= 5) return { label: "숙달", Icon: Star, level: "mastered" };
+  if (mastery >= 5) return { label: "숙달", Icon: BadgeCheck, level: "mastered" };
   if (mastery >= 4) return { label: "익힘", Icon: Check, level: "known" };
   if (mastery >= 2) return { label: "학습 중", Icon: CircleDot, level: "learning" };
   return { label: "미학습", Icon: Circle, level: "new" };
@@ -151,10 +154,12 @@ function PatternCardComponent({
   revealed = false,
   selected = false,
   isSpeaking = false,
+  favorite = false,
   onRevealChange,
   onActivate,
   onSpeak,
   onOpenDetails,
+  onFavoriteChange,
 }: PatternCardProps) {
   const cardRef = useRef<HTMLElement>(null);
   const pointerOrigin = useRef<PointerOrigin | null>(null);
@@ -162,6 +167,7 @@ function PatternCardComponent({
   const suppressNextClick = useRef(false);
   const gestureDirectionRef = useRef<RadialDirection | null>(null);
   const gestureActiveRef = useRef(false);
+  const gestureScrollGuardCleanup = useRef<(() => void) | null>(null);
   const previousPatternId = useRef(pattern.id);
   const [practiceOverride, setPracticeOverride] = useState<PracticeOverride | null>(null);
   const [radialGesture, setRadialGesture] = useState<RadialGestureState | null>(null);
@@ -205,19 +211,43 @@ function PatternCardComponent({
     }
   }, []);
 
+  const releaseGestureScrollGuard = useCallback(() => {
+    const cleanup = gestureScrollGuardCleanup.current;
+    gestureScrollGuardCleanup.current = null;
+    cleanup?.();
+  }, []);
+
+  const claimGestureScroll = useCallback(() => {
+    releaseGestureScrollGuard();
+
+    const preventTouchScroll = (event: TouchEvent) => {
+      if (gestureActiveRef.current && event.cancelable) event.preventDefault();
+    };
+
+    window.addEventListener("touchmove", preventTouchScroll, {
+      capture: true,
+      passive: false,
+    });
+    gestureScrollGuardCleanup.current = () => {
+      window.removeEventListener("touchmove", preventTouchScroll, true);
+    };
+  }, [releaseGestureScrollGuard]);
+
   const closeRadialGesture = useCallback(() => {
     gestureActiveRef.current = false;
     gestureDirectionRef.current = null;
+    releaseGestureScrollGuard();
     setRadialGesture(null);
-  }, []);
+  }, [releaseGestureScrollGuard]);
 
   useEffect(
     () => () => {
       clearLongPress();
       gestureActiveRef.current = false;
       gestureDirectionRef.current = null;
+      releaseGestureScrollGuard();
     },
-    [clearLongPress],
+    [clearLongPress, releaseGestureScrollGuard],
   );
 
   useEffect(() => {
@@ -309,6 +339,7 @@ function PatternCardComponent({
     suppressNextClick.current = true;
     gestureActiveRef.current = true;
     gestureDirectionRef.current = null;
+    claimGestureScroll();
 
     const rect = cardRef.current?.getBoundingClientRect();
     const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
@@ -328,11 +359,12 @@ function PatternCardComponent({
     onActivate?.(pattern);
     setRadialGesture({ center, direction: null, drag: { x: 0, y: 0 } });
     navigator.vibrate?.(10);
-  }, [onActivate, pattern]);
+  }, [claimGestureScroll, onActivate, pattern]);
 
   const handlePointerDown = useCallback(
     (event: PointerEvent<HTMLDivElement>) => {
       if (event.pointerType === "mouse" && event.button !== 0) return;
+      if (pointerOrigin.current) return;
       event.currentTarget.setPointerCapture?.(event.pointerId);
       suppressNextClick.current = false;
       pointerOrigin.current = {
@@ -376,9 +408,9 @@ function PatternCardComponent({
   const handlePointerUp = useCallback(
     (event: PointerEvent<HTMLDivElement>) => {
       const origin = pointerOrigin.current;
+      if (!origin || origin.pointerId !== event.pointerId) return;
       clearLongPress();
       pointerOrigin.current = null;
-      if (!origin || origin.pointerId !== event.pointerId) return;
       if (origin.longPressed) {
         event.preventDefault();
         suppressNextClick.current = true;
@@ -392,7 +424,9 @@ function PatternCardComponent({
     [clearLongPress, closeRadialGesture, performRadialAction],
   );
 
-  const cancelPointerGesture = useCallback(() => {
+  const cancelPointerGesture = useCallback((event: PointerEvent<HTMLDivElement>) => {
+    const origin = pointerOrigin.current;
+    if (!origin || origin.pointerId !== event.pointerId) return;
     clearLongPress();
     pointerOrigin.current = null;
     suppressNextClick.current = true;
@@ -406,6 +440,19 @@ function PatternCardComponent({
     }
     speakCurrent();
   }, [speakCurrent]);
+
+  const stopFavoritePointer = useCallback((event: PointerEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+  }, []);
+
+  const handleFavoriteClick = useCallback(
+    (event: MouseEvent<HTMLButtonElement>) => {
+      event.preventDefault();
+      event.stopPropagation();
+      onFavoriteChange?.(pattern.id, !favorite);
+    },
+    [favorite, onFavoriteChange, pattern.id],
+  );
 
   const handleKeyDown = useCallback(
     (event: KeyboardEvent<HTMLDivElement>) => {
@@ -460,10 +507,11 @@ function PatternCardComponent({
   return (
     <article
       ref={cardRef}
-      className={`sg-pattern-card sg-density-${density}${revealed ? " is-revealed" : ""}${selected ? " is-selected" : ""}${isSpeaking ? " is-speaking" : ""}${progress?.due ? " is-due" : ""}${radialGesture ? " is-gesture-active" : ""}`}
+      className={`sg-pattern-card sg-density-${density}${revealed ? " is-revealed" : ""}${selected ? " is-selected" : ""}${isSpeaking ? " is-speaking" : ""}${radialGesture ? " is-gesture-active" : ""}`}
       data-pattern-id={pattern.id}
       data-card-tone={cardTone(pattern)}
       data-mastery={mastery.level}
+      data-favorite={favorite ? "true" : "false"}
       data-practice-kind={practiceOverride?.kind ?? "base"}
     >
       <div className={`sg-pattern-card__topline${toplineLabel ? " has-label" : ""}`}>
@@ -473,12 +521,6 @@ function PatternCardComponent({
           </p>
         ) : null}
         <span className="sg-pattern-card__signals">
-          {progress?.due ? (
-            <span className="sg-mini-signal is-due" title="복습 예정">
-              <RotateCcw aria-hidden="true" />
-              <span className="sg-sr-only">복습 예정</span>
-            </span>
-          ) : null}
           {mastery.level !== "new" ? (
             <span className={`sg-mastery-mark is-${mastery.level}`} title={mastery.label}>
               <mastery.Icon aria-hidden="true" />
@@ -494,6 +536,26 @@ function PatternCardComponent({
           >
             <BookOpenText aria-hidden="true" />
             <span>상세</span>
+          </button>
+          <button
+            type="button"
+            className={`sg-favorite-button${favorite ? " is-favorite" : ""}`}
+            aria-label={`${pattern.english} 즐겨찾기 ${favorite ? "해제" : "추가"}`}
+            aria-pressed={favorite}
+            title={favorite ? "즐겨찾기 해제" : "즐겨찾기 추가"}
+            disabled={!onFavoriteChange}
+            onPointerDown={stopFavoritePointer}
+            onPointerMove={stopFavoritePointer}
+            onPointerUp={stopFavoritePointer}
+            onPointerCancel={stopFavoritePointer}
+            onClick={handleFavoriteClick}
+            onKeyDown={(event) => event.stopPropagation()}
+            onContextMenu={(event) => {
+              event.preventDefault();
+              event.stopPropagation();
+            }}
+          >
+            <Star aria-hidden="true" fill={favorite ? "currentColor" : "none"} />
           </button>
         </span>
       </div>
@@ -511,6 +573,7 @@ function PatternCardComponent({
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerCancel={cancelPointerGesture}
+        onLostPointerCapture={cancelPointerGesture}
         onContextMenu={(event) => event.preventDefault()}
       >
         {englishVisible ? (

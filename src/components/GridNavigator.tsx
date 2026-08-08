@@ -217,7 +217,11 @@ export function GridNavigator({
               if (jumpError) setJumpError("");
             }}
           />
-          <button type="submit" disabled={safeTotalCount === 0}>
+          <button
+            type="submit"
+            aria-label="입력한 번호로 이동"
+            disabled={safeTotalCount === 0}
+          >
             <span>이동</span>
             <ArrowRight aria-hidden="true" />
           </button>

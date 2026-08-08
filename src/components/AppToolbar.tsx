@@ -1,5 +1,4 @@
 import {
-  Clock3,
   Eye,
   EyeOff,
   Filter,
@@ -11,6 +10,7 @@ import {
   Search,
   Settings,
   Shuffle,
+  Star,
 } from "lucide-react";
 import { memo } from "react";
 import type { DisplayMode, GridDensity } from "./types";
@@ -21,12 +21,13 @@ export interface AppToolbarProps {
   density: GridDensity;
   onDensityChange: (density: GridDensity) => void;
   totalCount: number;
-  dueCount: number;
+  favoriteCount: number;
+  favoritesOnly: boolean;
   activeFilterCount?: number;
   onSearch: () => void;
   onFilters: () => void;
   onRandom: (count: number) => void;
-  onReview: () => void;
+  onToggleFavoritesOnly: () => void;
   onSettings: () => void;
   onHome: () => void;
   allRevealed?: boolean;
@@ -51,12 +52,13 @@ function AppToolbarComponent({
   density,
   onDensityChange,
   totalCount,
-  dueCount,
+  favoriteCount,
+  favoritesOnly,
   activeFilterCount = 0,
   onSearch,
   onFilters,
   onRandom,
-  onReview,
+  onToggleFavoritesOnly,
   onSettings,
   onHome,
   allRevealed = false,
@@ -96,10 +98,16 @@ function AppToolbarComponent({
               <Shuffle aria-hidden="true" />
               <span>랜덤 50</span>
             </button>
-            <button type="button" className="sg-toolbar-button" onClick={onReview}>
-              <Clock3 aria-hidden="true" />
-              <span>복습</span>
-              {dueCount > 0 ? <b aria-label={`복습 예정 ${dueCount}개`}>{dueCount}</b> : null}
+            <button
+              type="button"
+              className={`sg-toolbar-button sg-toolbar-favorite${favoritesOnly ? " is-active" : ""}`}
+              aria-label={`즐겨찾기 ${favoriteCount.toLocaleString("ko-KR")}개${favoritesOnly ? ", 전체 보기로 전환" : "만 보기"}`}
+              aria-pressed={favoritesOnly}
+              onClick={onToggleFavoritesOnly}
+            >
+              <Star aria-hidden="true" fill={favoritesOnly ? "currentColor" : "none"} />
+              <span>즐겨찾기</span>
+              <b aria-hidden="true">{favoriteCount.toLocaleString("ko-KR")}</b>
             </button>
             <button type="button" className="sg-toolbar-button is-search" onClick={onSearch}>
               <Search aria-hidden="true" />
@@ -126,7 +134,12 @@ function AppToolbarComponent({
           <span>개 패턴</span>
         </p>
         {onToggleRevealAll ? (
-          <button type="button" className="sg-quiet-button" onClick={onToggleRevealAll}>
+          <button
+            type="button"
+            className="sg-quiet-button"
+            aria-label={allRevealed ? "전체 다시 가리기" : "전체 정답 보기"}
+            onClick={onToggleRevealAll}
+          >
             {allRevealed ? <RefreshCw aria-hidden="true" /> : <Eye aria-hidden="true" />}
             <span>{allRevealed ? "전체 다시 가리기" : "전체 정답 보기"}</span>
           </button>

@@ -81,7 +81,7 @@ export interface StoredManifest {
 
 export interface RecentSession {
   id: string;
-  kind: "grid" | "random" | "review" | "listening";
+  kind: "grid" | "random" | "listening";
   patternIds: string[];
   completedPatternIds: string[];
   startedAt: string;
@@ -324,6 +324,19 @@ export function saveProgress(progress: LearningProgress): Promise<void> {
   return putRecord("userProgress", { ...progress, updatedAt: new Date().toISOString() });
 }
 
+export async function getFavoriteIds(): Promise<Set<string>> {
+  const records = await getAllRecords("favorites");
+  return new Set(records.map((record) => record.patternId));
+}
+
+export function setFavorite(patternId: string, favorite: boolean): Promise<void> {
+  if (!favorite) return deleteRecord("favorites", patternId);
+  return putRecord("favorites", {
+    patternId,
+    createdAt: new Date().toISOString(),
+  });
+}
+
 export async function getSettings(): Promise<AppSettings> {
   const stored = await getRecord("appSettings", "main");
   return { ...DEFAULT_SETTINGS, ...stored };
@@ -432,7 +445,6 @@ export async function resetLearningData(): Promise<void> {
   await Promise.all([
     clearStore("userProgress"),
     clearStore("reviewSchedule"),
-    clearStore("favorites"),
     clearStore("personalNotes"),
     clearStore("recentSessions"),
     clearStore("lastGridPosition"),

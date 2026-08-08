@@ -66,7 +66,6 @@ function PatternDetailDrawerComponent({
           {pattern.register.map((register) => (
             <span key={register}>{REGISTER_LABELS[register] ?? register}</span>
           ))}
-          {progress?.due ? <span className="is-due">복습 예정</span> : null}
         </div>
         <p className="sg-detail-formula" lang="en">{pattern.pattern}</p>
         <h3 lang="en">{pattern.english}</h3>

@@ -1,5 +1,4 @@
 import type { ConversationPattern, LearningProgress } from '../content/schema';
-import { isReviewDue } from './review';
 
 export type MasteryFilter =
   | 'unlearned'
@@ -7,8 +6,7 @@ export type MasteryFilter =
   | 'unknown'
   | 'unsure'
   | 'known'
-  | 'mastered'
-  | 'due';
+  | 'mastered';
 
 export interface PatternFilters {
   categoryIds?: readonly string[];
@@ -19,7 +17,6 @@ export interface PatternFilters {
   register?: readonly ConversationPattern['register'][number][];
   mastery?: readonly MasteryFilter[];
   favoritesOnly?: boolean;
-  reviewDueOnly?: boolean;
   newOnly?: boolean;
 }
 
@@ -35,7 +32,6 @@ export interface SearchPatternsOptions {
   progressById?: ProgressLookup;
   notesById?: NotesLookup;
   favoriteIds?: ReadonlySet<string> | readonly string[];
-  now?: Date | number | string;
   /** Items released on or after this time receive the `newOnly` match. */
   newSince?: Date | number | string;
 }
@@ -98,7 +94,6 @@ export function matchesSearchQuery(pattern: ConversationPattern, query: string, 
 function matchesMasteryFilters(
   selected: readonly MasteryFilter[] | undefined,
   progress: LearningProgress | undefined,
-  now: SearchPatternsOptions['now'],
 ): boolean {
   if (!selected?.length) return true;
   return selected.some((filter) => {
@@ -107,8 +102,7 @@ function matchesMasteryFilters(
     if (filter === 'unknown') return progress?.lastRating === 'unknown';
     if (filter === 'unsure') return progress?.lastRating === 'unsure';
     if (filter === 'known') return progress?.lastRating === 'known';
-    if (filter === 'mastered') return progress?.mastery === 5;
-    return isReviewDue(progress, now);
+    return progress?.mastery === 5;
   });
 }
 
@@ -123,7 +117,7 @@ function isFavorite(id: string, favorites: SearchPatternsOptions['favoriteIds'])
 export function matchesPatternFilters(
   pattern: ConversationPattern,
   filters: PatternFilters = {},
-  context: Pick<SearchPatternsOptions, 'progressById' | 'favoriteIds' | 'now' | 'newSince'> = {},
+  context: Pick<SearchPatternsOptions, 'progressById' | 'favoriteIds' | 'newSince'> = {},
 ): boolean {
   if (!intersects(pattern.categoryIds, filters.categoryIds)) return false;
   if (!intersects(pattern.situationIds, filters.situationIds)) return false;
@@ -134,8 +128,7 @@ export function matchesPatternFilters(
   if (filters.favoritesOnly && !isFavorite(pattern.id, context.favoriteIds)) return false;
 
   const progress = lookup(context.progressById, pattern.id);
-  if (filters.reviewDueOnly && !isReviewDue(progress, context.now)) return false;
-  if (!matchesMasteryFilters(filters.mastery, progress, context.now)) return false;
+  if (!matchesMasteryFilters(filters.mastery, progress)) return false;
 
   if (filters.newOnly) {
     if (!pattern.releasedAt) return false;

@@ -64,11 +64,19 @@ describe('pattern search and filters', () => {
     };
     const results = searchPatterns([aboutTo, request], {
       query: '다시 could',
-      filters: { mastery: ['due', 'mastered'], favoritesOnly: true, newOnly: true },
+      filters: { mastery: ['mastered'], favoritesOnly: true, newOnly: true },
       progressById: new Map([[request.id, progress]]),
       favoriteIds: new Set([request.id]),
       newSince: '2026-07-31T00:00:00.000Z',
-      now: '2026-08-08T00:00:00.000Z',
+    });
+
+    expect(results.map((pattern) => pattern.id)).toEqual([request.id]);
+  });
+
+  it('returns only IDs present in the persistent favorites set', () => {
+    const results = searchPatterns([aboutTo, request], {
+      filters: { favoritesOnly: true },
+      favoriteIds: new Set([request.id]),
     });
 
     expect(results.map((pattern) => pattern.id)).toEqual([request.id]);

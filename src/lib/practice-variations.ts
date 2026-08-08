@@ -70,7 +70,6 @@ const WORD_SWAP_RULES: readonly TextRule[] = [
   { pattern: /\beasy to talk to\b/i, replacement: "pleasant to talk to" },
   { pattern: /\bwhat time is check-in\b/i, replacement: "when does check-in begin" },
   { pattern: /\bhave to memorize this\b/i, replacement: "need to learn this by heart" },
-  { pattern: /\btomorrow instead\b/i, replacement: "tomorrow as an alternative" },
   { pattern: /\bbe any better\b/i, replacement: "work any better" },
   { pattern: /\bflexibility on the price\b/i, replacement: "leeway on the price" },
   { pattern: /\bI'd prefer\b/i, replacement: "I would prefer" },
@@ -79,7 +78,7 @@ const WORD_SWAP_RULES: readonly TextRule[] = [
   { pattern: /\bbrings you here\b/i, replacement: "brought you here" },
   { pattern: /\blong time no see\b/i, replacement: "haven't seen you in ages" },
   { pattern: /\bgive me an example\b/i, replacement: "provide an example" },
-  { pattern: /\bwhat do you mean by that\b/i, replacement: "what are you getting at" },
+  { pattern: /\bwhat do you mean by that\b/i, replacement: "what are you referring to" },
   { pattern: /\bwhat do you mean\b/i, replacement: "what are you referring to" },
   { pattern: /^Really(?=\?)/i, replacement: "Seriously" },
   { pattern: /\bif I understand correctly\b/i, replacement: "if I have this right" },
@@ -95,7 +94,6 @@ const WORD_SWAP_RULES: readonly TextRule[] = [
   { pattern: /\brings a bell\b/i, replacement: "sounds familiar" },
   { pattern: /\bcall it a day\b/i, replacement: "wrap things up" },
   { pattern: /\bget the ball rolling\b/i, replacement: "get things moving" },
-  { pattern: /\bleave a message\b/i, replacement: "leave a note" },
   { pattern: /\bget started\b/i, replacement: "begin" },
   { pattern: /\bmake a decision\b/i, replacement: "make a choice" },
   { pattern: /\bwork on this\b/i, replacement: "tackle this" },
@@ -105,25 +103,20 @@ const WORD_SWAP_RULES: readonly TextRule[] = [
   { pattern: /\bhow much is this\b/i, replacement: "how much is this item" },
   { pattern: /\btry this on\b/i, replacement: "try this item on" },
   { pattern: /\bpay by card\b/i, replacement: "pay with a card" },
-  { pattern: /\bget a receipt\b/i, replacement: "get proof of purchase" },
+  { pattern: /\bget a receipt\b/i, replacement: "request a receipt" },
   { pattern: /\bsplit the payment\b/i, replacement: "divide the payment" },
-  { pattern: /\bbreakfast\b/i, replacement: "morning meal" },
   { pattern: /\bleave my luggage\b/i, replacement: "store my luggage" },
   { pattern: /\bget to the station\b/i, replacement: "reach the station" },
   { pattern: /\blet me know\b/i, replacement: "tell me" },
   { pattern: /\bprescription\b/i, replacement: "written prescription" },
-  { pattern: /\bcall an ambulance\b/i, replacement: "phone an ambulance" },
   { pattern: /\bstay on the line\b/i, replacement: "remain on the line" },
   { pattern: /\bput it another way\b/i, replacement: "say it differently" },
   { pattern: /^I see(?=\.)/i, replacement: "I understand" },
-  { pattern: /\bmakes sense\b/i, replacement: "is logical" },
-  { pattern: /\bfair enough\b/i, replacement: "reasonable enough" },
+  { pattern: /^That makes sense(?=\.)/i, replacement: "That seems reasonable" },
+  { pattern: /^Fair enough(?=\.)/i, replacement: "That seems reasonable" },
   { pattern: /\bgood to know\b/i, replacement: "helpful to know" },
-  { pattern: /^No way(?=\.)/i, replacement: "Impossible" },
-  { pattern: /\bnot necessarily\b/i, replacement: "not always" },
   { pattern: /\bwhat a surprise\b/i, replacement: "how surprising" },
   { pattern: /\bhave a point\b/i, replacement: "make a valid point" },
-  { pattern: /\bagree to disagree\b/i, replacement: "accept our disagreement" },
   { pattern: /\bsit here\b/i, replacement: "take this seat" },
   { pattern: /\bjoin us\b/i, replacement: "come with us" },
   { pattern: /\bgrab lunch\b/i, replacement: "get lunch" },
@@ -140,22 +133,19 @@ const WORD_SWAP_RULES: readonly TextRule[] = [
   { pattern: /\bmy fault\b/i, replacement: "my mistake" },
   { pattern: /\bowe you an apology\b/i, replacement: "need to apologize to you" },
   { pattern: /\bforgive me\b/i, replacement: "excuse me" },
-  { pattern: /\bproud of yourself\b/i, replacement: "pleased with yourself" },
   { pattern: /\bgoing to be okay\b/i, replacement: "going to be all right" },
   { pattern: /\baddress this\b/i, replacement: "deal with this" },
   { pattern: /\bexchange this\b/i, replacement: "swap this" },
   { pattern: /\breceipt for a refund\b/i, replacement: "proof of purchase for a refund" },
-  { pattern: /\brefund it\b/i, replacement: "return the money" },
   { pattern: /\bchecks the weather\b/i, replacement: "looks at the forecast" },
   { pattern: /\bat first\b/i, replacement: "initially" },
   { pattern: /\bhope everything\b/i, replacement: "hope it all" },
-  { pattern: /\bhave my word\b/i, replacement: "have my promise" },
+  { pattern: /\bhave my word\b/i, replacement: "have my assurance" },
   { pattern: /\bcount on me\b/i, replacement: "rely on me" },
   { pattern: /\bask you a favor\b/i, replacement: "ask you for help" },
   { pattern: /\bhow have you been\b/i, replacement: "how have things been" },
   { pattern: /\bmy name is\b/i, replacement: "I go by" },
   { pattern: /\bwhat page\b/i, replacement: "which page" },
-  { pattern: /\bcarry that\b/i, replacement: "hold that" },
   { pattern: /\blet's do it\b/i, replacement: "let's go for it" },
   { pattern: /\bcongratulations\b/i, replacement: "congrats" },
   { pattern: /\bgood morning\b/i, replacement: "morning" },
@@ -169,19 +159,15 @@ const WORD_SWAP_RULES: readonly TextRule[] = [
   { pattern: /\btold you\b/i, replacement: "informed you" },
   { pattern: /\bdecide to\b/i, replacement: "choose to" },
   { pattern: /\bhow does this work\b/i, replacement: "how does this function" },
-  { pattern: /\banything else\b/i, replacement: "something more" },
-  { pattern: /\bwhat happened\b/i, replacement: "what occurred" },
   { pattern: /\bafter that\b/i, replacement: "following that" },
   { pattern: /\bmake you feel\b/i, replacement: "leave you feeling" },
   { pattern: /\bdo next\b/i, replacement: "do afterward" },
   { pattern: /\bthink that happened\b/i, replacement: "believe that occurred" },
   { pattern: /\bhappened before\b/i, replacement: "occurred previously" },
-  { pattern: /\bturn out\b/i, replacement: "end up" },
   { pattern: /\bthis one\b/i, replacement: "this particular one" },
   { pattern: /\bare you saying\b/i, replacement: "are you suggesting" },
   { pattern: /\bshould wait\b/i, replacement: "should hold off" },
   { pattern: /\balready done\b/i, replacement: "already finished" },
-  { pattern: /\bneed an appointment\b/i, replacement: "require a booking" },
   { pattern: /\bunderstanding you right\b/i, replacement: "following you correctly" },
   { pattern: /\bmissed what you said\b/i, replacement: "didn't hear what you said" },
   { pattern: /\bin my opinion\b/i, replacement: "in my view" },
@@ -190,23 +176,20 @@ const WORD_SWAP_RULES: readonly TextRule[] = [
   { pattern: /\btend to think\b/i, replacement: "generally believe" },
   { pattern: /\bmight have forgotten\b/i, replacement: "may have forgotten" },
   { pattern: /\bI guess\b/i, replacement: "I suppose" },
-  { pattern: /\bchanged their minds\b/i, replacement: "reconsidered" },
   { pattern: /\bpart of the reason\b/i, replacement: "one factor" },
   { pattern: /\bgiven the weather\b/i, replacement: "considering the weather" },
   { pattern: /\bstaying inside\b/i, replacement: "remaining indoors" },
   { pattern: /\bfor example\b/i, replacement: "for instance" },
-  { pattern: /\bfor instance\b/i, replacement: "as an example" },
   { pattern: /\bone good example\b/i, replacement: "one clear example" },
   { pattern: /\bsomething like\b/i, replacement: "something such as" },
   { pattern: /\ba case in point\b/i, replacement: "a good illustration" },
   { pattern: /\bmain difference\b/i, replacement: "key distinction" },
   { pattern: /\bon the other hand\b/i, replacement: "by contrast" },
-  { pattern: /\btakes more time\b/i, replacement: "requires longer" },
+  { pattern: /\btakes more time\b/i, replacement: "needs more time" },
   { pattern: /\bgreat sense of humor\b/i, replacement: "wonderful sense of humor" },
   { pattern: /\bcarry around\b/i, replacement: "take with you" },
   { pattern: /\blooks better\b/i, replacement: "appears nicer" },
   { pattern: /\bstands out\b/i, replacement: "is most noticeable" },
-  { pattern: /\battention to detail\b/i, replacement: "care with the details" },
   { pattern: /\bthe store\b/i, replacement: "the shop" },
   { pattern: /\bgetting better\b/i, replacement: "improving" },
   { pattern: /\bby the way\b/i, replacement: "incidentally" },
@@ -221,9 +204,7 @@ const WORD_SWAP_RULES: readonly TextRule[] = [
   { pattern: /\bgive my best\b/i, replacement: "send my regards" },
   { pattern: /\bit depends\b/i, replacement: "that varies" },
   { pattern: /\bnever thought about\b/i, replacement: "never considered" },
-  { pattern: /\bchanged my mind\b/i, replacement: "reconsidered" },
   { pattern: /\bbasically\b/i, replacement: "essentially" },
-  { pattern: /\bthe thing is\b/i, replacement: "the issue is" },
   { pattern: /\bmade other plans\b/i, replacement: "made different plans" },
   { pattern: /\bI was wondering\b/i, replacement: "I wanted to know" },
   { pattern: /\bwith all due respect\b/i, replacement: "respectfully" },
@@ -231,7 +212,6 @@ const WORD_SWAP_RULES: readonly TextRule[] = [
   { pattern: /\bwanna\b/i, replacement: "want to" },
   { pattern: /\bdunno\b/i, replacement: "don't know" },
   { pattern: /\bwhaddaya\b/i, replacement: "what do you" },
-  { pattern: /\bran out of\b/i, replacement: "used up all the" },
   { pattern: /\btook me a while\b/i, replacement: "took me some time" },
   { pattern: /\bget over\b/i, replacement: "recover from" },
   { pattern: /\bspeak to\b/i, replacement: "talk to" },
@@ -251,17 +231,14 @@ const WORD_SWAP_RULES: readonly TextRule[] = [
   { pattern: /\bit hurts\b/i, replacement: "it aches" },
   { pattern: /\bhow often\b/i, replacement: "how frequently" },
   { pattern: /\beveryone\b/i, replacement: "everybody" },
-  { pattern: /\bhas been stolen\b/i, replacement: "has been taken" },
   { pattern: /\bwhat I meant\b/i, replacement: "what I intended" },
   { pattern: /\btalking about\b/i, replacement: "discussing" },
   { pattern: /\bdifferent things\b/i, replacement: "different topics" },
   { pattern: /\bput this\b/i, replacement: "phrase this" },
   { pattern: /\bgive me a moment\b/i, replacement: "give me a second" },
-  { pattern: /\boff the top of my head\b/i, replacement: "at first thought" },
   { pattern: /\bget back to you\b/i, replacement: "follow up with you" },
   { pattern: /\byou actually did it\b/i, replacement: "you really did it" },
   { pattern: /\bknow how you feel\b/i, replacement: "understand how you feel" },
-  { pattern: /\bevery right\b/i, replacement: "every reason" },
   { pattern: /\bsounds right\b/i, replacement: "seems correct" },
   { pattern: /\bagree up to a point\b/i, replacement: "partly agree" },
   { pattern: /\bmay be right\b/i, replacement: "could be correct" },
@@ -270,7 +247,6 @@ const WORD_SWAP_RULES: readonly TextRule[] = [
   { pattern: /\bunderstand your point\b/i, replacement: "see your perspective" },
   { pattern: /\bsome concerns\b/i, replacement: "some reservations" },
   { pattern: /\banother explanation\b/i, replacement: "a different explanation" },
-  { pattern: /\brespectfully disagree\b/i, replacement: "politely disagree" },
   { pattern: /\bdo you mind if\b/i, replacement: "is it okay if" },
   { pattern: /\bbe all right to\b/i, replacement: "be okay to" },
   { pattern: /\bhow about meeting\b/i, replacement: "what about meeting" },
@@ -281,16 +257,15 @@ const WORD_SWAP_RULES: readonly TextRule[] = [
   { pattern: /\bofficial invitation\b/i, replacement: "formal invite" },
   { pattern: /\bmight want to\b/i, replacement: "may want to" },
   { pattern: /\bsave a copy\b/i, replacement: "keep a copy" },
-  { pattern: /\bbetter to wait\b/i, replacement: "best to hold off" },
+  { pattern: /\bbetter to wait\b/i, replacement: "better to hold off" },
   { pattern: /\bneed a hand\b/i, replacement: "want some help" },
-  { pattern: /\bgive you a ride\b/i, replacement: "drive you" },
+  { pattern: /\bgive you a ride\b/i, replacement: "drive you there" },
   { pattern: /\bmake this easier\b/i, replacement: "simplify this" },
   { pattern: /\bworks for me\b/i, replacement: "suits me" },
   { pattern: /\bthanks for asking\b/i, replacement: "thank you for asking" },
   { pattern: /\bas a compromise\b/i, replacement: "as a middle ground" },
   { pattern: /\bmeet halfway\b/i, replacement: "split the difference" },
   { pattern: /\border more\b/i, replacement: "place a larger order" },
-  { pattern: /\bone condition\b/i, replacement: "one requirement" },
   { pattern: /\bin return\b/i, replacement: "in exchange" },
   { pattern: /\bfair compromise\b/i, replacement: "reasonable middle ground" },
   { pattern: /\bletting me know\b/i, replacement: "telling me" },
@@ -307,7 +282,6 @@ const WORD_SWAP_RULES: readonly TextRule[] = [
   { pattern: /\bover an hour\b/i, replacement: "more than an hour" },
   { pattern: /\bmuch noisier\b/i, replacement: "far louder" },
   { pattern: /\bbought this\b/i, replacement: "purchased this" },
-  { pattern: /\brestocking fee\b/i, replacement: "return charge" },
   { pattern: /\busually get up\b/i, replacement: "normally get up" },
   { pattern: /\beat out\b/i, replacement: "dine out" },
   { pattern: /\bevery now and then\b/i, replacement: "occasionally" },
@@ -315,17 +289,14 @@ const WORD_SWAP_RULES: readonly TextRule[] = [
   { pattern: /\blose track of time\b/i, replacement: "forget the time" },
   { pattern: /\bused to live\b/i, replacement: "formerly lived" },
   { pattern: /\bnear here\b/i, replacement: "nearby" },
-  { pattern: /\bat a conference\b/i, replacement: "at a convention" },
   { pattern: /\banything like it\b/i, replacement: "anything similar" },
   { pattern: /\blooking back\b/i, replacement: "in retrospect" },
   { pattern: /\bit all started\b/i, replacement: "it all began" },
   { pattern: /\bmissed the bus\b/i, replacement: "failed to catch the bus" },
   { pattern: /\bout of nowhere\b/i, replacement: "without warning" },
-  { pattern: /\blights went out\b/i, replacement: "power went out" },
   { pattern: /\bbefore I knew it\b/i, replacement: "before I realized it" },
   { pattern: /\bto make a long story short\b/i, replacement: "to cut a long story short" },
   { pattern: /\bgot home safely\b/i, replacement: "made it home safely" },
-  { pattern: /\bthe funny thing is\b/i, replacement: "the amusing part is" },
   { pattern: /\ball along\b/i, replacement: "the whole time" },
   { pattern: /\bin the end\b/i, replacement: "ultimately" },
   { pattern: /\bbetter than expected\b/i, replacement: "better than anticipated" },
@@ -360,20 +331,17 @@ const WORD_SWAP_RULES: readonly TextRule[] = [
   { pattern: /\bthe right choice\b/i, replacement: "the correct choice" },
   { pattern: /\bthe right person\b/i, replacement: "the appropriate person" },
   { pattern: /\bthe nearest\b/i, replacement: "the closest" },
-  { pattern: /\bthe best way\b/i, replacement: "the easiest way" },
   { pattern: /\bmore slowly\b/i, replacement: "slower" },
   { pattern: /\bless spicy\b/i, replacement: "milder" },
   { pattern: /\blarger size\b/i, replacement: "bigger size" },
   { pattern: /\bhigher floor\b/i, replacement: "upper floor" },
   { pattern: /\bwalking distance\b/i, replacement: "a walkable distance" },
   { pattern: /\bside effects\b/i, replacement: "adverse effects" },
-  { pattern: /\bfamily matter\b/i, replacement: "family issue" },
   { pattern: /\bformal complaint\b/i, replacement: "official complaint" },
   { pattern: /\bimportant detail\b/i, replacement: "key detail" },
   { pattern: /\bdaily routine\b/i, replacement: "everyday routine" },
   { pattern: /\bhard work\b/i, replacement: "effort" },
   { pattern: /\bbackup plan\b/i, replacement: "fallback plan" },
-  { pattern: /\bstore credit\b/i, replacement: "shop credit" },
   { pattern: /\bvideo call\b/i, replacement: "video chat" },
   { pattern: /\bphone\b/i, replacement: "mobile" },
   { pattern: /\bvacation\b/i, replacement: "holiday" },
@@ -386,12 +354,12 @@ const WORD_SWAP_RULES: readonly TextRule[] = [
   { pattern: /\bfrustrating\b/i, replacement: "annoying" },
   { pattern: /\bdifficult\b/i, replacement: "challenging" },
   { pattern: /\bhard\b/i, replacement: "tough" },
+  { pattern: /\bmake it look easy\b/i, replacement: "make it look effortless" },
   { pattern: /\beasy\b/i, replacement: "simple" },
   { pattern: /\bsimple\b/i, replacement: "straightforward" },
   { pattern: /\bpractical\b/i, replacement: "functional" },
   { pattern: /\bspacious\b/i, replacement: "roomy" },
   { pattern: /\bbright\b/i, replacement: "well-lit" },
-  { pattern: /\bquiet\b/i, replacement: "silent" },
   { pattern: /\bnoisy\b/i, replacement: "loud" },
   { pattern: /\bexpensive\b/i, replacement: "costly" },
   { pattern: /\bcheaper\b/i, replacement: "less expensive" },
@@ -401,25 +369,19 @@ const WORD_SWAP_RULES: readonly TextRule[] = [
   { pattern: /\bexhausted\b/i, replacement: "worn out" },
   { pattern: /\bnervous\b/i, replacement: "anxious" },
   { pattern: /\bupset\b/i, replacement: "distressed" },
-  { pattern: /\bhappy\b/i, replacement: "glad" },
   { pattern: /\bcareful\b/i, replacement: "cautious" },
   { pattern: /\bclearly\b/i, replacement: "well" },
   { pattern: /\bquick\b/i, replacement: "brief" },
   { pattern: /\bquickly\b/i, replacement: "promptly" },
-  { pattern: /\btemporarily\b/i, replacement: "currently" },
+  { pattern: /\btemporarily unavailable\b/i, replacement: "unavailable for now" },
   { pattern: /\bmainly\b/i, replacement: "mostly" },
   { pattern: /\bcompletely\b/i, replacement: "totally" },
-  { pattern: /\breally\b/i, replacement: "truly" },
-  { pattern: /\bvery\b/i, replacement: "really" },
   { pattern: /\bperhaps\b/i, replacement: "maybe" },
   { pattern: /\bmaybe\b/i, replacement: "perhaps" },
   { pattern: /\balmost\b/i, replacement: "nearly" },
-  { pattern: /\bsoon\b/i, replacement: "shortly" },
-  { pattern: /\blater\b/i, replacement: "afterward" },
   { pattern: /\bagain\b/i, replacement: "once more" },
   { pattern: /\bmy first time here\b/i, replacement: "my initial visit here" },
   { pattern: /\bfirst step\b/i, replacement: "initial step" },
-  { pattern: /\bfinally\b/i, replacement: "eventually" },
   { pattern: /\badvantages\b/i, replacement: "benefits" },
   { pattern: /\boption\b/i, replacement: "choice" },
   { pattern: /\bidea\b/i, replacement: "suggestion" },
@@ -427,19 +389,22 @@ const WORD_SWAP_RULES: readonly TextRule[] = [
   { pattern: /\bdetails\b/i, replacement: "information" },
   { pattern: /\badvice\b/i, replacement: "recommendation" },
   { pattern: /\bstart\b/i, replacement: "begin" },
-  { pattern: /\bfinish\b/i, replacement: "complete" },
+  { pattern: /\bplan is to finish by\b/i, replacement: "plan is to wrap up by" },
   { pattern: /\bchoose\b/i, replacement: "pick" },
   { pattern: /\brecommend\b/i, replacement: "suggest" },
   { pattern: /\bpostpone\b/i, replacement: "delay" },
   { pattern: /\breschedule\b/i, replacement: "arrange another time" },
-  { pattern: /\bavailable\b/i, replacement: "free" },
-  { pattern: /\bfree\b/i, replacement: "complimentary" },
-  { pattern: /\bwrong\b/i, replacement: "incorrect" },
+  { pattern: /\bnot available right now\b/i, replacement: "not free right now" },
+  { pattern: /\bis this free\b/i, replacement: "is this complimentary" },
+  { pattern: /\bcould be wrong\b/i, replacement: "could be mistaken" },
   { pattern: /\bexactly\b/i, replacement: "precisely" },
 ];
 
-/** Expanding a contraction is a safe fallback and gives a useful formality cue. */
-const CONTRACTION_RULES: readonly TextRule[] = [
+/**
+ * Surface-form changes can contribute to a multi-change paraphrase, but must
+ * never enter the word-swap lane on their own.
+ */
+const GRAMMATICAL_FORM_RULES: readonly TextRule[] = [
   { pattern: /\bIt's been\b/, replacement: "It has been" },
   { pattern: /\bit's been\b/, replacement: "it has been" },
   { pattern: /\bI'm\b/, replacement: "I am" },
@@ -572,6 +537,7 @@ const EXACT_PARAPHRASES: Readonly<Record<string, readonly string[]>> = {
   "Is this on sale?": ["Is this item discounted?"],
   "I have a reservation under Kim.": ["The reservation is in the name Kim."],
   "Which bus should I take?": ["What bus do I need to get?"],
+  "What's the best way to get to the airport?": ["How should I get to the airport?"],
   "Does this train stop at City Hall?": ["Is City Hall one of this train's stops?"],
   "Where do I need to transfer?": ["At which station should I change lines?"],
   "How long does it take from here?": ["What's the travel time from here?"],
@@ -607,7 +573,7 @@ const EXACT_PARAPHRASES: Readonly<Record<string, readonly string[]>> = {
   "It would be better to wait until morning.": ["Waiting until morning would be best."],
   "Let me carry that for you.": ["I'll carry that for you."],
   "Do you need a hand?": ["Would some help be useful?"],
-  "I can give you a ride.": ["I can drive you there."],
+  "I can give you a ride.": ["I can take you there by car."],
   "Is there anything I can do to make this easier?": ["How can I make this easier for you?"],
   "Yes, that works for me.": ["Yes, I'm fine with that."],
   "Why not? Let's do it.": ["Sure, let's go ahead."],
@@ -701,6 +667,7 @@ const EXACT_PARAPHRASES: Readonly<Record<string, readonly string[]>> = {
   "We have a deal.": ["It's a deal."],
   "Maybe another time.": ["Perhaps we can do it another day."],
   "Thank you so much.": ["Thanks a lot."],
+  "I really appreciate your help.": ["Your help means a lot to me."],
   "That's very kind of you.": ["I appreciate your kindness."],
   "I owe you one.": ["I'll return the favor."],
   "That was my fault.": ["I was responsible for that."],
@@ -973,6 +940,141 @@ const REFINED_PARAPHRASES: Readonly<Record<string, readonly string[]>> = {
   "Please let me know when you're ready.": ["Tell me once you're ready, please."],
 };
 
+/**
+ * Grammatical glue words do not make a useful vocabulary substitution by
+ * themselves. A word-swap candidate must replace at least one content word
+ * with another content word after these are removed.
+ */
+const FUNCTION_WORDS = new Set([
+  "a", "an", "the", "this", "that", "these", "those",
+  "i", "me", "my", "mine", "myself", "you", "your", "yours", "yourself", "yourselves",
+  "he", "him", "his", "himself", "she", "her", "hers", "herself", "it", "its", "itself",
+  "we", "us", "our", "ours", "ourselves", "they", "them", "their", "theirs", "themselves",
+  "who", "whom", "whose", "what", "which", "where", "when", "why", "how",
+  "am", "is", "are", "was", "were", "be", "been", "being",
+  "have", "has", "had", "having", "do", "does", "did", "doing",
+  "can", "could", "may", "might", "must", "shall", "should", "will", "would",
+  "and", "but", "or", "nor", "so", "yet", "if", "because", "although", "though", "while",
+  "as", "at", "by", "for", "from", "in", "into", "of", "on", "onto", "to", "with", "without",
+  "about", "above", "after", "before", "behind", "below", "between", "during", "over", "under",
+  "again", "all", "any", "both", "each", "either", "enough", "every", "few", "many", "much",
+  "neither", "no", "none", "not", "one", "other", "several", "some", "such",
+  "here", "there", "then", "than", "too", "also", "only", "just",
+]);
+
+function canonicalSurfaceForm(value: string): string {
+  return value
+    .normalize("NFKC")
+    .toLocaleLowerCase("en-US")
+    .replace(/[‘’]/g, "'")
+    .replace(/\bwon't\b/g, "will not")
+    .replace(/\bcan't\b/g, "can not")
+    .replace(/\bshan't\b/g, "shall not")
+    .replace(/\b(\p{L}+)'m\b/gu, "$1 am")
+    .replace(/\b(\p{L}+)'re\b/gu, "$1 are")
+    .replace(/\b(\p{L}+)'ve\b/gu, "$1 have")
+    .replace(/\b(\p{L}+)'ll\b/gu, "$1 will")
+    .replace(/\b(\p{L}+)'d\b/gu, "$1 would")
+    .replace(/\b(\p{L}+)'s\b/gu, "$1 is")
+    .replace(/\b(\p{L}+)n't\b/gu, "$1 not")
+    .replace(/\bgonna\b/g, "going to")
+    .replace(/\bgotta\b/g, "have to")
+    .replace(/\bwanna\b/g, "want to")
+    .replace(/\bdunno\b/g, "do not know")
+    .replace(/\bwhaddaya\b/g, "what do you")
+    .replace(/\bcongrats\b/g, "congratulations")
+    .replace(/\bthanks\b/g, "thank you")
+    .replace(/\bworth trying\b/g, "worth try")
+    .replace(/\bworth a try\b/g, "worth try")
+    .replace(/\bmore slowly\b/g, "slow")
+    .replace(/\bslower\b/g, "slow")
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
+const IRREGULAR_LEXEMES: Readonly<Record<string, string>> = {
+  best: "good",
+  better: "good",
+  brought: "bring",
+  felt: "feel",
+  found: "find",
+  gone: "go",
+  got: "get",
+  gotten: "get",
+  left: "leave",
+  made: "make",
+  saw: "see",
+  seen: "see",
+  taken: "take",
+  thought: "think",
+  told: "tell",
+  took: "take",
+  went: "go",
+  worse: "bad",
+  worst: "bad",
+  written: "write",
+};
+
+function canonicalLexeme(token: string): string {
+  const irregular = IRREGULAR_LEXEMES[token];
+  if (irregular) return irregular;
+  if (token === "walkable") return "walk";
+
+  let stem = token;
+  if (stem.length > 5 && stem.endsWith("ingly")) stem = stem.slice(0, -5);
+  else if (stem.length > 4 && stem.endsWith("ly")) stem = stem.slice(0, -2);
+
+  if (stem.length > 5 && stem.endsWith("ying")) stem = `${stem.slice(0, -4)}y`;
+  else if (stem.length > 5 && stem.endsWith("ing")) stem = stem.slice(0, -3);
+  else if (stem.length > 4 && stem.endsWith("ied")) stem = `${stem.slice(0, -3)}y`;
+  else if (stem.length > 4 && stem.endsWith("ed")) stem = stem.slice(0, -2);
+  else if (stem.length > 4 && stem.endsWith("ies")) stem = `${stem.slice(0, -3)}y`;
+  else if (stem.length > 4 && stem.endsWith("est")) stem = stem.slice(0, -3);
+  else if (stem.length > 4 && stem.endsWith("er")) stem = stem.slice(0, -2);
+  else if (stem.length > 3 && stem.endsWith("s") && !stem.endsWith("ss")) stem = stem.slice(0, -1);
+
+  if (/(.)\1$/.test(stem)) stem = stem.slice(0, -1);
+  if (stem.length > 4 && stem.endsWith("e")) stem = stem.slice(0, -1);
+  return stem;
+}
+
+function lexicalTokens(value: string): string[] {
+  return canonicalSurfaceForm(value)
+    .split(" ")
+    .filter((token) => token && !FUNCTION_WORDS.has(token))
+    .map(canonicalLexeme);
+}
+
+function tokenCounts(tokens: readonly string[]): Map<string, number> {
+  const counts = new Map<string, number>();
+  for (const token of tokens) counts.set(token, (counts.get(token) ?? 0) + 1);
+  return counts;
+}
+
+/**
+ * A meaningful word swap removes a content word and introduces another one.
+ * This deliberately rejects contractions, auxiliary-only changes, casing,
+ * punctuation, and candidates that merely add grammatical filler.
+ */
+export function isMeaningfulWordSwap(original: string, candidate: string): boolean {
+  if (canonicalSurfaceForm(original) === canonicalSurfaceForm(candidate)) return false;
+
+  const originalCounts = tokenCounts(lexicalTokens(original));
+  const candidateCounts = tokenCounts(lexicalTokens(candidate));
+  let removedContentWord = false;
+  let addedContentWord = false;
+
+  for (const [token, count] of originalCounts) {
+    if (count > (candidateCounts.get(token) ?? 0)) removedContentWord = true;
+  }
+  for (const [token, count] of candidateCounts) {
+    if (count > (originalCounts.get(token) ?? 0)) addedContentWord = true;
+  }
+
+  return removedContentWord && addedContentWord;
+}
+
 function normalize(value: string): string {
   return value
     .trim()
@@ -990,19 +1092,44 @@ function lowercaseInitial(value: string): string {
   return `${value[0].toLocaleLowerCase("en-US")}${value.slice(1)}`;
 }
 
+function usesAn(word: string): boolean {
+  const normalized = word.toLocaleLowerCase("en-US");
+  if (/^(?:heir|honest|honor|hour)/.test(normalized)) return true;
+  if (/^(?:euro|one|once|uni|use|user|usual|url)/.test(normalized)) return false;
+  return /^[aeiou]/.test(normalized);
+}
+
+function repairIndefiniteArticles(value: string): string {
+  return value.replace(/\b(a|an)\s+([a-z][\w-]*)/gi, (match, article: string, word: string) => {
+    const expected = usesAn(word) ? "an" : "a";
+    if (article.toLocaleLowerCase("en-US") === expected) return match;
+    const corrected = /^\p{Lu}/u.test(article) ? capitalize(expected) : expected;
+    return `${corrected} ${word}`;
+  });
+}
+
 function applyRule(value: string, rule: TextRule): string {
   rule.pattern.lastIndex = 0;
-  return value.replace(rule.pattern, (match) => {
+  const replaced = value.replace(rule.pattern, (match) => {
     const startsUppercase = /^\p{Lu}/u.test(match);
     return startsUppercase ? capitalize(rule.replacement) : rule.replacement;
   });
+  return repairIndefiniteArticles(replaced);
 }
 
 function applyRules(value: string, rules: readonly TextRule[]): string[] {
   const candidates: string[] = [];
+  const claimedRanges: Array<readonly [start: number, end: number]> = [];
   for (const rule of rules) {
     rule.pattern.lastIndex = 0;
-    if (!rule.pattern.test(value)) continue;
+    const match = rule.pattern.exec(value);
+    if (!match || match.index === undefined) continue;
+    const start = match.index;
+    const end = start + match[0].length;
+    if (claimedRanges.some(([claimedStart, claimedEnd]) => start < claimedEnd && end > claimedStart)) {
+      continue;
+    }
+    claimedRanges.push([start, end]);
     candidates.push(applyRule(value, rule));
   }
   return candidates;
@@ -1106,12 +1233,9 @@ export function buildPracticeVariationDeck(
   pattern: Pick<ConversationPattern, "english" | "korean">,
 ): PracticeVariationDeck {
   const lexicalCandidates = uniqueCandidates(
-    [
-      ...applyRules(pattern.english, WORD_SWAP_RULES),
-      ...applyRules(pattern.english, CONTRACTION_RULES),
-    ],
+    applyRules(pattern.english, WORD_SWAP_RULES),
     pattern.english,
-  );
+  ).filter((candidate) => isMeaningfulWordSwap(pattern.english, candidate));
   const lexicalKeys = new Set(lexicalCandidates.map(normalize));
   const paraphraseCandidates = uniqueCandidates(
     [
@@ -1121,7 +1245,7 @@ export function buildPracticeVariationDeck(
       ...structuralParaphrases(pattern.english),
       ...applyMultipleRules(pattern.english, [
         ...WORD_SWAP_RULES,
-        ...CONTRACTION_RULES,
+        ...GRAMMATICAL_FORM_RULES,
       ]),
     ],
     pattern.english,
