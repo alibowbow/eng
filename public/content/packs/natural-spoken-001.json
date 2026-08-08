@@ -1,0 +1,4879 @@
+{
+  "schemaVersion": 1,
+  "packId": "natural-spoken-001",
+  "titleKo": "자연스러운 구어체",
+  "titleEn": "Natural Spoken English",
+  "descriptionKo": "화제 전환 · 대화 종료 · 필러와 말버릇 · 완곡한 표현 · 자연스러운 축약 · 자주 쓰는 구동사 · 일상적인 관용 표현 핵심 패턴",
+  "version": "1.0.0",
+  "contentVersion": 1,
+  "required": true,
+  "minAppVersion": "1.0.0",
+  "releasedAt": "2026-08-08",
+  "categories": [
+    {
+      "id": "contractions",
+      "labelKo": "자연스러운 축약",
+      "labelEn": "Natural contractions"
+    },
+    {
+      "id": "conversation-ending",
+      "labelKo": "대화 종료",
+      "labelEn": "Ending a conversation"
+    },
+    {
+      "id": "fillers",
+      "labelKo": "필러와 말버릇",
+      "labelEn": "Fillers and discourse markers"
+    },
+    {
+      "id": "idioms",
+      "labelKo": "일상적인 관용 표현",
+      "labelEn": "Everyday idioms"
+    },
+    {
+      "id": "phrasal-verbs",
+      "labelKo": "자주 쓰는 구동사",
+      "labelEn": "Everyday phrasal verbs"
+    },
+    {
+      "id": "softening",
+      "labelKo": "완곡한 표현",
+      "labelEn": "Softening language"
+    },
+    {
+      "id": "topic-change",
+      "labelKo": "화제 전환",
+      "labelEn": "Changing the subject"
+    }
+  ],
+  "situations": [
+    {
+      "id": "conversation",
+      "labelKo": "대화",
+      "labelEn": "Conversation"
+    },
+    {
+      "id": "daily",
+      "labelKo": "일상",
+      "labelEn": "Daily life"
+    }
+  ],
+  "patterns": [
+    {
+      "id": "topic-change.01-by-the-way-hows-your-sister",
+      "familyId": "topic-change.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "By the way, how's your sister?",
+      "english": "By the way, how's your sister?",
+      "korean": "그런데 여동생은 잘 지내요?",
+      "intentKo": "화제 전환 상황에서 “그런데 여동생은 잘 지내요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 화제 전환 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "topic-change"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "화제 전환",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "topic-change.01-by-the-way-hows-your-sister.example-1",
+          "english": "A: By the way, how's your sister? B: I see what you mean.",
+          "korean": "A: 그런데 여동생은 잘 지내요? B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "topic-change.01-by-the-way-hows-your-sister.example-2",
+          "english": "A: By the way, how's your sister? B: That makes sense.",
+          "korean": "A: 그런데 여동생은 잘 지내요? B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "topic-change.01-by-the-way-hows-your-sister.example-3",
+          "english": "A: By the way, how's your sister? B: Thanks for telling me.",
+          "korean": "A: 그런데 여동생은 잘 지내요? B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "topic-change.01-by-the-way-hows-your-sister.variant-1",
+          "english": "Speaking of travel, have you booked your flight?",
+          "korean": "여행 이야기가 나와서 말인데, 항공편은 예약했어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 화제 전환 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "topic-change.01-by-the-way-hows-your-sister.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "topic-change.08-not-to-change-the-subject-but-we-should-ch",
+          "topic-change.02-speaking-of-travel-have-you-booked-your-fl"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "topic-change.02-speaking-of-travel-have-you-booked-your-fl"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "By the way, how's your sister?",
+        "lang": "en-US"
+      },
+      "sortKey": "059.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "topic-change.02-speaking-of-travel-have-you-booked-your-fl",
+      "familyId": "topic-change.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Speaking of travel, have you booked your flight?",
+      "english": "Speaking of travel, have you booked your flight?",
+      "korean": "여행 이야기가 나와서 말인데, 항공편은 예약했어요?",
+      "intentKo": "화제 전환 상황에서 “여행 이야기가 나와서 말인데, 항공편은 예약했어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 화제 전환 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "topic-change"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "화제 전환",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "topic-change.02-speaking-of-travel-have-you-booked-your-fl.example-1",
+          "english": "A: Speaking of travel, have you booked your flight? B: I see what you mean.",
+          "korean": "A: 여행 이야기가 나와서 말인데, 항공편은 예약했어요? B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "topic-change.02-speaking-of-travel-have-you-booked-your-fl.example-2",
+          "english": "A: Speaking of travel, have you booked your flight? B: That makes sense.",
+          "korean": "A: 여행 이야기가 나와서 말인데, 항공편은 예약했어요? B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "topic-change.02-speaking-of-travel-have-you-booked-your-fl.example-3",
+          "english": "A: Speaking of travel, have you booked your flight? B: Thanks for telling me.",
+          "korean": "A: 여행 이야기가 나와서 말인데, 항공편은 예약했어요? B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "topic-change.02-speaking-of-travel-have-you-booked-your-fl.variant-1",
+          "english": "That reminds me, I need to call Sam.",
+          "korean": "그 말을 들으니 샘에게 전화해야 하는 게 생각났어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 화제 전환 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "topic-change.02-speaking-of-travel-have-you-booked-your-fl.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "topic-change.01-by-the-way-hows-your-sister",
+          "topic-change.03-that-reminds-me-i-need-to-call-sam"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "topic-change.03-that-reminds-me-i-need-to-call-sam"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Speaking of travel, have you booked your flight?",
+        "lang": "en-US"
+      },
+      "sortKey": "059.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "topic-change.03-that-reminds-me-i-need-to-call-sam",
+      "familyId": "topic-change.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "That reminds me, I need to call Sam.",
+      "english": "That reminds me, I need to call Sam.",
+      "korean": "그 말을 들으니 샘에게 전화해야 하는 게 생각났어요.",
+      "intentKo": "화제 전환 상황에서 “그 말을 들으니 샘에게 전화해야 하는 게 생각났어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 화제 전환 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "topic-change"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "화제 전환",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "topic-change.03-that-reminds-me-i-need-to-call-sam.example-1",
+          "english": "A: That reminds me, I need to call Sam. B: I see what you mean.",
+          "korean": "A: 그 말을 들으니 샘에게 전화해야 하는 게 생각났어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "topic-change.03-that-reminds-me-i-need-to-call-sam.example-2",
+          "english": "A: That reminds me, I need to call Sam. B: That makes sense.",
+          "korean": "A: 그 말을 들으니 샘에게 전화해야 하는 게 생각났어요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "topic-change.03-that-reminds-me-i-need-to-call-sam.example-3",
+          "english": "A: That reminds me, I need to call Sam. B: Thanks for telling me.",
+          "korean": "A: 그 말을 들으니 샘에게 전화해야 하는 게 생각났어요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "topic-change.03-that-reminds-me-i-need-to-call-sam.variant-1",
+          "english": "On a different note, I have some good news.",
+          "korean": "다른 이야기인데, 좋은 소식이 있어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 화제 전환 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "topic-change.03-that-reminds-me-i-need-to-call-sam.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "topic-change.02-speaking-of-travel-have-you-booked-your-fl",
+          "topic-change.04-on-a-different-note-i-have-some-good-news"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "topic-change.04-on-a-different-note-i-have-some-good-news"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "That reminds me, I need to call Sam.",
+        "lang": "en-US"
+      },
+      "sortKey": "059.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "topic-change.04-on-a-different-note-i-have-some-good-news",
+      "familyId": "topic-change.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "On a different note, I have some good news.",
+      "english": "On a different note, I have some good news.",
+      "korean": "다른 이야기인데, 좋은 소식이 있어요.",
+      "intentKo": "화제 전환 상황에서 “다른 이야기인데, 좋은 소식이 있어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 화제 전환 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "topic-change"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "화제 전환",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "topic-change.04-on-a-different-note-i-have-some-good-news.example-1",
+          "english": "A: On a different note, I have some good news. B: I see what you mean.",
+          "korean": "A: 다른 이야기인데, 좋은 소식이 있어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "topic-change.04-on-a-different-note-i-have-some-good-news.example-2",
+          "english": "A: On a different note, I have some good news. B: That makes sense.",
+          "korean": "A: 다른 이야기인데, 좋은 소식이 있어요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "topic-change.04-on-a-different-note-i-have-some-good-news.example-3",
+          "english": "A: On a different note, I have some good news. B: Thanks for telling me.",
+          "korean": "A: 다른 이야기인데, 좋은 소식이 있어요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "topic-change.04-on-a-different-note-i-have-some-good-news.variant-1",
+          "english": "Before I forget, can I ask you something?",
+          "korean": "잊기 전에 하나 물어봐도 될까요?",
+          "register": "neutral",
+          "nuanceKo": "같은 화제 전환 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "topic-change.04-on-a-different-note-i-have-some-good-news.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "topic-change.03-that-reminds-me-i-need-to-call-sam",
+          "topic-change.05-before-i-forget-can-i-ask-you-something"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "topic-change.05-before-i-forget-can-i-ask-you-something"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "On a different note, I have some good news.",
+        "lang": "en-US"
+      },
+      "sortKey": "059.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "topic-change.05-before-i-forget-can-i-ask-you-something",
+      "familyId": "topic-change.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Before I forget, can I ask you something?",
+      "english": "Before I forget, can I ask you something?",
+      "korean": "잊기 전에 하나 물어봐도 될까요?",
+      "intentKo": "화제 전환 상황에서 “잊기 전에 하나 물어봐도 될까요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 화제 전환 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "topic-change"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "화제 전환",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "topic-change.05-before-i-forget-can-i-ask-you-something.example-1",
+          "english": "A: Before I forget, can I ask you something? B: I see what you mean.",
+          "korean": "A: 잊기 전에 하나 물어봐도 될까요? B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "topic-change.05-before-i-forget-can-i-ask-you-something.example-2",
+          "english": "A: Before I forget, can I ask you something? B: That makes sense.",
+          "korean": "A: 잊기 전에 하나 물어봐도 될까요? B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "topic-change.05-before-i-forget-can-i-ask-you-something.example-3",
+          "english": "A: Before I forget, can I ask you something? B: Thanks for telling me.",
+          "korean": "A: 잊기 전에 하나 물어봐도 될까요? B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "topic-change.05-before-i-forget-can-i-ask-you-something.variant-1",
+          "english": "Anyway, what were you saying?",
+          "korean": "어쨌든, 무슨 말을 하고 있었죠?",
+          "register": "neutral",
+          "nuanceKo": "같은 화제 전환 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "topic-change.05-before-i-forget-can-i-ask-you-something.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "topic-change.04-on-a-different-note-i-have-some-good-news",
+          "topic-change.06-anyway-what-were-you-saying"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "topic-change.06-anyway-what-were-you-saying"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Before I forget, can I ask you something?",
+        "lang": "en-US"
+      },
+      "sortKey": "059.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "topic-change.06-anyway-what-were-you-saying",
+      "familyId": "topic-change.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Anyway, what were you saying?",
+      "english": "Anyway, what were you saying?",
+      "korean": "어쨌든, 무슨 말을 하고 있었죠?",
+      "intentKo": "화제 전환 상황에서 “어쨌든, 무슨 말을 하고 있었죠?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 화제 전환 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "topic-change"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "화제 전환",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "topic-change.06-anyway-what-were-you-saying.example-1",
+          "english": "A: Anyway, what were you saying? B: I see what you mean.",
+          "korean": "A: 어쨌든, 무슨 말을 하고 있었죠? B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "topic-change.06-anyway-what-were-you-saying.example-2",
+          "english": "A: Anyway, what were you saying? B: That makes sense.",
+          "korean": "A: 어쨌든, 무슨 말을 하고 있었죠? B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "topic-change.06-anyway-what-were-you-saying.example-3",
+          "english": "A: Anyway, what were you saying? B: Thanks for telling me.",
+          "korean": "A: 어쨌든, 무슨 말을 하고 있었죠? B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "topic-change.06-anyway-what-were-you-saying.variant-1",
+          "english": "Let's move on to the next point.",
+          "korean": "다음 요점으로 넘어가죠.",
+          "register": "neutral",
+          "nuanceKo": "같은 화제 전환 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "topic-change.06-anyway-what-were-you-saying.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "topic-change.05-before-i-forget-can-i-ask-you-something",
+          "topic-change.07-lets-move-on-to-the-next-point"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "topic-change.07-lets-move-on-to-the-next-point"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Anyway, what were you saying?",
+        "lang": "en-US"
+      },
+      "sortKey": "059.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "topic-change.07-lets-move-on-to-the-next-point",
+      "familyId": "topic-change.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Let's move on to the next point.",
+      "english": "Let's move on to the next point.",
+      "korean": "다음 요점으로 넘어가죠.",
+      "intentKo": "화제 전환 상황에서 “다음 요점으로 넘어가죠.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 화제 전환 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "topic-change"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "화제 전환",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "topic-change.07-lets-move-on-to-the-next-point.example-1",
+          "english": "A: Let's move on to the next point. B: I see what you mean.",
+          "korean": "A: 다음 요점으로 넘어가죠. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "topic-change.07-lets-move-on-to-the-next-point.example-2",
+          "english": "A: Let's move on to the next point. B: That makes sense.",
+          "korean": "A: 다음 요점으로 넘어가죠. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "topic-change.07-lets-move-on-to-the-next-point.example-3",
+          "english": "A: Let's move on to the next point. B: Thanks for telling me.",
+          "korean": "A: 다음 요점으로 넘어가죠. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "topic-change.07-lets-move-on-to-the-next-point.variant-1",
+          "english": "Not to change the subject, but we should check the time.",
+          "korean": "화제를 돌리려는 건 아니지만 시간을 확인해야 해요.",
+          "register": "neutral",
+          "nuanceKo": "같은 화제 전환 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "topic-change.07-lets-move-on-to-the-next-point.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "topic-change.06-anyway-what-were-you-saying",
+          "topic-change.08-not-to-change-the-subject-but-we-should-ch"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "topic-change.08-not-to-change-the-subject-but-we-should-ch"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Let's move on to the next point.",
+        "lang": "en-US"
+      },
+      "sortKey": "059.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "topic-change.08-not-to-change-the-subject-but-we-should-ch",
+      "familyId": "topic-change.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Not to change the subject, but we should check the time.",
+      "english": "Not to change the subject, but we should check the time.",
+      "korean": "화제를 돌리려는 건 아니지만 시간을 확인해야 해요.",
+      "intentKo": "화제 전환 상황에서 “화제를 돌리려는 건 아니지만 시간을 확인해야 해요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 화제 전환 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "topic-change"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "화제 전환",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "topic-change.08-not-to-change-the-subject-but-we-should-ch.example-1",
+          "english": "A: Not to change the subject, but we should check the time. B: I see what you mean.",
+          "korean": "A: 화제를 돌리려는 건 아니지만 시간을 확인해야 해요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "topic-change.08-not-to-change-the-subject-but-we-should-ch.example-2",
+          "english": "A: Not to change the subject, but we should check the time. B: That makes sense.",
+          "korean": "A: 화제를 돌리려는 건 아니지만 시간을 확인해야 해요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "topic-change.08-not-to-change-the-subject-but-we-should-ch.example-3",
+          "english": "A: Not to change the subject, but we should check the time. B: Thanks for telling me.",
+          "korean": "A: 화제를 돌리려는 건 아니지만 시간을 확인해야 해요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "topic-change.08-not-to-change-the-subject-but-we-should-ch.variant-1",
+          "english": "By the way, how's your sister?",
+          "korean": "그런데 여동생은 잘 지내요?",
+          "register": "neutral",
+          "nuanceKo": "같은 화제 전환 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "topic-change.08-not-to-change-the-subject-but-we-should-ch.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "topic-change.07-lets-move-on-to-the-next-point",
+          "topic-change.01-by-the-way-hows-your-sister"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "topic-change.01-by-the-way-hows-your-sister"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Not to change the subject, but we should check the time.",
+        "lang": "en-US"
+      },
+      "sortKey": "059.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conversation-ending.01-it-was-nice-talking-to-you",
+      "familyId": "conversation-ending.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "It was nice talking to you.",
+      "english": "It was nice talking to you.",
+      "korean": "이야기 나눠서 즐거웠어요.",
+      "intentKo": "대화 종료 상황에서 “이야기 나눠서 즐거웠어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 대화 종료 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conversation-ending"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "대화 종료",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conversation-ending.01-it-was-nice-talking-to-you.example-1",
+          "english": "A: It was nice talking to you. B: It was nice talking to you too.",
+          "korean": "A: 이야기 나눠서 즐거웠어요. B: 저도 이야기 나눠서 좋았어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-ending.01-it-was-nice-talking-to-you.example-2",
+          "english": "A: It was nice talking to you. B: Talk to you soon.",
+          "korean": "A: 이야기 나눠서 즐거웠어요. B: 곧 다시 이야기해요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-ending.01-it-was-nice-talking-to-you.example-3",
+          "english": "A: It was nice talking to you. B: Take care!",
+          "korean": "A: 이야기 나눠서 즐거웠어요. B: 잘 지내요!",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conversation-ending.01-it-was-nice-talking-to-you.variant-1",
+          "english": "I should get going.",
+          "korean": "이제 가봐야겠어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 대화 종료 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conversation-ending.01-it-was-nice-talking-to-you.reply-1",
+          "english": "It was nice talking to you too.",
+          "korean": "저도 이야기 나눠서 좋았어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conversation-ending.08-take-care-and-give-my-best-to-your-family",
+          "conversation-ending.02-i-should-get-going"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conversation-ending.02-i-should-get-going"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "It was nice talking to you.",
+        "lang": "en-US"
+      },
+      "sortKey": "060.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conversation-ending.02-i-should-get-going",
+      "familyId": "conversation-ending.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I should get going.",
+      "english": "I should get going.",
+      "korean": "이제 가봐야겠어요.",
+      "intentKo": "대화 종료 상황에서 “이제 가봐야겠어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 대화 종료 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conversation-ending"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "대화 종료",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conversation-ending.02-i-should-get-going.example-1",
+          "english": "A: I should get going. B: It was nice talking to you too.",
+          "korean": "A: 이제 가봐야겠어요. B: 저도 이야기 나눠서 좋았어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-ending.02-i-should-get-going.example-2",
+          "english": "A: I should get going. B: Talk to you soon.",
+          "korean": "A: 이제 가봐야겠어요. B: 곧 다시 이야기해요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-ending.02-i-should-get-going.example-3",
+          "english": "A: I should get going. B: Take care!",
+          "korean": "A: 이제 가봐야겠어요. B: 잘 지내요!",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conversation-ending.02-i-should-get-going.variant-1",
+          "english": "I'll let you get back to work.",
+          "korean": "다시 일하실 수 있게 이만 갈게요.",
+          "register": "neutral",
+          "nuanceKo": "같은 대화 종료 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conversation-ending.02-i-should-get-going.reply-1",
+          "english": "It was nice talking to you too.",
+          "korean": "저도 이야기 나눠서 좋았어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conversation-ending.01-it-was-nice-talking-to-you",
+          "conversation-ending.03-ill-let-you-get-back-to-work"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conversation-ending.03-ill-let-you-get-back-to-work"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I should get going.",
+        "lang": "en-US"
+      },
+      "sortKey": "060.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conversation-ending.03-ill-let-you-get-back-to-work",
+      "familyId": "conversation-ending.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'll let you get back to work.",
+      "english": "I'll let you get back to work.",
+      "korean": "다시 일하실 수 있게 이만 갈게요.",
+      "intentKo": "대화 종료 상황에서 “다시 일하실 수 있게 이만 갈게요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 대화 종료 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conversation-ending"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "대화 종료",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conversation-ending.03-ill-let-you-get-back-to-work.example-1",
+          "english": "A: I'll let you get back to work. B: It was nice talking to you too.",
+          "korean": "A: 다시 일하실 수 있게 이만 갈게요. B: 저도 이야기 나눠서 좋았어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-ending.03-ill-let-you-get-back-to-work.example-2",
+          "english": "A: I'll let you get back to work. B: Talk to you soon.",
+          "korean": "A: 다시 일하실 수 있게 이만 갈게요. B: 곧 다시 이야기해요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-ending.03-ill-let-you-get-back-to-work.example-3",
+          "english": "A: I'll let you get back to work. B: Take care!",
+          "korean": "A: 다시 일하실 수 있게 이만 갈게요. B: 잘 지내요!",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conversation-ending.03-ill-let-you-get-back-to-work.variant-1",
+          "english": "Let's catch up again soon.",
+          "korean": "조만간 또 이야기해요.",
+          "register": "neutral",
+          "nuanceKo": "같은 대화 종료 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conversation-ending.03-ill-let-you-get-back-to-work.reply-1",
+          "english": "It was nice talking to you too.",
+          "korean": "저도 이야기 나눠서 좋았어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conversation-ending.02-i-should-get-going",
+          "conversation-ending.04-lets-catch-up-again-soon"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conversation-ending.04-lets-catch-up-again-soon"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'll let you get back to work.",
+        "lang": "en-US"
+      },
+      "sortKey": "060.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conversation-ending.04-lets-catch-up-again-soon",
+      "familyId": "conversation-ending.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Let's catch up again soon.",
+      "english": "Let's catch up again soon.",
+      "korean": "조만간 또 이야기해요.",
+      "intentKo": "대화 종료 상황에서 “조만간 또 이야기해요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 대화 종료 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conversation-ending"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "대화 종료",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conversation-ending.04-lets-catch-up-again-soon.example-1",
+          "english": "A: Let's catch up again soon. B: It was nice talking to you too.",
+          "korean": "A: 조만간 또 이야기해요. B: 저도 이야기 나눠서 좋았어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-ending.04-lets-catch-up-again-soon.example-2",
+          "english": "A: Let's catch up again soon. B: Talk to you soon.",
+          "korean": "A: 조만간 또 이야기해요. B: 곧 다시 이야기해요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-ending.04-lets-catch-up-again-soon.example-3",
+          "english": "A: Let's catch up again soon. B: Take care!",
+          "korean": "A: 조만간 또 이야기해요. B: 잘 지내요!",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conversation-ending.04-lets-catch-up-again-soon.variant-1",
+          "english": "Thanks for your time.",
+          "korean": "시간 내주셔서 감사합니다.",
+          "register": "neutral",
+          "nuanceKo": "같은 대화 종료 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conversation-ending.04-lets-catch-up-again-soon.reply-1",
+          "english": "It was nice talking to you too.",
+          "korean": "저도 이야기 나눠서 좋았어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conversation-ending.03-ill-let-you-get-back-to-work",
+          "conversation-ending.05-thanks-for-your-time"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conversation-ending.05-thanks-for-your-time"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Let's catch up again soon.",
+        "lang": "en-US"
+      },
+      "sortKey": "060.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conversation-ending.05-thanks-for-your-time",
+      "familyId": "conversation-ending.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Thanks for your time.",
+      "english": "Thanks for your time.",
+      "korean": "시간 내주셔서 감사합니다.",
+      "intentKo": "대화 종료 상황에서 “시간 내주셔서 감사합니다.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 대화 종료 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conversation-ending"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "대화 종료",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conversation-ending.05-thanks-for-your-time.example-1",
+          "english": "A: Thanks for your time. B: It was nice talking to you too.",
+          "korean": "A: 시간 내주셔서 감사합니다. B: 저도 이야기 나눠서 좋았어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-ending.05-thanks-for-your-time.example-2",
+          "english": "A: Thanks for your time. B: Talk to you soon.",
+          "korean": "A: 시간 내주셔서 감사합니다. B: 곧 다시 이야기해요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-ending.05-thanks-for-your-time.example-3",
+          "english": "A: Thanks for your time. B: Take care!",
+          "korean": "A: 시간 내주셔서 감사합니다. B: 잘 지내요!",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conversation-ending.05-thanks-for-your-time.variant-1",
+          "english": "I'll talk to you later.",
+          "korean": "나중에 이야기해요.",
+          "register": "neutral",
+          "nuanceKo": "같은 대화 종료 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conversation-ending.05-thanks-for-your-time.reply-1",
+          "english": "It was nice talking to you too.",
+          "korean": "저도 이야기 나눠서 좋았어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conversation-ending.04-lets-catch-up-again-soon",
+          "conversation-ending.06-ill-talk-to-you-later"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conversation-ending.06-ill-talk-to-you-later"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Thanks for your time.",
+        "lang": "en-US"
+      },
+      "sortKey": "060.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conversation-ending.06-ill-talk-to-you-later",
+      "familyId": "conversation-ending.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'll talk to you later.",
+      "english": "I'll talk to you later.",
+      "korean": "나중에 이야기해요.",
+      "intentKo": "대화 종료 상황에서 “나중에 이야기해요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 대화 종료 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conversation-ending"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "대화 종료",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conversation-ending.06-ill-talk-to-you-later.example-1",
+          "english": "A: I'll talk to you later. B: It was nice talking to you too.",
+          "korean": "A: 나중에 이야기해요. B: 저도 이야기 나눠서 좋았어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-ending.06-ill-talk-to-you-later.example-2",
+          "english": "A: I'll talk to you later. B: Talk to you soon.",
+          "korean": "A: 나중에 이야기해요. B: 곧 다시 이야기해요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-ending.06-ill-talk-to-you-later.example-3",
+          "english": "A: I'll talk to you later. B: Take care!",
+          "korean": "A: 나중에 이야기해요. B: 잘 지내요!",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conversation-ending.06-ill-talk-to-you-later.variant-1",
+          "english": "I won't keep you any longer.",
+          "korean": "더 이상 시간을 뺏지 않을게요.",
+          "register": "neutral",
+          "nuanceKo": "같은 대화 종료 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conversation-ending.06-ill-talk-to-you-later.reply-1",
+          "english": "It was nice talking to you too.",
+          "korean": "저도 이야기 나눠서 좋았어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conversation-ending.05-thanks-for-your-time",
+          "conversation-ending.07-i-wont-keep-you-any-longer"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conversation-ending.07-i-wont-keep-you-any-longer"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'll talk to you later.",
+        "lang": "en-US"
+      },
+      "sortKey": "060.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conversation-ending.07-i-wont-keep-you-any-longer",
+      "familyId": "conversation-ending.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I won't keep you any longer.",
+      "english": "I won't keep you any longer.",
+      "korean": "더 이상 시간을 뺏지 않을게요.",
+      "intentKo": "대화 종료 상황에서 “더 이상 시간을 뺏지 않을게요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 대화 종료 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conversation-ending"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "대화 종료",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conversation-ending.07-i-wont-keep-you-any-longer.example-1",
+          "english": "A: I won't keep you any longer. B: It was nice talking to you too.",
+          "korean": "A: 더 이상 시간을 뺏지 않을게요. B: 저도 이야기 나눠서 좋았어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-ending.07-i-wont-keep-you-any-longer.example-2",
+          "english": "A: I won't keep you any longer. B: Talk to you soon.",
+          "korean": "A: 더 이상 시간을 뺏지 않을게요. B: 곧 다시 이야기해요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-ending.07-i-wont-keep-you-any-longer.example-3",
+          "english": "A: I won't keep you any longer. B: Take care!",
+          "korean": "A: 더 이상 시간을 뺏지 않을게요. B: 잘 지내요!",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conversation-ending.07-i-wont-keep-you-any-longer.variant-1",
+          "english": "Take care, and give my best to your family.",
+          "korean": "잘 지내고, 가족에게도 안부 전해 주세요.",
+          "register": "neutral",
+          "nuanceKo": "같은 대화 종료 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conversation-ending.07-i-wont-keep-you-any-longer.reply-1",
+          "english": "It was nice talking to you too.",
+          "korean": "저도 이야기 나눠서 좋았어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conversation-ending.06-ill-talk-to-you-later",
+          "conversation-ending.08-take-care-and-give-my-best-to-your-family"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conversation-ending.08-take-care-and-give-my-best-to-your-family"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I won't keep you any longer.",
+        "lang": "en-US"
+      },
+      "sortKey": "060.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conversation-ending.08-take-care-and-give-my-best-to-your-family",
+      "familyId": "conversation-ending.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Take care, and give my best to your family.",
+      "english": "Take care, and give my best to your family.",
+      "korean": "잘 지내고, 가족에게도 안부 전해 주세요.",
+      "intentKo": "대화 종료 상황에서 “잘 지내고, 가족에게도 안부 전해 주세요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 대화 종료 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conversation-ending"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "대화 종료",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conversation-ending.08-take-care-and-give-my-best-to-your-family.example-1",
+          "english": "A: Take care, and give my best to your family. B: It was nice talking to you too.",
+          "korean": "A: 잘 지내고, 가족에게도 안부 전해 주세요. B: 저도 이야기 나눠서 좋았어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-ending.08-take-care-and-give-my-best-to-your-family.example-2",
+          "english": "A: Take care, and give my best to your family. B: Talk to you soon.",
+          "korean": "A: 잘 지내고, 가족에게도 안부 전해 주세요. B: 곧 다시 이야기해요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-ending.08-take-care-and-give-my-best-to-your-family.example-3",
+          "english": "A: Take care, and give my best to your family. B: Take care!",
+          "korean": "A: 잘 지내고, 가족에게도 안부 전해 주세요. B: 잘 지내요!",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conversation-ending.08-take-care-and-give-my-best-to-your-family.variant-1",
+          "english": "It was nice talking to you.",
+          "korean": "이야기 나눠서 즐거웠어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 대화 종료 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conversation-ending.08-take-care-and-give-my-best-to-your-family.reply-1",
+          "english": "It was nice talking to you too.",
+          "korean": "저도 이야기 나눠서 좋았어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conversation-ending.07-i-wont-keep-you-any-longer",
+          "conversation-ending.01-it-was-nice-talking-to-you"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conversation-ending.01-it-was-nice-talking-to-you"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Take care, and give my best to your family.",
+        "lang": "en-US"
+      },
+      "sortKey": "060.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "fillers.01-well-it-depends",
+      "familyId": "fillers.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Well, it depends.",
+      "english": "Well, it depends.",
+      "korean": "글쎄요, 경우에 따라 달라요.",
+      "intentKo": "필러와 말버릇 상황에서 “글쎄요, 경우에 따라 달라요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 필러와 말버릇 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "fillers"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "필러와 말버릇",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "fillers.01-well-it-depends.example-1",
+          "english": "A: Well, it depends. B: I see what you mean.",
+          "korean": "A: 글쎄요, 경우에 따라 달라요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "fillers.01-well-it-depends.example-2",
+          "english": "A: Well, it depends. B: That makes sense.",
+          "korean": "A: 글쎄요, 경우에 따라 달라요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "fillers.01-well-it-depends.example-3",
+          "english": "A: Well, it depends. B: Thanks for telling me.",
+          "korean": "A: 글쎄요, 경우에 따라 달라요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "fillers.01-well-it-depends.variant-1",
+          "english": "You know, I never thought about that.",
+          "korean": "있잖아요, 그건 생각해 본 적이 없어요.",
+          "register": "casual",
+          "nuanceKo": "같은 필러와 말버릇 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "fillers.01-well-it-depends.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "fillers.08-the-thing-is-i-already-made-other-plans",
+          "fillers.02-you-know-i-never-thought-about-that"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "fillers.02-you-know-i-never-thought-about-that"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Well, it depends.",
+        "lang": "en-US"
+      },
+      "sortKey": "061.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "fillers.02-you-know-i-never-thought-about-that",
+      "familyId": "fillers.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "You know, I never thought about that.",
+      "english": "You know, I never thought about that.",
+      "korean": "있잖아요, 그건 생각해 본 적이 없어요.",
+      "intentKo": "필러와 말버릇 상황에서 “있잖아요, 그건 생각해 본 적이 없어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 필러와 말버릇 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "fillers"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "필러와 말버릇",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "fillers.02-you-know-i-never-thought-about-that.example-1",
+          "english": "A: You know, I never thought about that. B: I see what you mean.",
+          "korean": "A: 있잖아요, 그건 생각해 본 적이 없어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "fillers.02-you-know-i-never-thought-about-that.example-2",
+          "english": "A: You know, I never thought about that. B: That makes sense.",
+          "korean": "A: 있잖아요, 그건 생각해 본 적이 없어요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "fillers.02-you-know-i-never-thought-about-that.example-3",
+          "english": "A: You know, I never thought about that. B: Thanks for telling me.",
+          "korean": "A: 있잖아요, 그건 생각해 본 적이 없어요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "fillers.02-you-know-i-never-thought-about-that.variant-1",
+          "english": "I mean, it's not a bad idea.",
+          "korean": "그러니까, 나쁜 생각은 아니에요.",
+          "register": "casual",
+          "nuanceKo": "같은 필러와 말버릇 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "fillers.02-you-know-i-never-thought-about-that.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "fillers.01-well-it-depends",
+          "fillers.03-i-mean-its-not-a-bad-idea"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "fillers.03-i-mean-its-not-a-bad-idea"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "You know, I never thought about that.",
+        "lang": "en-US"
+      },
+      "sortKey": "061.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "fillers.03-i-mean-its-not-a-bad-idea",
+      "familyId": "fillers.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I mean, it's not a bad idea.",
+      "english": "I mean, it's not a bad idea.",
+      "korean": "그러니까, 나쁜 생각은 아니에요.",
+      "intentKo": "필러와 말버릇 상황에서 “그러니까, 나쁜 생각은 아니에요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 필러와 말버릇 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "fillers"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "필러와 말버릇",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "fillers.03-i-mean-its-not-a-bad-idea.example-1",
+          "english": "A: I mean, it's not a bad idea. B: I see what you mean.",
+          "korean": "A: 그러니까, 나쁜 생각은 아니에요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "fillers.03-i-mean-its-not-a-bad-idea.example-2",
+          "english": "A: I mean, it's not a bad idea. B: That makes sense.",
+          "korean": "A: 그러니까, 나쁜 생각은 아니에요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "fillers.03-i-mean-its-not-a-bad-idea.example-3",
+          "english": "A: I mean, it's not a bad idea. B: Thanks for telling me.",
+          "korean": "A: 그러니까, 나쁜 생각은 아니에요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "fillers.03-i-mean-its-not-a-bad-idea.variant-1",
+          "english": "Actually, I changed my mind.",
+          "korean": "사실, 마음을 바꿨어요.",
+          "register": "casual",
+          "nuanceKo": "같은 필러와 말버릇 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "fillers.03-i-mean-its-not-a-bad-idea.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "fillers.02-you-know-i-never-thought-about-that",
+          "fillers.04-actually-i-changed-my-mind"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "fillers.04-actually-i-changed-my-mind"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I mean, it's not a bad idea.",
+        "lang": "en-US"
+      },
+      "sortKey": "061.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "fillers.04-actually-i-changed-my-mind",
+      "familyId": "fillers.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Actually, I changed my mind.",
+      "english": "Actually, I changed my mind.",
+      "korean": "사실, 마음을 바꿨어요.",
+      "intentKo": "필러와 말버릇 상황에서 “사실, 마음을 바꿨어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 필러와 말버릇 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "fillers"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "필러와 말버릇",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "fillers.04-actually-i-changed-my-mind.example-1",
+          "english": "A: Actually, I changed my mind. B: I see what you mean.",
+          "korean": "A: 사실, 마음을 바꿨어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "fillers.04-actually-i-changed-my-mind.example-2",
+          "english": "A: Actually, I changed my mind. B: That makes sense.",
+          "korean": "A: 사실, 마음을 바꿨어요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "fillers.04-actually-i-changed-my-mind.example-3",
+          "english": "A: Actually, I changed my mind. B: Thanks for telling me.",
+          "korean": "A: 사실, 마음을 바꿨어요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "fillers.04-actually-i-changed-my-mind.variant-1",
+          "english": "Basically, we need more time.",
+          "korean": "기본적으로 시간이 더 필요해요.",
+          "register": "casual",
+          "nuanceKo": "같은 필러와 말버릇 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "fillers.04-actually-i-changed-my-mind.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "fillers.03-i-mean-its-not-a-bad-idea",
+          "fillers.05-basically-we-need-more-time"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "fillers.05-basically-we-need-more-time"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Actually, I changed my mind.",
+        "lang": "en-US"
+      },
+      "sortKey": "061.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "fillers.05-basically-we-need-more-time",
+      "familyId": "fillers.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Basically, we need more time.",
+      "english": "Basically, we need more time.",
+      "korean": "기본적으로 시간이 더 필요해요.",
+      "intentKo": "필러와 말버릇 상황에서 “기본적으로 시간이 더 필요해요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 필러와 말버릇 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "fillers"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "필러와 말버릇",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "fillers.05-basically-we-need-more-time.example-1",
+          "english": "A: Basically, we need more time. B: I see what you mean.",
+          "korean": "A: 기본적으로 시간이 더 필요해요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "fillers.05-basically-we-need-more-time.example-2",
+          "english": "A: Basically, we need more time. B: That makes sense.",
+          "korean": "A: 기본적으로 시간이 더 필요해요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "fillers.05-basically-we-need-more-time.example-3",
+          "english": "A: Basically, we need more time. B: Thanks for telling me.",
+          "korean": "A: 기본적으로 시간이 더 필요해요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "fillers.05-basically-we-need-more-time.variant-1",
+          "english": "To be honest, I'm a little nervous.",
+          "korean": "솔직히 말하면 조금 긴장돼요.",
+          "register": "casual",
+          "nuanceKo": "같은 필러와 말버릇 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "fillers.05-basically-we-need-more-time.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "fillers.04-actually-i-changed-my-mind",
+          "fillers.06-to-be-honest-im-a-little-nervous"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "fillers.06-to-be-honest-im-a-little-nervous"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Basically, we need more time.",
+        "lang": "en-US"
+      },
+      "sortKey": "061.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "fillers.06-to-be-honest-im-a-little-nervous",
+      "familyId": "fillers.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "To be honest, I'm a little nervous.",
+      "english": "To be honest, I'm a little nervous.",
+      "korean": "솔직히 말하면 조금 긴장돼요.",
+      "intentKo": "필러와 말버릇 상황에서 “솔직히 말하면 조금 긴장돼요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 필러와 말버릇 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "fillers"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "필러와 말버릇",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "fillers.06-to-be-honest-im-a-little-nervous.example-1",
+          "english": "A: To be honest, I'm a little nervous. B: I see what you mean.",
+          "korean": "A: 솔직히 말하면 조금 긴장돼요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "fillers.06-to-be-honest-im-a-little-nervous.example-2",
+          "english": "A: To be honest, I'm a little nervous. B: That makes sense.",
+          "korean": "A: 솔직히 말하면 조금 긴장돼요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "fillers.06-to-be-honest-im-a-little-nervous.example-3",
+          "english": "A: To be honest, I'm a little nervous. B: Thanks for telling me.",
+          "korean": "A: 솔직히 말하면 조금 긴장돼요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "fillers.06-to-be-honest-im-a-little-nervous.variant-1",
+          "english": "As I was saying, the first step is easy.",
+          "korean": "말씀드리던 대로 첫 단계는 쉬워요.",
+          "register": "casual",
+          "nuanceKo": "같은 필러와 말버릇 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "fillers.06-to-be-honest-im-a-little-nervous.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "fillers.05-basically-we-need-more-time",
+          "fillers.07-as-i-was-saying-the-first-step-is-easy"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "fillers.07-as-i-was-saying-the-first-step-is-easy"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "To be honest, I'm a little nervous.",
+        "lang": "en-US"
+      },
+      "sortKey": "061.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "fillers.07-as-i-was-saying-the-first-step-is-easy",
+      "familyId": "fillers.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "As I was saying, the first step is easy.",
+      "english": "As I was saying, the first step is easy.",
+      "korean": "말씀드리던 대로 첫 단계는 쉬워요.",
+      "intentKo": "필러와 말버릇 상황에서 “말씀드리던 대로 첫 단계는 쉬워요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 필러와 말버릇 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "fillers"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "필러와 말버릇",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "fillers.07-as-i-was-saying-the-first-step-is-easy.example-1",
+          "english": "A: As I was saying, the first step is easy. B: I see what you mean.",
+          "korean": "A: 말씀드리던 대로 첫 단계는 쉬워요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "fillers.07-as-i-was-saying-the-first-step-is-easy.example-2",
+          "english": "A: As I was saying, the first step is easy. B: That makes sense.",
+          "korean": "A: 말씀드리던 대로 첫 단계는 쉬워요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "fillers.07-as-i-was-saying-the-first-step-is-easy.example-3",
+          "english": "A: As I was saying, the first step is easy. B: Thanks for telling me.",
+          "korean": "A: 말씀드리던 대로 첫 단계는 쉬워요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "fillers.07-as-i-was-saying-the-first-step-is-easy.variant-1",
+          "english": "The thing is, I already made other plans.",
+          "korean": "문제는 제가 이미 다른 계획을 세웠다는 거예요.",
+          "register": "casual",
+          "nuanceKo": "같은 필러와 말버릇 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "fillers.07-as-i-was-saying-the-first-step-is-easy.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "fillers.06-to-be-honest-im-a-little-nervous",
+          "fillers.08-the-thing-is-i-already-made-other-plans"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "fillers.08-the-thing-is-i-already-made-other-plans"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "As I was saying, the first step is easy.",
+        "lang": "en-US"
+      },
+      "sortKey": "061.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "fillers.08-the-thing-is-i-already-made-other-plans",
+      "familyId": "fillers.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "The thing is, I already made other plans.",
+      "english": "The thing is, I already made other plans.",
+      "korean": "문제는 제가 이미 다른 계획을 세웠다는 거예요.",
+      "intentKo": "필러와 말버릇 상황에서 “문제는 제가 이미 다른 계획을 세웠다는 거예요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 필러와 말버릇 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "fillers"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "필러와 말버릇",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "fillers.08-the-thing-is-i-already-made-other-plans.example-1",
+          "english": "A: The thing is, I already made other plans. B: I see what you mean.",
+          "korean": "A: 문제는 제가 이미 다른 계획을 세웠다는 거예요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "fillers.08-the-thing-is-i-already-made-other-plans.example-2",
+          "english": "A: The thing is, I already made other plans. B: That makes sense.",
+          "korean": "A: 문제는 제가 이미 다른 계획을 세웠다는 거예요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "fillers.08-the-thing-is-i-already-made-other-plans.example-3",
+          "english": "A: The thing is, I already made other plans. B: Thanks for telling me.",
+          "korean": "A: 문제는 제가 이미 다른 계획을 세웠다는 거예요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "fillers.08-the-thing-is-i-already-made-other-plans.variant-1",
+          "english": "Well, it depends.",
+          "korean": "글쎄요, 경우에 따라 달라요.",
+          "register": "casual",
+          "nuanceKo": "같은 필러와 말버릇 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "fillers.08-the-thing-is-i-already-made-other-plans.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "fillers.07-as-i-was-saying-the-first-step-is-easy",
+          "fillers.01-well-it-depends"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "fillers.01-well-it-depends"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "The thing is, I already made other plans.",
+        "lang": "en-US"
+      },
+      "sortKey": "061.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "softening.01-it-might-be-a-little-difficult",
+      "familyId": "softening.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "It might be a little difficult.",
+      "english": "It might be a little difficult.",
+      "korean": "조금 어려울 수도 있을 것 같아요.",
+      "intentKo": "완곡한 표현 상황에서 “조금 어려울 수도 있을 것 같아요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 완곡한 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "softening"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "완곡한 표현",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "softening.01-it-might-be-a-little-difficult.example-1",
+          "english": "A: It might be a little difficult. B: I see what you mean.",
+          "korean": "A: 조금 어려울 수도 있을 것 같아요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "softening.01-it-might-be-a-little-difficult.example-2",
+          "english": "A: It might be a little difficult. B: That makes sense.",
+          "korean": "A: 조금 어려울 수도 있을 것 같아요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "softening.01-it-might-be-a-little-difficult.example-3",
+          "english": "A: It might be a little difficult. B: Thanks for telling me.",
+          "korean": "A: 조금 어려울 수도 있을 것 같아요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "softening.01-it-might-be-a-little-difficult.variant-1",
+          "english": "I'm not sure that's the best idea.",
+          "korean": "그게 가장 좋은 생각인지는 모르겠어요.",
+          "register": "casual",
+          "nuanceKo": "같은 완곡한 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "softening.01-it-might-be-a-little-difficult.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "softening.08-you-may-want-to-reconsider-that-option",
+          "softening.02-im-not-sure-thats-the-best-idea"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "softening.02-im-not-sure-thats-the-best-idea"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "It might be a little difficult.",
+        "lang": "en-US"
+      },
+      "sortKey": "062.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "softening.02-im-not-sure-thats-the-best-idea",
+      "familyId": "softening.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm not sure that's the best idea.",
+      "english": "I'm not sure that's the best idea.",
+      "korean": "그게 가장 좋은 생각인지는 모르겠어요.",
+      "intentKo": "완곡한 표현 상황에서 “그게 가장 좋은 생각인지는 모르겠어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 완곡한 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "softening"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "완곡한 표현",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "softening.02-im-not-sure-thats-the-best-idea.example-1",
+          "english": "A: I'm not sure that's the best idea. B: I see what you mean.",
+          "korean": "A: 그게 가장 좋은 생각인지는 모르겠어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "softening.02-im-not-sure-thats-the-best-idea.example-2",
+          "english": "A: I'm not sure that's the best idea. B: That makes sense.",
+          "korean": "A: 그게 가장 좋은 생각인지는 모르겠어요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "softening.02-im-not-sure-thats-the-best-idea.example-3",
+          "english": "A: I'm not sure that's the best idea. B: Thanks for telling me.",
+          "korean": "A: 그게 가장 좋은 생각인지는 모르겠어요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "softening.02-im-not-sure-thats-the-best-idea.variant-1",
+          "english": "Perhaps we could look at it another way.",
+          "korean": "어쩌면 다른 방식으로 볼 수도 있겠어요.",
+          "register": "casual",
+          "nuanceKo": "같은 완곡한 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "softening.02-im-not-sure-thats-the-best-idea.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "softening.01-it-might-be-a-little-difficult",
+          "softening.03-perhaps-we-could-look-at-it-another-way"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "softening.03-perhaps-we-could-look-at-it-another-way"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm not sure that's the best idea.",
+        "lang": "en-US"
+      },
+      "sortKey": "062.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "softening.03-perhaps-we-could-look-at-it-another-way",
+      "familyId": "softening.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Perhaps we could look at it another way.",
+      "english": "Perhaps we could look at it another way.",
+      "korean": "어쩌면 다른 방식으로 볼 수도 있겠어요.",
+      "intentKo": "완곡한 표현 상황에서 “어쩌면 다른 방식으로 볼 수도 있겠어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 완곡한 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "softening"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "완곡한 표현",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "softening.03-perhaps-we-could-look-at-it-another-way.example-1",
+          "english": "A: Perhaps we could look at it another way. B: I see what you mean.",
+          "korean": "A: 어쩌면 다른 방식으로 볼 수도 있겠어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "softening.03-perhaps-we-could-look-at-it-another-way.example-2",
+          "english": "A: Perhaps we could look at it another way. B: That makes sense.",
+          "korean": "A: 어쩌면 다른 방식으로 볼 수도 있겠어요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "softening.03-perhaps-we-could-look-at-it-another-way.example-3",
+          "english": "A: Perhaps we could look at it another way. B: Thanks for telling me.",
+          "korean": "A: 어쩌면 다른 방식으로 볼 수도 있겠어요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "softening.03-perhaps-we-could-look-at-it-another-way.variant-1",
+          "english": "I was wondering if you had a moment.",
+          "korean": "잠깐 시간 괜찮으신지 여쭤보고 싶었어요.",
+          "register": "casual",
+          "nuanceKo": "같은 완곡한 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "softening.03-perhaps-we-could-look-at-it-another-way.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "softening.02-im-not-sure-thats-the-best-idea",
+          "softening.04-i-was-wondering-if-you-had-a-moment"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "softening.04-i-was-wondering-if-you-had-a-moment"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Perhaps we could look at it another way.",
+        "lang": "en-US"
+      },
+      "sortKey": "062.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "softening.04-i-was-wondering-if-you-had-a-moment",
+      "familyId": "softening.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I was wondering if you had a moment.",
+      "english": "I was wondering if you had a moment.",
+      "korean": "잠깐 시간 괜찮으신지 여쭤보고 싶었어요.",
+      "intentKo": "완곡한 표현 상황에서 “잠깐 시간 괜찮으신지 여쭤보고 싶었어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 완곡한 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "softening"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "완곡한 표현",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "softening.04-i-was-wondering-if-you-had-a-moment.example-1",
+          "english": "A: I was wondering if you had a moment. B: I see what you mean.",
+          "korean": "A: 잠깐 시간 괜찮으신지 여쭤보고 싶었어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "softening.04-i-was-wondering-if-you-had-a-moment.example-2",
+          "english": "A: I was wondering if you had a moment. B: That makes sense.",
+          "korean": "A: 잠깐 시간 괜찮으신지 여쭤보고 싶었어요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "softening.04-i-was-wondering-if-you-had-a-moment.example-3",
+          "english": "A: I was wondering if you had a moment. B: Thanks for telling me.",
+          "korean": "A: 잠깐 시간 괜찮으신지 여쭤보고 싶었어요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "softening.04-i-was-wondering-if-you-had-a-moment.variant-1",
+          "english": "There seems to be a small problem.",
+          "korean": "작은 문제가 있는 것 같아요.",
+          "register": "casual",
+          "nuanceKo": "같은 완곡한 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "softening.04-i-was-wondering-if-you-had-a-moment.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "softening.03-perhaps-we-could-look-at-it-another-way",
+          "softening.05-there-seems-to-be-a-small-problem"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "softening.05-there-seems-to-be-a-small-problem"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I was wondering if you had a moment.",
+        "lang": "en-US"
+      },
+      "sortKey": "062.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "softening.05-there-seems-to-be-a-small-problem",
+      "familyId": "softening.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "There seems to be a small problem.",
+      "english": "There seems to be a small problem.",
+      "korean": "작은 문제가 있는 것 같아요.",
+      "intentKo": "완곡한 표현 상황에서 “작은 문제가 있는 것 같아요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 완곡한 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "softening"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "완곡한 표현",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "softening.05-there-seems-to-be-a-small-problem.example-1",
+          "english": "A: There seems to be a small problem. B: I see what you mean.",
+          "korean": "A: 작은 문제가 있는 것 같아요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "softening.05-there-seems-to-be-a-small-problem.example-2",
+          "english": "A: There seems to be a small problem. B: That makes sense.",
+          "korean": "A: 작은 문제가 있는 것 같아요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "softening.05-there-seems-to-be-a-small-problem.example-3",
+          "english": "A: There seems to be a small problem. B: Thanks for telling me.",
+          "korean": "A: 작은 문제가 있는 것 같아요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "softening.05-there-seems-to-be-a-small-problem.variant-1",
+          "english": "I don't suppose you could help me?",
+          "korean": "혹시 저를 도와주실 수 있을까요?",
+          "register": "casual",
+          "nuanceKo": "같은 완곡한 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "softening.05-there-seems-to-be-a-small-problem.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "softening.04-i-was-wondering-if-you-had-a-moment",
+          "softening.06-i-dont-suppose-you-could-help-me"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "softening.06-i-dont-suppose-you-could-help-me"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "There seems to be a small problem.",
+        "lang": "en-US"
+      },
+      "sortKey": "062.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "softening.06-i-dont-suppose-you-could-help-me",
+      "familyId": "softening.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I don't suppose you could help me?",
+      "english": "I don't suppose you could help me?",
+      "korean": "혹시 저를 도와주실 수 있을까요?",
+      "intentKo": "완곡한 표현 상황에서 “혹시 저를 도와주실 수 있을까요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 완곡한 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "softening"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "완곡한 표현",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "softening.06-i-dont-suppose-you-could-help-me.example-1",
+          "english": "A: I don't suppose you could help me? B: I see what you mean.",
+          "korean": "A: 혹시 저를 도와주실 수 있을까요? B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "softening.06-i-dont-suppose-you-could-help-me.example-2",
+          "english": "A: I don't suppose you could help me? B: That makes sense.",
+          "korean": "A: 혹시 저를 도와주실 수 있을까요? B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "softening.06-i-dont-suppose-you-could-help-me.example-3",
+          "english": "A: I don't suppose you could help me? B: Thanks for telling me.",
+          "korean": "A: 혹시 저를 도와주실 수 있을까요? B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "softening.06-i-dont-suppose-you-could-help-me.variant-1",
+          "english": "With all due respect, I see it differently.",
+          "korean": "존중하는 마음은 있지만 저는 다르게 봅니다.",
+          "register": "casual",
+          "nuanceKo": "같은 완곡한 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "softening.06-i-dont-suppose-you-could-help-me.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "softening.05-there-seems-to-be-a-small-problem",
+          "softening.07-with-all-due-respect-i-see-it-differently"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "softening.07-with-all-due-respect-i-see-it-differently"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I don't suppose you could help me?",
+        "lang": "en-US"
+      },
+      "sortKey": "062.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "softening.07-with-all-due-respect-i-see-it-differently",
+      "familyId": "softening.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "With all due respect, I see it differently.",
+      "english": "With all due respect, I see it differently.",
+      "korean": "존중하는 마음은 있지만 저는 다르게 봅니다.",
+      "intentKo": "완곡한 표현 상황에서 “존중하는 마음은 있지만 저는 다르게 봅니다.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 완곡한 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "softening"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "완곡한 표현",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "softening.07-with-all-due-respect-i-see-it-differently.example-1",
+          "english": "A: With all due respect, I see it differently. B: I see what you mean.",
+          "korean": "A: 존중하는 마음은 있지만 저는 다르게 봅니다. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "softening.07-with-all-due-respect-i-see-it-differently.example-2",
+          "english": "A: With all due respect, I see it differently. B: That makes sense.",
+          "korean": "A: 존중하는 마음은 있지만 저는 다르게 봅니다. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "softening.07-with-all-due-respect-i-see-it-differently.example-3",
+          "english": "A: With all due respect, I see it differently. B: Thanks for telling me.",
+          "korean": "A: 존중하는 마음은 있지만 저는 다르게 봅니다. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "softening.07-with-all-due-respect-i-see-it-differently.variant-1",
+          "english": "You may want to reconsider that option.",
+          "korean": "그 선택지를 다시 생각해 보시는 게 좋을 수도 있어요.",
+          "register": "casual",
+          "nuanceKo": "같은 완곡한 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "softening.07-with-all-due-respect-i-see-it-differently.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "softening.06-i-dont-suppose-you-could-help-me",
+          "softening.08-you-may-want-to-reconsider-that-option"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "softening.08-you-may-want-to-reconsider-that-option"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "With all due respect, I see it differently.",
+        "lang": "en-US"
+      },
+      "sortKey": "062.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "softening.08-you-may-want-to-reconsider-that-option",
+      "familyId": "softening.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "You may want to reconsider that option.",
+      "english": "You may want to reconsider that option.",
+      "korean": "그 선택지를 다시 생각해 보시는 게 좋을 수도 있어요.",
+      "intentKo": "완곡한 표현 상황에서 “그 선택지를 다시 생각해 보시는 게 좋을 수도 있어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 완곡한 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "softening"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "완곡한 표현",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "softening.08-you-may-want-to-reconsider-that-option.example-1",
+          "english": "A: You may want to reconsider that option. B: I see what you mean.",
+          "korean": "A: 그 선택지를 다시 생각해 보시는 게 좋을 수도 있어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "softening.08-you-may-want-to-reconsider-that-option.example-2",
+          "english": "A: You may want to reconsider that option. B: That makes sense.",
+          "korean": "A: 그 선택지를 다시 생각해 보시는 게 좋을 수도 있어요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "softening.08-you-may-want-to-reconsider-that-option.example-3",
+          "english": "A: You may want to reconsider that option. B: Thanks for telling me.",
+          "korean": "A: 그 선택지를 다시 생각해 보시는 게 좋을 수도 있어요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "softening.08-you-may-want-to-reconsider-that-option.variant-1",
+          "english": "It might be a little difficult.",
+          "korean": "조금 어려울 수도 있을 것 같아요.",
+          "register": "casual",
+          "nuanceKo": "같은 완곡한 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "softening.08-you-may-want-to-reconsider-that-option.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "softening.07-with-all-due-respect-i-see-it-differently",
+          "softening.01-it-might-be-a-little-difficult"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "softening.01-it-might-be-a-little-difficult"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "You may want to reconsider that option.",
+        "lang": "en-US"
+      },
+      "sortKey": "062.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "contractions.01-im-gonna-head-out",
+      "familyId": "contractions.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm gonna head out.",
+      "english": "I'm gonna head out.",
+      "korean": "저 이제 나갈게요.",
+      "intentKo": "자연스러운 축약 상황에서 “저 이제 나갈게요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 자연스러운 축약 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "contractions"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "자연스러운 축약",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "contractions.01-im-gonna-head-out.example-1",
+          "english": "A: I'm gonna head out. B: I see what you mean.",
+          "korean": "A: 저 이제 나갈게요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "contractions.01-im-gonna-head-out.example-2",
+          "english": "A: I'm gonna head out. B: That makes sense.",
+          "korean": "A: 저 이제 나갈게요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "contractions.01-im-gonna-head-out.example-3",
+          "english": "A: I'm gonna head out. B: Thanks for telling me.",
+          "korean": "A: 저 이제 나갈게요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "contractions.01-im-gonna-head-out.variant-1",
+          "english": "Do you wanna come?",
+          "korean": "같이 갈래요?",
+          "register": "casual",
+          "nuanceKo": "같은 자연스러운 축약 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "contractions.01-im-gonna-head-out.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "contractions.08-whaddaya-think",
+          "contractions.02-do-you-wanna-come"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "contractions.02-do-you-wanna-come"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm gonna head out.",
+        "lang": "en-US"
+      },
+      "sortKey": "063.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "contractions.02-do-you-wanna-come",
+      "familyId": "contractions.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Do you wanna come?",
+      "english": "Do you wanna come?",
+      "korean": "같이 갈래요?",
+      "intentKo": "자연스러운 축약 상황에서 “같이 갈래요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 자연스러운 축약 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "contractions"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "자연스러운 축약",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "contractions.02-do-you-wanna-come.example-1",
+          "english": "A: Do you wanna come? B: I see what you mean.",
+          "korean": "A: 같이 갈래요? B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "contractions.02-do-you-wanna-come.example-2",
+          "english": "A: Do you wanna come? B: That makes sense.",
+          "korean": "A: 같이 갈래요? B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "contractions.02-do-you-wanna-come.example-3",
+          "english": "A: Do you wanna come? B: Thanks for telling me.",
+          "korean": "A: 같이 갈래요? B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "contractions.02-do-you-wanna-come.variant-1",
+          "english": "I've gotta get back to work.",
+          "korean": "저 다시 일하러 가야 해요.",
+          "register": "casual",
+          "nuanceKo": "같은 자연스러운 축약 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "contractions.02-do-you-wanna-come.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "contractions.01-im-gonna-head-out",
+          "contractions.03-ive-gotta-get-back-to-work"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "contractions.03-ive-gotta-get-back-to-work"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Do you wanna come?",
+        "lang": "en-US"
+      },
+      "sortKey": "063.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "contractions.03-ive-gotta-get-back-to-work",
+      "familyId": "contractions.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I've gotta get back to work.",
+      "english": "I've gotta get back to work.",
+      "korean": "저 다시 일하러 가야 해요.",
+      "intentKo": "자연스러운 축약 상황에서 “저 다시 일하러 가야 해요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 자연스러운 축약 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "contractions"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "자연스러운 축약",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "contractions.03-ive-gotta-get-back-to-work.example-1",
+          "english": "A: I've gotta get back to work. B: I see what you mean.",
+          "korean": "A: 저 다시 일하러 가야 해요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "contractions.03-ive-gotta-get-back-to-work.example-2",
+          "english": "A: I've gotta get back to work. B: That makes sense.",
+          "korean": "A: 저 다시 일하러 가야 해요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "contractions.03-ive-gotta-get-back-to-work.example-3",
+          "english": "A: I've gotta get back to work. B: Thanks for telling me.",
+          "korean": "A: 저 다시 일하러 가야 해요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "contractions.03-ive-gotta-get-back-to-work.variant-1",
+          "english": "Lemme check real quick.",
+          "korean": "제가 얼른 확인해 볼게요.",
+          "register": "casual",
+          "nuanceKo": "같은 자연스러운 축약 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "contractions.03-ive-gotta-get-back-to-work.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "contractions.02-do-you-wanna-come",
+          "contractions.04-lemme-check-real-quick"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "contractions.04-lemme-check-real-quick"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I've gotta get back to work.",
+        "lang": "en-US"
+      },
+      "sortKey": "063.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "contractions.04-lemme-check-real-quick",
+      "familyId": "contractions.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Lemme check real quick.",
+      "english": "Lemme check real quick.",
+      "korean": "제가 얼른 확인해 볼게요.",
+      "intentKo": "자연스러운 축약 상황에서 “제가 얼른 확인해 볼게요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 자연스러운 축약 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "contractions"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "자연스러운 축약",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "contractions.04-lemme-check-real-quick.example-1",
+          "english": "A: Lemme check real quick. B: I see what you mean.",
+          "korean": "A: 제가 얼른 확인해 볼게요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "contractions.04-lemme-check-real-quick.example-2",
+          "english": "A: Lemme check real quick. B: That makes sense.",
+          "korean": "A: 제가 얼른 확인해 볼게요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "contractions.04-lemme-check-real-quick.example-3",
+          "english": "A: Lemme check real quick. B: Thanks for telling me.",
+          "korean": "A: 제가 얼른 확인해 볼게요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "contractions.04-lemme-check-real-quick.variant-1",
+          "english": "Gimme a second.",
+          "korean": "잠깐만요.",
+          "register": "casual",
+          "nuanceKo": "같은 자연스러운 축약 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "contractions.04-lemme-check-real-quick.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "contractions.03-ive-gotta-get-back-to-work",
+          "contractions.05-gimme-a-second"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "contractions.05-gimme-a-second"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Lemme check real quick.",
+        "lang": "en-US"
+      },
+      "sortKey": "063.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "contractions.05-gimme-a-second",
+      "familyId": "contractions.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Gimme a second.",
+      "english": "Gimme a second.",
+      "korean": "잠깐만요.",
+      "intentKo": "자연스러운 축약 상황에서 “잠깐만요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 자연스러운 축약 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "contractions"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "자연스러운 축약",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "contractions.05-gimme-a-second.example-1",
+          "english": "A: Gimme a second. B: I see what you mean.",
+          "korean": "A: 잠깐만요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "contractions.05-gimme-a-second.example-2",
+          "english": "A: Gimme a second. B: That makes sense.",
+          "korean": "A: 잠깐만요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "contractions.05-gimme-a-second.example-3",
+          "english": "A: Gimme a second. B: Thanks for telling me.",
+          "korean": "A: 잠깐만요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "contractions.05-gimme-a-second.variant-1",
+          "english": "Kinda feels like we're stuck.",
+          "korean": "우리 막힌 것 같은 느낌이 좀 들어요.",
+          "register": "casual",
+          "nuanceKo": "같은 자연스러운 축약 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "contractions.05-gimme-a-second.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "contractions.04-lemme-check-real-quick",
+          "contractions.06-kinda-feels-like-were-stuck"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "contractions.06-kinda-feels-like-were-stuck"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Gimme a second.",
+        "lang": "en-US"
+      },
+      "sortKey": "063.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "contractions.06-kinda-feels-like-were-stuck",
+      "familyId": "contractions.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Kinda feels like we're stuck.",
+      "english": "Kinda feels like we're stuck.",
+      "korean": "우리 막힌 것 같은 느낌이 좀 들어요.",
+      "intentKo": "자연스러운 축약 상황에서 “우리 막힌 것 같은 느낌이 좀 들어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 자연스러운 축약 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "contractions"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "자연스러운 축약",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "contractions.06-kinda-feels-like-were-stuck.example-1",
+          "english": "A: Kinda feels like we're stuck. B: I see what you mean.",
+          "korean": "A: 우리 막힌 것 같은 느낌이 좀 들어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "contractions.06-kinda-feels-like-were-stuck.example-2",
+          "english": "A: Kinda feels like we're stuck. B: That makes sense.",
+          "korean": "A: 우리 막힌 것 같은 느낌이 좀 들어요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "contractions.06-kinda-feels-like-were-stuck.example-3",
+          "english": "A: Kinda feels like we're stuck. B: Thanks for telling me.",
+          "korean": "A: 우리 막힌 것 같은 느낌이 좀 들어요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "contractions.06-kinda-feels-like-were-stuck.variant-1",
+          "english": "I dunno what happened.",
+          "korean": "무슨 일이 있었는지 모르겠어요.",
+          "register": "casual",
+          "nuanceKo": "같은 자연스러운 축약 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "contractions.06-kinda-feels-like-were-stuck.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "contractions.05-gimme-a-second",
+          "contractions.07-i-dunno-what-happened"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "contractions.07-i-dunno-what-happened"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Kinda feels like we're stuck.",
+        "lang": "en-US"
+      },
+      "sortKey": "063.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "contractions.07-i-dunno-what-happened",
+      "familyId": "contractions.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I dunno what happened.",
+      "english": "I dunno what happened.",
+      "korean": "무슨 일이 있었는지 모르겠어요.",
+      "intentKo": "자연스러운 축약 상황에서 “무슨 일이 있었는지 모르겠어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 자연스러운 축약 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "contractions"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "자연스러운 축약",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "contractions.07-i-dunno-what-happened.example-1",
+          "english": "A: I dunno what happened. B: I see what you mean.",
+          "korean": "A: 무슨 일이 있었는지 모르겠어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "contractions.07-i-dunno-what-happened.example-2",
+          "english": "A: I dunno what happened. B: That makes sense.",
+          "korean": "A: 무슨 일이 있었는지 모르겠어요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "contractions.07-i-dunno-what-happened.example-3",
+          "english": "A: I dunno what happened. B: Thanks for telling me.",
+          "korean": "A: 무슨 일이 있었는지 모르겠어요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "contractions.07-i-dunno-what-happened.variant-1",
+          "english": "Whaddaya think?",
+          "korean": "어떻게 생각해요?",
+          "register": "casual",
+          "nuanceKo": "같은 자연스러운 축약 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "contractions.07-i-dunno-what-happened.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "contractions.06-kinda-feels-like-were-stuck",
+          "contractions.08-whaddaya-think"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "contractions.08-whaddaya-think"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I dunno what happened.",
+        "lang": "en-US"
+      },
+      "sortKey": "063.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "contractions.08-whaddaya-think",
+      "familyId": "contractions.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Whaddaya think?",
+      "english": "Whaddaya think?",
+      "korean": "어떻게 생각해요?",
+      "intentKo": "자연스러운 축약 상황에서 “어떻게 생각해요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 자연스러운 축약 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "contractions"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "자연스러운 축약",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "contractions.08-whaddaya-think.example-1",
+          "english": "A: Whaddaya think? B: I see what you mean.",
+          "korean": "A: 어떻게 생각해요? B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "contractions.08-whaddaya-think.example-2",
+          "english": "A: Whaddaya think? B: That makes sense.",
+          "korean": "A: 어떻게 생각해요? B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "contractions.08-whaddaya-think.example-3",
+          "english": "A: Whaddaya think? B: Thanks for telling me.",
+          "korean": "A: 어떻게 생각해요? B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "contractions.08-whaddaya-think.variant-1",
+          "english": "I'm gonna head out.",
+          "korean": "저 이제 나갈게요.",
+          "register": "casual",
+          "nuanceKo": "같은 자연스러운 축약 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "contractions.08-whaddaya-think.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "contractions.07-i-dunno-what-happened",
+          "contractions.01-im-gonna-head-out"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "contractions.01-im-gonna-head-out"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Whaddaya think?",
+        "lang": "en-US"
+      },
+      "sortKey": "063.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "phrasal-verbs.01-ill-pick-you-up-at-eight",
+      "familyId": "phrasal-verbs.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'll pick you up at eight.",
+      "english": "I'll pick you up at eight.",
+      "korean": "8시에 데리러 갈게요.",
+      "intentKo": "자주 쓰는 구동사 상황에서 “8시에 데리러 갈게요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 자주 쓰는 구동사 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "phrasal-verbs"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "자주 쓰는 구동사",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "phrasal-verbs.01-ill-pick-you-up-at-eight.example-1",
+          "english": "A: I'll pick you up at eight. B: I see what you mean.",
+          "korean": "A: 8시에 데리러 갈게요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "phrasal-verbs.01-ill-pick-you-up-at-eight.example-2",
+          "english": "A: I'll pick you up at eight. B: That makes sense.",
+          "korean": "A: 8시에 데리러 갈게요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "phrasal-verbs.01-ill-pick-you-up-at-eight.example-3",
+          "english": "A: I'll pick you up at eight. B: Thanks for telling me.",
+          "korean": "A: 8시에 데리러 갈게요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "phrasal-verbs.01-ill-pick-you-up-at-eight.variant-1",
+          "english": "Can you turn the music down?",
+          "korean": "음악 소리를 줄여줄래요?",
+          "register": "casual",
+          "nuanceKo": "같은 자주 쓰는 구동사 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "phrasal-verbs.01-ill-pick-you-up-at-eight.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "phrasal-verbs.08-it-took-me-a-while-to-get-over-it",
+          "phrasal-verbs.02-can-you-turn-the-music-down"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "phrasal-verbs.02-can-you-turn-the-music-down"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'll pick you up at eight.",
+        "lang": "en-US"
+      },
+      "sortKey": "064.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "phrasal-verbs.02-can-you-turn-the-music-down",
+      "familyId": "phrasal-verbs.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Can you turn the music down?",
+      "english": "Can you turn the music down?",
+      "korean": "음악 소리를 줄여줄래요?",
+      "intentKo": "자주 쓰는 구동사 상황에서 “음악 소리를 줄여줄래요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 자주 쓰는 구동사 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "phrasal-verbs"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "자주 쓰는 구동사",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "phrasal-verbs.02-can-you-turn-the-music-down.example-1",
+          "english": "A: Can you turn the music down? B: I see what you mean.",
+          "korean": "A: 음악 소리를 줄여줄래요? B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "phrasal-verbs.02-can-you-turn-the-music-down.example-2",
+          "english": "A: Can you turn the music down? B: That makes sense.",
+          "korean": "A: 음악 소리를 줄여줄래요? B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "phrasal-verbs.02-can-you-turn-the-music-down.example-3",
+          "english": "A: Can you turn the music down? B: Thanks for telling me.",
+          "korean": "A: 음악 소리를 줄여줄래요? B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "phrasal-verbs.02-can-you-turn-the-music-down.variant-1",
+          "english": "We ran out of milk.",
+          "korean": "우유가 다 떨어졌어요.",
+          "register": "casual",
+          "nuanceKo": "같은 자주 쓰는 구동사 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "phrasal-verbs.02-can-you-turn-the-music-down.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "phrasal-verbs.01-ill-pick-you-up-at-eight",
+          "phrasal-verbs.03-we-ran-out-of-milk"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "phrasal-verbs.03-we-ran-out-of-milk"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Can you turn the music down?",
+        "lang": "en-US"
+      },
+      "sortKey": "064.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "phrasal-verbs.03-we-ran-out-of-milk",
+      "familyId": "phrasal-verbs.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "We ran out of milk.",
+      "english": "We ran out of milk.",
+      "korean": "우유가 다 떨어졌어요.",
+      "intentKo": "자주 쓰는 구동사 상황에서 “우유가 다 떨어졌어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 자주 쓰는 구동사 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "phrasal-verbs"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "자주 쓰는 구동사",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "phrasal-verbs.03-we-ran-out-of-milk.example-1",
+          "english": "A: We ran out of milk. B: I see what you mean.",
+          "korean": "A: 우유가 다 떨어졌어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "phrasal-verbs.03-we-ran-out-of-milk.example-2",
+          "english": "A: We ran out of milk. B: That makes sense.",
+          "korean": "A: 우유가 다 떨어졌어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "phrasal-verbs.03-we-ran-out-of-milk.example-3",
+          "english": "A: We ran out of milk. B: Thanks for telling me.",
+          "korean": "A: 우유가 다 떨어졌어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "phrasal-verbs.03-we-ran-out-of-milk.variant-1",
+          "english": "I need to figure this out.",
+          "korean": "이걸 해결해야 해요.",
+          "register": "casual",
+          "nuanceKo": "같은 자주 쓰는 구동사 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "phrasal-verbs.03-we-ran-out-of-milk.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "phrasal-verbs.02-can-you-turn-the-music-down",
+          "phrasal-verbs.04-i-need-to-figure-this-out"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "phrasal-verbs.04-i-need-to-figure-this-out"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "We ran out of milk.",
+        "lang": "en-US"
+      },
+      "sortKey": "064.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "phrasal-verbs.04-i-need-to-figure-this-out",
+      "familyId": "phrasal-verbs.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I need to figure this out.",
+      "english": "I need to figure this out.",
+      "korean": "이걸 해결해야 해요.",
+      "intentKo": "자주 쓰는 구동사 상황에서 “이걸 해결해야 해요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 자주 쓰는 구동사 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "phrasal-verbs"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "자주 쓰는 구동사",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "phrasal-verbs.04-i-need-to-figure-this-out.example-1",
+          "english": "A: I need to figure this out. B: I see what you mean.",
+          "korean": "A: 이걸 해결해야 해요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "phrasal-verbs.04-i-need-to-figure-this-out.example-2",
+          "english": "A: I need to figure this out. B: That makes sense.",
+          "korean": "A: 이걸 해결해야 해요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "phrasal-verbs.04-i-need-to-figure-this-out.example-3",
+          "english": "A: I need to figure this out. B: Thanks for telling me.",
+          "korean": "A: 이걸 해결해야 해요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "phrasal-verbs.04-i-need-to-figure-this-out.variant-1",
+          "english": "Don't put it off any longer.",
+          "korean": "더 이상 미루지 마세요.",
+          "register": "casual",
+          "nuanceKo": "같은 자주 쓰는 구동사 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "phrasal-verbs.04-i-need-to-figure-this-out.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "phrasal-verbs.03-we-ran-out-of-milk",
+          "phrasal-verbs.05-dont-put-it-off-any-longer"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "phrasal-verbs.05-dont-put-it-off-any-longer"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I need to figure this out.",
+        "lang": "en-US"
+      },
+      "sortKey": "064.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "phrasal-verbs.05-dont-put-it-off-any-longer",
+      "familyId": "phrasal-verbs.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Don't put it off any longer.",
+      "english": "Don't put it off any longer.",
+      "korean": "더 이상 미루지 마세요.",
+      "intentKo": "자주 쓰는 구동사 상황에서 “더 이상 미루지 마세요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 자주 쓰는 구동사 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "phrasal-verbs"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "자주 쓰는 구동사",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "phrasal-verbs.05-dont-put-it-off-any-longer.example-1",
+          "english": "A: Don't put it off any longer. B: I see what you mean.",
+          "korean": "A: 더 이상 미루지 마세요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "phrasal-verbs.05-dont-put-it-off-any-longer.example-2",
+          "english": "A: Don't put it off any longer. B: That makes sense.",
+          "korean": "A: 더 이상 미루지 마세요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "phrasal-verbs.05-dont-put-it-off-any-longer.example-3",
+          "english": "A: Don't put it off any longer. B: Thanks for telling me.",
+          "korean": "A: 더 이상 미루지 마세요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "phrasal-verbs.05-dont-put-it-off-any-longer.variant-1",
+          "english": "She came up with a great idea.",
+          "korean": "그녀가 좋은 아이디어를 생각해 냈어요.",
+          "register": "casual",
+          "nuanceKo": "같은 자주 쓰는 구동사 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "phrasal-verbs.05-dont-put-it-off-any-longer.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "phrasal-verbs.04-i-need-to-figure-this-out",
+          "phrasal-verbs.06-she-came-up-with-a-great-idea"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "phrasal-verbs.06-she-came-up-with-a-great-idea"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Don't put it off any longer.",
+        "lang": "en-US"
+      },
+      "sortKey": "064.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "phrasal-verbs.06-she-came-up-with-a-great-idea",
+      "familyId": "phrasal-verbs.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "She came up with a great idea.",
+      "english": "She came up with a great idea.",
+      "korean": "그녀가 좋은 아이디어를 생각해 냈어요.",
+      "intentKo": "자주 쓰는 구동사 상황에서 “그녀가 좋은 아이디어를 생각해 냈어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 자주 쓰는 구동사 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "phrasal-verbs"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "자주 쓰는 구동사",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "phrasal-verbs.06-she-came-up-with-a-great-idea.example-1",
+          "english": "A: She came up with a great idea. B: I see what you mean.",
+          "korean": "A: 그녀가 좋은 아이디어를 생각해 냈어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "phrasal-verbs.06-she-came-up-with-a-great-idea.example-2",
+          "english": "A: She came up with a great idea. B: That makes sense.",
+          "korean": "A: 그녀가 좋은 아이디어를 생각해 냈어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "phrasal-verbs.06-she-came-up-with-a-great-idea.example-3",
+          "english": "A: She came up with a great idea. B: Thanks for telling me.",
+          "korean": "A: 그녀가 좋은 아이디어를 생각해 냈어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "phrasal-verbs.06-she-came-up-with-a-great-idea.variant-1",
+          "english": "Let's go over the plan once more.",
+          "korean": "계획을 한 번 더 검토해 봅시다.",
+          "register": "casual",
+          "nuanceKo": "같은 자주 쓰는 구동사 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "phrasal-verbs.06-she-came-up-with-a-great-idea.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "phrasal-verbs.05-dont-put-it-off-any-longer",
+          "phrasal-verbs.07-lets-go-over-the-plan-once-more"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "phrasal-verbs.07-lets-go-over-the-plan-once-more"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "She came up with a great idea.",
+        "lang": "en-US"
+      },
+      "sortKey": "064.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "phrasal-verbs.07-lets-go-over-the-plan-once-more",
+      "familyId": "phrasal-verbs.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Let's go over the plan once more.",
+      "english": "Let's go over the plan once more.",
+      "korean": "계획을 한 번 더 검토해 봅시다.",
+      "intentKo": "자주 쓰는 구동사 상황에서 “계획을 한 번 더 검토해 봅시다.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 자주 쓰는 구동사 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "phrasal-verbs"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "자주 쓰는 구동사",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "phrasal-verbs.07-lets-go-over-the-plan-once-more.example-1",
+          "english": "A: Let's go over the plan once more. B: I see what you mean.",
+          "korean": "A: 계획을 한 번 더 검토해 봅시다. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "phrasal-verbs.07-lets-go-over-the-plan-once-more.example-2",
+          "english": "A: Let's go over the plan once more. B: That makes sense.",
+          "korean": "A: 계획을 한 번 더 검토해 봅시다. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "phrasal-verbs.07-lets-go-over-the-plan-once-more.example-3",
+          "english": "A: Let's go over the plan once more. B: Thanks for telling me.",
+          "korean": "A: 계획을 한 번 더 검토해 봅시다. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "phrasal-verbs.07-lets-go-over-the-plan-once-more.variant-1",
+          "english": "It took me a while to get over it.",
+          "korean": "그걸 극복하는 데 시간이 좀 걸렸어요.",
+          "register": "casual",
+          "nuanceKo": "같은 자주 쓰는 구동사 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "phrasal-verbs.07-lets-go-over-the-plan-once-more.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "phrasal-verbs.06-she-came-up-with-a-great-idea",
+          "phrasal-verbs.08-it-took-me-a-while-to-get-over-it"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "phrasal-verbs.08-it-took-me-a-while-to-get-over-it"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Let's go over the plan once more.",
+        "lang": "en-US"
+      },
+      "sortKey": "064.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "phrasal-verbs.08-it-took-me-a-while-to-get-over-it",
+      "familyId": "phrasal-verbs.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "It took me a while to get over it.",
+      "english": "It took me a while to get over it.",
+      "korean": "그걸 극복하는 데 시간이 좀 걸렸어요.",
+      "intentKo": "자주 쓰는 구동사 상황에서 “그걸 극복하는 데 시간이 좀 걸렸어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 자주 쓰는 구동사 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "phrasal-verbs"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "자주 쓰는 구동사",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "phrasal-verbs.08-it-took-me-a-while-to-get-over-it.example-1",
+          "english": "A: It took me a while to get over it. B: I see what you mean.",
+          "korean": "A: 그걸 극복하는 데 시간이 좀 걸렸어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "phrasal-verbs.08-it-took-me-a-while-to-get-over-it.example-2",
+          "english": "A: It took me a while to get over it. B: That makes sense.",
+          "korean": "A: 그걸 극복하는 데 시간이 좀 걸렸어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "phrasal-verbs.08-it-took-me-a-while-to-get-over-it.example-3",
+          "english": "A: It took me a while to get over it. B: Thanks for telling me.",
+          "korean": "A: 그걸 극복하는 데 시간이 좀 걸렸어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "phrasal-verbs.08-it-took-me-a-while-to-get-over-it.variant-1",
+          "english": "I'll pick you up at eight.",
+          "korean": "8시에 데리러 갈게요.",
+          "register": "casual",
+          "nuanceKo": "같은 자주 쓰는 구동사 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "phrasal-verbs.08-it-took-me-a-while-to-get-over-it.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "phrasal-verbs.07-lets-go-over-the-plan-once-more",
+          "phrasal-verbs.01-ill-pick-you-up-at-eight"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "phrasal-verbs.01-ill-pick-you-up-at-eight"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "It took me a while to get over it.",
+        "lang": "en-US"
+      },
+      "sortKey": "064.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "idioms.01-its-not-a-big-deal",
+      "familyId": "idioms.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "It's not a big deal.",
+      "english": "It's not a big deal.",
+      "korean": "별일 아니에요.",
+      "intentKo": "일상적인 관용 표현 상황에서 “별일 아니에요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 일상적인 관용 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "idioms"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "일상적인 관용 표현",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "idioms.01-its-not-a-big-deal.example-1",
+          "english": "A: It's not a big deal. B: I see what you mean.",
+          "korean": "A: 별일 아니에요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "idioms.01-its-not-a-big-deal.example-2",
+          "english": "A: It's not a big deal. B: That makes sense.",
+          "korean": "A: 별일 아니에요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "idioms.01-its-not-a-big-deal.example-3",
+          "english": "A: It's not a big deal. B: Thanks for telling me.",
+          "korean": "A: 별일 아니에요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "idioms.01-its-not-a-big-deal.variant-1",
+          "english": "That rings a bell.",
+          "korean": "그 말이 어렴풋이 기억나요.",
+          "register": "casual",
+          "nuanceKo": "같은 일상적인 관용 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "idioms.01-its-not-a-big-deal.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "idioms.08-well-cross-that-bridge-when-we-come-to-it",
+          "idioms.02-that-rings-a-bell"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "idioms.02-that-rings-a-bell"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "It's not a big deal.",
+        "lang": "en-US"
+      },
+      "sortKey": "065.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "idioms.02-that-rings-a-bell",
+      "familyId": "idioms.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "That rings a bell.",
+      "english": "That rings a bell.",
+      "korean": "그 말이 어렴풋이 기억나요.",
+      "intentKo": "일상적인 관용 표현 상황에서 “그 말이 어렴풋이 기억나요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 일상적인 관용 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "idioms"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "일상적인 관용 표현",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "idioms.02-that-rings-a-bell.example-1",
+          "english": "A: That rings a bell. B: I see what you mean.",
+          "korean": "A: 그 말이 어렴풋이 기억나요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "idioms.02-that-rings-a-bell.example-2",
+          "english": "A: That rings a bell. B: That makes sense.",
+          "korean": "A: 그 말이 어렴풋이 기억나요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "idioms.02-that-rings-a-bell.example-3",
+          "english": "A: That rings a bell. B: Thanks for telling me.",
+          "korean": "A: 그 말이 어렴풋이 기억나요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "idioms.02-that-rings-a-bell.variant-1",
+          "english": "I'm just pulling your leg.",
+          "korean": "그냥 농담하는 거예요.",
+          "register": "casual",
+          "nuanceKo": "같은 일상적인 관용 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "idioms.02-that-rings-a-bell.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "idioms.01-its-not-a-big-deal",
+          "idioms.03-im-just-pulling-your-leg"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "idioms.03-im-just-pulling-your-leg"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "That rings a bell.",
+        "lang": "en-US"
+      },
+      "sortKey": "065.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "idioms.03-im-just-pulling-your-leg",
+      "familyId": "idioms.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm just pulling your leg.",
+      "english": "I'm just pulling your leg.",
+      "korean": "그냥 농담하는 거예요.",
+      "intentKo": "일상적인 관용 표현 상황에서 “그냥 농담하는 거예요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 일상적인 관용 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "idioms"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "일상적인 관용 표현",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "idioms.03-im-just-pulling-your-leg.example-1",
+          "english": "A: I'm just pulling your leg. B: I see what you mean.",
+          "korean": "A: 그냥 농담하는 거예요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "idioms.03-im-just-pulling-your-leg.example-2",
+          "english": "A: I'm just pulling your leg. B: That makes sense.",
+          "korean": "A: 그냥 농담하는 거예요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "idioms.03-im-just-pulling-your-leg.example-3",
+          "english": "A: I'm just pulling your leg. B: Thanks for telling me.",
+          "korean": "A: 그냥 농담하는 거예요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "idioms.03-im-just-pulling-your-leg.variant-1",
+          "english": "Let's call it a day.",
+          "korean": "오늘은 이만 끝내죠.",
+          "register": "casual",
+          "nuanceKo": "같은 일상적인 관용 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "idioms.03-im-just-pulling-your-leg.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "idioms.02-that-rings-a-bell",
+          "idioms.04-lets-call-it-a-day"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "idioms.04-lets-call-it-a-day"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm just pulling your leg.",
+        "lang": "en-US"
+      },
+      "sortKey": "065.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "idioms.04-lets-call-it-a-day",
+      "familyId": "idioms.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Let's call it a day.",
+      "english": "Let's call it a day.",
+      "korean": "오늘은 이만 끝내죠.",
+      "intentKo": "일상적인 관용 표현 상황에서 “오늘은 이만 끝내죠.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 일상적인 관용 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "idioms"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "일상적인 관용 표현",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "idioms.04-lets-call-it-a-day.example-1",
+          "english": "A: Let's call it a day. B: I see what you mean.",
+          "korean": "A: 오늘은 이만 끝내죠. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "idioms.04-lets-call-it-a-day.example-2",
+          "english": "A: Let's call it a day. B: That makes sense.",
+          "korean": "A: 오늘은 이만 끝내죠. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "idioms.04-lets-call-it-a-day.example-3",
+          "english": "A: Let's call it a day. B: Thanks for telling me.",
+          "korean": "A: 오늘은 이만 끝내죠. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "idioms.04-lets-call-it-a-day.variant-1",
+          "english": "I'm feeling under the weather.",
+          "korean": "몸이 좀 안 좋아요.",
+          "register": "casual",
+          "nuanceKo": "같은 일상적인 관용 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "idioms.04-lets-call-it-a-day.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "idioms.03-im-just-pulling-your-leg",
+          "idioms.05-im-feeling-under-the-weather"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "idioms.05-im-feeling-under-the-weather"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Let's call it a day.",
+        "lang": "en-US"
+      },
+      "sortKey": "065.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "idioms.05-im-feeling-under-the-weather",
+      "familyId": "idioms.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm feeling under the weather.",
+      "english": "I'm feeling under the weather.",
+      "korean": "몸이 좀 안 좋아요.",
+      "intentKo": "일상적인 관용 표현 상황에서 “몸이 좀 안 좋아요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 일상적인 관용 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "idioms"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "일상적인 관용 표현",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "idioms.05-im-feeling-under-the-weather.example-1",
+          "english": "A: I'm feeling under the weather. B: I see what you mean.",
+          "korean": "A: 몸이 좀 안 좋아요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "idioms.05-im-feeling-under-the-weather.example-2",
+          "english": "A: I'm feeling under the weather. B: That makes sense.",
+          "korean": "A: 몸이 좀 안 좋아요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "idioms.05-im-feeling-under-the-weather.example-3",
+          "english": "A: I'm feeling under the weather. B: Thanks for telling me.",
+          "korean": "A: 몸이 좀 안 좋아요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "idioms.05-im-feeling-under-the-weather.variant-1",
+          "english": "We need to get the ball rolling.",
+          "korean": "이제 일을 시작해야 해요.",
+          "register": "casual",
+          "nuanceKo": "같은 일상적인 관용 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "idioms.05-im-feeling-under-the-weather.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "idioms.04-lets-call-it-a-day",
+          "idioms.06-we-need-to-get-the-ball-rolling"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "idioms.06-we-need-to-get-the-ball-rolling"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm feeling under the weather.",
+        "lang": "en-US"
+      },
+      "sortKey": "065.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "idioms.06-we-need-to-get-the-ball-rolling",
+      "familyId": "idioms.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "We need to get the ball rolling.",
+      "english": "We need to get the ball rolling.",
+      "korean": "이제 일을 시작해야 해요.",
+      "intentKo": "일상적인 관용 표현 상황에서 “이제 일을 시작해야 해요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 일상적인 관용 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "idioms"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "일상적인 관용 표현",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "idioms.06-we-need-to-get-the-ball-rolling.example-1",
+          "english": "A: We need to get the ball rolling. B: I see what you mean.",
+          "korean": "A: 이제 일을 시작해야 해요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "idioms.06-we-need-to-get-the-ball-rolling.example-2",
+          "english": "A: We need to get the ball rolling. B: That makes sense.",
+          "korean": "A: 이제 일을 시작해야 해요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "idioms.06-we-need-to-get-the-ball-rolling.example-3",
+          "english": "A: We need to get the ball rolling. B: Thanks for telling me.",
+          "korean": "A: 이제 일을 시작해야 해요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "idioms.06-we-need-to-get-the-ball-rolling.variant-1",
+          "english": "You're on the right track.",
+          "korean": "제대로 하고 있어요.",
+          "register": "casual",
+          "nuanceKo": "같은 일상적인 관용 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "idioms.06-we-need-to-get-the-ball-rolling.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "idioms.05-im-feeling-under-the-weather",
+          "idioms.07-youre-on-the-right-track"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "idioms.07-youre-on-the-right-track"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "We need to get the ball rolling.",
+        "lang": "en-US"
+      },
+      "sortKey": "065.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "idioms.07-youre-on-the-right-track",
+      "familyId": "idioms.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "You're on the right track.",
+      "english": "You're on the right track.",
+      "korean": "제대로 하고 있어요.",
+      "intentKo": "일상적인 관용 표현 상황에서 “제대로 하고 있어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 일상적인 관용 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "idioms"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "일상적인 관용 표현",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "idioms.07-youre-on-the-right-track.example-1",
+          "english": "A: You're on the right track. B: I see what you mean.",
+          "korean": "A: 제대로 하고 있어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "idioms.07-youre-on-the-right-track.example-2",
+          "english": "A: You're on the right track. B: That makes sense.",
+          "korean": "A: 제대로 하고 있어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "idioms.07-youre-on-the-right-track.example-3",
+          "english": "A: You're on the right track. B: Thanks for telling me.",
+          "korean": "A: 제대로 하고 있어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "idioms.07-youre-on-the-right-track.variant-1",
+          "english": "We'll cross that bridge when we come to it.",
+          "korean": "그 문제는 닥치면 해결하죠.",
+          "register": "casual",
+          "nuanceKo": "같은 일상적인 관용 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "idioms.07-youre-on-the-right-track.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "idioms.06-we-need-to-get-the-ball-rolling",
+          "idioms.08-well-cross-that-bridge-when-we-come-to-it"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "idioms.08-well-cross-that-bridge-when-we-come-to-it"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "You're on the right track.",
+        "lang": "en-US"
+      },
+      "sortKey": "065.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "idioms.08-well-cross-that-bridge-when-we-come-to-it",
+      "familyId": "idioms.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "We'll cross that bridge when we come to it.",
+      "english": "We'll cross that bridge when we come to it.",
+      "korean": "그 문제는 닥치면 해결하죠.",
+      "intentKo": "일상적인 관용 표현 상황에서 “그 문제는 닥치면 해결하죠.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 일상적인 관용 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "idioms"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "일상적인 관용 표현",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "casual"
+      ],
+      "examples": [
+        {
+          "id": "idioms.08-well-cross-that-bridge-when-we-come-to-it.example-1",
+          "english": "A: We'll cross that bridge when we come to it. B: I see what you mean.",
+          "korean": "A: 그 문제는 닥치면 해결하죠. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "idioms.08-well-cross-that-bridge-when-we-come-to-it.example-2",
+          "english": "A: We'll cross that bridge when we come to it. B: That makes sense.",
+          "korean": "A: 그 문제는 닥치면 해결하죠. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "idioms.08-well-cross-that-bridge-when-we-come-to-it.example-3",
+          "english": "A: We'll cross that bridge when we come to it. B: Thanks for telling me.",
+          "korean": "A: 그 문제는 닥치면 해결하죠. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "idioms.08-well-cross-that-bridge-when-we-come-to-it.variant-1",
+          "english": "It's not a big deal.",
+          "korean": "별일 아니에요.",
+          "register": "casual",
+          "nuanceKo": "같은 일상적인 관용 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "idioms.08-well-cross-that-bridge-when-we-come-to-it.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "idioms.07-youre-on-the-right-track",
+          "idioms.01-its-not-a-big-deal"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "idioms.01-its-not-a-big-deal"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "We'll cross that bridge when we come to it.",
+        "lang": "en-US"
+      },
+      "sortKey": "065.001.008",
+      "releasedAt": "2026-08-08"
+    }
+  ]
+}

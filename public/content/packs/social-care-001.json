@@ -1,0 +1,5592 @@
+{
+  "schemaVersion": 1,
+  "packId": "social-care-001",
+  "titleKo": "감사·감정·문제",
+  "titleEn": "Social Care",
+  "descriptionKo": "감사 · 사과 · 칭찬 · 축하 · 위로 · 불만 · 문제 제기 · 환불과 교환 핵심 패턴",
+  "version": "1.0.0",
+  "contentVersion": 1,
+  "required": true,
+  "minAppVersion": "1.0.0",
+  "releasedAt": "2026-08-08",
+  "categories": [
+    {
+      "id": "apologies",
+      "labelKo": "사과",
+      "labelEn": "Apologies"
+    },
+    {
+      "id": "comfort",
+      "labelKo": "위로",
+      "labelEn": "Comforting"
+    },
+    {
+      "id": "complaints",
+      "labelKo": "불만",
+      "labelEn": "Complaints"
+    },
+    {
+      "id": "compliments",
+      "labelKo": "칭찬",
+      "labelEn": "Compliments"
+    },
+    {
+      "id": "congratulations",
+      "labelKo": "축하",
+      "labelEn": "Congratulations"
+    },
+    {
+      "id": "raising-problems",
+      "labelKo": "문제 제기",
+      "labelEn": "Raising problems"
+    },
+    {
+      "id": "returns-exchanges",
+      "labelKo": "환불과 교환",
+      "labelEn": "Returns and exchanges"
+    },
+    {
+      "id": "thanks",
+      "labelKo": "감사",
+      "labelEn": "Thanks"
+    }
+  ],
+  "situations": [
+    {
+      "id": "service",
+      "labelKo": "서비스",
+      "labelEn": "Service"
+    },
+    {
+      "id": "shopping",
+      "labelKo": "쇼핑",
+      "labelEn": "Shopping"
+    },
+    {
+      "id": "social",
+      "labelKo": "사교",
+      "labelEn": "Social"
+    },
+    {
+      "id": "work",
+      "labelKo": "직장",
+      "labelEn": "Work"
+    }
+  ],
+  "patterns": [
+    {
+      "id": "thanks.01-thank-you-so-much",
+      "familyId": "thanks.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Thank you so much.",
+      "english": "Thank you so much.",
+      "korean": "정말 고마워요.",
+      "intentKo": "감사 상황에서 “정말 고마워요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 감사 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "thanks"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "감사",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "thanks.01-thank-you-so-much.example-1",
+          "english": "A: Thank you so much. B: I know, right?",
+          "korean": "A: 정말 고마워요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "thanks.01-thank-you-so-much.example-2",
+          "english": "A: Thank you so much. B: That's exactly how I feel.",
+          "korean": "A: 정말 고마워요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "thanks.01-thank-you-so-much.example-3",
+          "english": "A: Thank you so much. B: Thanks for saying that.",
+          "korean": "A: 정말 고마워요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "thanks.01-thank-you-so-much.variant-1",
+          "english": "I really appreciate your help.",
+          "korean": "도와주셔서 정말 감사해요.",
+          "register": "neutral",
+          "nuanceKo": "같은 감사 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "thanks.01-thank-you-so-much.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "thanks.08-please-accept-my-sincere-thanks",
+          "thanks.02-i-really-appreciate-your-help"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "thanks.02-i-really-appreciate-your-help"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Thank you so much.",
+        "lang": "en-US"
+      },
+      "sortKey": "042.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "thanks.02-i-really-appreciate-your-help",
+      "familyId": "thanks.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I really appreciate your help.",
+      "english": "I really appreciate your help.",
+      "korean": "도와주셔서 정말 감사해요.",
+      "intentKo": "감사 상황에서 “도와주셔서 정말 감사해요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 감사 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "thanks"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "감사",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "thanks.02-i-really-appreciate-your-help.example-1",
+          "english": "A: I really appreciate your help. B: I know, right?",
+          "korean": "A: 도와주셔서 정말 감사해요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "thanks.02-i-really-appreciate-your-help.example-2",
+          "english": "A: I really appreciate your help. B: That's exactly how I feel.",
+          "korean": "A: 도와주셔서 정말 감사해요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "thanks.02-i-really-appreciate-your-help.example-3",
+          "english": "A: I really appreciate your help. B: Thanks for saying that.",
+          "korean": "A: 도와주셔서 정말 감사해요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "thanks.02-i-really-appreciate-your-help.variant-1",
+          "english": "That's very kind of you.",
+          "korean": "정말 친절하시네요.",
+          "register": "neutral",
+          "nuanceKo": "같은 감사 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "thanks.02-i-really-appreciate-your-help.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "thanks.01-thank-you-so-much",
+          "thanks.03-thats-very-kind-of-you"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "thanks.03-thats-very-kind-of-you"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I really appreciate your help.",
+        "lang": "en-US"
+      },
+      "sortKey": "042.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "thanks.03-thats-very-kind-of-you",
+      "familyId": "thanks.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "That's very kind of you.",
+      "english": "That's very kind of you.",
+      "korean": "정말 친절하시네요.",
+      "intentKo": "감사 상황에서 “정말 친절하시네요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 감사 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "thanks"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "감사",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "thanks.03-thats-very-kind-of-you.example-1",
+          "english": "A: That's very kind of you. B: I know, right?",
+          "korean": "A: 정말 친절하시네요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "thanks.03-thats-very-kind-of-you.example-2",
+          "english": "A: That's very kind of you. B: That's exactly how I feel.",
+          "korean": "A: 정말 친절하시네요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "thanks.03-thats-very-kind-of-you.example-3",
+          "english": "A: That's very kind of you. B: Thanks for saying that.",
+          "korean": "A: 정말 친절하시네요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "thanks.03-thats-very-kind-of-you.variant-1",
+          "english": "Thanks for letting me know.",
+          "korean": "알려줘서 고마워요.",
+          "register": "neutral",
+          "nuanceKo": "같은 감사 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "thanks.03-thats-very-kind-of-you.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "thanks.02-i-really-appreciate-your-help",
+          "thanks.04-thanks-for-letting-me-know"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "thanks.04-thanks-for-letting-me-know"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "That's very kind of you.",
+        "lang": "en-US"
+      },
+      "sortKey": "042.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "thanks.04-thanks-for-letting-me-know",
+      "familyId": "thanks.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Thanks for letting me know.",
+      "english": "Thanks for letting me know.",
+      "korean": "알려줘서 고마워요.",
+      "intentKo": "감사 상황에서 “알려줘서 고마워요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 감사 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "thanks"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "감사",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "thanks.04-thanks-for-letting-me-know.example-1",
+          "english": "A: Thanks for letting me know. B: I know, right?",
+          "korean": "A: 알려줘서 고마워요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "thanks.04-thanks-for-letting-me-know.example-2",
+          "english": "A: Thanks for letting me know. B: That's exactly how I feel.",
+          "korean": "A: 알려줘서 고마워요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "thanks.04-thanks-for-letting-me-know.example-3",
+          "english": "A: Thanks for letting me know. B: Thanks for saying that.",
+          "korean": "A: 알려줘서 고마워요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "thanks.04-thanks-for-letting-me-know.variant-1",
+          "english": "I can't thank you enough.",
+          "korean": "아무리 감사해도 부족해요.",
+          "register": "neutral",
+          "nuanceKo": "같은 감사 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "thanks.04-thanks-for-letting-me-know.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "thanks.03-thats-very-kind-of-you",
+          "thanks.05-i-cant-thank-you-enough"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "thanks.05-i-cant-thank-you-enough"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Thanks for letting me know.",
+        "lang": "en-US"
+      },
+      "sortKey": "042.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "thanks.05-i-cant-thank-you-enough",
+      "familyId": "thanks.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I can't thank you enough.",
+      "english": "I can't thank you enough.",
+      "korean": "아무리 감사해도 부족해요.",
+      "intentKo": "감사 상황에서 “아무리 감사해도 부족해요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 감사 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "thanks"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "감사",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "thanks.05-i-cant-thank-you-enough.example-1",
+          "english": "A: I can't thank you enough. B: I know, right?",
+          "korean": "A: 아무리 감사해도 부족해요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "thanks.05-i-cant-thank-you-enough.example-2",
+          "english": "A: I can't thank you enough. B: That's exactly how I feel.",
+          "korean": "A: 아무리 감사해도 부족해요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "thanks.05-i-cant-thank-you-enough.example-3",
+          "english": "A: I can't thank you enough. B: Thanks for saying that.",
+          "korean": "A: 아무리 감사해도 부족해요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "thanks.05-i-cant-thank-you-enough.variant-1",
+          "english": "It means a lot to me.",
+          "korean": "저에게 정말 큰 의미예요.",
+          "register": "neutral",
+          "nuanceKo": "같은 감사 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "thanks.05-i-cant-thank-you-enough.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "thanks.04-thanks-for-letting-me-know",
+          "thanks.06-it-means-a-lot-to-me"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "thanks.06-it-means-a-lot-to-me"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I can't thank you enough.",
+        "lang": "en-US"
+      },
+      "sortKey": "042.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "thanks.06-it-means-a-lot-to-me",
+      "familyId": "thanks.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "It means a lot to me.",
+      "english": "It means a lot to me.",
+      "korean": "저에게 정말 큰 의미예요.",
+      "intentKo": "감사 상황에서 “저에게 정말 큰 의미예요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 감사 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "thanks"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "감사",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "thanks.06-it-means-a-lot-to-me.example-1",
+          "english": "A: It means a lot to me. B: I know, right?",
+          "korean": "A: 저에게 정말 큰 의미예요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "thanks.06-it-means-a-lot-to-me.example-2",
+          "english": "A: It means a lot to me. B: That's exactly how I feel.",
+          "korean": "A: 저에게 정말 큰 의미예요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "thanks.06-it-means-a-lot-to-me.example-3",
+          "english": "A: It means a lot to me. B: Thanks for saying that.",
+          "korean": "A: 저에게 정말 큰 의미예요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "thanks.06-it-means-a-lot-to-me.variant-1",
+          "english": "I owe you one.",
+          "korean": "제가 신세를 졌네요.",
+          "register": "neutral",
+          "nuanceKo": "같은 감사 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "thanks.06-it-means-a-lot-to-me.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "thanks.05-i-cant-thank-you-enough",
+          "thanks.07-i-owe-you-one"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "thanks.07-i-owe-you-one"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "It means a lot to me.",
+        "lang": "en-US"
+      },
+      "sortKey": "042.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "thanks.07-i-owe-you-one",
+      "familyId": "thanks.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I owe you one.",
+      "english": "I owe you one.",
+      "korean": "제가 신세를 졌네요.",
+      "intentKo": "감사 상황에서 “제가 신세를 졌네요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 감사 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "thanks"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "감사",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "thanks.07-i-owe-you-one.example-1",
+          "english": "A: I owe you one. B: I know, right?",
+          "korean": "A: 제가 신세를 졌네요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "thanks.07-i-owe-you-one.example-2",
+          "english": "A: I owe you one. B: That's exactly how I feel.",
+          "korean": "A: 제가 신세를 졌네요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "thanks.07-i-owe-you-one.example-3",
+          "english": "A: I owe you one. B: Thanks for saying that.",
+          "korean": "A: 제가 신세를 졌네요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "thanks.07-i-owe-you-one.variant-1",
+          "english": "Please accept my sincere thanks.",
+          "korean": "진심으로 감사드립니다.",
+          "register": "neutral",
+          "nuanceKo": "같은 감사 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "thanks.07-i-owe-you-one.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "thanks.06-it-means-a-lot-to-me",
+          "thanks.08-please-accept-my-sincere-thanks"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "thanks.08-please-accept-my-sincere-thanks"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I owe you one.",
+        "lang": "en-US"
+      },
+      "sortKey": "042.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "thanks.08-please-accept-my-sincere-thanks",
+      "familyId": "thanks.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Please accept my sincere thanks.",
+      "english": "Please accept my sincere thanks.",
+      "korean": "진심으로 감사드립니다.",
+      "intentKo": "감사 상황에서 “진심으로 감사드립니다.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 감사 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "thanks"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "감사",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "thanks.08-please-accept-my-sincere-thanks.example-1",
+          "english": "A: Please accept my sincere thanks. B: I know, right?",
+          "korean": "A: 진심으로 감사드립니다. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "thanks.08-please-accept-my-sincere-thanks.example-2",
+          "english": "A: Please accept my sincere thanks. B: That's exactly how I feel.",
+          "korean": "A: 진심으로 감사드립니다. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "thanks.08-please-accept-my-sincere-thanks.example-3",
+          "english": "A: Please accept my sincere thanks. B: Thanks for saying that.",
+          "korean": "A: 진심으로 감사드립니다. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "thanks.08-please-accept-my-sincere-thanks.variant-1",
+          "english": "Thank you so much.",
+          "korean": "정말 고마워요.",
+          "register": "neutral",
+          "nuanceKo": "같은 감사 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "thanks.08-please-accept-my-sincere-thanks.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "thanks.07-i-owe-you-one",
+          "thanks.01-thank-you-so-much"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "thanks.01-thank-you-so-much"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Please accept my sincere thanks.",
+        "lang": "en-US"
+      },
+      "sortKey": "042.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "apologies.01-im-sorry-im-late",
+      "familyId": "apologies.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm sorry I'm late.",
+      "english": "I'm sorry I'm late.",
+      "korean": "늦어서 미안해요.",
+      "intentKo": "사과 상황에서 “늦어서 미안해요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 사과 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "apologies"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "사과",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "apologies.01-im-sorry-im-late.example-1",
+          "english": "A: I'm sorry I'm late. B: I see what you mean.",
+          "korean": "A: 늦어서 미안해요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "apologies.01-im-sorry-im-late.example-2",
+          "english": "A: I'm sorry I'm late. B: That makes sense.",
+          "korean": "A: 늦어서 미안해요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "apologies.01-im-sorry-im-late.example-3",
+          "english": "A: I'm sorry I'm late. B: Thanks for telling me.",
+          "korean": "A: 늦어서 미안해요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "apologies.01-im-sorry-im-late.variant-1",
+          "english": "I didn't mean to upset you.",
+          "korean": "당신을 속상하게 할 생각은 아니었어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 사과 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "apologies.01-im-sorry-im-late.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "apologies.08-i-sincerely-apologize-for-the-inconvenienc",
+          "apologies.02-i-didnt-mean-to-upset-you"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "apologies.02-i-didnt-mean-to-upset-you"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm sorry I'm late.",
+        "lang": "en-US"
+      },
+      "sortKey": "043.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "apologies.02-i-didnt-mean-to-upset-you",
+      "familyId": "apologies.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I didn't mean to upset you.",
+      "english": "I didn't mean to upset you.",
+      "korean": "당신을 속상하게 할 생각은 아니었어요.",
+      "intentKo": "사과 상황에서 “당신을 속상하게 할 생각은 아니었어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 사과 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "apologies"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "사과",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "apologies.02-i-didnt-mean-to-upset-you.example-1",
+          "english": "A: I didn't mean to upset you. B: I see what you mean.",
+          "korean": "A: 당신을 속상하게 할 생각은 아니었어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "apologies.02-i-didnt-mean-to-upset-you.example-2",
+          "english": "A: I didn't mean to upset you. B: That makes sense.",
+          "korean": "A: 당신을 속상하게 할 생각은 아니었어요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "apologies.02-i-didnt-mean-to-upset-you.example-3",
+          "english": "A: I didn't mean to upset you. B: Thanks for telling me.",
+          "korean": "A: 당신을 속상하게 할 생각은 아니었어요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "apologies.02-i-didnt-mean-to-upset-you.variant-1",
+          "english": "That was my fault.",
+          "korean": "그건 제 잘못이었어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 사과 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "apologies.02-i-didnt-mean-to-upset-you.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "apologies.01-im-sorry-im-late",
+          "apologies.03-that-was-my-fault"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "apologies.03-that-was-my-fault"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I didn't mean to upset you.",
+        "lang": "en-US"
+      },
+      "sortKey": "043.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "apologies.03-that-was-my-fault",
+      "familyId": "apologies.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "That was my fault.",
+      "english": "That was my fault.",
+      "korean": "그건 제 잘못이었어요.",
+      "intentKo": "사과 상황에서 “그건 제 잘못이었어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 사과 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "apologies"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "사과",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "apologies.03-that-was-my-fault.example-1",
+          "english": "A: That was my fault. B: I see what you mean.",
+          "korean": "A: 그건 제 잘못이었어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "apologies.03-that-was-my-fault.example-2",
+          "english": "A: That was my fault. B: That makes sense.",
+          "korean": "A: 그건 제 잘못이었어요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "apologies.03-that-was-my-fault.example-3",
+          "english": "A: That was my fault. B: Thanks for telling me.",
+          "korean": "A: 그건 제 잘못이었어요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "apologies.03-that-was-my-fault.variant-1",
+          "english": "I owe you an apology.",
+          "korean": "제가 사과드려야 해요.",
+          "register": "neutral",
+          "nuanceKo": "같은 사과 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "apologies.03-that-was-my-fault.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "apologies.02-i-didnt-mean-to-upset-you",
+          "apologies.04-i-owe-you-an-apology"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "apologies.04-i-owe-you-an-apology"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "That was my fault.",
+        "lang": "en-US"
+      },
+      "sortKey": "043.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "apologies.04-i-owe-you-an-apology",
+      "familyId": "apologies.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I owe you an apology.",
+      "english": "I owe you an apology.",
+      "korean": "제가 사과드려야 해요.",
+      "intentKo": "사과 상황에서 “제가 사과드려야 해요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 사과 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "apologies"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "사과",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "apologies.04-i-owe-you-an-apology.example-1",
+          "english": "A: I owe you an apology. B: I see what you mean.",
+          "korean": "A: 제가 사과드려야 해요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "apologies.04-i-owe-you-an-apology.example-2",
+          "english": "A: I owe you an apology. B: That makes sense.",
+          "korean": "A: 제가 사과드려야 해요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "apologies.04-i-owe-you-an-apology.example-3",
+          "english": "A: I owe you an apology. B: Thanks for telling me.",
+          "korean": "A: 제가 사과드려야 해요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "apologies.04-i-owe-you-an-apology.variant-1",
+          "english": "I'm sorry for the misunderstanding.",
+          "korean": "오해가 생겨서 죄송해요.",
+          "register": "neutral",
+          "nuanceKo": "같은 사과 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "apologies.04-i-owe-you-an-apology.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "apologies.03-that-was-my-fault",
+          "apologies.05-im-sorry-for-the-misunderstanding"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "apologies.05-im-sorry-for-the-misunderstanding"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I owe you an apology.",
+        "lang": "en-US"
+      },
+      "sortKey": "043.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "apologies.05-im-sorry-for-the-misunderstanding",
+      "familyId": "apologies.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm sorry for the misunderstanding.",
+      "english": "I'm sorry for the misunderstanding.",
+      "korean": "오해가 생겨서 죄송해요.",
+      "intentKo": "사과 상황에서 “오해가 생겨서 죄송해요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 사과 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "apologies"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "사과",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "apologies.05-im-sorry-for-the-misunderstanding.example-1",
+          "english": "A: I'm sorry for the misunderstanding. B: I see what you mean.",
+          "korean": "A: 오해가 생겨서 죄송해요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "apologies.05-im-sorry-for-the-misunderstanding.example-2",
+          "english": "A: I'm sorry for the misunderstanding. B: That makes sense.",
+          "korean": "A: 오해가 생겨서 죄송해요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "apologies.05-im-sorry-for-the-misunderstanding.example-3",
+          "english": "A: I'm sorry for the misunderstanding. B: Thanks for telling me.",
+          "korean": "A: 오해가 생겨서 죄송해요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "apologies.05-im-sorry-for-the-misunderstanding.variant-1",
+          "english": "Please forgive me for forgetting.",
+          "korean": "잊어버린 걸 용서해 주세요.",
+          "register": "neutral",
+          "nuanceKo": "같은 사과 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "apologies.05-im-sorry-for-the-misunderstanding.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "apologies.04-i-owe-you-an-apology",
+          "apologies.06-please-forgive-me-for-forgetting"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "apologies.06-please-forgive-me-for-forgetting"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm sorry for the misunderstanding.",
+        "lang": "en-US"
+      },
+      "sortKey": "043.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "apologies.06-please-forgive-me-for-forgetting",
+      "familyId": "apologies.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Please forgive me for forgetting.",
+      "english": "Please forgive me for forgetting.",
+      "korean": "잊어버린 걸 용서해 주세요.",
+      "intentKo": "사과 상황에서 “잊어버린 걸 용서해 주세요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 사과 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "apologies"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "사과",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "apologies.06-please-forgive-me-for-forgetting.example-1",
+          "english": "A: Please forgive me for forgetting. B: I see what you mean.",
+          "korean": "A: 잊어버린 걸 용서해 주세요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "apologies.06-please-forgive-me-for-forgetting.example-2",
+          "english": "A: Please forgive me for forgetting. B: That makes sense.",
+          "korean": "A: 잊어버린 걸 용서해 주세요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "apologies.06-please-forgive-me-for-forgetting.example-3",
+          "english": "A: Please forgive me for forgetting. B: Thanks for telling me.",
+          "korean": "A: 잊어버린 걸 용서해 주세요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "apologies.06-please-forgive-me-for-forgetting.variant-1",
+          "english": "I should have handled that better.",
+          "korean": "제가 더 잘 대처했어야 했어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 사과 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "apologies.06-please-forgive-me-for-forgetting.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "apologies.05-im-sorry-for-the-misunderstanding",
+          "apologies.07-i-should-have-handled-that-better"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "apologies.07-i-should-have-handled-that-better"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Please forgive me for forgetting.",
+        "lang": "en-US"
+      },
+      "sortKey": "043.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "apologies.07-i-should-have-handled-that-better",
+      "familyId": "apologies.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I should have handled that better.",
+      "english": "I should have handled that better.",
+      "korean": "제가 더 잘 대처했어야 했어요.",
+      "intentKo": "사과 상황에서 “제가 더 잘 대처했어야 했어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 사과 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "apologies"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "사과",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "apologies.07-i-should-have-handled-that-better.example-1",
+          "english": "A: I should have handled that better. B: I see what you mean.",
+          "korean": "A: 제가 더 잘 대처했어야 했어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "apologies.07-i-should-have-handled-that-better.example-2",
+          "english": "A: I should have handled that better. B: That makes sense.",
+          "korean": "A: 제가 더 잘 대처했어야 했어요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "apologies.07-i-should-have-handled-that-better.example-3",
+          "english": "A: I should have handled that better. B: Thanks for telling me.",
+          "korean": "A: 제가 더 잘 대처했어야 했어요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "apologies.07-i-should-have-handled-that-better.variant-1",
+          "english": "I sincerely apologize for the inconvenience.",
+          "korean": "불편을 끼쳐드려 진심으로 사과드립니다.",
+          "register": "neutral",
+          "nuanceKo": "같은 사과 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "apologies.07-i-should-have-handled-that-better.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "apologies.06-please-forgive-me-for-forgetting",
+          "apologies.08-i-sincerely-apologize-for-the-inconvenienc"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "apologies.08-i-sincerely-apologize-for-the-inconvenienc"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I should have handled that better.",
+        "lang": "en-US"
+      },
+      "sortKey": "043.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "apologies.08-i-sincerely-apologize-for-the-inconvenienc",
+      "familyId": "apologies.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I sincerely apologize for the inconvenience.",
+      "english": "I sincerely apologize for the inconvenience.",
+      "korean": "불편을 끼쳐드려 진심으로 사과드립니다.",
+      "intentKo": "사과 상황에서 “불편을 끼쳐드려 진심으로 사과드립니다.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 사과 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "apologies"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "사과",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "apologies.08-i-sincerely-apologize-for-the-inconvenienc.example-1",
+          "english": "A: I sincerely apologize for the inconvenience. B: I see what you mean.",
+          "korean": "A: 불편을 끼쳐드려 진심으로 사과드립니다. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "apologies.08-i-sincerely-apologize-for-the-inconvenienc.example-2",
+          "english": "A: I sincerely apologize for the inconvenience. B: That makes sense.",
+          "korean": "A: 불편을 끼쳐드려 진심으로 사과드립니다. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "apologies.08-i-sincerely-apologize-for-the-inconvenienc.example-3",
+          "english": "A: I sincerely apologize for the inconvenience. B: Thanks for telling me.",
+          "korean": "A: 불편을 끼쳐드려 진심으로 사과드립니다. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "apologies.08-i-sincerely-apologize-for-the-inconvenienc.variant-1",
+          "english": "I'm sorry I'm late.",
+          "korean": "늦어서 미안해요.",
+          "register": "neutral",
+          "nuanceKo": "같은 사과 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "apologies.08-i-sincerely-apologize-for-the-inconvenienc.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "apologies.07-i-should-have-handled-that-better",
+          "apologies.01-im-sorry-im-late"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "apologies.01-im-sorry-im-late"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I sincerely apologize for the inconvenience.",
+        "lang": "en-US"
+      },
+      "sortKey": "043.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "compliments.01-you-did-a-great-job",
+      "familyId": "compliments.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "You did a great job.",
+      "english": "You did a great job.",
+      "korean": "정말 잘했어요.",
+      "intentKo": "칭찬 상황에서 “정말 잘했어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 칭찬 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "compliments"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "칭찬",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "compliments.01-you-did-a-great-job.example-1",
+          "english": "A: You did a great job. B: I know, right?",
+          "korean": "A: 정말 잘했어요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "compliments.01-you-did-a-great-job.example-2",
+          "english": "A: You did a great job. B: That's exactly how I feel.",
+          "korean": "A: 정말 잘했어요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "compliments.01-you-did-a-great-job.example-3",
+          "english": "A: You did a great job. B: Thanks for saying that.",
+          "korean": "A: 정말 잘했어요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "compliments.01-you-did-a-great-job.variant-1",
+          "english": "That looks good on you.",
+          "korean": "그거 정말 잘 어울려요.",
+          "register": "neutral",
+          "nuanceKo": "같은 칭찬 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "compliments.01-you-did-a-great-job.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "compliments.08-i-was-impressed-by-how-calmly-you-handled",
+          "compliments.02-that-looks-good-on-you"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "compliments.02-that-looks-good-on-you"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "You did a great job.",
+        "lang": "en-US"
+      },
+      "sortKey": "044.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "compliments.02-that-looks-good-on-you",
+      "familyId": "compliments.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "That looks good on you.",
+      "english": "That looks good on you.",
+      "korean": "그거 정말 잘 어울려요.",
+      "intentKo": "칭찬 상황에서 “그거 정말 잘 어울려요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 칭찬 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "compliments"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "칭찬",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "compliments.02-that-looks-good-on-you.example-1",
+          "english": "A: That looks good on you. B: I know, right?",
+          "korean": "A: 그거 정말 잘 어울려요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "compliments.02-that-looks-good-on-you.example-2",
+          "english": "A: That looks good on you. B: That's exactly how I feel.",
+          "korean": "A: 그거 정말 잘 어울려요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "compliments.02-that-looks-good-on-you.example-3",
+          "english": "A: That looks good on you. B: Thanks for saying that.",
+          "korean": "A: 그거 정말 잘 어울려요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "compliments.02-that-looks-good-on-you.variant-1",
+          "english": "You're really good at this.",
+          "korean": "이걸 정말 잘하네요.",
+          "register": "neutral",
+          "nuanceKo": "같은 칭찬 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "compliments.02-that-looks-good-on-you.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "compliments.01-you-did-a-great-job",
+          "compliments.03-youre-really-good-at-this"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "compliments.03-youre-really-good-at-this"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "That looks good on you.",
+        "lang": "en-US"
+      },
+      "sortKey": "044.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "compliments.03-youre-really-good-at-this",
+      "familyId": "compliments.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "You're really good at this.",
+      "english": "You're really good at this.",
+      "korean": "이걸 정말 잘하네요.",
+      "intentKo": "칭찬 상황에서 “이걸 정말 잘하네요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 칭찬 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "compliments"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "칭찬",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "compliments.03-youre-really-good-at-this.example-1",
+          "english": "A: You're really good at this. B: I know, right?",
+          "korean": "A: 이걸 정말 잘하네요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "compliments.03-youre-really-good-at-this.example-2",
+          "english": "A: You're really good at this. B: That's exactly how I feel.",
+          "korean": "A: 이걸 정말 잘하네요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "compliments.03-youre-really-good-at-this.example-3",
+          "english": "A: You're really good at this. B: Thanks for saying that.",
+          "korean": "A: 이걸 정말 잘하네요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "compliments.03-youre-really-good-at-this.variant-1",
+          "english": "I love what you've done with the place.",
+          "korean": "이곳을 꾸민 방식이 정말 마음에 들어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 칭찬 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "compliments.03-youre-really-good-at-this.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "compliments.02-that-looks-good-on-you",
+          "compliments.04-i-love-what-youve-done-with-the-place"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "compliments.04-i-love-what-youve-done-with-the-place"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "You're really good at this.",
+        "lang": "en-US"
+      },
+      "sortKey": "044.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "compliments.04-i-love-what-youve-done-with-the-place",
+      "familyId": "compliments.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I love what you've done with the place.",
+      "english": "I love what you've done with the place.",
+      "korean": "이곳을 꾸민 방식이 정말 마음에 들어요.",
+      "intentKo": "칭찬 상황에서 “이곳을 꾸민 방식이 정말 마음에 들어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 칭찬 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "compliments"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "칭찬",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "compliments.04-i-love-what-youve-done-with-the-place.example-1",
+          "english": "A: I love what you've done with the place. B: I know, right?",
+          "korean": "A: 이곳을 꾸민 방식이 정말 마음에 들어요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "compliments.04-i-love-what-youve-done-with-the-place.example-2",
+          "english": "A: I love what you've done with the place. B: That's exactly how I feel.",
+          "korean": "A: 이곳을 꾸민 방식이 정말 마음에 들어요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "compliments.04-i-love-what-youve-done-with-the-place.example-3",
+          "english": "A: I love what you've done with the place. B: Thanks for saying that.",
+          "korean": "A: 이곳을 꾸민 방식이 정말 마음에 들어요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "compliments.04-i-love-what-youve-done-with-the-place.variant-1",
+          "english": "You have excellent taste.",
+          "korean": "안목이 정말 좋네요.",
+          "register": "neutral",
+          "nuanceKo": "같은 칭찬 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "compliments.04-i-love-what-youve-done-with-the-place.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "compliments.03-youre-really-good-at-this",
+          "compliments.05-you-have-excellent-taste"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "compliments.05-you-have-excellent-taste"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I love what you've done with the place.",
+        "lang": "en-US"
+      },
+      "sortKey": "044.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "compliments.05-you-have-excellent-taste",
+      "familyId": "compliments.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "You have excellent taste.",
+      "english": "You have excellent taste.",
+      "korean": "안목이 정말 좋네요.",
+      "intentKo": "칭찬 상황에서 “안목이 정말 좋네요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 칭찬 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "compliments"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "칭찬",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "compliments.05-you-have-excellent-taste.example-1",
+          "english": "A: You have excellent taste. B: I know, right?",
+          "korean": "A: 안목이 정말 좋네요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "compliments.05-you-have-excellent-taste.example-2",
+          "english": "A: You have excellent taste. B: That's exactly how I feel.",
+          "korean": "A: 안목이 정말 좋네요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "compliments.05-you-have-excellent-taste.example-3",
+          "english": "A: You have excellent taste. B: Thanks for saying that.",
+          "korean": "A: 안목이 정말 좋네요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "compliments.05-you-have-excellent-taste.variant-1",
+          "english": "That was very thoughtful of you.",
+          "korean": "정말 세심하게 배려해 주셨네요.",
+          "register": "neutral",
+          "nuanceKo": "같은 칭찬 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "compliments.05-you-have-excellent-taste.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "compliments.04-i-love-what-youve-done-with-the-place",
+          "compliments.06-that-was-very-thoughtful-of-you"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "compliments.06-that-was-very-thoughtful-of-you"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "You have excellent taste.",
+        "lang": "en-US"
+      },
+      "sortKey": "044.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "compliments.06-that-was-very-thoughtful-of-you",
+      "familyId": "compliments.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "That was very thoughtful of you.",
+      "english": "That was very thoughtful of you.",
+      "korean": "정말 세심하게 배려해 주셨네요.",
+      "intentKo": "칭찬 상황에서 “정말 세심하게 배려해 주셨네요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 칭찬 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "compliments"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "칭찬",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "compliments.06-that-was-very-thoughtful-of-you.example-1",
+          "english": "A: That was very thoughtful of you. B: I know, right?",
+          "korean": "A: 정말 세심하게 배려해 주셨네요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "compliments.06-that-was-very-thoughtful-of-you.example-2",
+          "english": "A: That was very thoughtful of you. B: That's exactly how I feel.",
+          "korean": "A: 정말 세심하게 배려해 주셨네요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "compliments.06-that-was-very-thoughtful-of-you.example-3",
+          "english": "A: That was very thoughtful of you. B: Thanks for saying that.",
+          "korean": "A: 정말 세심하게 배려해 주셨네요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "compliments.06-that-was-very-thoughtful-of-you.variant-1",
+          "english": "You make it look easy.",
+          "korean": "아주 쉽게 해내는 것처럼 보여요.",
+          "register": "neutral",
+          "nuanceKo": "같은 칭찬 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "compliments.06-that-was-very-thoughtful-of-you.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "compliments.05-you-have-excellent-taste",
+          "compliments.07-you-make-it-look-easy"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "compliments.07-you-make-it-look-easy"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "That was very thoughtful of you.",
+        "lang": "en-US"
+      },
+      "sortKey": "044.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "compliments.07-you-make-it-look-easy",
+      "familyId": "compliments.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "You make it look easy.",
+      "english": "You make it look easy.",
+      "korean": "아주 쉽게 해내는 것처럼 보여요.",
+      "intentKo": "칭찬 상황에서 “아주 쉽게 해내는 것처럼 보여요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 칭찬 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "compliments"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "칭찬",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "compliments.07-you-make-it-look-easy.example-1",
+          "english": "A: You make it look easy. B: I know, right?",
+          "korean": "A: 아주 쉽게 해내는 것처럼 보여요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "compliments.07-you-make-it-look-easy.example-2",
+          "english": "A: You make it look easy. B: That's exactly how I feel.",
+          "korean": "A: 아주 쉽게 해내는 것처럼 보여요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "compliments.07-you-make-it-look-easy.example-3",
+          "english": "A: You make it look easy. B: Thanks for saying that.",
+          "korean": "A: 아주 쉽게 해내는 것처럼 보여요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "compliments.07-you-make-it-look-easy.variant-1",
+          "english": "I was impressed by how calmly you handled it.",
+          "korean": "침착하게 대처하는 모습이 인상적이었어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 칭찬 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "compliments.07-you-make-it-look-easy.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "compliments.06-that-was-very-thoughtful-of-you",
+          "compliments.08-i-was-impressed-by-how-calmly-you-handled"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "compliments.08-i-was-impressed-by-how-calmly-you-handled"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "You make it look easy.",
+        "lang": "en-US"
+      },
+      "sortKey": "044.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "compliments.08-i-was-impressed-by-how-calmly-you-handled",
+      "familyId": "compliments.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I was impressed by how calmly you handled it.",
+      "english": "I was impressed by how calmly you handled it.",
+      "korean": "침착하게 대처하는 모습이 인상적이었어요.",
+      "intentKo": "칭찬 상황에서 “침착하게 대처하는 모습이 인상적이었어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 칭찬 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "compliments"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "칭찬",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "compliments.08-i-was-impressed-by-how-calmly-you-handled.example-1",
+          "english": "A: I was impressed by how calmly you handled it. B: I know, right?",
+          "korean": "A: 침착하게 대처하는 모습이 인상적이었어요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "compliments.08-i-was-impressed-by-how-calmly-you-handled.example-2",
+          "english": "A: I was impressed by how calmly you handled it. B: That's exactly how I feel.",
+          "korean": "A: 침착하게 대처하는 모습이 인상적이었어요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "compliments.08-i-was-impressed-by-how-calmly-you-handled.example-3",
+          "english": "A: I was impressed by how calmly you handled it. B: Thanks for saying that.",
+          "korean": "A: 침착하게 대처하는 모습이 인상적이었어요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "compliments.08-i-was-impressed-by-how-calmly-you-handled.variant-1",
+          "english": "You did a great job.",
+          "korean": "정말 잘했어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 칭찬 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "compliments.08-i-was-impressed-by-how-calmly-you-handled.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "compliments.07-you-make-it-look-easy",
+          "compliments.01-you-did-a-great-job"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "compliments.01-you-did-a-great-job"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I was impressed by how calmly you handled it.",
+        "lang": "en-US"
+      },
+      "sortKey": "044.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "congratulations.01-congratulations-you-deserve-it",
+      "familyId": "congratulations.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Congratulations! You deserve it.",
+      "english": "Congratulations! You deserve it.",
+      "korean": "축하해요! 충분히 그럴 자격이 있어요.",
+      "intentKo": "축하 상황에서 “축하해요! 충분히 그럴 자격이 있어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 축하 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "congratulations"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "축하",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "congratulations.01-congratulations-you-deserve-it.example-1",
+          "english": "A: Congratulations! You deserve it. B: I know, right?",
+          "korean": "A: 축하해요! 충분히 그럴 자격이 있어요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "congratulations.01-congratulations-you-deserve-it.example-2",
+          "english": "A: Congratulations! You deserve it. B: That's exactly how I feel.",
+          "korean": "A: 축하해요! 충분히 그럴 자격이 있어요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "congratulations.01-congratulations-you-deserve-it.example-3",
+          "english": "A: Congratulations! You deserve it. B: Thanks for saying that.",
+          "korean": "A: 축하해요! 충분히 그럴 자격이 있어요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "congratulations.01-congratulations-you-deserve-it.variant-1",
+          "english": "I'm so happy for you.",
+          "korean": "정말 잘돼서 기뻐요.",
+          "register": "neutral",
+          "nuanceKo": "같은 축하 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "congratulations.01-congratulations-you-deserve-it.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "congratulations.08-please-accept-my-warmest-congratulations",
+          "congratulations.02-im-so-happy-for-you"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "congratulations.02-im-so-happy-for-you"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Congratulations! You deserve it.",
+        "lang": "en-US"
+      },
+      "sortKey": "045.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "congratulations.02-im-so-happy-for-you",
+      "familyId": "congratulations.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm so happy for you.",
+      "english": "I'm so happy for you.",
+      "korean": "정말 잘돼서 기뻐요.",
+      "intentKo": "축하 상황에서 “정말 잘돼서 기뻐요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 축하 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "congratulations"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "축하",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "congratulations.02-im-so-happy-for-you.example-1",
+          "english": "A: I'm so happy for you. B: I know, right?",
+          "korean": "A: 정말 잘돼서 기뻐요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "congratulations.02-im-so-happy-for-you.example-2",
+          "english": "A: I'm so happy for you. B: That's exactly how I feel.",
+          "korean": "A: 정말 잘돼서 기뻐요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "congratulations.02-im-so-happy-for-you.example-3",
+          "english": "A: I'm so happy for you. B: Thanks for saying that.",
+          "korean": "A: 정말 잘돼서 기뻐요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "congratulations.02-im-so-happy-for-you.variant-1",
+          "english": "Well done on passing the exam.",
+          "korean": "시험에 합격한 것 정말 잘했어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 축하 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "congratulations.02-im-so-happy-for-you.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "congratulations.01-congratulations-you-deserve-it",
+          "congratulations.03-well-done-on-passing-the-exam"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "congratulations.03-well-done-on-passing-the-exam"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm so happy for you.",
+        "lang": "en-US"
+      },
+      "sortKey": "045.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "congratulations.03-well-done-on-passing-the-exam",
+      "familyId": "congratulations.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Well done on passing the exam.",
+      "english": "Well done on passing the exam.",
+      "korean": "시험에 합격한 것 정말 잘했어요.",
+      "intentKo": "축하 상황에서 “시험에 합격한 것 정말 잘했어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 축하 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "congratulations"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "축하",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "congratulations.03-well-done-on-passing-the-exam.example-1",
+          "english": "A: Well done on passing the exam. B: I know, right?",
+          "korean": "A: 시험에 합격한 것 정말 잘했어요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "congratulations.03-well-done-on-passing-the-exam.example-2",
+          "english": "A: Well done on passing the exam. B: That's exactly how I feel.",
+          "korean": "A: 시험에 합격한 것 정말 잘했어요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "congratulations.03-well-done-on-passing-the-exam.example-3",
+          "english": "A: Well done on passing the exam. B: Thanks for saying that.",
+          "korean": "A: 시험에 합격한 것 정말 잘했어요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "congratulations.03-well-done-on-passing-the-exam.variant-1",
+          "english": "That's wonderful news.",
+          "korean": "정말 좋은 소식이네요.",
+          "register": "neutral",
+          "nuanceKo": "같은 축하 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "congratulations.03-well-done-on-passing-the-exam.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "congratulations.02-im-so-happy-for-you",
+          "congratulations.04-thats-wonderful-news"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "congratulations.04-thats-wonderful-news"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Well done on passing the exam.",
+        "lang": "en-US"
+      },
+      "sortKey": "045.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "congratulations.04-thats-wonderful-news",
+      "familyId": "congratulations.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "That's wonderful news.",
+      "english": "That's wonderful news.",
+      "korean": "정말 좋은 소식이네요.",
+      "intentKo": "축하 상황에서 “정말 좋은 소식이네요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 축하 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "congratulations"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "축하",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "congratulations.04-thats-wonderful-news.example-1",
+          "english": "A: That's wonderful news. B: I know, right?",
+          "korean": "A: 정말 좋은 소식이네요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "congratulations.04-thats-wonderful-news.example-2",
+          "english": "A: That's wonderful news. B: That's exactly how I feel.",
+          "korean": "A: 정말 좋은 소식이네요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "congratulations.04-thats-wonderful-news.example-3",
+          "english": "A: That's wonderful news. B: Thanks for saying that.",
+          "korean": "A: 정말 좋은 소식이네요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "congratulations.04-thats-wonderful-news.variant-1",
+          "english": "Here's to your new beginning.",
+          "korean": "당신의 새로운 시작을 축하해요.",
+          "register": "neutral",
+          "nuanceKo": "같은 축하 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "congratulations.04-thats-wonderful-news.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "congratulations.03-well-done-on-passing-the-exam",
+          "congratulations.05-heres-to-your-new-beginning"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "congratulations.05-heres-to-your-new-beginning"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "That's wonderful news.",
+        "lang": "en-US"
+      },
+      "sortKey": "045.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "congratulations.05-heres-to-your-new-beginning",
+      "familyId": "congratulations.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Here's to your new beginning.",
+      "english": "Here's to your new beginning.",
+      "korean": "당신의 새로운 시작을 축하해요.",
+      "intentKo": "축하 상황에서 “당신의 새로운 시작을 축하해요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 축하 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "congratulations"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "축하",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "congratulations.05-heres-to-your-new-beginning.example-1",
+          "english": "A: Here's to your new beginning. B: I know, right?",
+          "korean": "A: 당신의 새로운 시작을 축하해요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "congratulations.05-heres-to-your-new-beginning.example-2",
+          "english": "A: Here's to your new beginning. B: That's exactly how I feel.",
+          "korean": "A: 당신의 새로운 시작을 축하해요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "congratulations.05-heres-to-your-new-beginning.example-3",
+          "english": "A: Here's to your new beginning. B: Thanks for saying that.",
+          "korean": "A: 당신의 새로운 시작을 축하해요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "congratulations.05-heres-to-your-new-beginning.variant-1",
+          "english": "You should be proud of yourself.",
+          "korean": "스스로 자랑스러워해도 돼요.",
+          "register": "neutral",
+          "nuanceKo": "같은 축하 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "congratulations.05-heres-to-your-new-beginning.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "congratulations.04-thats-wonderful-news",
+          "congratulations.06-you-should-be-proud-of-yourself"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "congratulations.06-you-should-be-proud-of-yourself"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Here's to your new beginning.",
+        "lang": "en-US"
+      },
+      "sortKey": "045.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "congratulations.06-you-should-be-proud-of-yourself",
+      "familyId": "congratulations.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "You should be proud of yourself.",
+      "english": "You should be proud of yourself.",
+      "korean": "스스로 자랑스러워해도 돼요.",
+      "intentKo": "축하 상황에서 “스스로 자랑스러워해도 돼요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 축하 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "congratulations"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "축하",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "congratulations.06-you-should-be-proud-of-yourself.example-1",
+          "english": "A: You should be proud of yourself. B: I know, right?",
+          "korean": "A: 스스로 자랑스러워해도 돼요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "congratulations.06-you-should-be-proud-of-yourself.example-2",
+          "english": "A: You should be proud of yourself. B: That's exactly how I feel.",
+          "korean": "A: 스스로 자랑스러워해도 돼요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "congratulations.06-you-should-be-proud-of-yourself.example-3",
+          "english": "A: You should be proud of yourself. B: Thanks for saying that.",
+          "korean": "A: 스스로 자랑스러워해도 돼요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "congratulations.06-you-should-be-proud-of-yourself.variant-1",
+          "english": "All your hard work paid off.",
+          "korean": "열심히 노력한 보람이 있었네요.",
+          "register": "neutral",
+          "nuanceKo": "같은 축하 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "congratulations.06-you-should-be-proud-of-yourself.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "congratulations.05-heres-to-your-new-beginning",
+          "congratulations.07-all-your-hard-work-paid-off"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "congratulations.07-all-your-hard-work-paid-off"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "You should be proud of yourself.",
+        "lang": "en-US"
+      },
+      "sortKey": "045.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "congratulations.07-all-your-hard-work-paid-off",
+      "familyId": "congratulations.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "All your hard work paid off.",
+      "english": "All your hard work paid off.",
+      "korean": "열심히 노력한 보람이 있었네요.",
+      "intentKo": "축하 상황에서 “열심히 노력한 보람이 있었네요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 축하 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "congratulations"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "축하",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "congratulations.07-all-your-hard-work-paid-off.example-1",
+          "english": "A: All your hard work paid off. B: I know, right?",
+          "korean": "A: 열심히 노력한 보람이 있었네요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "congratulations.07-all-your-hard-work-paid-off.example-2",
+          "english": "A: All your hard work paid off. B: That's exactly how I feel.",
+          "korean": "A: 열심히 노력한 보람이 있었네요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "congratulations.07-all-your-hard-work-paid-off.example-3",
+          "english": "A: All your hard work paid off. B: Thanks for saying that.",
+          "korean": "A: 열심히 노력한 보람이 있었네요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "congratulations.07-all-your-hard-work-paid-off.variant-1",
+          "english": "Please accept my warmest congratulations.",
+          "korean": "진심 어린 축하를 전합니다.",
+          "register": "neutral",
+          "nuanceKo": "같은 축하 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "congratulations.07-all-your-hard-work-paid-off.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "congratulations.06-you-should-be-proud-of-yourself",
+          "congratulations.08-please-accept-my-warmest-congratulations"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "congratulations.08-please-accept-my-warmest-congratulations"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "All your hard work paid off.",
+        "lang": "en-US"
+      },
+      "sortKey": "045.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "congratulations.08-please-accept-my-warmest-congratulations",
+      "familyId": "congratulations.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Please accept my warmest congratulations.",
+      "english": "Please accept my warmest congratulations.",
+      "korean": "진심 어린 축하를 전합니다.",
+      "intentKo": "축하 상황에서 “진심 어린 축하를 전합니다.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 축하 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "congratulations"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "축하",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "congratulations.08-please-accept-my-warmest-congratulations.example-1",
+          "english": "A: Please accept my warmest congratulations. B: I know, right?",
+          "korean": "A: 진심 어린 축하를 전합니다. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "congratulations.08-please-accept-my-warmest-congratulations.example-2",
+          "english": "A: Please accept my warmest congratulations. B: That's exactly how I feel.",
+          "korean": "A: 진심 어린 축하를 전합니다. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "congratulations.08-please-accept-my-warmest-congratulations.example-3",
+          "english": "A: Please accept my warmest congratulations. B: Thanks for saying that.",
+          "korean": "A: 진심 어린 축하를 전합니다. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "congratulations.08-please-accept-my-warmest-congratulations.variant-1",
+          "english": "Congratulations! You deserve it.",
+          "korean": "축하해요! 충분히 그럴 자격이 있어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 축하 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "congratulations.08-please-accept-my-warmest-congratulations.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "congratulations.07-all-your-hard-work-paid-off",
+          "congratulations.01-congratulations-you-deserve-it"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "congratulations.01-congratulations-you-deserve-it"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Please accept my warmest congratulations.",
+        "lang": "en-US"
+      },
+      "sortKey": "045.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "comfort.01-im-sorry-to-hear-that",
+      "familyId": "comfort.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm sorry to hear that.",
+      "english": "I'm sorry to hear that.",
+      "korean": "그런 소식을 들어 마음이 안 좋아요.",
+      "intentKo": "위로 상황에서 “그런 소식을 들어 마음이 안 좋아요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 위로 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "comfort"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "위로",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "comfort.01-im-sorry-to-hear-that.example-1",
+          "english": "A: I'm sorry to hear that. B: I know, right?",
+          "korean": "A: 그런 소식을 들어 마음이 안 좋아요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "comfort.01-im-sorry-to-hear-that.example-2",
+          "english": "A: I'm sorry to hear that. B: That's exactly how I feel.",
+          "korean": "A: 그런 소식을 들어 마음이 안 좋아요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "comfort.01-im-sorry-to-hear-that.example-3",
+          "english": "A: I'm sorry to hear that. B: Thanks for saying that.",
+          "korean": "A: 그런 소식을 들어 마음이 안 좋아요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "comfort.01-im-sorry-to-hear-that.variant-1",
+          "english": "It's going to be okay.",
+          "korean": "괜찮아질 거예요.",
+          "register": "neutral",
+          "nuanceKo": "같은 위로 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "comfort.01-im-sorry-to-hear-that.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "comfort.08-whatever-you-need-im-here-for-you",
+          "comfort.02-its-going-to-be-okay"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "comfort.02-its-going-to-be-okay"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm sorry to hear that.",
+        "lang": "en-US"
+      },
+      "sortKey": "046.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "comfort.02-its-going-to-be-okay",
+      "familyId": "comfort.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "It's going to be okay.",
+      "english": "It's going to be okay.",
+      "korean": "괜찮아질 거예요.",
+      "intentKo": "위로 상황에서 “괜찮아질 거예요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 위로 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "comfort"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "위로",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "comfort.02-its-going-to-be-okay.example-1",
+          "english": "A: It's going to be okay. B: I know, right?",
+          "korean": "A: 괜찮아질 거예요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "comfort.02-its-going-to-be-okay.example-2",
+          "english": "A: It's going to be okay. B: That's exactly how I feel.",
+          "korean": "A: 괜찮아질 거예요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "comfort.02-its-going-to-be-okay.example-3",
+          "english": "A: It's going to be okay. B: Thanks for saying that.",
+          "korean": "A: 괜찮아질 거예요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "comfort.02-its-going-to-be-okay.variant-1",
+          "english": "Take all the time you need.",
+          "korean": "필요한 만큼 천천히 시간을 가지세요.",
+          "register": "neutral",
+          "nuanceKo": "같은 위로 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "comfort.02-its-going-to-be-okay.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "comfort.01-im-sorry-to-hear-that",
+          "comfort.03-take-all-the-time-you-need"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "comfort.03-take-all-the-time-you-need"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "It's going to be okay.",
+        "lang": "en-US"
+      },
+      "sortKey": "046.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "comfort.03-take-all-the-time-you-need",
+      "familyId": "comfort.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Take all the time you need.",
+      "english": "Take all the time you need.",
+      "korean": "필요한 만큼 천천히 시간을 가지세요.",
+      "intentKo": "위로 상황에서 “필요한 만큼 천천히 시간을 가지세요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 위로 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "comfort"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "위로",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "comfort.03-take-all-the-time-you-need.example-1",
+          "english": "A: Take all the time you need. B: I know, right?",
+          "korean": "A: 필요한 만큼 천천히 시간을 가지세요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "comfort.03-take-all-the-time-you-need.example-2",
+          "english": "A: Take all the time you need. B: That's exactly how I feel.",
+          "korean": "A: 필요한 만큼 천천히 시간을 가지세요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "comfort.03-take-all-the-time-you-need.example-3",
+          "english": "A: Take all the time you need. B: Thanks for saying that.",
+          "korean": "A: 필요한 만큼 천천히 시간을 가지세요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "comfort.03-take-all-the-time-you-need.variant-1",
+          "english": "You don't have to go through this alone.",
+          "korean": "이 일을 혼자 겪을 필요는 없어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 위로 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "comfort.03-take-all-the-time-you-need.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "comfort.02-its-going-to-be-okay",
+          "comfort.04-you-dont-have-to-go-through-this-alone"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "comfort.04-you-dont-have-to-go-through-this-alone"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Take all the time you need.",
+        "lang": "en-US"
+      },
+      "sortKey": "046.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "comfort.04-you-dont-have-to-go-through-this-alone",
+      "familyId": "comfort.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "You don't have to go through this alone.",
+      "english": "You don't have to go through this alone.",
+      "korean": "이 일을 혼자 겪을 필요는 없어요.",
+      "intentKo": "위로 상황에서 “이 일을 혼자 겪을 필요는 없어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 위로 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "comfort"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "위로",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "comfort.04-you-dont-have-to-go-through-this-alone.example-1",
+          "english": "A: You don't have to go through this alone. B: I know, right?",
+          "korean": "A: 이 일을 혼자 겪을 필요는 없어요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "comfort.04-you-dont-have-to-go-through-this-alone.example-2",
+          "english": "A: You don't have to go through this alone. B: That's exactly how I feel.",
+          "korean": "A: 이 일을 혼자 겪을 필요는 없어요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "comfort.04-you-dont-have-to-go-through-this-alone.example-3",
+          "english": "A: You don't have to go through this alone. B: Thanks for saying that.",
+          "korean": "A: 이 일을 혼자 겪을 필요는 없어요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "comfort.04-you-dont-have-to-go-through-this-alone.variant-1",
+          "english": "I'm thinking of you.",
+          "korean": "당신을 생각하고 있어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 위로 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "comfort.04-you-dont-have-to-go-through-this-alone.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "comfort.03-take-all-the-time-you-need",
+          "comfort.05-im-thinking-of-you"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "comfort.05-im-thinking-of-you"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "You don't have to go through this alone.",
+        "lang": "en-US"
+      },
+      "sortKey": "046.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "comfort.05-im-thinking-of-you",
+      "familyId": "comfort.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm thinking of you.",
+      "english": "I'm thinking of you.",
+      "korean": "당신을 생각하고 있어요.",
+      "intentKo": "위로 상황에서 “당신을 생각하고 있어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 위로 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "comfort"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "위로",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "comfort.05-im-thinking-of-you.example-1",
+          "english": "A: I'm thinking of you. B: I know, right?",
+          "korean": "A: 당신을 생각하고 있어요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "comfort.05-im-thinking-of-you.example-2",
+          "english": "A: I'm thinking of you. B: That's exactly how I feel.",
+          "korean": "A: 당신을 생각하고 있어요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "comfort.05-im-thinking-of-you.example-3",
+          "english": "A: I'm thinking of you. B: Thanks for saying that.",
+          "korean": "A: 당신을 생각하고 있어요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "comfort.05-im-thinking-of-you.variant-1",
+          "english": "Things may feel different with time.",
+          "korean": "시간이 지나면 다르게 느껴질 수도 있어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 위로 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "comfort.05-im-thinking-of-you.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "comfort.04-you-dont-have-to-go-through-this-alone",
+          "comfort.06-things-may-feel-different-with-time"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "comfort.06-things-may-feel-different-with-time"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm thinking of you.",
+        "lang": "en-US"
+      },
+      "sortKey": "046.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "comfort.06-things-may-feel-different-with-time",
+      "familyId": "comfort.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Things may feel different with time.",
+      "english": "Things may feel different with time.",
+      "korean": "시간이 지나면 다르게 느껴질 수도 있어요.",
+      "intentKo": "위로 상황에서 “시간이 지나면 다르게 느껴질 수도 있어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 위로 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "comfort"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "위로",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "comfort.06-things-may-feel-different-with-time.example-1",
+          "english": "A: Things may feel different with time. B: I know, right?",
+          "korean": "A: 시간이 지나면 다르게 느껴질 수도 있어요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "comfort.06-things-may-feel-different-with-time.example-2",
+          "english": "A: Things may feel different with time. B: That's exactly how I feel.",
+          "korean": "A: 시간이 지나면 다르게 느껴질 수도 있어요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "comfort.06-things-may-feel-different-with-time.example-3",
+          "english": "A: Things may feel different with time. B: Thanks for saying that.",
+          "korean": "A: 시간이 지나면 다르게 느껴질 수도 있어요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "comfort.06-things-may-feel-different-with-time.variant-1",
+          "english": "There's no right way to feel right now.",
+          "korean": "지금 어떤 감정을 느껴야 한다는 정답은 없어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 위로 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "comfort.06-things-may-feel-different-with-time.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "comfort.05-im-thinking-of-you",
+          "comfort.07-theres-no-right-way-to-feel-right-now"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "comfort.07-theres-no-right-way-to-feel-right-now"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Things may feel different with time.",
+        "lang": "en-US"
+      },
+      "sortKey": "046.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "comfort.07-theres-no-right-way-to-feel-right-now",
+      "familyId": "comfort.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "There's no right way to feel right now.",
+      "english": "There's no right way to feel right now.",
+      "korean": "지금 어떤 감정을 느껴야 한다는 정답은 없어요.",
+      "intentKo": "위로 상황에서 “지금 어떤 감정을 느껴야 한다는 정답은 없어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 위로 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "comfort"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "위로",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "comfort.07-theres-no-right-way-to-feel-right-now.example-1",
+          "english": "A: There's no right way to feel right now. B: I know, right?",
+          "korean": "A: 지금 어떤 감정을 느껴야 한다는 정답은 없어요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "comfort.07-theres-no-right-way-to-feel-right-now.example-2",
+          "english": "A: There's no right way to feel right now. B: That's exactly how I feel.",
+          "korean": "A: 지금 어떤 감정을 느껴야 한다는 정답은 없어요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "comfort.07-theres-no-right-way-to-feel-right-now.example-3",
+          "english": "A: There's no right way to feel right now. B: Thanks for saying that.",
+          "korean": "A: 지금 어떤 감정을 느껴야 한다는 정답은 없어요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "comfort.07-theres-no-right-way-to-feel-right-now.variant-1",
+          "english": "Whatever you need, I'm here for you.",
+          "korean": "무엇이 필요하든 제가 곁에 있을게요.",
+          "register": "neutral",
+          "nuanceKo": "같은 위로 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "comfort.07-theres-no-right-way-to-feel-right-now.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "comfort.06-things-may-feel-different-with-time",
+          "comfort.08-whatever-you-need-im-here-for-you"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "comfort.08-whatever-you-need-im-here-for-you"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "There's no right way to feel right now.",
+        "lang": "en-US"
+      },
+      "sortKey": "046.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "comfort.08-whatever-you-need-im-here-for-you",
+      "familyId": "comfort.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Whatever you need, I'm here for you.",
+      "english": "Whatever you need, I'm here for you.",
+      "korean": "무엇이 필요하든 제가 곁에 있을게요.",
+      "intentKo": "위로 상황에서 “무엇이 필요하든 제가 곁에 있을게요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 위로 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "comfort"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "위로",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "comfort.08-whatever-you-need-im-here-for-you.example-1",
+          "english": "A: Whatever you need, I'm here for you. B: I know, right?",
+          "korean": "A: 무엇이 필요하든 제가 곁에 있을게요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "comfort.08-whatever-you-need-im-here-for-you.example-2",
+          "english": "A: Whatever you need, I'm here for you. B: That's exactly how I feel.",
+          "korean": "A: 무엇이 필요하든 제가 곁에 있을게요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "comfort.08-whatever-you-need-im-here-for-you.example-3",
+          "english": "A: Whatever you need, I'm here for you. B: Thanks for saying that.",
+          "korean": "A: 무엇이 필요하든 제가 곁에 있을게요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "comfort.08-whatever-you-need-im-here-for-you.variant-1",
+          "english": "I'm sorry to hear that.",
+          "korean": "그런 소식을 들어 마음이 안 좋아요.",
+          "register": "neutral",
+          "nuanceKo": "같은 위로 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "comfort.08-whatever-you-need-im-here-for-you.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "comfort.07-theres-no-right-way-to-feel-right-now",
+          "comfort.01-im-sorry-to-hear-that"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "comfort.01-im-sorry-to-hear-that"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Whatever you need, I'm here for you.",
+        "lang": "en-US"
+      },
+      "sortKey": "046.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "complaints.01-im-not-happy-with-this-service",
+      "familyId": "complaints.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm not happy with this service.",
+      "english": "I'm not happy with this service.",
+      "korean": "이 서비스가 만족스럽지 않아요.",
+      "intentKo": "불만 상황에서 “이 서비스가 만족스럽지 않아요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 서비스 대화에서 바로 쓸 수 있는 불만 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "complaints"
+      ],
+      "situationIds": [
+        "service"
+      ],
+      "tags": [
+        "불만",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "complaints.01-im-not-happy-with-this-service.example-1",
+          "english": "A: I'm not happy with this service. B: Certainly. Let me check that for you.",
+          "korean": "A: 이 서비스가 만족스럽지 않아요. B: 물론입니다. 확인해 드릴게요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "complaints.01-im-not-happy-with-this-service.example-2",
+          "english": "A: I'm not happy with this service. B: Of course. One moment, please.",
+          "korean": "A: 이 서비스가 만족스럽지 않아요. B: 네. 잠시만 기다려 주세요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "complaints.01-im-not-happy-with-this-service.example-3",
+          "english": "A: I'm not happy with this service. B: I'll help you with that.",
+          "korean": "A: 이 서비스가 만족스럽지 않아요. B: 그 부분을 도와드릴게요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "complaints.01-im-not-happy-with-this-service.variant-1",
+          "english": "This isn't what I ordered.",
+          "korean": "이건 제가 주문한 게 아니에요.",
+          "register": "neutral",
+          "nuanceKo": "같은 불만 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "complaints.01-im-not-happy-with-this-service.reply-1",
+          "english": "Certainly. Let me check that for you.",
+          "korean": "물론입니다. 확인해 드릴게요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "complaints.08-id-like-to-make-a-formal-complaint",
+          "complaints.02-this-isnt-what-i-ordered"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "complaints.02-this-isnt-what-i-ordered"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm not happy with this service.",
+        "lang": "en-US"
+      },
+      "sortKey": "047.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "complaints.02-this-isnt-what-i-ordered",
+      "familyId": "complaints.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "This isn't what I ordered.",
+      "english": "This isn't what I ordered.",
+      "korean": "이건 제가 주문한 게 아니에요.",
+      "intentKo": "불만 상황에서 “이건 제가 주문한 게 아니에요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 서비스 대화에서 바로 쓸 수 있는 불만 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "complaints"
+      ],
+      "situationIds": [
+        "service"
+      ],
+      "tags": [
+        "불만",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "complaints.02-this-isnt-what-i-ordered.example-1",
+          "english": "A: This isn't what I ordered. B: Certainly. Let me check that for you.",
+          "korean": "A: 이건 제가 주문한 게 아니에요. B: 물론입니다. 확인해 드릴게요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "complaints.02-this-isnt-what-i-ordered.example-2",
+          "english": "A: This isn't what I ordered. B: Of course. One moment, please.",
+          "korean": "A: 이건 제가 주문한 게 아니에요. B: 네. 잠시만 기다려 주세요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "complaints.02-this-isnt-what-i-ordered.example-3",
+          "english": "A: This isn't what I ordered. B: I'll help you with that.",
+          "korean": "A: 이건 제가 주문한 게 아니에요. B: 그 부분을 도와드릴게요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "complaints.02-this-isnt-what-i-ordered.variant-1",
+          "english": "We've been waiting for over an hour.",
+          "korean": "한 시간 넘게 기다리고 있어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 불만 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "complaints.02-this-isnt-what-i-ordered.reply-1",
+          "english": "Certainly. Let me check that for you.",
+          "korean": "물론입니다. 확인해 드릴게요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "complaints.01-im-not-happy-with-this-service",
+          "complaints.03-weve-been-waiting-for-over-an-hour"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "complaints.03-weve-been-waiting-for-over-an-hour"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "This isn't what I ordered.",
+        "lang": "en-US"
+      },
+      "sortKey": "047.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "complaints.03-weve-been-waiting-for-over-an-hour",
+      "familyId": "complaints.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "We've been waiting for over an hour.",
+      "english": "We've been waiting for over an hour.",
+      "korean": "한 시간 넘게 기다리고 있어요.",
+      "intentKo": "불만 상황에서 “한 시간 넘게 기다리고 있어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 서비스 대화에서 바로 쓸 수 있는 불만 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "complaints"
+      ],
+      "situationIds": [
+        "service"
+      ],
+      "tags": [
+        "불만",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "complaints.03-weve-been-waiting-for-over-an-hour.example-1",
+          "english": "A: We've been waiting for over an hour. B: Certainly. Let me check that for you.",
+          "korean": "A: 한 시간 넘게 기다리고 있어요. B: 물론입니다. 확인해 드릴게요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "complaints.03-weve-been-waiting-for-over-an-hour.example-2",
+          "english": "A: We've been waiting for over an hour. B: Of course. One moment, please.",
+          "korean": "A: 한 시간 넘게 기다리고 있어요. B: 네. 잠시만 기다려 주세요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "complaints.03-weve-been-waiting-for-over-an-hour.example-3",
+          "english": "A: We've been waiting for over an hour. B: I'll help you with that.",
+          "korean": "A: 한 시간 넘게 기다리고 있어요. B: 그 부분을 도와드릴게요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "complaints.03-weve-been-waiting-for-over-an-hour.variant-1",
+          "english": "The room is much noisier than expected.",
+          "korean": "방이 예상보다 훨씬 시끄러워요.",
+          "register": "neutral",
+          "nuanceKo": "같은 불만 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "complaints.03-weve-been-waiting-for-over-an-hour.reply-1",
+          "english": "Certainly. Let me check that for you.",
+          "korean": "물론입니다. 확인해 드릴게요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "complaints.02-this-isnt-what-i-ordered",
+          "complaints.04-the-room-is-much-noisier-than-expected"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "complaints.04-the-room-is-much-noisier-than-expected"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "We've been waiting for over an hour.",
+        "lang": "en-US"
+      },
+      "sortKey": "047.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "complaints.04-the-room-is-much-noisier-than-expected",
+      "familyId": "complaints.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "The room is much noisier than expected.",
+      "english": "The room is much noisier than expected.",
+      "korean": "방이 예상보다 훨씬 시끄러워요.",
+      "intentKo": "불만 상황에서 “방이 예상보다 훨씬 시끄러워요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 서비스 대화에서 바로 쓸 수 있는 불만 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "complaints"
+      ],
+      "situationIds": [
+        "service"
+      ],
+      "tags": [
+        "불만",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "complaints.04-the-room-is-much-noisier-than-expected.example-1",
+          "english": "A: The room is much noisier than expected. B: Certainly. Let me check that for you.",
+          "korean": "A: 방이 예상보다 훨씬 시끄러워요. B: 물론입니다. 확인해 드릴게요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "complaints.04-the-room-is-much-noisier-than-expected.example-2",
+          "english": "A: The room is much noisier than expected. B: Of course. One moment, please.",
+          "korean": "A: 방이 예상보다 훨씬 시끄러워요. B: 네. 잠시만 기다려 주세요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "complaints.04-the-room-is-much-noisier-than-expected.example-3",
+          "english": "A: The room is much noisier than expected. B: I'll help you with that.",
+          "korean": "A: 방이 예상보다 훨씬 시끄러워요. B: 그 부분을 도와드릴게요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "complaints.04-the-room-is-much-noisier-than-expected.variant-1",
+          "english": "I'm afraid this still hasn't been fixed.",
+          "korean": "유감이지만 이 문제가 아직 해결되지 않았어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 불만 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "complaints.04-the-room-is-much-noisier-than-expected.reply-1",
+          "english": "Certainly. Let me check that for you.",
+          "korean": "물론입니다. 확인해 드릴게요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "complaints.03-weve-been-waiting-for-over-an-hour",
+          "complaints.05-im-afraid-this-still-hasnt-been-fixed"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "complaints.05-im-afraid-this-still-hasnt-been-fixed"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "The room is much noisier than expected.",
+        "lang": "en-US"
+      },
+      "sortKey": "047.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "complaints.05-im-afraid-this-still-hasnt-been-fixed",
+      "familyId": "complaints.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm afraid this still hasn't been fixed.",
+      "english": "I'm afraid this still hasn't been fixed.",
+      "korean": "유감이지만 이 문제가 아직 해결되지 않았어요.",
+      "intentKo": "불만 상황에서 “유감이지만 이 문제가 아직 해결되지 않았어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 서비스 대화에서 바로 쓸 수 있는 불만 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "complaints"
+      ],
+      "situationIds": [
+        "service"
+      ],
+      "tags": [
+        "불만",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "complaints.05-im-afraid-this-still-hasnt-been-fixed.example-1",
+          "english": "A: I'm afraid this still hasn't been fixed. B: Certainly. Let me check that for you.",
+          "korean": "A: 유감이지만 이 문제가 아직 해결되지 않았어요. B: 물론입니다. 확인해 드릴게요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "complaints.05-im-afraid-this-still-hasnt-been-fixed.example-2",
+          "english": "A: I'm afraid this still hasn't been fixed. B: Of course. One moment, please.",
+          "korean": "A: 유감이지만 이 문제가 아직 해결되지 않았어요. B: 네. 잠시만 기다려 주세요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "complaints.05-im-afraid-this-still-hasnt-been-fixed.example-3",
+          "english": "A: I'm afraid this still hasn't been fixed. B: I'll help you with that.",
+          "korean": "A: 유감이지만 이 문제가 아직 해결되지 않았어요. B: 그 부분을 도와드릴게요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "complaints.05-im-afraid-this-still-hasnt-been-fixed.variant-1",
+          "english": "Could I speak to the person in charge?",
+          "korean": "담당자와 이야기할 수 있을까요?",
+          "register": "neutral",
+          "nuanceKo": "같은 불만 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "complaints.05-im-afraid-this-still-hasnt-been-fixed.reply-1",
+          "english": "Certainly. Let me check that for you.",
+          "korean": "물론입니다. 확인해 드릴게요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "complaints.04-the-room-is-much-noisier-than-expected",
+          "complaints.06-could-i-speak-to-the-person-in-charge"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "complaints.06-could-i-speak-to-the-person-in-charge"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm afraid this still hasn't been fixed.",
+        "lang": "en-US"
+      },
+      "sortKey": "047.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "complaints.06-could-i-speak-to-the-person-in-charge",
+      "familyId": "complaints.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Could I speak to the person in charge?",
+      "english": "Could I speak to the person in charge?",
+      "korean": "담당자와 이야기할 수 있을까요?",
+      "intentKo": "불만 상황에서 “담당자와 이야기할 수 있을까요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 서비스 대화에서 바로 쓸 수 있는 불만 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "complaints"
+      ],
+      "situationIds": [
+        "service"
+      ],
+      "tags": [
+        "불만",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "complaints.06-could-i-speak-to-the-person-in-charge.example-1",
+          "english": "A: Could I speak to the person in charge? B: Certainly. Let me check that for you.",
+          "korean": "A: 담당자와 이야기할 수 있을까요? B: 물론입니다. 확인해 드릴게요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "complaints.06-could-i-speak-to-the-person-in-charge.example-2",
+          "english": "A: Could I speak to the person in charge? B: Of course. One moment, please.",
+          "korean": "A: 담당자와 이야기할 수 있을까요? B: 네. 잠시만 기다려 주세요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "complaints.06-could-i-speak-to-the-person-in-charge.example-3",
+          "english": "A: Could I speak to the person in charge? B: I'll help you with that.",
+          "korean": "A: 담당자와 이야기할 수 있을까요? B: 그 부분을 도와드릴게요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "complaints.06-could-i-speak-to-the-person-in-charge.variant-1",
+          "english": "I don't think this is acceptable.",
+          "korean": "이건 받아들이기 어렵다고 생각해요.",
+          "register": "neutral",
+          "nuanceKo": "같은 불만 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "complaints.06-could-i-speak-to-the-person-in-charge.reply-1",
+          "english": "Certainly. Let me check that for you.",
+          "korean": "물론입니다. 확인해 드릴게요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "complaints.05-im-afraid-this-still-hasnt-been-fixed",
+          "complaints.07-i-dont-think-this-is-acceptable"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "complaints.07-i-dont-think-this-is-acceptable"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Could I speak to the person in charge?",
+        "lang": "en-US"
+      },
+      "sortKey": "047.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "complaints.07-i-dont-think-this-is-acceptable",
+      "familyId": "complaints.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I don't think this is acceptable.",
+      "english": "I don't think this is acceptable.",
+      "korean": "이건 받아들이기 어렵다고 생각해요.",
+      "intentKo": "불만 상황에서 “이건 받아들이기 어렵다고 생각해요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 서비스 대화에서 바로 쓸 수 있는 불만 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "complaints"
+      ],
+      "situationIds": [
+        "service"
+      ],
+      "tags": [
+        "불만",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "complaints.07-i-dont-think-this-is-acceptable.example-1",
+          "english": "A: I don't think this is acceptable. B: Certainly. Let me check that for you.",
+          "korean": "A: 이건 받아들이기 어렵다고 생각해요. B: 물론입니다. 확인해 드릴게요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "complaints.07-i-dont-think-this-is-acceptable.example-2",
+          "english": "A: I don't think this is acceptable. B: Of course. One moment, please.",
+          "korean": "A: 이건 받아들이기 어렵다고 생각해요. B: 네. 잠시만 기다려 주세요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "complaints.07-i-dont-think-this-is-acceptable.example-3",
+          "english": "A: I don't think this is acceptable. B: I'll help you with that.",
+          "korean": "A: 이건 받아들이기 어렵다고 생각해요. B: 그 부분을 도와드릴게요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "complaints.07-i-dont-think-this-is-acceptable.variant-1",
+          "english": "I'd like to make a formal complaint.",
+          "korean": "정식으로 불만을 제기하고 싶습니다.",
+          "register": "neutral",
+          "nuanceKo": "같은 불만 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "complaints.07-i-dont-think-this-is-acceptable.reply-1",
+          "english": "Certainly. Let me check that for you.",
+          "korean": "물론입니다. 확인해 드릴게요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "complaints.06-could-i-speak-to-the-person-in-charge",
+          "complaints.08-id-like-to-make-a-formal-complaint"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "complaints.08-id-like-to-make-a-formal-complaint"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I don't think this is acceptable.",
+        "lang": "en-US"
+      },
+      "sortKey": "047.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "complaints.08-id-like-to-make-a-formal-complaint",
+      "familyId": "complaints.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'd like to make a formal complaint.",
+      "english": "I'd like to make a formal complaint.",
+      "korean": "정식으로 불만을 제기하고 싶습니다.",
+      "intentKo": "불만 상황에서 “정식으로 불만을 제기하고 싶습니다.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 서비스 대화에서 바로 쓸 수 있는 불만 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "complaints"
+      ],
+      "situationIds": [
+        "service"
+      ],
+      "tags": [
+        "불만",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "complaints.08-id-like-to-make-a-formal-complaint.example-1",
+          "english": "A: I'd like to make a formal complaint. B: Certainly. Let me check that for you.",
+          "korean": "A: 정식으로 불만을 제기하고 싶습니다. B: 물론입니다. 확인해 드릴게요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "complaints.08-id-like-to-make-a-formal-complaint.example-2",
+          "english": "A: I'd like to make a formal complaint. B: Of course. One moment, please.",
+          "korean": "A: 정식으로 불만을 제기하고 싶습니다. B: 네. 잠시만 기다려 주세요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "complaints.08-id-like-to-make-a-formal-complaint.example-3",
+          "english": "A: I'd like to make a formal complaint. B: I'll help you with that.",
+          "korean": "A: 정식으로 불만을 제기하고 싶습니다. B: 그 부분을 도와드릴게요.",
+          "situationId": "service",
+          "noteKo": "서비스에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "complaints.08-id-like-to-make-a-formal-complaint.variant-1",
+          "english": "I'm not happy with this service.",
+          "korean": "이 서비스가 만족스럽지 않아요.",
+          "register": "neutral",
+          "nuanceKo": "같은 불만 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "complaints.08-id-like-to-make-a-formal-complaint.reply-1",
+          "english": "Certainly. Let me check that for you.",
+          "korean": "물론입니다. 확인해 드릴게요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "complaints.07-i-dont-think-this-is-acceptable",
+          "complaints.01-im-not-happy-with-this-service"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "complaints.01-im-not-happy-with-this-service"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'd like to make a formal complaint.",
+        "lang": "en-US"
+      },
+      "sortKey": "047.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "raising-problems.01-theres-a-problem-with-the-schedule",
+      "familyId": "raising-problems.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "There's a problem with the schedule.",
+      "english": "There's a problem with the schedule.",
+      "korean": "일정에 문제가 있어요.",
+      "intentKo": "문제 제기 상황에서 “일정에 문제가 있어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 직장 대화에서 바로 쓸 수 있는 문제 제기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "raising-problems"
+      ],
+      "situationIds": [
+        "work"
+      ],
+      "tags": [
+        "문제 제기",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "raising-problems.01-theres-a-problem-with-the-schedule.example-1",
+          "english": "A: There's a problem with the schedule. B: I see what you mean.",
+          "korean": "A: 일정에 문제가 있어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "raising-problems.01-theres-a-problem-with-the-schedule.example-2",
+          "english": "A: There's a problem with the schedule. B: That makes sense.",
+          "korean": "A: 일정에 문제가 있어요. B: 말이 되네요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "raising-problems.01-theres-a-problem-with-the-schedule.example-3",
+          "english": "A: There's a problem with the schedule. B: Thanks for telling me.",
+          "korean": "A: 일정에 문제가 있어요. B: 말해줘서 고마워요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "raising-problems.01-theres-a-problem-with-the-schedule.variant-1",
+          "english": "Something doesn't seem right here.",
+          "korean": "여기 뭔가 이상해 보여요.",
+          "register": "neutral",
+          "nuanceKo": "같은 문제 제기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "raising-problems.01-theres-a-problem-with-the-schedule.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "raising-problems.08-theres-a-larger-issue-we-havent-discussed",
+          "raising-problems.02-something-doesnt-seem-right-here"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "raising-problems.02-something-doesnt-seem-right-here"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "There's a problem with the schedule.",
+        "lang": "en-US"
+      },
+      "sortKey": "048.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "raising-problems.02-something-doesnt-seem-right-here",
+      "familyId": "raising-problems.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Something doesn't seem right here.",
+      "english": "Something doesn't seem right here.",
+      "korean": "여기 뭔가 이상해 보여요.",
+      "intentKo": "문제 제기 상황에서 “여기 뭔가 이상해 보여요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 직장 대화에서 바로 쓸 수 있는 문제 제기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "raising-problems"
+      ],
+      "situationIds": [
+        "work"
+      ],
+      "tags": [
+        "문제 제기",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "raising-problems.02-something-doesnt-seem-right-here.example-1",
+          "english": "A: Something doesn't seem right here. B: I see what you mean.",
+          "korean": "A: 여기 뭔가 이상해 보여요. B: 무슨 말인지 알겠어요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "raising-problems.02-something-doesnt-seem-right-here.example-2",
+          "english": "A: Something doesn't seem right here. B: That makes sense.",
+          "korean": "A: 여기 뭔가 이상해 보여요. B: 말이 되네요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "raising-problems.02-something-doesnt-seem-right-here.example-3",
+          "english": "A: Something doesn't seem right here. B: Thanks for telling me.",
+          "korean": "A: 여기 뭔가 이상해 보여요. B: 말해줘서 고마워요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "raising-problems.02-something-doesnt-seem-right-here.variant-1",
+          "english": "We may have overlooked an important detail.",
+          "korean": "중요한 세부 사항을 놓쳤을 수도 있어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 문제 제기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "raising-problems.02-something-doesnt-seem-right-here.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "raising-problems.01-theres-a-problem-with-the-schedule",
+          "raising-problems.03-we-may-have-overlooked-an-important-detail"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "raising-problems.03-we-may-have-overlooked-an-important-detail"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Something doesn't seem right here.",
+        "lang": "en-US"
+      },
+      "sortKey": "048.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "raising-problems.03-we-may-have-overlooked-an-important-detail",
+      "familyId": "raising-problems.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "We may have overlooked an important detail.",
+      "english": "We may have overlooked an important detail.",
+      "korean": "중요한 세부 사항을 놓쳤을 수도 있어요.",
+      "intentKo": "문제 제기 상황에서 “중요한 세부 사항을 놓쳤을 수도 있어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 직장 대화에서 바로 쓸 수 있는 문제 제기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "raising-problems"
+      ],
+      "situationIds": [
+        "work"
+      ],
+      "tags": [
+        "문제 제기",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "raising-problems.03-we-may-have-overlooked-an-important-detail.example-1",
+          "english": "A: We may have overlooked an important detail. B: I see what you mean.",
+          "korean": "A: 중요한 세부 사항을 놓쳤을 수도 있어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "raising-problems.03-we-may-have-overlooked-an-important-detail.example-2",
+          "english": "A: We may have overlooked an important detail. B: That makes sense.",
+          "korean": "A: 중요한 세부 사항을 놓쳤을 수도 있어요. B: 말이 되네요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "raising-problems.03-we-may-have-overlooked-an-important-detail.example-3",
+          "english": "A: We may have overlooked an important detail. B: Thanks for telling me.",
+          "korean": "A: 중요한 세부 사항을 놓쳤을 수도 있어요. B: 말해줘서 고마워요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "raising-problems.03-we-may-have-overlooked-an-important-detail.variant-1",
+          "english": "I'm concerned about the deadline.",
+          "korean": "마감일이 걱정돼요.",
+          "register": "neutral",
+          "nuanceKo": "같은 문제 제기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "raising-problems.03-we-may-have-overlooked-an-important-detail.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "raising-problems.02-something-doesnt-seem-right-here",
+          "raising-problems.04-im-concerned-about-the-deadline"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "raising-problems.04-im-concerned-about-the-deadline"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "We may have overlooked an important detail.",
+        "lang": "en-US"
+      },
+      "sortKey": "048.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "raising-problems.04-im-concerned-about-the-deadline",
+      "familyId": "raising-problems.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm concerned about the deadline.",
+      "english": "I'm concerned about the deadline.",
+      "korean": "마감일이 걱정돼요.",
+      "intentKo": "문제 제기 상황에서 “마감일이 걱정돼요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 직장 대화에서 바로 쓸 수 있는 문제 제기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "raising-problems"
+      ],
+      "situationIds": [
+        "work"
+      ],
+      "tags": [
+        "문제 제기",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "raising-problems.04-im-concerned-about-the-deadline.example-1",
+          "english": "A: I'm concerned about the deadline. B: I see what you mean.",
+          "korean": "A: 마감일이 걱정돼요. B: 무슨 말인지 알겠어요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "raising-problems.04-im-concerned-about-the-deadline.example-2",
+          "english": "A: I'm concerned about the deadline. B: That makes sense.",
+          "korean": "A: 마감일이 걱정돼요. B: 말이 되네요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "raising-problems.04-im-concerned-about-the-deadline.example-3",
+          "english": "A: I'm concerned about the deadline. B: Thanks for telling me.",
+          "korean": "A: 마감일이 걱정돼요. B: 말해줘서 고마워요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "raising-problems.04-im-concerned-about-the-deadline.variant-1",
+          "english": "This could cause delays later.",
+          "korean": "이것 때문에 나중에 지연이 생길 수 있어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 문제 제기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "raising-problems.04-im-concerned-about-the-deadline.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "raising-problems.03-we-may-have-overlooked-an-important-detail",
+          "raising-problems.05-this-could-cause-delays-later"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "raising-problems.05-this-could-cause-delays-later"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm concerned about the deadline.",
+        "lang": "en-US"
+      },
+      "sortKey": "048.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "raising-problems.05-this-could-cause-delays-later",
+      "familyId": "raising-problems.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "This could cause delays later.",
+      "english": "This could cause delays later.",
+      "korean": "이것 때문에 나중에 지연이 생길 수 있어요.",
+      "intentKo": "문제 제기 상황에서 “이것 때문에 나중에 지연이 생길 수 있어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 직장 대화에서 바로 쓸 수 있는 문제 제기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "raising-problems"
+      ],
+      "situationIds": [
+        "work"
+      ],
+      "tags": [
+        "문제 제기",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "raising-problems.05-this-could-cause-delays-later.example-1",
+          "english": "A: This could cause delays later. B: I see what you mean.",
+          "korean": "A: 이것 때문에 나중에 지연이 생길 수 있어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "raising-problems.05-this-could-cause-delays-later.example-2",
+          "english": "A: This could cause delays later. B: That makes sense.",
+          "korean": "A: 이것 때문에 나중에 지연이 생길 수 있어요. B: 말이 되네요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "raising-problems.05-this-could-cause-delays-later.example-3",
+          "english": "A: This could cause delays later. B: Thanks for telling me.",
+          "korean": "A: 이것 때문에 나중에 지연이 생길 수 있어요. B: 말해줘서 고마워요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "raising-problems.05-this-could-cause-delays-later.variant-1",
+          "english": "We need to address this before moving on.",
+          "korean": "계속 진행하기 전에 이 문제를 다뤄야 해요.",
+          "register": "neutral",
+          "nuanceKo": "같은 문제 제기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "raising-problems.05-this-could-cause-delays-later.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "raising-problems.04-im-concerned-about-the-deadline",
+          "raising-problems.06-we-need-to-address-this-before-moving-on"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "raising-problems.06-we-need-to-address-this-before-moving-on"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "This could cause delays later.",
+        "lang": "en-US"
+      },
+      "sortKey": "048.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "raising-problems.06-we-need-to-address-this-before-moving-on",
+      "familyId": "raising-problems.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "We need to address this before moving on.",
+      "english": "We need to address this before moving on.",
+      "korean": "계속 진행하기 전에 이 문제를 다뤄야 해요.",
+      "intentKo": "문제 제기 상황에서 “계속 진행하기 전에 이 문제를 다뤄야 해요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 직장 대화에서 바로 쓸 수 있는 문제 제기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "raising-problems"
+      ],
+      "situationIds": [
+        "work"
+      ],
+      "tags": [
+        "문제 제기",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "raising-problems.06-we-need-to-address-this-before-moving-on.example-1",
+          "english": "A: We need to address this before moving on. B: I see what you mean.",
+          "korean": "A: 계속 진행하기 전에 이 문제를 다뤄야 해요. B: 무슨 말인지 알겠어요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "raising-problems.06-we-need-to-address-this-before-moving-on.example-2",
+          "english": "A: We need to address this before moving on. B: That makes sense.",
+          "korean": "A: 계속 진행하기 전에 이 문제를 다뤄야 해요. B: 말이 되네요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "raising-problems.06-we-need-to-address-this-before-moving-on.example-3",
+          "english": "A: We need to address this before moving on. B: Thanks for telling me.",
+          "korean": "A: 계속 진행하기 전에 이 문제를 다뤄야 해요. B: 말해줘서 고마워요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "raising-problems.06-we-need-to-address-this-before-moving-on.variant-1",
+          "english": "I hate to bring this up, but the numbers don't match.",
+          "korean": "말씀드리기 조심스럽지만 숫자가 맞지 않아요.",
+          "register": "neutral",
+          "nuanceKo": "같은 문제 제기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "raising-problems.06-we-need-to-address-this-before-moving-on.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "raising-problems.05-this-could-cause-delays-later",
+          "raising-problems.07-i-hate-to-bring-this-up-but-the-numbers-do"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "raising-problems.07-i-hate-to-bring-this-up-but-the-numbers-do"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "We need to address this before moving on.",
+        "lang": "en-US"
+      },
+      "sortKey": "048.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "raising-problems.07-i-hate-to-bring-this-up-but-the-numbers-do",
+      "familyId": "raising-problems.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I hate to bring this up, but the numbers don't match.",
+      "english": "I hate to bring this up, but the numbers don't match.",
+      "korean": "말씀드리기 조심스럽지만 숫자가 맞지 않아요.",
+      "intentKo": "문제 제기 상황에서 “말씀드리기 조심스럽지만 숫자가 맞지 않아요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 직장 대화에서 바로 쓸 수 있는 문제 제기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "raising-problems"
+      ],
+      "situationIds": [
+        "work"
+      ],
+      "tags": [
+        "문제 제기",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "raising-problems.07-i-hate-to-bring-this-up-but-the-numbers-do.example-1",
+          "english": "A: I hate to bring this up, but the numbers don't match. B: I see what you mean.",
+          "korean": "A: 말씀드리기 조심스럽지만 숫자가 맞지 않아요. B: 무슨 말인지 알겠어요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "raising-problems.07-i-hate-to-bring-this-up-but-the-numbers-do.example-2",
+          "english": "A: I hate to bring this up, but the numbers don't match. B: That makes sense.",
+          "korean": "A: 말씀드리기 조심스럽지만 숫자가 맞지 않아요. B: 말이 되네요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "raising-problems.07-i-hate-to-bring-this-up-but-the-numbers-do.example-3",
+          "english": "A: I hate to bring this up, but the numbers don't match. B: Thanks for telling me.",
+          "korean": "A: 말씀드리기 조심스럽지만 숫자가 맞지 않아요. B: 말해줘서 고마워요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "raising-problems.07-i-hate-to-bring-this-up-but-the-numbers-do.variant-1",
+          "english": "There's a larger issue we haven't discussed yet.",
+          "korean": "아직 논의하지 않은 더 큰 문제가 있어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 문제 제기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "raising-problems.07-i-hate-to-bring-this-up-but-the-numbers-do.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "raising-problems.06-we-need-to-address-this-before-moving-on",
+          "raising-problems.08-theres-a-larger-issue-we-havent-discussed"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "raising-problems.08-theres-a-larger-issue-we-havent-discussed"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I hate to bring this up, but the numbers don't match.",
+        "lang": "en-US"
+      },
+      "sortKey": "048.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "raising-problems.08-theres-a-larger-issue-we-havent-discussed",
+      "familyId": "raising-problems.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "There's a larger issue we haven't discussed yet.",
+      "english": "There's a larger issue we haven't discussed yet.",
+      "korean": "아직 논의하지 않은 더 큰 문제가 있어요.",
+      "intentKo": "문제 제기 상황에서 “아직 논의하지 않은 더 큰 문제가 있어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 직장 대화에서 바로 쓸 수 있는 문제 제기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "raising-problems"
+      ],
+      "situationIds": [
+        "work"
+      ],
+      "tags": [
+        "문제 제기",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "raising-problems.08-theres-a-larger-issue-we-havent-discussed.example-1",
+          "english": "A: There's a larger issue we haven't discussed yet. B: I see what you mean.",
+          "korean": "A: 아직 논의하지 않은 더 큰 문제가 있어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "raising-problems.08-theres-a-larger-issue-we-havent-discussed.example-2",
+          "english": "A: There's a larger issue we haven't discussed yet. B: That makes sense.",
+          "korean": "A: 아직 논의하지 않은 더 큰 문제가 있어요. B: 말이 되네요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "raising-problems.08-theres-a-larger-issue-we-havent-discussed.example-3",
+          "english": "A: There's a larger issue we haven't discussed yet. B: Thanks for telling me.",
+          "korean": "A: 아직 논의하지 않은 더 큰 문제가 있어요. B: 말해줘서 고마워요.",
+          "situationId": "work",
+          "noteKo": "직장에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "raising-problems.08-theres-a-larger-issue-we-havent-discussed.variant-1",
+          "english": "There's a problem with the schedule.",
+          "korean": "일정에 문제가 있어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 문제 제기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "raising-problems.08-theres-a-larger-issue-we-havent-discussed.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "raising-problems.07-i-hate-to-bring-this-up-but-the-numbers-do",
+          "raising-problems.01-theres-a-problem-with-the-schedule"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "raising-problems.01-theres-a-problem-with-the-schedule"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "There's a larger issue we haven't discussed yet.",
+        "lang": "en-US"
+      },
+      "sortKey": "048.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "returns-exchanges.01-id-like-to-return-this",
+      "familyId": "returns-exchanges.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'd like to return this.",
+      "english": "I'd like to return this.",
+      "korean": "이걸 반품하고 싶어요.",
+      "intentKo": "환불과 교환 상황에서 “이걸 반품하고 싶어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 쇼핑 대화에서 바로 쓸 수 있는 환불과 교환 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "returns-exchanges"
+      ],
+      "situationIds": [
+        "shopping"
+      ],
+      "tags": [
+        "환불과 교환",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "returns-exchanges.01-id-like-to-return-this.example-1",
+          "english": "A: I'd like to return this. B: Certainly. Let me check that for you.",
+          "korean": "A: 이걸 반품하고 싶어요. B: 물론입니다. 확인해 드릴게요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "returns-exchanges.01-id-like-to-return-this.example-2",
+          "english": "A: I'd like to return this. B: Of course. One moment, please.",
+          "korean": "A: 이걸 반품하고 싶어요. B: 네. 잠시만 기다려 주세요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "returns-exchanges.01-id-like-to-return-this.example-3",
+          "english": "A: I'd like to return this. B: I'll help you with that.",
+          "korean": "A: 이걸 반품하고 싶어요. B: 그 부분을 도와드릴게요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "returns-exchanges.01-id-like-to-return-this.variant-1",
+          "english": "Can I exchange this for a different size?",
+          "korean": "이걸 다른 사이즈로 교환할 수 있을까요?",
+          "register": "neutral",
+          "nuanceKo": "같은 환불과 교환 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "returns-exchanges.01-id-like-to-return-this.reply-1",
+          "english": "Certainly. Let me check that for you.",
+          "korean": "물론입니다. 확인해 드릴게요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "returns-exchanges.08-id-prefer-store-credit-if-a-refund-isnt-po",
+          "returns-exchanges.02-can-i-exchange-this-for-a-different-size"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "returns-exchanges.02-can-i-exchange-this-for-a-different-size"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'd like to return this.",
+        "lang": "en-US"
+      },
+      "sortKey": "049.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "returns-exchanges.02-can-i-exchange-this-for-a-different-size",
+      "familyId": "returns-exchanges.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Can I exchange this for a different size?",
+      "english": "Can I exchange this for a different size?",
+      "korean": "이걸 다른 사이즈로 교환할 수 있을까요?",
+      "intentKo": "환불과 교환 상황에서 “이걸 다른 사이즈로 교환할 수 있을까요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 쇼핑 대화에서 바로 쓸 수 있는 환불과 교환 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "returns-exchanges"
+      ],
+      "situationIds": [
+        "shopping"
+      ],
+      "tags": [
+        "환불과 교환",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "returns-exchanges.02-can-i-exchange-this-for-a-different-size.example-1",
+          "english": "A: Can I exchange this for a different size? B: Certainly. Let me check that for you.",
+          "korean": "A: 이걸 다른 사이즈로 교환할 수 있을까요? B: 물론입니다. 확인해 드릴게요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "returns-exchanges.02-can-i-exchange-this-for-a-different-size.example-2",
+          "english": "A: Can I exchange this for a different size? B: Of course. One moment, please.",
+          "korean": "A: 이걸 다른 사이즈로 교환할 수 있을까요? B: 네. 잠시만 기다려 주세요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "returns-exchanges.02-can-i-exchange-this-for-a-different-size.example-3",
+          "english": "A: Can I exchange this for a different size? B: I'll help you with that.",
+          "korean": "A: 이걸 다른 사이즈로 교환할 수 있을까요? B: 그 부분을 도와드릴게요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "returns-exchanges.02-can-i-exchange-this-for-a-different-size.variant-1",
+          "english": "It doesn't work as advertised.",
+          "korean": "광고한 대로 작동하지 않아요.",
+          "register": "neutral",
+          "nuanceKo": "같은 환불과 교환 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "returns-exchanges.02-can-i-exchange-this-for-a-different-size.reply-1",
+          "english": "Certainly. Let me check that for you.",
+          "korean": "물론입니다. 확인해 드릴게요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "returns-exchanges.01-id-like-to-return-this",
+          "returns-exchanges.03-it-doesnt-work-as-advertised"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "returns-exchanges.03-it-doesnt-work-as-advertised"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Can I exchange this for a different size?",
+        "lang": "en-US"
+      },
+      "sortKey": "049.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "returns-exchanges.03-it-doesnt-work-as-advertised",
+      "familyId": "returns-exchanges.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "It doesn't work as advertised.",
+      "english": "It doesn't work as advertised.",
+      "korean": "광고한 대로 작동하지 않아요.",
+      "intentKo": "환불과 교환 상황에서 “광고한 대로 작동하지 않아요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 쇼핑 대화에서 바로 쓸 수 있는 환불과 교환 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "returns-exchanges"
+      ],
+      "situationIds": [
+        "shopping"
+      ],
+      "tags": [
+        "환불과 교환",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "returns-exchanges.03-it-doesnt-work-as-advertised.example-1",
+          "english": "A: It doesn't work as advertised. B: Certainly. Let me check that for you.",
+          "korean": "A: 광고한 대로 작동하지 않아요. B: 물론입니다. 확인해 드릴게요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "returns-exchanges.03-it-doesnt-work-as-advertised.example-2",
+          "english": "A: It doesn't work as advertised. B: Of course. One moment, please.",
+          "korean": "A: 광고한 대로 작동하지 않아요. B: 네. 잠시만 기다려 주세요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "returns-exchanges.03-it-doesnt-work-as-advertised.example-3",
+          "english": "A: It doesn't work as advertised. B: I'll help you with that.",
+          "korean": "A: 광고한 대로 작동하지 않아요. B: 그 부분을 도와드릴게요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "returns-exchanges.03-it-doesnt-work-as-advertised.variant-1",
+          "english": "I bought this yesterday, but it's damaged.",
+          "korean": "어제 샀는데 손상되어 있어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 환불과 교환 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "returns-exchanges.03-it-doesnt-work-as-advertised.reply-1",
+          "english": "Certainly. Let me check that for you.",
+          "korean": "물론입니다. 확인해 드릴게요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "returns-exchanges.02-can-i-exchange-this-for-a-different-size",
+          "returns-exchanges.04-i-bought-this-yesterday-but-its-damaged"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "returns-exchanges.04-i-bought-this-yesterday-but-its-damaged"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "It doesn't work as advertised.",
+        "lang": "en-US"
+      },
+      "sortKey": "049.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "returns-exchanges.04-i-bought-this-yesterday-but-its-damaged",
+      "familyId": "returns-exchanges.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I bought this yesterday, but it's damaged.",
+      "english": "I bought this yesterday, but it's damaged.",
+      "korean": "어제 샀는데 손상되어 있어요.",
+      "intentKo": "환불과 교환 상황에서 “어제 샀는데 손상되어 있어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 쇼핑 대화에서 바로 쓸 수 있는 환불과 교환 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "returns-exchanges"
+      ],
+      "situationIds": [
+        "shopping"
+      ],
+      "tags": [
+        "환불과 교환",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "returns-exchanges.04-i-bought-this-yesterday-but-its-damaged.example-1",
+          "english": "A: I bought this yesterday, but it's damaged. B: Certainly. Let me check that for you.",
+          "korean": "A: 어제 샀는데 손상되어 있어요. B: 물론입니다. 확인해 드릴게요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "returns-exchanges.04-i-bought-this-yesterday-but-its-damaged.example-2",
+          "english": "A: I bought this yesterday, but it's damaged. B: Of course. One moment, please.",
+          "korean": "A: 어제 샀는데 손상되어 있어요. B: 네. 잠시만 기다려 주세요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "returns-exchanges.04-i-bought-this-yesterday-but-its-damaged.example-3",
+          "english": "A: I bought this yesterday, but it's damaged. B: I'll help you with that.",
+          "korean": "A: 어제 샀는데 손상되어 있어요. B: 그 부분을 도와드릴게요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "returns-exchanges.04-i-bought-this-yesterday-but-its-damaged.variant-1",
+          "english": "Do I need the receipt for a refund?",
+          "korean": "환불하려면 영수증이 필요한가요?",
+          "register": "neutral",
+          "nuanceKo": "같은 환불과 교환 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "returns-exchanges.04-i-bought-this-yesterday-but-its-damaged.reply-1",
+          "english": "Certainly. Let me check that for you.",
+          "korean": "물론입니다. 확인해 드릴게요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "returns-exchanges.03-it-doesnt-work-as-advertised",
+          "returns-exchanges.05-do-i-need-the-receipt-for-a-refund"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "returns-exchanges.05-do-i-need-the-receipt-for-a-refund"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I bought this yesterday, but it's damaged.",
+        "lang": "en-US"
+      },
+      "sortKey": "049.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "returns-exchanges.05-do-i-need-the-receipt-for-a-refund",
+      "familyId": "returns-exchanges.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Do I need the receipt for a refund?",
+      "english": "Do I need the receipt for a refund?",
+      "korean": "환불하려면 영수증이 필요한가요?",
+      "intentKo": "환불과 교환 상황에서 “환불하려면 영수증이 필요한가요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 쇼핑 대화에서 바로 쓸 수 있는 환불과 교환 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "returns-exchanges"
+      ],
+      "situationIds": [
+        "shopping"
+      ],
+      "tags": [
+        "환불과 교환",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "returns-exchanges.05-do-i-need-the-receipt-for-a-refund.example-1",
+          "english": "A: Do I need the receipt for a refund? B: Certainly. Let me check that for you.",
+          "korean": "A: 환불하려면 영수증이 필요한가요? B: 물론입니다. 확인해 드릴게요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "returns-exchanges.05-do-i-need-the-receipt-for-a-refund.example-2",
+          "english": "A: Do I need the receipt for a refund? B: Of course. One moment, please.",
+          "korean": "A: 환불하려면 영수증이 필요한가요? B: 네. 잠시만 기다려 주세요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "returns-exchanges.05-do-i-need-the-receipt-for-a-refund.example-3",
+          "english": "A: Do I need the receipt for a refund? B: I'll help you with that.",
+          "korean": "A: 환불하려면 영수증이 필요한가요? B: 그 부분을 도와드릴게요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "returns-exchanges.05-do-i-need-the-receipt-for-a-refund.variant-1",
+          "english": "Could you refund it to the same card?",
+          "korean": "같은 카드로 환불해 주시겠어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 환불과 교환 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "returns-exchanges.05-do-i-need-the-receipt-for-a-refund.reply-1",
+          "english": "Certainly. Let me check that for you.",
+          "korean": "물론입니다. 확인해 드릴게요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "returns-exchanges.04-i-bought-this-yesterday-but-its-damaged",
+          "returns-exchanges.06-could-you-refund-it-to-the-same-card"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "returns-exchanges.06-could-you-refund-it-to-the-same-card"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Do I need the receipt for a refund?",
+        "lang": "en-US"
+      },
+      "sortKey": "049.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "returns-exchanges.06-could-you-refund-it-to-the-same-card",
+      "familyId": "returns-exchanges.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Could you refund it to the same card?",
+      "english": "Could you refund it to the same card?",
+      "korean": "같은 카드로 환불해 주시겠어요?",
+      "intentKo": "환불과 교환 상황에서 “같은 카드로 환불해 주시겠어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 쇼핑 대화에서 바로 쓸 수 있는 환불과 교환 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "returns-exchanges"
+      ],
+      "situationIds": [
+        "shopping"
+      ],
+      "tags": [
+        "환불과 교환",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "returns-exchanges.06-could-you-refund-it-to-the-same-card.example-1",
+          "english": "A: Could you refund it to the same card? B: Certainly. Let me check that for you.",
+          "korean": "A: 같은 카드로 환불해 주시겠어요? B: 물론입니다. 확인해 드릴게요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "returns-exchanges.06-could-you-refund-it-to-the-same-card.example-2",
+          "english": "A: Could you refund it to the same card? B: Of course. One moment, please.",
+          "korean": "A: 같은 카드로 환불해 주시겠어요? B: 네. 잠시만 기다려 주세요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "returns-exchanges.06-could-you-refund-it-to-the-same-card.example-3",
+          "english": "A: Could you refund it to the same card? B: I'll help you with that.",
+          "korean": "A: 같은 카드로 환불해 주시겠어요? B: 그 부분을 도와드릴게요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "returns-exchanges.06-could-you-refund-it-to-the-same-card.variant-1",
+          "english": "Is there a restocking fee?",
+          "korean": "반품 수수료가 있나요?",
+          "register": "neutral",
+          "nuanceKo": "같은 환불과 교환 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "returns-exchanges.06-could-you-refund-it-to-the-same-card.reply-1",
+          "english": "Certainly. Let me check that for you.",
+          "korean": "물론입니다. 확인해 드릴게요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "returns-exchanges.05-do-i-need-the-receipt-for-a-refund",
+          "returns-exchanges.07-is-there-a-restocking-fee"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "returns-exchanges.07-is-there-a-restocking-fee"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Could you refund it to the same card?",
+        "lang": "en-US"
+      },
+      "sortKey": "049.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "returns-exchanges.07-is-there-a-restocking-fee",
+      "familyId": "returns-exchanges.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Is there a restocking fee?",
+      "english": "Is there a restocking fee?",
+      "korean": "반품 수수료가 있나요?",
+      "intentKo": "환불과 교환 상황에서 “반품 수수료가 있나요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 쇼핑 대화에서 바로 쓸 수 있는 환불과 교환 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "returns-exchanges"
+      ],
+      "situationIds": [
+        "shopping"
+      ],
+      "tags": [
+        "환불과 교환",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "returns-exchanges.07-is-there-a-restocking-fee.example-1",
+          "english": "A: Is there a restocking fee? B: Certainly. Let me check that for you.",
+          "korean": "A: 반품 수수료가 있나요? B: 물론입니다. 확인해 드릴게요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "returns-exchanges.07-is-there-a-restocking-fee.example-2",
+          "english": "A: Is there a restocking fee? B: Of course. One moment, please.",
+          "korean": "A: 반품 수수료가 있나요? B: 네. 잠시만 기다려 주세요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "returns-exchanges.07-is-there-a-restocking-fee.example-3",
+          "english": "A: Is there a restocking fee? B: I'll help you with that.",
+          "korean": "A: 반품 수수료가 있나요? B: 그 부분을 도와드릴게요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "returns-exchanges.07-is-there-a-restocking-fee.variant-1",
+          "english": "I'd prefer store credit if a refund isn't possible.",
+          "korean": "환불이 안 된다면 매장 적립금으로 받고 싶어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 환불과 교환 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "returns-exchanges.07-is-there-a-restocking-fee.reply-1",
+          "english": "Certainly. Let me check that for you.",
+          "korean": "물론입니다. 확인해 드릴게요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "returns-exchanges.06-could-you-refund-it-to-the-same-card",
+          "returns-exchanges.08-id-prefer-store-credit-if-a-refund-isnt-po"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "returns-exchanges.08-id-prefer-store-credit-if-a-refund-isnt-po"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Is there a restocking fee?",
+        "lang": "en-US"
+      },
+      "sortKey": "049.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "returns-exchanges.08-id-prefer-store-credit-if-a-refund-isnt-po",
+      "familyId": "returns-exchanges.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'd prefer store credit if a refund isn't possible.",
+      "english": "I'd prefer store credit if a refund isn't possible.",
+      "korean": "환불이 안 된다면 매장 적립금으로 받고 싶어요.",
+      "intentKo": "환불과 교환 상황에서 “환불이 안 된다면 매장 적립금으로 받고 싶어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 쇼핑 대화에서 바로 쓸 수 있는 환불과 교환 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "returns-exchanges"
+      ],
+      "situationIds": [
+        "shopping"
+      ],
+      "tags": [
+        "환불과 교환",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "returns-exchanges.08-id-prefer-store-credit-if-a-refund-isnt-po.example-1",
+          "english": "A: I'd prefer store credit if a refund isn't possible. B: Certainly. Let me check that for you.",
+          "korean": "A: 환불이 안 된다면 매장 적립금으로 받고 싶어요. B: 물론입니다. 확인해 드릴게요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "returns-exchanges.08-id-prefer-store-credit-if-a-refund-isnt-po.example-2",
+          "english": "A: I'd prefer store credit if a refund isn't possible. B: Of course. One moment, please.",
+          "korean": "A: 환불이 안 된다면 매장 적립금으로 받고 싶어요. B: 네. 잠시만 기다려 주세요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "returns-exchanges.08-id-prefer-store-credit-if-a-refund-isnt-po.example-3",
+          "english": "A: I'd prefer store credit if a refund isn't possible. B: I'll help you with that.",
+          "korean": "A: 환불이 안 된다면 매장 적립금으로 받고 싶어요. B: 그 부분을 도와드릴게요.",
+          "situationId": "shopping",
+          "noteKo": "쇼핑에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "returns-exchanges.08-id-prefer-store-credit-if-a-refund-isnt-po.variant-1",
+          "english": "I'd like to return this.",
+          "korean": "이걸 반품하고 싶어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 환불과 교환 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "returns-exchanges.08-id-prefer-store-credit-if-a-refund-isnt-po.reply-1",
+          "english": "Certainly. Let me check that for you.",
+          "korean": "물론입니다. 확인해 드릴게요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "returns-exchanges.07-is-there-a-restocking-fee",
+          "returns-exchanges.01-id-like-to-return-this"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "returns-exchanges.01-id-like-to-return-this"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'd prefer store credit if a refund isn't possible.",
+        "lang": "en-US"
+      },
+      "sortKey": "049.001.008",
+      "releasedAt": "2026-08-08"
+    }
+  ]
+}

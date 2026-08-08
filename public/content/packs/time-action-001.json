@@ -1,0 +1,5609 @@
+{
+  "schemaVersion": 1,
+  "packId": "time-action-001",
+  "titleKo": "시간·경험·행동",
+  "titleEn": "Time and Action",
+  "descriptionKo": "습관과 빈도 · 과거 경험 · 사건과 이야기 · 계획과 예정 · 희망과 의도 · 약속 · 조건 · 부탁 핵심 패턴",
+  "version": "1.0.0",
+  "contentVersion": 1,
+  "required": true,
+  "minAppVersion": "1.0.0",
+  "releasedAt": "2026-08-08",
+  "categories": [
+    {
+      "id": "conditions",
+      "labelKo": "조건",
+      "labelEn": "Conditions"
+    },
+    {
+      "id": "habits-frequency",
+      "labelKo": "습관과 빈도",
+      "labelEn": "Habits and frequency"
+    },
+    {
+      "id": "hopes-intentions",
+      "labelKo": "희망과 의도",
+      "labelEn": "Hopes and intentions"
+    },
+    {
+      "id": "past-experience",
+      "labelKo": "과거 경험",
+      "labelEn": "Past experiences"
+    },
+    {
+      "id": "plans",
+      "labelKo": "계획과 예정",
+      "labelEn": "Plans and arrangements"
+    },
+    {
+      "id": "promises",
+      "labelKo": "약속",
+      "labelEn": "Promises"
+    },
+    {
+      "id": "requests",
+      "labelKo": "부탁",
+      "labelEn": "Requests"
+    },
+    {
+      "id": "storytelling",
+      "labelKo": "사건과 이야기",
+      "labelEn": "Events and storytelling"
+    }
+  ],
+  "situations": [
+    {
+      "id": "conversation",
+      "labelKo": "대화",
+      "labelEn": "Conversation"
+    },
+    {
+      "id": "daily",
+      "labelKo": "일상",
+      "labelEn": "Daily life"
+    },
+    {
+      "id": "social",
+      "labelKo": "사교",
+      "labelEn": "Social"
+    }
+  ],
+  "patterns": [
+    {
+      "id": "habits-frequency.01-i-usually-get-up-around-seven",
+      "familyId": "habits-frequency.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I usually get up around seven.",
+      "english": "I usually get up around seven.",
+      "korean": "저는 보통 7시쯤 일어나요.",
+      "intentKo": "습관과 빈도 상황에서 “저는 보통 7시쯤 일어나요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 습관과 빈도 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "habits-frequency"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "습관과 빈도",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "habits-frequency.01-i-usually-get-up-around-seven.example-1",
+          "english": "A: I usually get up around seven. B: I see what you mean.",
+          "korean": "A: 저는 보통 7시쯤 일어나요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "habits-frequency.01-i-usually-get-up-around-seven.example-2",
+          "english": "A: I usually get up around seven. B: That makes sense.",
+          "korean": "A: 저는 보통 7시쯤 일어나요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "habits-frequency.01-i-usually-get-up-around-seven.example-3",
+          "english": "A: I usually get up around seven. B: Thanks for telling me.",
+          "korean": "A: 저는 보통 7시쯤 일어나요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "habits-frequency.01-i-usually-get-up-around-seven.variant-1",
+          "english": "We eat out once or twice a week.",
+          "korean": "우리는 일주일에 한두 번 외식해요.",
+          "register": "neutral",
+          "nuanceKo": "같은 습관과 빈도 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "habits-frequency.01-i-usually-get-up-around-seven.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "habits-frequency.08-its-become-part-of-my-daily-routine",
+          "habits-frequency.02-we-eat-out-once-or-twice-a-week"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "habits-frequency.02-we-eat-out-once-or-twice-a-week"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I usually get up around seven.",
+        "lang": "en-US"
+      },
+      "sortKey": "025.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "habits-frequency.02-we-eat-out-once-or-twice-a-week",
+      "familyId": "habits-frequency.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "We eat out once or twice a week.",
+      "english": "We eat out once or twice a week.",
+      "korean": "우리는 일주일에 한두 번 외식해요.",
+      "intentKo": "습관과 빈도 상황에서 “우리는 일주일에 한두 번 외식해요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 습관과 빈도 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "habits-frequency"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "습관과 빈도",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "habits-frequency.02-we-eat-out-once-or-twice-a-week.example-1",
+          "english": "A: We eat out once or twice a week. B: I see what you mean.",
+          "korean": "A: 우리는 일주일에 한두 번 외식해요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "habits-frequency.02-we-eat-out-once-or-twice-a-week.example-2",
+          "english": "A: We eat out once or twice a week. B: That makes sense.",
+          "korean": "A: 우리는 일주일에 한두 번 외식해요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "habits-frequency.02-we-eat-out-once-or-twice-a-week.example-3",
+          "english": "A: We eat out once or twice a week. B: Thanks for telling me.",
+          "korean": "A: 우리는 일주일에 한두 번 외식해요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "habits-frequency.02-we-eat-out-once-or-twice-a-week.variant-1",
+          "english": "I don't drink coffee very often.",
+          "korean": "저는 커피를 자주 마시지 않아요.",
+          "register": "neutral",
+          "nuanceKo": "같은 습관과 빈도 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "habits-frequency.02-we-eat-out-once-or-twice-a-week.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "habits-frequency.01-i-usually-get-up-around-seven",
+          "habits-frequency.03-i-dont-drink-coffee-very-often"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "habits-frequency.03-i-dont-drink-coffee-very-often"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "We eat out once or twice a week.",
+        "lang": "en-US"
+      },
+      "sortKey": "025.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "habits-frequency.03-i-dont-drink-coffee-very-often",
+      "familyId": "habits-frequency.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I don't drink coffee very often.",
+      "english": "I don't drink coffee very often.",
+      "korean": "저는 커피를 자주 마시지 않아요.",
+      "intentKo": "습관과 빈도 상황에서 “저는 커피를 자주 마시지 않아요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 습관과 빈도 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "habits-frequency"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "습관과 빈도",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "habits-frequency.03-i-dont-drink-coffee-very-often.example-1",
+          "english": "A: I don't drink coffee very often. B: I see what you mean.",
+          "korean": "A: 저는 커피를 자주 마시지 않아요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "habits-frequency.03-i-dont-drink-coffee-very-often.example-2",
+          "english": "A: I don't drink coffee very often. B: That makes sense.",
+          "korean": "A: 저는 커피를 자주 마시지 않아요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "habits-frequency.03-i-dont-drink-coffee-very-often.example-3",
+          "english": "A: I don't drink coffee very often. B: Thanks for telling me.",
+          "korean": "A: 저는 커피를 자주 마시지 않아요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "habits-frequency.03-i-dont-drink-coffee-very-often.variant-1",
+          "english": "She always checks the weather first.",
+          "korean": "그녀는 항상 먼저 날씨를 확인해요.",
+          "register": "neutral",
+          "nuanceKo": "같은 습관과 빈도 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "habits-frequency.03-i-dont-drink-coffee-very-often.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "habits-frequency.02-we-eat-out-once-or-twice-a-week",
+          "habits-frequency.04-she-always-checks-the-weather-first"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "habits-frequency.04-she-always-checks-the-weather-first"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I don't drink coffee very often.",
+        "lang": "en-US"
+      },
+      "sortKey": "025.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "habits-frequency.04-she-always-checks-the-weather-first",
+      "familyId": "habits-frequency.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "She always checks the weather first.",
+      "english": "She always checks the weather first.",
+      "korean": "그녀는 항상 먼저 날씨를 확인해요.",
+      "intentKo": "습관과 빈도 상황에서 “그녀는 항상 먼저 날씨를 확인해요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 습관과 빈도 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "habits-frequency"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "습관과 빈도",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "habits-frequency.04-she-always-checks-the-weather-first.example-1",
+          "english": "A: She always checks the weather first. B: I see what you mean.",
+          "korean": "A: 그녀는 항상 먼저 날씨를 확인해요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "habits-frequency.04-she-always-checks-the-weather-first.example-2",
+          "english": "A: She always checks the weather first. B: That makes sense.",
+          "korean": "A: 그녀는 항상 먼저 날씨를 확인해요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "habits-frequency.04-she-always-checks-the-weather-first.example-3",
+          "english": "A: She always checks the weather first. B: Thanks for telling me.",
+          "korean": "A: 그녀는 항상 먼저 날씨를 확인해요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "habits-frequency.04-she-always-checks-the-weather-first.variant-1",
+          "english": "Every now and then, I take a day off.",
+          "korean": "가끔씩 하루 쉬어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 습관과 빈도 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "habits-frequency.04-she-always-checks-the-weather-first.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "habits-frequency.03-i-dont-drink-coffee-very-often",
+          "habits-frequency.05-every-now-and-then-i-take-a-day-off"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "habits-frequency.05-every-now-and-then-i-take-a-day-off"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "She always checks the weather first.",
+        "lang": "en-US"
+      },
+      "sortKey": "025.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "habits-frequency.05-every-now-and-then-i-take-a-day-off",
+      "familyId": "habits-frequency.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Every now and then, I take a day off.",
+      "english": "Every now and then, I take a day off.",
+      "korean": "가끔씩 하루 쉬어요.",
+      "intentKo": "습관과 빈도 상황에서 “가끔씩 하루 쉬어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 습관과 빈도 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "habits-frequency"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "습관과 빈도",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "habits-frequency.05-every-now-and-then-i-take-a-day-off.example-1",
+          "english": "A: Every now and then, I take a day off. B: I see what you mean.",
+          "korean": "A: 가끔씩 하루 쉬어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "habits-frequency.05-every-now-and-then-i-take-a-day-off.example-2",
+          "english": "A: Every now and then, I take a day off. B: That makes sense.",
+          "korean": "A: 가끔씩 하루 쉬어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "habits-frequency.05-every-now-and-then-i-take-a-day-off.example-3",
+          "english": "A: Every now and then, I take a day off. B: Thanks for telling me.",
+          "korean": "A: 가끔씩 하루 쉬어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "habits-frequency.05-every-now-and-then-i-take-a-day-off.variant-1",
+          "english": "I've gotten into the habit of walking after dinner.",
+          "korean": "저녁 식사 후 걷는 습관이 생겼어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 습관과 빈도 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "habits-frequency.05-every-now-and-then-i-take-a-day-off.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "habits-frequency.04-she-always-checks-the-weather-first",
+          "habits-frequency.06-ive-gotten-into-the-habit-of-walking-after"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "habits-frequency.06-ive-gotten-into-the-habit-of-walking-after"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Every now and then, I take a day off.",
+        "lang": "en-US"
+      },
+      "sortKey": "025.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "habits-frequency.06-ive-gotten-into-the-habit-of-walking-after",
+      "familyId": "habits-frequency.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I've gotten into the habit of walking after dinner.",
+      "english": "I've gotten into the habit of walking after dinner.",
+      "korean": "저녁 식사 후 걷는 습관이 생겼어요.",
+      "intentKo": "습관과 빈도 상황에서 “저녁 식사 후 걷는 습관이 생겼어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 습관과 빈도 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "habits-frequency"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "습관과 빈도",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "habits-frequency.06-ive-gotten-into-the-habit-of-walking-after.example-1",
+          "english": "A: I've gotten into the habit of walking after dinner. B: I see what you mean.",
+          "korean": "A: 저녁 식사 후 걷는 습관이 생겼어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "habits-frequency.06-ive-gotten-into-the-habit-of-walking-after.example-2",
+          "english": "A: I've gotten into the habit of walking after dinner. B: That makes sense.",
+          "korean": "A: 저녁 식사 후 걷는 습관이 생겼어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "habits-frequency.06-ive-gotten-into-the-habit-of-walking-after.example-3",
+          "english": "A: I've gotten into the habit of walking after dinner. B: Thanks for telling me.",
+          "korean": "A: 저녁 식사 후 걷는 습관이 생겼어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "habits-frequency.06-ive-gotten-into-the-habit-of-walking-after.variant-1",
+          "english": "I tend to lose track of time when I read.",
+          "korean": "책을 읽으면 시간 가는 줄 모르는 편이에요.",
+          "register": "neutral",
+          "nuanceKo": "같은 습관과 빈도 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "habits-frequency.06-ive-gotten-into-the-habit-of-walking-after.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "habits-frequency.05-every-now-and-then-i-take-a-day-off",
+          "habits-frequency.07-i-tend-to-lose-track-of-time-when-i-read"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "habits-frequency.07-i-tend-to-lose-track-of-time-when-i-read"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I've gotten into the habit of walking after dinner.",
+        "lang": "en-US"
+      },
+      "sortKey": "025.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "habits-frequency.07-i-tend-to-lose-track-of-time-when-i-read",
+      "familyId": "habits-frequency.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I tend to lose track of time when I read.",
+      "english": "I tend to lose track of time when I read.",
+      "korean": "책을 읽으면 시간 가는 줄 모르는 편이에요.",
+      "intentKo": "습관과 빈도 상황에서 “책을 읽으면 시간 가는 줄 모르는 편이에요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 습관과 빈도 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "habits-frequency"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "습관과 빈도",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "habits-frequency.07-i-tend-to-lose-track-of-time-when-i-read.example-1",
+          "english": "A: I tend to lose track of time when I read. B: I see what you mean.",
+          "korean": "A: 책을 읽으면 시간 가는 줄 모르는 편이에요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "habits-frequency.07-i-tend-to-lose-track-of-time-when-i-read.example-2",
+          "english": "A: I tend to lose track of time when I read. B: That makes sense.",
+          "korean": "A: 책을 읽으면 시간 가는 줄 모르는 편이에요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "habits-frequency.07-i-tend-to-lose-track-of-time-when-i-read.example-3",
+          "english": "A: I tend to lose track of time when I read. B: Thanks for telling me.",
+          "korean": "A: 책을 읽으면 시간 가는 줄 모르는 편이에요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "habits-frequency.07-i-tend-to-lose-track-of-time-when-i-read.variant-1",
+          "english": "It's become part of my daily routine.",
+          "korean": "그게 제 일과의 일부가 됐어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 습관과 빈도 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "habits-frequency.07-i-tend-to-lose-track-of-time-when-i-read.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "habits-frequency.06-ive-gotten-into-the-habit-of-walking-after",
+          "habits-frequency.08-its-become-part-of-my-daily-routine"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "habits-frequency.08-its-become-part-of-my-daily-routine"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I tend to lose track of time when I read.",
+        "lang": "en-US"
+      },
+      "sortKey": "025.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "habits-frequency.08-its-become-part-of-my-daily-routine",
+      "familyId": "habits-frequency.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "It's become part of my daily routine.",
+      "english": "It's become part of my daily routine.",
+      "korean": "그게 제 일과의 일부가 됐어요.",
+      "intentKo": "습관과 빈도 상황에서 “그게 제 일과의 일부가 됐어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 습관과 빈도 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "habits-frequency"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "습관과 빈도",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "habits-frequency.08-its-become-part-of-my-daily-routine.example-1",
+          "english": "A: It's become part of my daily routine. B: I see what you mean.",
+          "korean": "A: 그게 제 일과의 일부가 됐어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "habits-frequency.08-its-become-part-of-my-daily-routine.example-2",
+          "english": "A: It's become part of my daily routine. B: That makes sense.",
+          "korean": "A: 그게 제 일과의 일부가 됐어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "habits-frequency.08-its-become-part-of-my-daily-routine.example-3",
+          "english": "A: It's become part of my daily routine. B: Thanks for telling me.",
+          "korean": "A: 그게 제 일과의 일부가 됐어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "habits-frequency.08-its-become-part-of-my-daily-routine.variant-1",
+          "english": "I usually get up around seven.",
+          "korean": "저는 보통 7시쯤 일어나요.",
+          "register": "neutral",
+          "nuanceKo": "같은 습관과 빈도 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "habits-frequency.08-its-become-part-of-my-daily-routine.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "habits-frequency.07-i-tend-to-lose-track-of-time-when-i-read",
+          "habits-frequency.01-i-usually-get-up-around-seven"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "habits-frequency.01-i-usually-get-up-around-seven"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "It's become part of my daily routine.",
+        "lang": "en-US"
+      },
+      "sortKey": "025.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "past-experience.01-ive-been-there-before",
+      "familyId": "past-experience.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I've been there before.",
+      "english": "I've been there before.",
+      "korean": "전에 거기 가본 적 있어요.",
+      "intentKo": "과거 경험 상황에서 “전에 거기 가본 적 있어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 과거 경험 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "past-experience"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "과거 경험",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "past-experience.01-ive-been-there-before.example-1",
+          "english": "A: I've been there before. B: I see what you mean.",
+          "korean": "A: 전에 거기 가본 적 있어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "past-experience.01-ive-been-there-before.example-2",
+          "english": "A: I've been there before. B: That makes sense.",
+          "korean": "A: 전에 거기 가본 적 있어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "past-experience.01-ive-been-there-before.example-3",
+          "english": "A: I've been there before. B: Thanks for telling me.",
+          "korean": "A: 전에 거기 가본 적 있어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "past-experience.01-ive-been-there-before.variant-1",
+          "english": "I've never tried that.",
+          "korean": "그건 한 번도 해본 적 없어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 과거 경험 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "past-experience.01-ive-been-there-before.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "I have ever been there.",
+          "corrected": "I've been there before.",
+          "explanationKo": "긍정 경험을 말할 때는 before를 쓰는 편이 자연스럽고 ever는 주로 의문문·최상급과 쓴다."
+        }
+      ],
+      "relations": {
+        "similar": [
+          "past-experience.08-looking-back-i-learned-a-lot-from-it",
+          "past-experience.02-ive-never-tried-that"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "past-experience.02-ive-never-tried-that"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I've been there before.",
+        "lang": "en-US"
+      },
+      "sortKey": "026.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "past-experience.02-ive-never-tried-that",
+      "familyId": "past-experience.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I've never tried that.",
+      "english": "I've never tried that.",
+      "korean": "그건 한 번도 해본 적 없어요.",
+      "intentKo": "과거 경험 상황에서 “그건 한 번도 해본 적 없어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 과거 경험 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "past-experience"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "과거 경험",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "past-experience.02-ive-never-tried-that.example-1",
+          "english": "A: I've never tried that. B: I see what you mean.",
+          "korean": "A: 그건 한 번도 해본 적 없어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "past-experience.02-ive-never-tried-that.example-2",
+          "english": "A: I've never tried that. B: That makes sense.",
+          "korean": "A: 그건 한 번도 해본 적 없어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "past-experience.02-ive-never-tried-that.example-3",
+          "english": "A: I've never tried that. B: Thanks for telling me.",
+          "korean": "A: 그건 한 번도 해본 적 없어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "past-experience.02-ive-never-tried-that.variant-1",
+          "english": "I used to live near here.",
+          "korean": "예전에 이 근처에 살았어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 과거 경험 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "past-experience.02-ive-never-tried-that.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "past-experience.01-ive-been-there-before",
+          "past-experience.03-i-used-to-live-near-here"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "past-experience.03-i-used-to-live-near-here"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I've never tried that.",
+        "lang": "en-US"
+      },
+      "sortKey": "026.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "past-experience.03-i-used-to-live-near-here",
+      "familyId": "past-experience.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I used to live near here.",
+      "english": "I used to live near here.",
+      "korean": "예전에 이 근처에 살았어요.",
+      "intentKo": "과거 경험 상황에서 “예전에 이 근처에 살았어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 과거 경험 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "past-experience"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "과거 경험",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "past-experience.03-i-used-to-live-near-here.example-1",
+          "english": "A: I used to live near here. B: I see what you mean.",
+          "korean": "A: 예전에 이 근처에 살았어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "past-experience.03-i-used-to-live-near-here.example-2",
+          "english": "A: I used to live near here. B: That makes sense.",
+          "korean": "A: 예전에 이 근처에 살았어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "past-experience.03-i-used-to-live-near-here.example-3",
+          "english": "A: I used to live near here. B: Thanks for telling me.",
+          "korean": "A: 예전에 이 근처에 살았어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "past-experience.03-i-used-to-live-near-here.variant-1",
+          "english": "The last time I went, it was crowded.",
+          "korean": "지난번에 갔을 때는 붐볐어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 과거 경험 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "past-experience.03-i-used-to-live-near-here.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "I use to live near here.",
+          "corrected": "I used to live near here.",
+          "explanationKo": "과거의 습관은 긍정문에서 used to로 쓴다."
+        }
+      ],
+      "relations": {
+        "similar": [
+          "past-experience.02-ive-never-tried-that",
+          "past-experience.04-the-last-time-i-went-it-was-crowded"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "past-experience.04-the-last-time-i-went-it-was-crowded"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I used to live near here.",
+        "lang": "en-US"
+      },
+      "sortKey": "026.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "past-experience.04-the-last-time-i-went-it-was-crowded",
+      "familyId": "past-experience.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "The last time I went, it was crowded.",
+      "english": "The last time I went, it was crowded.",
+      "korean": "지난번에 갔을 때는 붐볐어요.",
+      "intentKo": "과거 경험 상황에서 “지난번에 갔을 때는 붐볐어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 과거 경험 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "past-experience"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "과거 경험",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "past-experience.04-the-last-time-i-went-it-was-crowded.example-1",
+          "english": "A: The last time I went, it was crowded. B: I see what you mean.",
+          "korean": "A: 지난번에 갔을 때는 붐볐어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "past-experience.04-the-last-time-i-went-it-was-crowded.example-2",
+          "english": "A: The last time I went, it was crowded. B: That makes sense.",
+          "korean": "A: 지난번에 갔을 때는 붐볐어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "past-experience.04-the-last-time-i-went-it-was-crowded.example-3",
+          "english": "A: The last time I went, it was crowded. B: Thanks for telling me.",
+          "korean": "A: 지난번에 갔을 때는 붐볐어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "past-experience.04-the-last-time-i-went-it-was-crowded.variant-1",
+          "english": "I once met her at a conference.",
+          "korean": "전에 한 학회에서 그녀를 만난 적이 있어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 과거 경험 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "past-experience.04-the-last-time-i-went-it-was-crowded.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "past-experience.03-i-used-to-live-near-here",
+          "past-experience.05-i-once-met-her-at-a-conference"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "past-experience.05-i-once-met-her-at-a-conference"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "The last time I went, it was crowded.",
+        "lang": "en-US"
+      },
+      "sortKey": "026.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "past-experience.05-i-once-met-her-at-a-conference",
+      "familyId": "past-experience.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I once met her at a conference.",
+      "english": "I once met her at a conference.",
+      "korean": "전에 한 학회에서 그녀를 만난 적이 있어요.",
+      "intentKo": "과거 경험 상황에서 “전에 한 학회에서 그녀를 만난 적이 있어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 과거 경험 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "past-experience"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "과거 경험",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "past-experience.05-i-once-met-her-at-a-conference.example-1",
+          "english": "A: I once met her at a conference. B: I see what you mean.",
+          "korean": "A: 전에 한 학회에서 그녀를 만난 적이 있어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "past-experience.05-i-once-met-her-at-a-conference.example-2",
+          "english": "A: I once met her at a conference. B: That makes sense.",
+          "korean": "A: 전에 한 학회에서 그녀를 만난 적이 있어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "past-experience.05-i-once-met-her-at-a-conference.example-3",
+          "english": "A: I once met her at a conference. B: Thanks for telling me.",
+          "korean": "A: 전에 한 학회에서 그녀를 만난 적이 있어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "past-experience.05-i-once-met-her-at-a-conference.variant-1",
+          "english": "That was the best trip I've ever taken.",
+          "korean": "그 여행이 지금까지 가장 좋았어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 과거 경험 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "past-experience.05-i-once-met-her-at-a-conference.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "past-experience.04-the-last-time-i-went-it-was-crowded",
+          "past-experience.06-that-was-the-best-trip-ive-ever-taken"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "past-experience.06-that-was-the-best-trip-ive-ever-taken"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I once met her at a conference.",
+        "lang": "en-US"
+      },
+      "sortKey": "026.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "past-experience.06-that-was-the-best-trip-ive-ever-taken",
+      "familyId": "past-experience.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "That was the best trip I've ever taken.",
+      "english": "That was the best trip I've ever taken.",
+      "korean": "그 여행이 지금까지 가장 좋았어요.",
+      "intentKo": "과거 경험 상황에서 “그 여행이 지금까지 가장 좋았어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 과거 경험 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "past-experience"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "과거 경험",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "past-experience.06-that-was-the-best-trip-ive-ever-taken.example-1",
+          "english": "A: That was the best trip I've ever taken. B: I see what you mean.",
+          "korean": "A: 그 여행이 지금까지 가장 좋았어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "past-experience.06-that-was-the-best-trip-ive-ever-taken.example-2",
+          "english": "A: That was the best trip I've ever taken. B: That makes sense.",
+          "korean": "A: 그 여행이 지금까지 가장 좋았어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "past-experience.06-that-was-the-best-trip-ive-ever-taken.example-3",
+          "english": "A: That was the best trip I've ever taken. B: Thanks for telling me.",
+          "korean": "A: 그 여행이 지금까지 가장 좋았어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "past-experience.06-that-was-the-best-trip-ive-ever-taken.variant-1",
+          "english": "I had never seen anything like it.",
+          "korean": "그런 건 한 번도 본 적이 없었어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 과거 경험 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "past-experience.06-that-was-the-best-trip-ive-ever-taken.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "past-experience.05-i-once-met-her-at-a-conference",
+          "past-experience.07-i-had-never-seen-anything-like-it"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "past-experience.07-i-had-never-seen-anything-like-it"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "That was the best trip I've ever taken.",
+        "lang": "en-US"
+      },
+      "sortKey": "026.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "past-experience.07-i-had-never-seen-anything-like-it",
+      "familyId": "past-experience.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I had never seen anything like it.",
+      "english": "I had never seen anything like it.",
+      "korean": "그런 건 한 번도 본 적이 없었어요.",
+      "intentKo": "과거 경험 상황에서 “그런 건 한 번도 본 적이 없었어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 과거 경험 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "past-experience"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "과거 경험",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "past-experience.07-i-had-never-seen-anything-like-it.example-1",
+          "english": "A: I had never seen anything like it. B: I see what you mean.",
+          "korean": "A: 그런 건 한 번도 본 적이 없었어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "past-experience.07-i-had-never-seen-anything-like-it.example-2",
+          "english": "A: I had never seen anything like it. B: That makes sense.",
+          "korean": "A: 그런 건 한 번도 본 적이 없었어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "past-experience.07-i-had-never-seen-anything-like-it.example-3",
+          "english": "A: I had never seen anything like it. B: Thanks for telling me.",
+          "korean": "A: 그런 건 한 번도 본 적이 없었어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "past-experience.07-i-had-never-seen-anything-like-it.variant-1",
+          "english": "Looking back, I learned a lot from it.",
+          "korean": "돌이켜 보면 그 일에서 많이 배웠어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 과거 경험 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "past-experience.07-i-had-never-seen-anything-like-it.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "past-experience.06-that-was-the-best-trip-ive-ever-taken",
+          "past-experience.08-looking-back-i-learned-a-lot-from-it"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "past-experience.08-looking-back-i-learned-a-lot-from-it"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I had never seen anything like it.",
+        "lang": "en-US"
+      },
+      "sortKey": "026.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "past-experience.08-looking-back-i-learned-a-lot-from-it",
+      "familyId": "past-experience.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Looking back, I learned a lot from it.",
+      "english": "Looking back, I learned a lot from it.",
+      "korean": "돌이켜 보면 그 일에서 많이 배웠어요.",
+      "intentKo": "과거 경험 상황에서 “돌이켜 보면 그 일에서 많이 배웠어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 과거 경험 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "past-experience"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "과거 경험",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "past-experience.08-looking-back-i-learned-a-lot-from-it.example-1",
+          "english": "A: Looking back, I learned a lot from it. B: I see what you mean.",
+          "korean": "A: 돌이켜 보면 그 일에서 많이 배웠어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "past-experience.08-looking-back-i-learned-a-lot-from-it.example-2",
+          "english": "A: Looking back, I learned a lot from it. B: That makes sense.",
+          "korean": "A: 돌이켜 보면 그 일에서 많이 배웠어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "past-experience.08-looking-back-i-learned-a-lot-from-it.example-3",
+          "english": "A: Looking back, I learned a lot from it. B: Thanks for telling me.",
+          "korean": "A: 돌이켜 보면 그 일에서 많이 배웠어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "past-experience.08-looking-back-i-learned-a-lot-from-it.variant-1",
+          "english": "I've been there before.",
+          "korean": "전에 거기 가본 적 있어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 과거 경험 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "past-experience.08-looking-back-i-learned-a-lot-from-it.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "past-experience.07-i-had-never-seen-anything-like-it",
+          "past-experience.01-ive-been-there-before"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "past-experience.01-ive-been-there-before"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Looking back, I learned a lot from it.",
+        "lang": "en-US"
+      },
+      "sortKey": "026.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "storytelling.01-youll-never-guess-what-happened",
+      "familyId": "storytelling.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "You'll never guess what happened.",
+      "english": "You'll never guess what happened.",
+      "korean": "무슨 일이 있었는지 절대 못 맞힐 거예요.",
+      "intentKo": "사건과 이야기 상황에서 “무슨 일이 있었는지 절대 못 맞힐 거예요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 사건과 이야기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "storytelling"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "사건과 이야기",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "storytelling.01-youll-never-guess-what-happened.example-1",
+          "english": "A: You'll never guess what happened. B: I see what you mean.",
+          "korean": "A: 무슨 일이 있었는지 절대 못 맞힐 거예요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "storytelling.01-youll-never-guess-what-happened.example-2",
+          "english": "A: You'll never guess what happened. B: That makes sense.",
+          "korean": "A: 무슨 일이 있었는지 절대 못 맞힐 거예요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "storytelling.01-youll-never-guess-what-happened.example-3",
+          "english": "A: You'll never guess what happened. B: Thanks for telling me.",
+          "korean": "A: 무슨 일이 있었는지 절대 못 맞힐 거예요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "storytelling.01-youll-never-guess-what-happened.variant-1",
+          "english": "It all started when I missed the bus.",
+          "korean": "모든 건 제가 버스를 놓치면서 시작됐어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 사건과 이야기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "storytelling.01-youll-never-guess-what-happened.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "storytelling.08-in-the-end-it-turned-out-better-than-expec",
+          "storytelling.02-it-all-started-when-i-missed-the-bus"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "storytelling.02-it-all-started-when-i-missed-the-bus"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "You'll never guess what happened.",
+        "lang": "en-US"
+      },
+      "sortKey": "027.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "storytelling.02-it-all-started-when-i-missed-the-bus",
+      "familyId": "storytelling.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "It all started when I missed the bus.",
+      "english": "It all started when I missed the bus.",
+      "korean": "모든 건 제가 버스를 놓치면서 시작됐어요.",
+      "intentKo": "사건과 이야기 상황에서 “모든 건 제가 버스를 놓치면서 시작됐어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 사건과 이야기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "storytelling"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "사건과 이야기",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "storytelling.02-it-all-started-when-i-missed-the-bus.example-1",
+          "english": "A: It all started when I missed the bus. B: I see what you mean.",
+          "korean": "A: 모든 건 제가 버스를 놓치면서 시작됐어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "storytelling.02-it-all-started-when-i-missed-the-bus.example-2",
+          "english": "A: It all started when I missed the bus. B: That makes sense.",
+          "korean": "A: 모든 건 제가 버스를 놓치면서 시작됐어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "storytelling.02-it-all-started-when-i-missed-the-bus.example-3",
+          "english": "A: It all started when I missed the bus. B: Thanks for telling me.",
+          "korean": "A: 모든 건 제가 버스를 놓치면서 시작됐어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "storytelling.02-it-all-started-when-i-missed-the-bus.variant-1",
+          "english": "At first, everything seemed fine.",
+          "korean": "처음에는 모든 게 괜찮아 보였어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 사건과 이야기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "storytelling.02-it-all-started-when-i-missed-the-bus.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "storytelling.01-youll-never-guess-what-happened",
+          "storytelling.03-at-first-everything-seemed-fine"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "storytelling.03-at-first-everything-seemed-fine"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "It all started when I missed the bus.",
+        "lang": "en-US"
+      },
+      "sortKey": "027.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "storytelling.03-at-first-everything-seemed-fine",
+      "familyId": "storytelling.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "At first, everything seemed fine.",
+      "english": "At first, everything seemed fine.",
+      "korean": "처음에는 모든 게 괜찮아 보였어요.",
+      "intentKo": "사건과 이야기 상황에서 “처음에는 모든 게 괜찮아 보였어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 사건과 이야기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "storytelling"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "사건과 이야기",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "storytelling.03-at-first-everything-seemed-fine.example-1",
+          "english": "A: At first, everything seemed fine. B: I see what you mean.",
+          "korean": "A: 처음에는 모든 게 괜찮아 보였어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "storytelling.03-at-first-everything-seemed-fine.example-2",
+          "english": "A: At first, everything seemed fine. B: That makes sense.",
+          "korean": "A: 처음에는 모든 게 괜찮아 보였어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "storytelling.03-at-first-everything-seemed-fine.example-3",
+          "english": "A: At first, everything seemed fine. B: Thanks for telling me.",
+          "korean": "A: 처음에는 모든 게 괜찮아 보였어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "storytelling.03-at-first-everything-seemed-fine.variant-1",
+          "english": "Then, out of nowhere, the lights went out.",
+          "korean": "그러다 갑자기 불이 꺼졌어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 사건과 이야기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "storytelling.03-at-first-everything-seemed-fine.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "storytelling.02-it-all-started-when-i-missed-the-bus",
+          "storytelling.04-then-out-of-nowhere-the-lights-went-out"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "storytelling.04-then-out-of-nowhere-the-lights-went-out"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "At first, everything seemed fine.",
+        "lang": "en-US"
+      },
+      "sortKey": "027.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "storytelling.04-then-out-of-nowhere-the-lights-went-out",
+      "familyId": "storytelling.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Then, out of nowhere, the lights went out.",
+      "english": "Then, out of nowhere, the lights went out.",
+      "korean": "그러다 갑자기 불이 꺼졌어요.",
+      "intentKo": "사건과 이야기 상황에서 “그러다 갑자기 불이 꺼졌어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 사건과 이야기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "storytelling"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "사건과 이야기",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "storytelling.04-then-out-of-nowhere-the-lights-went-out.example-1",
+          "english": "A: Then, out of nowhere, the lights went out. B: I see what you mean.",
+          "korean": "A: 그러다 갑자기 불이 꺼졌어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "storytelling.04-then-out-of-nowhere-the-lights-went-out.example-2",
+          "english": "A: Then, out of nowhere, the lights went out. B: That makes sense.",
+          "korean": "A: 그러다 갑자기 불이 꺼졌어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "storytelling.04-then-out-of-nowhere-the-lights-went-out.example-3",
+          "english": "A: Then, out of nowhere, the lights went out. B: Thanks for telling me.",
+          "korean": "A: 그러다 갑자기 불이 꺼졌어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "storytelling.04-then-out-of-nowhere-the-lights-went-out.variant-1",
+          "english": "Before I knew it, everyone was laughing.",
+          "korean": "어느새 모두가 웃고 있었어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 사건과 이야기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "storytelling.04-then-out-of-nowhere-the-lights-went-out.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "storytelling.03-at-first-everything-seemed-fine",
+          "storytelling.05-before-i-knew-it-everyone-was-laughing"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "storytelling.05-before-i-knew-it-everyone-was-laughing"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Then, out of nowhere, the lights went out.",
+        "lang": "en-US"
+      },
+      "sortKey": "027.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "storytelling.05-before-i-knew-it-everyone-was-laughing",
+      "familyId": "storytelling.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Before I knew it, everyone was laughing.",
+      "english": "Before I knew it, everyone was laughing.",
+      "korean": "어느새 모두가 웃고 있었어요.",
+      "intentKo": "사건과 이야기 상황에서 “어느새 모두가 웃고 있었어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 사건과 이야기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "storytelling"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "사건과 이야기",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "storytelling.05-before-i-knew-it-everyone-was-laughing.example-1",
+          "english": "A: Before I knew it, everyone was laughing. B: I see what you mean.",
+          "korean": "A: 어느새 모두가 웃고 있었어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "storytelling.05-before-i-knew-it-everyone-was-laughing.example-2",
+          "english": "A: Before I knew it, everyone was laughing. B: That makes sense.",
+          "korean": "A: 어느새 모두가 웃고 있었어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "storytelling.05-before-i-knew-it-everyone-was-laughing.example-3",
+          "english": "A: Before I knew it, everyone was laughing. B: Thanks for telling me.",
+          "korean": "A: 어느새 모두가 웃고 있었어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "storytelling.05-before-i-knew-it-everyone-was-laughing.variant-1",
+          "english": "To make a long story short, we got home safely.",
+          "korean": "간단히 말하면 우리는 무사히 집에 왔어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 사건과 이야기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "storytelling.05-before-i-knew-it-everyone-was-laughing.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "storytelling.04-then-out-of-nowhere-the-lights-went-out",
+          "storytelling.06-to-make-a-long-story-short-we-got-home-saf"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "storytelling.06-to-make-a-long-story-short-we-got-home-saf"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Before I knew it, everyone was laughing.",
+        "lang": "en-US"
+      },
+      "sortKey": "027.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "storytelling.06-to-make-a-long-story-short-we-got-home-saf",
+      "familyId": "storytelling.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "To make a long story short, we got home safely.",
+      "english": "To make a long story short, we got home safely.",
+      "korean": "간단히 말하면 우리는 무사히 집에 왔어요.",
+      "intentKo": "사건과 이야기 상황에서 “간단히 말하면 우리는 무사히 집에 왔어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 사건과 이야기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "storytelling"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "사건과 이야기",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "storytelling.06-to-make-a-long-story-short-we-got-home-saf.example-1",
+          "english": "A: To make a long story short, we got home safely. B: I see what you mean.",
+          "korean": "A: 간단히 말하면 우리는 무사히 집에 왔어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "storytelling.06-to-make-a-long-story-short-we-got-home-saf.example-2",
+          "english": "A: To make a long story short, we got home safely. B: That makes sense.",
+          "korean": "A: 간단히 말하면 우리는 무사히 집에 왔어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "storytelling.06-to-make-a-long-story-short-we-got-home-saf.example-3",
+          "english": "A: To make a long story short, we got home safely. B: Thanks for telling me.",
+          "korean": "A: 간단히 말하면 우리는 무사히 집에 왔어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "storytelling.06-to-make-a-long-story-short-we-got-home-saf.variant-1",
+          "english": "The funny thing is, I had the key all along.",
+          "korean": "웃긴 건 제가 내내 열쇠를 가지고 있었다는 거예요.",
+          "register": "neutral",
+          "nuanceKo": "같은 사건과 이야기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "storytelling.06-to-make-a-long-story-short-we-got-home-saf.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "storytelling.05-before-i-knew-it-everyone-was-laughing",
+          "storytelling.07-the-funny-thing-is-i-had-the-key-all-along"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "storytelling.07-the-funny-thing-is-i-had-the-key-all-along"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "To make a long story short, we got home safely.",
+        "lang": "en-US"
+      },
+      "sortKey": "027.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "storytelling.07-the-funny-thing-is-i-had-the-key-all-along",
+      "familyId": "storytelling.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "The funny thing is, I had the key all along.",
+      "english": "The funny thing is, I had the key all along.",
+      "korean": "웃긴 건 제가 내내 열쇠를 가지고 있었다는 거예요.",
+      "intentKo": "사건과 이야기 상황에서 “웃긴 건 제가 내내 열쇠를 가지고 있었다는 거예요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 사건과 이야기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "storytelling"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "사건과 이야기",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "storytelling.07-the-funny-thing-is-i-had-the-key-all-along.example-1",
+          "english": "A: The funny thing is, I had the key all along. B: I see what you mean.",
+          "korean": "A: 웃긴 건 제가 내내 열쇠를 가지고 있었다는 거예요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "storytelling.07-the-funny-thing-is-i-had-the-key-all-along.example-2",
+          "english": "A: The funny thing is, I had the key all along. B: That makes sense.",
+          "korean": "A: 웃긴 건 제가 내내 열쇠를 가지고 있었다는 거예요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "storytelling.07-the-funny-thing-is-i-had-the-key-all-along.example-3",
+          "english": "A: The funny thing is, I had the key all along. B: Thanks for telling me.",
+          "korean": "A: 웃긴 건 제가 내내 열쇠를 가지고 있었다는 거예요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "storytelling.07-the-funny-thing-is-i-had-the-key-all-along.variant-1",
+          "english": "In the end, it turned out better than expected.",
+          "korean": "결국 예상보다 잘 풀렸어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 사건과 이야기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "storytelling.07-the-funny-thing-is-i-had-the-key-all-along.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "storytelling.06-to-make-a-long-story-short-we-got-home-saf",
+          "storytelling.08-in-the-end-it-turned-out-better-than-expec"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "storytelling.08-in-the-end-it-turned-out-better-than-expec"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "The funny thing is, I had the key all along.",
+        "lang": "en-US"
+      },
+      "sortKey": "027.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "storytelling.08-in-the-end-it-turned-out-better-than-expec",
+      "familyId": "storytelling.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "In the end, it turned out better than expected.",
+      "english": "In the end, it turned out better than expected.",
+      "korean": "결국 예상보다 잘 풀렸어요.",
+      "intentKo": "사건과 이야기 상황에서 “결국 예상보다 잘 풀렸어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 사건과 이야기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "storytelling"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "사건과 이야기",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "storytelling.08-in-the-end-it-turned-out-better-than-expec.example-1",
+          "english": "A: In the end, it turned out better than expected. B: I see what you mean.",
+          "korean": "A: 결국 예상보다 잘 풀렸어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "storytelling.08-in-the-end-it-turned-out-better-than-expec.example-2",
+          "english": "A: In the end, it turned out better than expected. B: That makes sense.",
+          "korean": "A: 결국 예상보다 잘 풀렸어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "storytelling.08-in-the-end-it-turned-out-better-than-expec.example-3",
+          "english": "A: In the end, it turned out better than expected. B: Thanks for telling me.",
+          "korean": "A: 결국 예상보다 잘 풀렸어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "storytelling.08-in-the-end-it-turned-out-better-than-expec.variant-1",
+          "english": "You'll never guess what happened.",
+          "korean": "무슨 일이 있었는지 절대 못 맞힐 거예요.",
+          "register": "neutral",
+          "nuanceKo": "같은 사건과 이야기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "storytelling.08-in-the-end-it-turned-out-better-than-expec.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "storytelling.07-the-funny-thing-is-i-had-the-key-all-along",
+          "storytelling.01-youll-never-guess-what-happened"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "storytelling.01-youll-never-guess-what-happened"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "In the end, it turned out better than expected.",
+        "lang": "en-US"
+      },
+      "sortKey": "027.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "plans.01-im-going-to-stay-home-tonight",
+      "familyId": "plans.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm going to stay home tonight.",
+      "english": "I'm going to stay home tonight.",
+      "korean": "오늘 밤에는 집에 있을 거예요.",
+      "intentKo": "계획과 예정 상황에서 “오늘 밤에는 집에 있을 거예요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 계획과 예정 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "plans"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "계획과 예정",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "plans.01-im-going-to-stay-home-tonight.example-1",
+          "english": "A: I'm going to stay home tonight. B: I see what you mean.",
+          "korean": "A: 오늘 밤에는 집에 있을 거예요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "plans.01-im-going-to-stay-home-tonight.example-2",
+          "english": "A: I'm going to stay home tonight. B: That makes sense.",
+          "korean": "A: 오늘 밤에는 집에 있을 거예요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "plans.01-im-going-to-stay-home-tonight.example-3",
+          "english": "A: I'm going to stay home tonight. B: Thanks for telling me.",
+          "korean": "A: 오늘 밤에는 집에 있을 거예요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "plans.01-im-going-to-stay-home-tonight.variant-1",
+          "english": "We're meeting at six.",
+          "korean": "우리는 6시에 만나기로 했어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 계획과 예정 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "plans.01-im-going-to-stay-home-tonight.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "plans.08-barring-any-problems-well-start-next-week",
+          "plans.02-were-meeting-at-six"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "plans.02-were-meeting-at-six"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm going to stay home tonight.",
+        "lang": "en-US"
+      },
+      "sortKey": "028.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "plans.02-were-meeting-at-six",
+      "familyId": "plans.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "We're meeting at six.",
+      "english": "We're meeting at six.",
+      "korean": "우리는 6시에 만나기로 했어요.",
+      "intentKo": "계획과 예정 상황에서 “우리는 6시에 만나기로 했어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 계획과 예정 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "plans"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "계획과 예정",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "plans.02-were-meeting-at-six.example-1",
+          "english": "A: We're meeting at six. B: I see what you mean.",
+          "korean": "A: 우리는 6시에 만나기로 했어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "plans.02-were-meeting-at-six.example-2",
+          "english": "A: We're meeting at six. B: That makes sense.",
+          "korean": "A: 우리는 6시에 만나기로 했어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "plans.02-were-meeting-at-six.example-3",
+          "english": "A: We're meeting at six. B: Thanks for telling me.",
+          "korean": "A: 우리는 6시에 만나기로 했어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "plans.02-were-meeting-at-six.variant-1",
+          "english": "I'm planning to visit next month.",
+          "korean": "다음 달에 방문할 계획이에요.",
+          "register": "neutral",
+          "nuanceKo": "같은 계획과 예정 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "plans.02-were-meeting-at-six.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "plans.01-im-going-to-stay-home-tonight",
+          "plans.03-im-planning-to-visit-next-month"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "plans.03-im-planning-to-visit-next-month"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "We're meeting at six.",
+        "lang": "en-US"
+      },
+      "sortKey": "028.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "plans.03-im-planning-to-visit-next-month",
+      "familyId": "plans.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm planning to visit next month.",
+      "english": "I'm planning to visit next month.",
+      "korean": "다음 달에 방문할 계획이에요.",
+      "intentKo": "계획과 예정 상황에서 “다음 달에 방문할 계획이에요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 계획과 예정 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "plans"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "계획과 예정",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "plans.03-im-planning-to-visit-next-month.example-1",
+          "english": "A: I'm planning to visit next month. B: I see what you mean.",
+          "korean": "A: 다음 달에 방문할 계획이에요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "plans.03-im-planning-to-visit-next-month.example-2",
+          "english": "A: I'm planning to visit next month. B: That makes sense.",
+          "korean": "A: 다음 달에 방문할 계획이에요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "plans.03-im-planning-to-visit-next-month.example-3",
+          "english": "A: I'm planning to visit next month. B: Thanks for telling me.",
+          "korean": "A: 다음 달에 방문할 계획이에요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "plans.03-im-planning-to-visit-next-month.variant-1",
+          "english": "I'm about to leave.",
+          "korean": "이제 막 나가려던 참이에요.",
+          "register": "neutral",
+          "nuanceKo": "같은 계획과 예정 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "plans.03-im-planning-to-visit-next-month.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "plans.02-were-meeting-at-six",
+          "plans.04-im-about-to-leave"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "plans.04-im-about-to-leave"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm planning to visit next month.",
+        "lang": "en-US"
+      },
+      "sortKey": "028.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "plans.04-im-about-to-leave",
+      "familyId": "plans.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm about to leave.",
+      "english": "I'm about to leave.",
+      "korean": "이제 막 나가려던 참이에요.",
+      "intentKo": "계획과 예정 상황에서 “이제 막 나가려던 참이에요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 계획과 예정 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "plans"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "계획과 예정",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "plans.04-im-about-to-leave.example-1",
+          "english": "A: I'm about to leave. B: I see what you mean.",
+          "korean": "A: 이제 막 나가려던 참이에요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "plans.04-im-about-to-leave.example-2",
+          "english": "A: I'm about to leave. B: That makes sense.",
+          "korean": "A: 이제 막 나가려던 참이에요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "plans.04-im-about-to-leave.example-3",
+          "english": "A: I'm about to leave. B: Thanks for telling me.",
+          "korean": "A: 이제 막 나가려던 참이에요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "plans.04-im-about-to-leave.variant-1",
+          "english": "We're supposed to hear back tomorrow.",
+          "korean": "내일 답을 받기로 되어 있어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 계획과 예정 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "plans.04-im-about-to-leave.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "I'm about leaving.",
+          "corrected": "I'm about to leave.",
+          "explanationKo": "막 ~하려는 참이라는 뜻은 be about to + 동사원형 구조를 쓴다."
+        }
+      ],
+      "relations": {
+        "similar": [
+          "plans.03-im-planning-to-visit-next-month",
+          "plans.05-were-supposed-to-hear-back-tomorrow"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "plans.05-were-supposed-to-hear-back-tomorrow"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm about to leave.",
+        "lang": "en-US"
+      },
+      "sortKey": "028.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "plans.05-were-supposed-to-hear-back-tomorrow",
+      "familyId": "plans.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "We're supposed to hear back tomorrow.",
+      "english": "We're supposed to hear back tomorrow.",
+      "korean": "내일 답을 받기로 되어 있어요.",
+      "intentKo": "계획과 예정 상황에서 “내일 답을 받기로 되어 있어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 계획과 예정 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "plans"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "계획과 예정",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "plans.05-were-supposed-to-hear-back-tomorrow.example-1",
+          "english": "A: We're supposed to hear back tomorrow. B: I see what you mean.",
+          "korean": "A: 내일 답을 받기로 되어 있어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "plans.05-were-supposed-to-hear-back-tomorrow.example-2",
+          "english": "A: We're supposed to hear back tomorrow. B: That makes sense.",
+          "korean": "A: 내일 답을 받기로 되어 있어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "plans.05-were-supposed-to-hear-back-tomorrow.example-3",
+          "english": "A: We're supposed to hear back tomorrow. B: Thanks for telling me.",
+          "korean": "A: 내일 답을 받기로 되어 있어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "plans.05-were-supposed-to-hear-back-tomorrow.variant-1",
+          "english": "I haven't decided what to do yet.",
+          "korean": "아직 뭘 할지 정하지 못했어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 계획과 예정 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "plans.05-were-supposed-to-hear-back-tomorrow.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "plans.04-im-about-to-leave",
+          "plans.06-i-havent-decided-what-to-do-yet"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "plans.06-i-havent-decided-what-to-do-yet"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "We're supposed to hear back tomorrow.",
+        "lang": "en-US"
+      },
+      "sortKey": "028.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "plans.06-i-havent-decided-what-to-do-yet",
+      "familyId": "plans.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I haven't decided what to do yet.",
+      "english": "I haven't decided what to do yet.",
+      "korean": "아직 뭘 할지 정하지 못했어요.",
+      "intentKo": "계획과 예정 상황에서 “아직 뭘 할지 정하지 못했어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 계획과 예정 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "plans"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "계획과 예정",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "plans.06-i-havent-decided-what-to-do-yet.example-1",
+          "english": "A: I haven't decided what to do yet. B: I see what you mean.",
+          "korean": "A: 아직 뭘 할지 정하지 못했어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "plans.06-i-havent-decided-what-to-do-yet.example-2",
+          "english": "A: I haven't decided what to do yet. B: That makes sense.",
+          "korean": "A: 아직 뭘 할지 정하지 못했어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "plans.06-i-havent-decided-what-to-do-yet.example-3",
+          "english": "A: I haven't decided what to do yet. B: Thanks for telling me.",
+          "korean": "A: 아직 뭘 할지 정하지 못했어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "plans.06-i-havent-decided-what-to-do-yet.variant-1",
+          "english": "The plan is to finish by Friday.",
+          "korean": "계획은 금요일까지 끝내는 거예요.",
+          "register": "neutral",
+          "nuanceKo": "같은 계획과 예정 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "plans.06-i-havent-decided-what-to-do-yet.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "plans.05-were-supposed-to-hear-back-tomorrow",
+          "plans.07-the-plan-is-to-finish-by-friday"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "plans.07-the-plan-is-to-finish-by-friday"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I haven't decided what to do yet.",
+        "lang": "en-US"
+      },
+      "sortKey": "028.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "plans.07-the-plan-is-to-finish-by-friday",
+      "familyId": "plans.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "The plan is to finish by Friday.",
+      "english": "The plan is to finish by Friday.",
+      "korean": "계획은 금요일까지 끝내는 거예요.",
+      "intentKo": "계획과 예정 상황에서 “계획은 금요일까지 끝내는 거예요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 계획과 예정 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "plans"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "계획과 예정",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "plans.07-the-plan-is-to-finish-by-friday.example-1",
+          "english": "A: The plan is to finish by Friday. B: I see what you mean.",
+          "korean": "A: 계획은 금요일까지 끝내는 거예요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "plans.07-the-plan-is-to-finish-by-friday.example-2",
+          "english": "A: The plan is to finish by Friday. B: That makes sense.",
+          "korean": "A: 계획은 금요일까지 끝내는 거예요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "plans.07-the-plan-is-to-finish-by-friday.example-3",
+          "english": "A: The plan is to finish by Friday. B: Thanks for telling me.",
+          "korean": "A: 계획은 금요일까지 끝내는 거예요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "plans.07-the-plan-is-to-finish-by-friday.variant-1",
+          "english": "Barring any problems, we'll start next week.",
+          "korean": "문제가 없다면 다음 주에 시작할 거예요.",
+          "register": "neutral",
+          "nuanceKo": "같은 계획과 예정 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "plans.07-the-plan-is-to-finish-by-friday.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "plans.06-i-havent-decided-what-to-do-yet",
+          "plans.08-barring-any-problems-well-start-next-week"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "plans.08-barring-any-problems-well-start-next-week"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "The plan is to finish by Friday.",
+        "lang": "en-US"
+      },
+      "sortKey": "028.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "plans.08-barring-any-problems-well-start-next-week",
+      "familyId": "plans.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Barring any problems, we'll start next week.",
+      "english": "Barring any problems, we'll start next week.",
+      "korean": "문제가 없다면 다음 주에 시작할 거예요.",
+      "intentKo": "계획과 예정 상황에서 “문제가 없다면 다음 주에 시작할 거예요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 계획과 예정 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "plans"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "계획과 예정",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "plans.08-barring-any-problems-well-start-next-week.example-1",
+          "english": "A: Barring any problems, we'll start next week. B: I see what you mean.",
+          "korean": "A: 문제가 없다면 다음 주에 시작할 거예요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "plans.08-barring-any-problems-well-start-next-week.example-2",
+          "english": "A: Barring any problems, we'll start next week. B: That makes sense.",
+          "korean": "A: 문제가 없다면 다음 주에 시작할 거예요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "plans.08-barring-any-problems-well-start-next-week.example-3",
+          "english": "A: Barring any problems, we'll start next week. B: Thanks for telling me.",
+          "korean": "A: 문제가 없다면 다음 주에 시작할 거예요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "plans.08-barring-any-problems-well-start-next-week.variant-1",
+          "english": "I'm going to stay home tonight.",
+          "korean": "오늘 밤에는 집에 있을 거예요.",
+          "register": "neutral",
+          "nuanceKo": "같은 계획과 예정 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "plans.08-barring-any-problems-well-start-next-week.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "plans.07-the-plan-is-to-finish-by-friday",
+          "plans.01-im-going-to-stay-home-tonight"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "plans.01-im-going-to-stay-home-tonight"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Barring any problems, we'll start next week.",
+        "lang": "en-US"
+      },
+      "sortKey": "028.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "hopes-intentions.01-i-hope-everything-goes-well",
+      "familyId": "hopes-intentions.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I hope everything goes well.",
+      "english": "I hope everything goes well.",
+      "korean": "모든 일이 잘되길 바라요.",
+      "intentKo": "희망과 의도 상황에서 “모든 일이 잘되길 바라요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 희망과 의도 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "hopes-intentions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "희망과 의도",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "hopes-intentions.01-i-hope-everything-goes-well.example-1",
+          "english": "A: I hope everything goes well. B: I see what you mean.",
+          "korean": "A: 모든 일이 잘되길 바라요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "hopes-intentions.01-i-hope-everything-goes-well.example-2",
+          "english": "A: I hope everything goes well. B: That makes sense.",
+          "korean": "A: 모든 일이 잘되길 바라요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "hopes-intentions.01-i-hope-everything-goes-well.example-3",
+          "english": "A: I hope everything goes well. B: Thanks for telling me.",
+          "korean": "A: 모든 일이 잘되길 바라요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "hopes-intentions.01-i-hope-everything-goes-well.variant-1",
+          "english": "I'd like to learn something new.",
+          "korean": "새로운 걸 배우고 싶어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 희망과 의도 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "hopes-intentions.01-i-hope-everything-goes-well.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "hopes-intentions.08-i-have-every-intention-of-finishing-it",
+          "hopes-intentions.02-id-like-to-learn-something-new"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "hopes-intentions.02-id-like-to-learn-something-new"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I hope everything goes well.",
+        "lang": "en-US"
+      },
+      "sortKey": "029.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "hopes-intentions.02-id-like-to-learn-something-new",
+      "familyId": "hopes-intentions.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'd like to learn something new.",
+      "english": "I'd like to learn something new.",
+      "korean": "새로운 걸 배우고 싶어요.",
+      "intentKo": "희망과 의도 상황에서 “새로운 걸 배우고 싶어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 희망과 의도 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "hopes-intentions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "희망과 의도",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "hopes-intentions.02-id-like-to-learn-something-new.example-1",
+          "english": "A: I'd like to learn something new. B: I see what you mean.",
+          "korean": "A: 새로운 걸 배우고 싶어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "hopes-intentions.02-id-like-to-learn-something-new.example-2",
+          "english": "A: I'd like to learn something new. B: That makes sense.",
+          "korean": "A: 새로운 걸 배우고 싶어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "hopes-intentions.02-id-like-to-learn-something-new.example-3",
+          "english": "A: I'd like to learn something new. B: Thanks for telling me.",
+          "korean": "A: 새로운 걸 배우고 싶어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "hopes-intentions.02-id-like-to-learn-something-new.variant-1",
+          "english": "I'm hoping to see you soon.",
+          "korean": "곧 만나기를 바라고 있어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 희망과 의도 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "hopes-intentions.02-id-like-to-learn-something-new.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "hopes-intentions.01-i-hope-everything-goes-well",
+          "hopes-intentions.03-im-hoping-to-see-you-soon"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "hopes-intentions.03-im-hoping-to-see-you-soon"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'd like to learn something new.",
+        "lang": "en-US"
+      },
+      "sortKey": "029.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "hopes-intentions.03-im-hoping-to-see-you-soon",
+      "familyId": "hopes-intentions.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm hoping to see you soon.",
+      "english": "I'm hoping to see you soon.",
+      "korean": "곧 만나기를 바라고 있어요.",
+      "intentKo": "희망과 의도 상황에서 “곧 만나기를 바라고 있어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 희망과 의도 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "hopes-intentions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "희망과 의도",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "hopes-intentions.03-im-hoping-to-see-you-soon.example-1",
+          "english": "A: I'm hoping to see you soon. B: I see what you mean.",
+          "korean": "A: 곧 만나기를 바라고 있어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "hopes-intentions.03-im-hoping-to-see-you-soon.example-2",
+          "english": "A: I'm hoping to see you soon. B: That makes sense.",
+          "korean": "A: 곧 만나기를 바라고 있어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "hopes-intentions.03-im-hoping-to-see-you-soon.example-3",
+          "english": "A: I'm hoping to see you soon. B: Thanks for telling me.",
+          "korean": "A: 곧 만나기를 바라고 있어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "hopes-intentions.03-im-hoping-to-see-you-soon.variant-1",
+          "english": "I intend to keep my promise.",
+          "korean": "약속을 지킬 생각이에요.",
+          "register": "neutral",
+          "nuanceKo": "같은 희망과 의도 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "hopes-intentions.03-im-hoping-to-see-you-soon.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "hopes-intentions.02-id-like-to-learn-something-new",
+          "hopes-intentions.04-i-intend-to-keep-my-promise"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "hopes-intentions.04-i-intend-to-keep-my-promise"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm hoping to see you soon.",
+        "lang": "en-US"
+      },
+      "sortKey": "029.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "hopes-intentions.04-i-intend-to-keep-my-promise",
+      "familyId": "hopes-intentions.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I intend to keep my promise.",
+      "english": "I intend to keep my promise.",
+      "korean": "약속을 지킬 생각이에요.",
+      "intentKo": "희망과 의도 상황에서 “약속을 지킬 생각이에요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 희망과 의도 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "hopes-intentions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "희망과 의도",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "hopes-intentions.04-i-intend-to-keep-my-promise.example-1",
+          "english": "A: I intend to keep my promise. B: I see what you mean.",
+          "korean": "A: 약속을 지킬 생각이에요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "hopes-intentions.04-i-intend-to-keep-my-promise.example-2",
+          "english": "A: I intend to keep my promise. B: That makes sense.",
+          "korean": "A: 약속을 지킬 생각이에요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "hopes-intentions.04-i-intend-to-keep-my-promise.example-3",
+          "english": "A: I intend to keep my promise. B: Thanks for telling me.",
+          "korean": "A: 약속을 지킬 생각이에요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "hopes-intentions.04-i-intend-to-keep-my-promise.variant-1",
+          "english": "My goal is to become more confident.",
+          "korean": "제 목표는 더 자신감을 갖는 거예요.",
+          "register": "neutral",
+          "nuanceKo": "같은 희망과 의도 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "hopes-intentions.04-i-intend-to-keep-my-promise.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "hopes-intentions.03-im-hoping-to-see-you-soon",
+          "hopes-intentions.05-my-goal-is-to-become-more-confident"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "hopes-intentions.05-my-goal-is-to-become-more-confident"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I intend to keep my promise.",
+        "lang": "en-US"
+      },
+      "sortKey": "029.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "hopes-intentions.05-my-goal-is-to-become-more-confident",
+      "familyId": "hopes-intentions.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "My goal is to become more confident.",
+      "english": "My goal is to become more confident.",
+      "korean": "제 목표는 더 자신감을 갖는 거예요.",
+      "intentKo": "희망과 의도 상황에서 “제 목표는 더 자신감을 갖는 거예요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 희망과 의도 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "hopes-intentions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "희망과 의도",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "hopes-intentions.05-my-goal-is-to-become-more-confident.example-1",
+          "english": "A: My goal is to become more confident. B: I see what you mean.",
+          "korean": "A: 제 목표는 더 자신감을 갖는 거예요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "hopes-intentions.05-my-goal-is-to-become-more-confident.example-2",
+          "english": "A: My goal is to become more confident. B: That makes sense.",
+          "korean": "A: 제 목표는 더 자신감을 갖는 거예요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "hopes-intentions.05-my-goal-is-to-become-more-confident.example-3",
+          "english": "A: My goal is to become more confident. B: Thanks for telling me.",
+          "korean": "A: 제 목표는 더 자신감을 갖는 거예요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "hopes-intentions.05-my-goal-is-to-become-more-confident.variant-1",
+          "english": "I'm determined to make it work.",
+          "korean": "반드시 잘되게 만들 생각이에요.",
+          "register": "neutral",
+          "nuanceKo": "같은 희망과 의도 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "hopes-intentions.05-my-goal-is-to-become-more-confident.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "hopes-intentions.04-i-intend-to-keep-my-promise",
+          "hopes-intentions.06-im-determined-to-make-it-work"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "hopes-intentions.06-im-determined-to-make-it-work"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "My goal is to become more confident.",
+        "lang": "en-US"
+      },
+      "sortKey": "029.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "hopes-intentions.06-im-determined-to-make-it-work",
+      "familyId": "hopes-intentions.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm determined to make it work.",
+      "english": "I'm determined to make it work.",
+      "korean": "반드시 잘되게 만들 생각이에요.",
+      "intentKo": "희망과 의도 상황에서 “반드시 잘되게 만들 생각이에요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 희망과 의도 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "hopes-intentions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "희망과 의도",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "hopes-intentions.06-im-determined-to-make-it-work.example-1",
+          "english": "A: I'm determined to make it work. B: I see what you mean.",
+          "korean": "A: 반드시 잘되게 만들 생각이에요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "hopes-intentions.06-im-determined-to-make-it-work.example-2",
+          "english": "A: I'm determined to make it work. B: That makes sense.",
+          "korean": "A: 반드시 잘되게 만들 생각이에요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "hopes-intentions.06-im-determined-to-make-it-work.example-3",
+          "english": "A: I'm determined to make it work. B: Thanks for telling me.",
+          "korean": "A: 반드시 잘되게 만들 생각이에요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "hopes-intentions.06-im-determined-to-make-it-work.variant-1",
+          "english": "One day, I'd love to live abroad.",
+          "korean": "언젠가 해외에서 살아보고 싶어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 희망과 의도 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "hopes-intentions.06-im-determined-to-make-it-work.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "hopes-intentions.05-my-goal-is-to-become-more-confident",
+          "hopes-intentions.07-one-day-id-love-to-live-abroad"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "hopes-intentions.07-one-day-id-love-to-live-abroad"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm determined to make it work.",
+        "lang": "en-US"
+      },
+      "sortKey": "029.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "hopes-intentions.07-one-day-id-love-to-live-abroad",
+      "familyId": "hopes-intentions.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "One day, I'd love to live abroad.",
+      "english": "One day, I'd love to live abroad.",
+      "korean": "언젠가 해외에서 살아보고 싶어요.",
+      "intentKo": "희망과 의도 상황에서 “언젠가 해외에서 살아보고 싶어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 희망과 의도 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "hopes-intentions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "희망과 의도",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "hopes-intentions.07-one-day-id-love-to-live-abroad.example-1",
+          "english": "A: One day, I'd love to live abroad. B: I see what you mean.",
+          "korean": "A: 언젠가 해외에서 살아보고 싶어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "hopes-intentions.07-one-day-id-love-to-live-abroad.example-2",
+          "english": "A: One day, I'd love to live abroad. B: That makes sense.",
+          "korean": "A: 언젠가 해외에서 살아보고 싶어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "hopes-intentions.07-one-day-id-love-to-live-abroad.example-3",
+          "english": "A: One day, I'd love to live abroad. B: Thanks for telling me.",
+          "korean": "A: 언젠가 해외에서 살아보고 싶어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "hopes-intentions.07-one-day-id-love-to-live-abroad.variant-1",
+          "english": "I have every intention of finishing it.",
+          "korean": "그걸 끝낼 확실한 의지가 있어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 희망과 의도 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "hopes-intentions.07-one-day-id-love-to-live-abroad.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "hopes-intentions.06-im-determined-to-make-it-work",
+          "hopes-intentions.08-i-have-every-intention-of-finishing-it"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "hopes-intentions.08-i-have-every-intention-of-finishing-it"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "One day, I'd love to live abroad.",
+        "lang": "en-US"
+      },
+      "sortKey": "029.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "hopes-intentions.08-i-have-every-intention-of-finishing-it",
+      "familyId": "hopes-intentions.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I have every intention of finishing it.",
+      "english": "I have every intention of finishing it.",
+      "korean": "그걸 끝낼 확실한 의지가 있어요.",
+      "intentKo": "희망과 의도 상황에서 “그걸 끝낼 확실한 의지가 있어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 희망과 의도 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "hopes-intentions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "희망과 의도",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "hopes-intentions.08-i-have-every-intention-of-finishing-it.example-1",
+          "english": "A: I have every intention of finishing it. B: I see what you mean.",
+          "korean": "A: 그걸 끝낼 확실한 의지가 있어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "hopes-intentions.08-i-have-every-intention-of-finishing-it.example-2",
+          "english": "A: I have every intention of finishing it. B: That makes sense.",
+          "korean": "A: 그걸 끝낼 확실한 의지가 있어요. B: 말이 되네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "hopes-intentions.08-i-have-every-intention-of-finishing-it.example-3",
+          "english": "A: I have every intention of finishing it. B: Thanks for telling me.",
+          "korean": "A: 그걸 끝낼 확실한 의지가 있어요. B: 말해줘서 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "hopes-intentions.08-i-have-every-intention-of-finishing-it.variant-1",
+          "english": "I hope everything goes well.",
+          "korean": "모든 일이 잘되길 바라요.",
+          "register": "neutral",
+          "nuanceKo": "같은 희망과 의도 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "hopes-intentions.08-i-have-every-intention-of-finishing-it.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "hopes-intentions.07-one-day-id-love-to-live-abroad",
+          "hopes-intentions.01-i-hope-everything-goes-well"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "hopes-intentions.01-i-hope-everything-goes-well"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I have every intention of finishing it.",
+        "lang": "en-US"
+      },
+      "sortKey": "029.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "promises.01-i-promise-ill-call-you-tonight",
+      "familyId": "promises.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I promise I'll call you tonight.",
+      "english": "I promise I'll call you tonight.",
+      "korean": "오늘 밤에 전화하겠다고 약속할게요.",
+      "intentKo": "약속 상황에서 “오늘 밤에 전화하겠다고 약속할게요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 약속 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "promises"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "약속",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "promises.01-i-promise-ill-call-you-tonight.example-1",
+          "english": "A: I promise I'll call you tonight. B: I see what you mean.",
+          "korean": "A: 오늘 밤에 전화하겠다고 약속할게요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "promises.01-i-promise-ill-call-you-tonight.example-2",
+          "english": "A: I promise I'll call you tonight. B: That makes sense.",
+          "korean": "A: 오늘 밤에 전화하겠다고 약속할게요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "promises.01-i-promise-ill-call-you-tonight.example-3",
+          "english": "A: I promise I'll call you tonight. B: Thanks for telling me.",
+          "korean": "A: 오늘 밤에 전화하겠다고 약속할게요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "promises.01-i-promise-ill-call-you-tonight.variant-1",
+          "english": "I'll be there on time.",
+          "korean": "시간 맞춰 갈게요.",
+          "register": "neutral",
+          "nuanceKo": "같은 약속 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "promises.01-i-promise-ill-call-you-tonight.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "promises.08-whatever-happens-ill-keep-my-end-of-the-ba",
+          "promises.02-ill-be-there-on-time"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "promises.02-ill-be-there-on-time"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I promise I'll call you tonight.",
+        "lang": "en-US"
+      },
+      "sortKey": "030.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "promises.02-ill-be-there-on-time",
+      "familyId": "promises.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'll be there on time.",
+      "english": "I'll be there on time.",
+      "korean": "시간 맞춰 갈게요.",
+      "intentKo": "약속 상황에서 “시간 맞춰 갈게요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 약속 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "promises"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "약속",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "promises.02-ill-be-there-on-time.example-1",
+          "english": "A: I'll be there on time. B: I see what you mean.",
+          "korean": "A: 시간 맞춰 갈게요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "promises.02-ill-be-there-on-time.example-2",
+          "english": "A: I'll be there on time. B: That makes sense.",
+          "korean": "A: 시간 맞춰 갈게요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "promises.02-ill-be-there-on-time.example-3",
+          "english": "A: I'll be there on time. B: Thanks for telling me.",
+          "korean": "A: 시간 맞춰 갈게요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "promises.02-ill-be-there-on-time.variant-1",
+          "english": "You have my word.",
+          "korean": "제가 약속할게요.",
+          "register": "neutral",
+          "nuanceKo": "같은 약속 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "promises.02-ill-be-there-on-time.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "promises.01-i-promise-ill-call-you-tonight",
+          "promises.03-you-have-my-word"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "promises.03-you-have-my-word"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'll be there on time.",
+        "lang": "en-US"
+      },
+      "sortKey": "030.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "promises.03-you-have-my-word",
+      "familyId": "promises.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "You have my word.",
+      "english": "You have my word.",
+      "korean": "제가 약속할게요.",
+      "intentKo": "약속 상황에서 “제가 약속할게요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 약속 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "promises"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "약속",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "promises.03-you-have-my-word.example-1",
+          "english": "A: You have my word. B: I see what you mean.",
+          "korean": "A: 제가 약속할게요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "promises.03-you-have-my-word.example-2",
+          "english": "A: You have my word. B: That makes sense.",
+          "korean": "A: 제가 약속할게요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "promises.03-you-have-my-word.example-3",
+          "english": "A: You have my word. B: Thanks for telling me.",
+          "korean": "A: 제가 약속할게요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "promises.03-you-have-my-word.variant-1",
+          "english": "I won't tell anyone.",
+          "korean": "아무에게도 말하지 않을게요.",
+          "register": "neutral",
+          "nuanceKo": "같은 약속 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "promises.03-you-have-my-word.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "promises.02-ill-be-there-on-time",
+          "promises.04-i-wont-tell-anyone"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "promises.04-i-wont-tell-anyone"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "You have my word.",
+        "lang": "en-US"
+      },
+      "sortKey": "030.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "promises.04-i-wont-tell-anyone",
+      "familyId": "promises.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I won't tell anyone.",
+      "english": "I won't tell anyone.",
+      "korean": "아무에게도 말하지 않을게요.",
+      "intentKo": "약속 상황에서 “아무에게도 말하지 않을게요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 약속 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "promises"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "약속",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "promises.04-i-wont-tell-anyone.example-1",
+          "english": "A: I won't tell anyone. B: I see what you mean.",
+          "korean": "A: 아무에게도 말하지 않을게요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "promises.04-i-wont-tell-anyone.example-2",
+          "english": "A: I won't tell anyone. B: That makes sense.",
+          "korean": "A: 아무에게도 말하지 않을게요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "promises.04-i-wont-tell-anyone.example-3",
+          "english": "A: I won't tell anyone. B: Thanks for telling me.",
+          "korean": "A: 아무에게도 말하지 않을게요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "promises.04-i-wont-tell-anyone.variant-1",
+          "english": "I'll make it up to you.",
+          "korean": "꼭 만회할게요.",
+          "register": "neutral",
+          "nuanceKo": "같은 약속 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "promises.04-i-wont-tell-anyone.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "promises.03-you-have-my-word",
+          "promises.05-ill-make-it-up-to-you"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "promises.05-ill-make-it-up-to-you"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I won't tell anyone.",
+        "lang": "en-US"
+      },
+      "sortKey": "030.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "promises.05-ill-make-it-up-to-you",
+      "familyId": "promises.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'll make it up to you.",
+      "english": "I'll make it up to you.",
+      "korean": "꼭 만회할게요.",
+      "intentKo": "약속 상황에서 “꼭 만회할게요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 약속 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "promises"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "약속",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "promises.05-ill-make-it-up-to-you.example-1",
+          "english": "A: I'll make it up to you. B: I see what you mean.",
+          "korean": "A: 꼭 만회할게요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "promises.05-ill-make-it-up-to-you.example-2",
+          "english": "A: I'll make it up to you. B: That makes sense.",
+          "korean": "A: 꼭 만회할게요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "promises.05-ill-make-it-up-to-you.example-3",
+          "english": "A: I'll make it up to you. B: Thanks for telling me.",
+          "korean": "A: 꼭 만회할게요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "promises.05-ill-make-it-up-to-you.variant-1",
+          "english": "You can count on me.",
+          "korean": "저를 믿어도 돼요.",
+          "register": "neutral",
+          "nuanceKo": "같은 약속 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "promises.05-ill-make-it-up-to-you.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "promises.04-i-wont-tell-anyone",
+          "promises.06-you-can-count-on-me"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "promises.06-you-can-count-on-me"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'll make it up to you.",
+        "lang": "en-US"
+      },
+      "sortKey": "030.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "promises.06-you-can-count-on-me",
+      "familyId": "promises.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "You can count on me.",
+      "english": "You can count on me.",
+      "korean": "저를 믿어도 돼요.",
+      "intentKo": "약속 상황에서 “저를 믿어도 돼요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 약속 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "promises"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "약속",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "promises.06-you-can-count-on-me.example-1",
+          "english": "A: You can count on me. B: I see what you mean.",
+          "korean": "A: 저를 믿어도 돼요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "promises.06-you-can-count-on-me.example-2",
+          "english": "A: You can count on me. B: That makes sense.",
+          "korean": "A: 저를 믿어도 돼요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "promises.06-you-can-count-on-me.example-3",
+          "english": "A: You can count on me. B: Thanks for telling me.",
+          "korean": "A: 저를 믿어도 돼요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "promises.06-you-can-count-on-me.variant-1",
+          "english": "I'll do my best not to let you down.",
+          "korean": "실망시키지 않도록 최선을 다할게요.",
+          "register": "neutral",
+          "nuanceKo": "같은 약속 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "promises.06-you-can-count-on-me.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "promises.05-ill-make-it-up-to-you",
+          "promises.07-ill-do-my-best-not-to-let-you-down"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "promises.07-ill-do-my-best-not-to-let-you-down"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "You can count on me.",
+        "lang": "en-US"
+      },
+      "sortKey": "030.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "promises.07-ill-do-my-best-not-to-let-you-down",
+      "familyId": "promises.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'll do my best not to let you down.",
+      "english": "I'll do my best not to let you down.",
+      "korean": "실망시키지 않도록 최선을 다할게요.",
+      "intentKo": "약속 상황에서 “실망시키지 않도록 최선을 다할게요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 약속 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "promises"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "약속",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "promises.07-ill-do-my-best-not-to-let-you-down.example-1",
+          "english": "A: I'll do my best not to let you down. B: I see what you mean.",
+          "korean": "A: 실망시키지 않도록 최선을 다할게요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "promises.07-ill-do-my-best-not-to-let-you-down.example-2",
+          "english": "A: I'll do my best not to let you down. B: That makes sense.",
+          "korean": "A: 실망시키지 않도록 최선을 다할게요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "promises.07-ill-do-my-best-not-to-let-you-down.example-3",
+          "english": "A: I'll do my best not to let you down. B: Thanks for telling me.",
+          "korean": "A: 실망시키지 않도록 최선을 다할게요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "promises.07-ill-do-my-best-not-to-let-you-down.variant-1",
+          "english": "Whatever happens, I'll keep my end of the bargain.",
+          "korean": "무슨 일이 있어도 제 몫의 약속은 지킬게요.",
+          "register": "neutral",
+          "nuanceKo": "같은 약속 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "promises.07-ill-do-my-best-not-to-let-you-down.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "promises.06-you-can-count-on-me",
+          "promises.08-whatever-happens-ill-keep-my-end-of-the-ba"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "promises.08-whatever-happens-ill-keep-my-end-of-the-ba"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'll do my best not to let you down.",
+        "lang": "en-US"
+      },
+      "sortKey": "030.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "promises.08-whatever-happens-ill-keep-my-end-of-the-ba",
+      "familyId": "promises.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Whatever happens, I'll keep my end of the bargain.",
+      "english": "Whatever happens, I'll keep my end of the bargain.",
+      "korean": "무슨 일이 있어도 제 몫의 약속은 지킬게요.",
+      "intentKo": "약속 상황에서 “무슨 일이 있어도 제 몫의 약속은 지킬게요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 약속 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "promises"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "약속",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "promises.08-whatever-happens-ill-keep-my-end-of-the-ba.example-1",
+          "english": "A: Whatever happens, I'll keep my end of the bargain. B: I see what you mean.",
+          "korean": "A: 무슨 일이 있어도 제 몫의 약속은 지킬게요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "promises.08-whatever-happens-ill-keep-my-end-of-the-ba.example-2",
+          "english": "A: Whatever happens, I'll keep my end of the bargain. B: That makes sense.",
+          "korean": "A: 무슨 일이 있어도 제 몫의 약속은 지킬게요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "promises.08-whatever-happens-ill-keep-my-end-of-the-ba.example-3",
+          "english": "A: Whatever happens, I'll keep my end of the bargain. B: Thanks for telling me.",
+          "korean": "A: 무슨 일이 있어도 제 몫의 약속은 지킬게요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "promises.08-whatever-happens-ill-keep-my-end-of-the-ba.variant-1",
+          "english": "I promise I'll call you tonight.",
+          "korean": "오늘 밤에 전화하겠다고 약속할게요.",
+          "register": "neutral",
+          "nuanceKo": "같은 약속 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "promises.08-whatever-happens-ill-keep-my-end-of-the-ba.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "promises.07-ill-do-my-best-not-to-let-you-down",
+          "promises.01-i-promise-ill-call-you-tonight"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "promises.01-i-promise-ill-call-you-tonight"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Whatever happens, I'll keep my end of the bargain.",
+        "lang": "en-US"
+      },
+      "sortKey": "030.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conditions.01-if-it-rains-well-stay-inside",
+      "familyId": "conditions.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "If it rains, we'll stay inside.",
+      "english": "If it rains, we'll stay inside.",
+      "korean": "비가 오면 실내에 있을 거예요.",
+      "intentKo": "조건 상황에서 “비가 오면 실내에 있을 거예요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 조건 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conditions"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "조건",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conditions.01-if-it-rains-well-stay-inside.example-1",
+          "english": "A: If it rains, we'll stay inside. B: I see what you mean.",
+          "korean": "A: 비가 오면 실내에 있을 거예요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conditions.01-if-it-rains-well-stay-inside.example-2",
+          "english": "A: If it rains, we'll stay inside. B: That makes sense.",
+          "korean": "A: 비가 오면 실내에 있을 거예요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conditions.01-if-it-rains-well-stay-inside.example-3",
+          "english": "A: If it rains, we'll stay inside. B: Thanks for telling me.",
+          "korean": "A: 비가 오면 실내에 있을 거예요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conditions.01-if-it-rains-well-stay-inside.variant-1",
+          "english": "I'll go as long as you come with me.",
+          "korean": "당신이 같이 가면 저도 갈게요.",
+          "register": "neutral",
+          "nuanceKo": "같은 조건 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conditions.01-if-it-rains-well-stay-inside.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conditions.08-had-i-known-earlier-i-would-have-helped",
+          "conditions.02-ill-go-as-long-as-you-come-with-me"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conditions.02-ill-go-as-long-as-you-come-with-me"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "If it rains, we'll stay inside.",
+        "lang": "en-US"
+      },
+      "sortKey": "031.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conditions.02-ill-go-as-long-as-you-come-with-me",
+      "familyId": "conditions.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'll go as long as you come with me.",
+      "english": "I'll go as long as you come with me.",
+      "korean": "당신이 같이 가면 저도 갈게요.",
+      "intentKo": "조건 상황에서 “당신이 같이 가면 저도 갈게요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 조건 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conditions"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "조건",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conditions.02-ill-go-as-long-as-you-come-with-me.example-1",
+          "english": "A: I'll go as long as you come with me. B: I see what you mean.",
+          "korean": "A: 당신이 같이 가면 저도 갈게요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conditions.02-ill-go-as-long-as-you-come-with-me.example-2",
+          "english": "A: I'll go as long as you come with me. B: That makes sense.",
+          "korean": "A: 당신이 같이 가면 저도 갈게요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conditions.02-ill-go-as-long-as-you-come-with-me.example-3",
+          "english": "A: I'll go as long as you come with me. B: Thanks for telling me.",
+          "korean": "A: 당신이 같이 가면 저도 갈게요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conditions.02-ill-go-as-long-as-you-come-with-me.variant-1",
+          "english": "You can borrow it provided that you're careful.",
+          "korean": "조심해서 쓴다는 조건으로 빌려도 돼요.",
+          "register": "neutral",
+          "nuanceKo": "같은 조건 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conditions.02-ill-go-as-long-as-you-come-with-me.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conditions.01-if-it-rains-well-stay-inside",
+          "conditions.03-you-can-borrow-it-provided-that-youre-care"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conditions.03-you-can-borrow-it-provided-that-youre-care"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'll go as long as you come with me.",
+        "lang": "en-US"
+      },
+      "sortKey": "031.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conditions.03-you-can-borrow-it-provided-that-youre-care",
+      "familyId": "conditions.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "You can borrow it provided that you're careful.",
+      "english": "You can borrow it provided that you're careful.",
+      "korean": "조심해서 쓴다는 조건으로 빌려도 돼요.",
+      "intentKo": "조건 상황에서 “조심해서 쓴다는 조건으로 빌려도 돼요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 조건 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conditions"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "조건",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conditions.03-you-can-borrow-it-provided-that-youre-care.example-1",
+          "english": "A: You can borrow it provided that you're careful. B: I see what you mean.",
+          "korean": "A: 조심해서 쓴다는 조건으로 빌려도 돼요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conditions.03-you-can-borrow-it-provided-that-youre-care.example-2",
+          "english": "A: You can borrow it provided that you're careful. B: That makes sense.",
+          "korean": "A: 조심해서 쓴다는 조건으로 빌려도 돼요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conditions.03-you-can-borrow-it-provided-that-youre-care.example-3",
+          "english": "A: You can borrow it provided that you're careful. B: Thanks for telling me.",
+          "korean": "A: 조심해서 쓴다는 조건으로 빌려도 돼요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conditions.03-you-can-borrow-it-provided-that-youre-care.variant-1",
+          "english": "Unless we leave now, we'll be late.",
+          "korean": "지금 출발하지 않으면 늦을 거예요.",
+          "register": "neutral",
+          "nuanceKo": "같은 조건 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conditions.03-you-can-borrow-it-provided-that-youre-care.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conditions.02-ill-go-as-long-as-you-come-with-me",
+          "conditions.04-unless-we-leave-now-well-be-late"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conditions.04-unless-we-leave-now-well-be-late"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "You can borrow it provided that you're careful.",
+        "lang": "en-US"
+      },
+      "sortKey": "031.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conditions.04-unless-we-leave-now-well-be-late",
+      "familyId": "conditions.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Unless we leave now, we'll be late.",
+      "english": "Unless we leave now, we'll be late.",
+      "korean": "지금 출발하지 않으면 늦을 거예요.",
+      "intentKo": "조건 상황에서 “지금 출발하지 않으면 늦을 거예요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 조건 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conditions"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "조건",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conditions.04-unless-we-leave-now-well-be-late.example-1",
+          "english": "A: Unless we leave now, we'll be late. B: I see what you mean.",
+          "korean": "A: 지금 출발하지 않으면 늦을 거예요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conditions.04-unless-we-leave-now-well-be-late.example-2",
+          "english": "A: Unless we leave now, we'll be late. B: That makes sense.",
+          "korean": "A: 지금 출발하지 않으면 늦을 거예요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conditions.04-unless-we-leave-now-well-be-late.example-3",
+          "english": "A: Unless we leave now, we'll be late. B: Thanks for telling me.",
+          "korean": "A: 지금 출발하지 않으면 늦을 거예요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conditions.04-unless-we-leave-now-well-be-late.variant-1",
+          "english": "Even if it's expensive, we still need it.",
+          "korean": "비싸더라도 우리에게는 필요해요.",
+          "register": "neutral",
+          "nuanceKo": "같은 조건 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conditions.04-unless-we-leave-now-well-be-late.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conditions.03-you-can-borrow-it-provided-that-youre-care",
+          "conditions.05-even-if-its-expensive-we-still-need-it"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conditions.05-even-if-its-expensive-we-still-need-it"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Unless we leave now, we'll be late.",
+        "lang": "en-US"
+      },
+      "sortKey": "031.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conditions.05-even-if-its-expensive-we-still-need-it",
+      "familyId": "conditions.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Even if it's expensive, we still need it.",
+      "english": "Even if it's expensive, we still need it.",
+      "korean": "비싸더라도 우리에게는 필요해요.",
+      "intentKo": "조건 상황에서 “비싸더라도 우리에게는 필요해요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 조건 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conditions"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "조건",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conditions.05-even-if-its-expensive-we-still-need-it.example-1",
+          "english": "A: Even if it's expensive, we still need it. B: I see what you mean.",
+          "korean": "A: 비싸더라도 우리에게는 필요해요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conditions.05-even-if-its-expensive-we-still-need-it.example-2",
+          "english": "A: Even if it's expensive, we still need it. B: That makes sense.",
+          "korean": "A: 비싸더라도 우리에게는 필요해요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conditions.05-even-if-its-expensive-we-still-need-it.example-3",
+          "english": "A: Even if it's expensive, we still need it. B: Thanks for telling me.",
+          "korean": "A: 비싸더라도 우리에게는 필요해요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conditions.05-even-if-its-expensive-we-still-need-it.variant-1",
+          "english": "In case you need me, keep my number.",
+          "korean": "제가 필요할 경우를 대비해 번호를 저장해 두세요.",
+          "register": "neutral",
+          "nuanceKo": "같은 조건 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conditions.05-even-if-its-expensive-we-still-need-it.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conditions.04-unless-we-leave-now-well-be-late",
+          "conditions.06-in-case-you-need-me-keep-my-number"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conditions.06-in-case-you-need-me-keep-my-number"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Even if it's expensive, we still need it.",
+        "lang": "en-US"
+      },
+      "sortKey": "031.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conditions.06-in-case-you-need-me-keep-my-number",
+      "familyId": "conditions.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "In case you need me, keep my number.",
+      "english": "In case you need me, keep my number.",
+      "korean": "제가 필요할 경우를 대비해 번호를 저장해 두세요.",
+      "intentKo": "조건 상황에서 “제가 필요할 경우를 대비해 번호를 저장해 두세요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 조건 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conditions"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "조건",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conditions.06-in-case-you-need-me-keep-my-number.example-1",
+          "english": "A: In case you need me, keep my number. B: I see what you mean.",
+          "korean": "A: 제가 필요할 경우를 대비해 번호를 저장해 두세요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conditions.06-in-case-you-need-me-keep-my-number.example-2",
+          "english": "A: In case you need me, keep my number. B: That makes sense.",
+          "korean": "A: 제가 필요할 경우를 대비해 번호를 저장해 두세요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conditions.06-in-case-you-need-me-keep-my-number.example-3",
+          "english": "A: In case you need me, keep my number. B: Thanks for telling me.",
+          "korean": "A: 제가 필요할 경우를 대비해 번호를 저장해 두세요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conditions.06-in-case-you-need-me-keep-my-number.variant-1",
+          "english": "What if the plan doesn't work?",
+          "korean": "계획대로 되지 않으면 어떡하죠?",
+          "register": "neutral",
+          "nuanceKo": "같은 조건 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conditions.06-in-case-you-need-me-keep-my-number.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conditions.05-even-if-its-expensive-we-still-need-it",
+          "conditions.07-what-if-the-plan-doesnt-work"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conditions.07-what-if-the-plan-doesnt-work"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "In case you need me, keep my number.",
+        "lang": "en-US"
+      },
+      "sortKey": "031.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conditions.07-what-if-the-plan-doesnt-work",
+      "familyId": "conditions.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "What if the plan doesn't work?",
+      "english": "What if the plan doesn't work?",
+      "korean": "계획대로 되지 않으면 어떡하죠?",
+      "intentKo": "조건 상황에서 “계획대로 되지 않으면 어떡하죠?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 조건 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conditions"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "조건",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conditions.07-what-if-the-plan-doesnt-work.example-1",
+          "english": "A: What if the plan doesn't work? B: I see what you mean.",
+          "korean": "A: 계획대로 되지 않으면 어떡하죠? B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conditions.07-what-if-the-plan-doesnt-work.example-2",
+          "english": "A: What if the plan doesn't work? B: That makes sense.",
+          "korean": "A: 계획대로 되지 않으면 어떡하죠? B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conditions.07-what-if-the-plan-doesnt-work.example-3",
+          "english": "A: What if the plan doesn't work? B: Thanks for telling me.",
+          "korean": "A: 계획대로 되지 않으면 어떡하죠? B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conditions.07-what-if-the-plan-doesnt-work.variant-1",
+          "english": "Had I known earlier, I would have helped.",
+          "korean": "더 일찍 알았더라면 도왔을 거예요.",
+          "register": "neutral",
+          "nuanceKo": "같은 조건 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conditions.07-what-if-the-plan-doesnt-work.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conditions.06-in-case-you-need-me-keep-my-number",
+          "conditions.08-had-i-known-earlier-i-would-have-helped"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conditions.08-had-i-known-earlier-i-would-have-helped"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "What if the plan doesn't work?",
+        "lang": "en-US"
+      },
+      "sortKey": "031.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conditions.08-had-i-known-earlier-i-would-have-helped",
+      "familyId": "conditions.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Had I known earlier, I would have helped.",
+      "english": "Had I known earlier, I would have helped.",
+      "korean": "더 일찍 알았더라면 도왔을 거예요.",
+      "intentKo": "조건 상황에서 “더 일찍 알았더라면 도왔을 거예요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 조건 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conditions"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "조건",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "conditions.08-had-i-known-earlier-i-would-have-helped.example-1",
+          "english": "A: Had I known earlier, I would have helped. B: I see what you mean.",
+          "korean": "A: 더 일찍 알았더라면 도왔을 거예요. B: 무슨 말인지 알겠어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conditions.08-had-i-known-earlier-i-would-have-helped.example-2",
+          "english": "A: Had I known earlier, I would have helped. B: That makes sense.",
+          "korean": "A: 더 일찍 알았더라면 도왔을 거예요. B: 말이 되네요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conditions.08-had-i-known-earlier-i-would-have-helped.example-3",
+          "english": "A: Had I known earlier, I would have helped. B: Thanks for telling me.",
+          "korean": "A: 더 일찍 알았더라면 도왔을 거예요. B: 말해줘서 고마워요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conditions.08-had-i-known-earlier-i-would-have-helped.variant-1",
+          "english": "If it rains, we'll stay inside.",
+          "korean": "비가 오면 실내에 있을 거예요.",
+          "register": "neutral",
+          "nuanceKo": "같은 조건 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conditions.08-had-i-known-earlier-i-would-have-helped.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conditions.07-what-if-the-plan-doesnt-work",
+          "conditions.01-if-it-rains-well-stay-inside"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conditions.01-if-it-rains-well-stay-inside"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Had I known earlier, I would have helped.",
+        "lang": "en-US"
+      },
+      "sortKey": "031.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "requests.01-could-you-help-me-with-this",
+      "familyId": "requests.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Could you help me with this?",
+      "english": "Could you help me with this?",
+      "korean": "이것 좀 도와주시겠어요?",
+      "intentKo": "부탁 상황에서 “이것 좀 도와주시겠어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 부탁 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "requests"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "부탁",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "requests.01-could-you-help-me-with-this.example-1",
+          "english": "A: Could you help me with this? B: Sure, no problem.",
+          "korean": "A: 이것 좀 도와주시겠어요? B: 물론이죠, 문제없어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "requests.01-could-you-help-me-with-this.example-2",
+          "english": "A: Could you help me with this? B: I'd be happy to.",
+          "korean": "A: 이것 좀 도와주시겠어요? B: 기꺼이 그럴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "requests.01-could-you-help-me-with-this.example-3",
+          "english": "A: Could you help me with this? B: Let me see what I can do.",
+          "korean": "A: 이것 좀 도와주시겠어요? B: 제가 어떻게 할 수 있는지 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "requests.01-could-you-help-me-with-this.variant-1",
+          "english": "Can you hold this for a second?",
+          "korean": "이것 좀 잠깐 들어줄래요?",
+          "register": "neutral",
+          "nuanceKo": "같은 부탁 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "requests.01-could-you-help-me-with-this.reply-1",
+          "english": "Sure, no problem.",
+          "korean": "물론이죠, 문제없어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "requests.08-would-it-be-possible-to-move-the-meeting",
+          "requests.02-can-you-hold-this-for-a-second"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "requests.02-can-you-hold-this-for-a-second"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Could you help me with this?",
+        "lang": "en-US"
+      },
+      "sortKey": "032.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "requests.02-can-you-hold-this-for-a-second",
+      "familyId": "requests.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Can you hold this for a second?",
+      "english": "Can you hold this for a second?",
+      "korean": "이것 좀 잠깐 들어줄래요?",
+      "intentKo": "부탁 상황에서 “이것 좀 잠깐 들어줄래요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 부탁 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "requests"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "부탁",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "requests.02-can-you-hold-this-for-a-second.example-1",
+          "english": "A: Can you hold this for a second? B: Sure, no problem.",
+          "korean": "A: 이것 좀 잠깐 들어줄래요? B: 물론이죠, 문제없어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "requests.02-can-you-hold-this-for-a-second.example-2",
+          "english": "A: Can you hold this for a second? B: I'd be happy to.",
+          "korean": "A: 이것 좀 잠깐 들어줄래요? B: 기꺼이 그럴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "requests.02-can-you-hold-this-for-a-second.example-3",
+          "english": "A: Can you hold this for a second? B: Let me see what I can do.",
+          "korean": "A: 이것 좀 잠깐 들어줄래요? B: 제가 어떻게 할 수 있는지 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "requests.02-can-you-hold-this-for-a-second.variant-1",
+          "english": "Would you mind closing the window?",
+          "korean": "창문을 닫아 주시겠어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 부탁 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "requests.02-can-you-hold-this-for-a-second.reply-1",
+          "english": "Sure, no problem.",
+          "korean": "물론이죠, 문제없어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "requests.01-could-you-help-me-with-this",
+          "requests.03-would-you-mind-closing-the-window"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "requests.03-would-you-mind-closing-the-window"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Can you hold this for a second?",
+        "lang": "en-US"
+      },
+      "sortKey": "032.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "requests.03-would-you-mind-closing-the-window",
+      "familyId": "requests.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Would you mind closing the window?",
+      "english": "Would you mind closing the window?",
+      "korean": "창문을 닫아 주시겠어요?",
+      "intentKo": "부탁 상황에서 “창문을 닫아 주시겠어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 부탁 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "requests"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "부탁",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "requests.03-would-you-mind-closing-the-window.example-1",
+          "english": "A: Would you mind closing the window? B: Sure, no problem.",
+          "korean": "A: 창문을 닫아 주시겠어요? B: 물론이죠, 문제없어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "requests.03-would-you-mind-closing-the-window.example-2",
+          "english": "A: Would you mind closing the window? B: I'd be happy to.",
+          "korean": "A: 창문을 닫아 주시겠어요? B: 기꺼이 그럴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "requests.03-would-you-mind-closing-the-window.example-3",
+          "english": "A: Would you mind closing the window? B: Let me see what I can do.",
+          "korean": "A: 창문을 닫아 주시겠어요? B: 제가 어떻게 할 수 있는지 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "requests.03-would-you-mind-closing-the-window.variant-1",
+          "english": "Could I ask you a favor?",
+          "korean": "부탁 하나 해도 될까요?",
+          "register": "neutral",
+          "nuanceKo": "같은 부탁 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "requests.03-would-you-mind-closing-the-window.reply-1",
+          "english": "Sure, no problem.",
+          "korean": "물론이죠, 문제없어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "Would you mind to close the window?",
+          "corrected": "Would you mind closing the window?",
+          "explanationKo": "Would you mind 뒤에는 to부정사가 아니라 동명사(-ing)를 쓴다."
+        }
+      ],
+      "relations": {
+        "similar": [
+          "requests.02-can-you-hold-this-for-a-second",
+          "requests.04-could-i-ask-you-a-favor"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "requests.04-could-i-ask-you-a-favor"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Would you mind closing the window?",
+        "lang": "en-US"
+      },
+      "sortKey": "032.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "requests.04-could-i-ask-you-a-favor",
+      "familyId": "requests.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Could I ask you a favor?",
+      "english": "Could I ask you a favor?",
+      "korean": "부탁 하나 해도 될까요?",
+      "intentKo": "부탁 상황에서 “부탁 하나 해도 될까요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 부탁 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "requests"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "부탁",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "requests.04-could-i-ask-you-a-favor.example-1",
+          "english": "A: Could I ask you a favor? B: Sure, no problem.",
+          "korean": "A: 부탁 하나 해도 될까요? B: 물론이죠, 문제없어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "requests.04-could-i-ask-you-a-favor.example-2",
+          "english": "A: Could I ask you a favor? B: I'd be happy to.",
+          "korean": "A: 부탁 하나 해도 될까요? B: 기꺼이 그럴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "requests.04-could-i-ask-you-a-favor.example-3",
+          "english": "A: Could I ask you a favor? B: Let me see what I can do.",
+          "korean": "A: 부탁 하나 해도 될까요? B: 제가 어떻게 할 수 있는지 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "requests.04-could-i-ask-you-a-favor.variant-1",
+          "english": "Please let me know when you're ready.",
+          "korean": "준비되면 알려 주세요.",
+          "register": "neutral",
+          "nuanceKo": "같은 부탁 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "requests.04-could-i-ask-you-a-favor.reply-1",
+          "english": "Sure, no problem.",
+          "korean": "물론이죠, 문제없어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "requests.03-would-you-mind-closing-the-window",
+          "requests.05-please-let-me-know-when-youre-ready"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "requests.05-please-let-me-know-when-youre-ready"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Could I ask you a favor?",
+        "lang": "en-US"
+      },
+      "sortKey": "032.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "requests.05-please-let-me-know-when-youre-ready",
+      "familyId": "requests.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Please let me know when you're ready.",
+      "english": "Please let me know when you're ready.",
+      "korean": "준비되면 알려 주세요.",
+      "intentKo": "부탁 상황에서 “준비되면 알려 주세요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 부탁 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "requests"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "부탁",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "requests.05-please-let-me-know-when-youre-ready.example-1",
+          "english": "A: Please let me know when you're ready. B: Sure, no problem.",
+          "korean": "A: 준비되면 알려 주세요. B: 물론이죠, 문제없어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "requests.05-please-let-me-know-when-youre-ready.example-2",
+          "english": "A: Please let me know when you're ready. B: I'd be happy to.",
+          "korean": "A: 준비되면 알려 주세요. B: 기꺼이 그럴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "requests.05-please-let-me-know-when-youre-ready.example-3",
+          "english": "A: Please let me know when you're ready. B: Let me see what I can do.",
+          "korean": "A: 준비되면 알려 주세요. B: 제가 어떻게 할 수 있는지 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "requests.05-please-let-me-know-when-youre-ready.variant-1",
+          "english": "Do you think you could come a little earlier?",
+          "korean": "조금 일찍 와줄 수 있을까요?",
+          "register": "neutral",
+          "nuanceKo": "같은 부탁 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "requests.05-please-let-me-know-when-youre-ready.reply-1",
+          "english": "Sure, no problem.",
+          "korean": "물론이죠, 문제없어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "requests.04-could-i-ask-you-a-favor",
+          "requests.06-do-you-think-you-could-come-a-little-earli"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "requests.06-do-you-think-you-could-come-a-little-earli"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Please let me know when you're ready.",
+        "lang": "en-US"
+      },
+      "sortKey": "032.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "requests.06-do-you-think-you-could-come-a-little-earli",
+      "familyId": "requests.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Do you think you could come a little earlier?",
+      "english": "Do you think you could come a little earlier?",
+      "korean": "조금 일찍 와줄 수 있을까요?",
+      "intentKo": "부탁 상황에서 “조금 일찍 와줄 수 있을까요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 부탁 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "requests"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "부탁",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "requests.06-do-you-think-you-could-come-a-little-earli.example-1",
+          "english": "A: Do you think you could come a little earlier? B: Sure, no problem.",
+          "korean": "A: 조금 일찍 와줄 수 있을까요? B: 물론이죠, 문제없어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "requests.06-do-you-think-you-could-come-a-little-earli.example-2",
+          "english": "A: Do you think you could come a little earlier? B: I'd be happy to.",
+          "korean": "A: 조금 일찍 와줄 수 있을까요? B: 기꺼이 그럴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "requests.06-do-you-think-you-could-come-a-little-earli.example-3",
+          "english": "A: Do you think you could come a little earlier? B: Let me see what I can do.",
+          "korean": "A: 조금 일찍 와줄 수 있을까요? B: 제가 어떻게 할 수 있는지 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "requests.06-do-you-think-you-could-come-a-little-earli.variant-1",
+          "english": "I'd appreciate it if you kept this private.",
+          "korean": "이 일을 비밀로 해주시면 감사하겠습니다.",
+          "register": "neutral",
+          "nuanceKo": "같은 부탁 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "requests.06-do-you-think-you-could-come-a-little-earli.reply-1",
+          "english": "Sure, no problem.",
+          "korean": "물론이죠, 문제없어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "requests.05-please-let-me-know-when-youre-ready",
+          "requests.07-id-appreciate-it-if-you-kept-this-private"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "requests.07-id-appreciate-it-if-you-kept-this-private"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Do you think you could come a little earlier?",
+        "lang": "en-US"
+      },
+      "sortKey": "032.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "requests.07-id-appreciate-it-if-you-kept-this-private",
+      "familyId": "requests.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'd appreciate it if you kept this private.",
+      "english": "I'd appreciate it if you kept this private.",
+      "korean": "이 일을 비밀로 해주시면 감사하겠습니다.",
+      "intentKo": "부탁 상황에서 “이 일을 비밀로 해주시면 감사하겠습니다.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 부탁 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "requests"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "부탁",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "requests.07-id-appreciate-it-if-you-kept-this-private.example-1",
+          "english": "A: I'd appreciate it if you kept this private. B: Sure, no problem.",
+          "korean": "A: 이 일을 비밀로 해주시면 감사하겠습니다. B: 물론이죠, 문제없어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "requests.07-id-appreciate-it-if-you-kept-this-private.example-2",
+          "english": "A: I'd appreciate it if you kept this private. B: I'd be happy to.",
+          "korean": "A: 이 일을 비밀로 해주시면 감사하겠습니다. B: 기꺼이 그럴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "requests.07-id-appreciate-it-if-you-kept-this-private.example-3",
+          "english": "A: I'd appreciate it if you kept this private. B: Let me see what I can do.",
+          "korean": "A: 이 일을 비밀로 해주시면 감사하겠습니다. B: 제가 어떻게 할 수 있는지 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "requests.07-id-appreciate-it-if-you-kept-this-private.variant-1",
+          "english": "Would it be possible to move the meeting?",
+          "korean": "회의 시간을 옮길 수 있을까요?",
+          "register": "neutral",
+          "nuanceKo": "같은 부탁 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "requests.07-id-appreciate-it-if-you-kept-this-private.reply-1",
+          "english": "Sure, no problem.",
+          "korean": "물론이죠, 문제없어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "requests.06-do-you-think-you-could-come-a-little-earli",
+          "requests.08-would-it-be-possible-to-move-the-meeting"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "requests.08-would-it-be-possible-to-move-the-meeting"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'd appreciate it if you kept this private.",
+        "lang": "en-US"
+      },
+      "sortKey": "032.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "requests.08-would-it-be-possible-to-move-the-meeting",
+      "familyId": "requests.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Would it be possible to move the meeting?",
+      "english": "Would it be possible to move the meeting?",
+      "korean": "회의 시간을 옮길 수 있을까요?",
+      "intentKo": "부탁 상황에서 “회의 시간을 옮길 수 있을까요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 부탁 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "requests"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "부탁",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "requests.08-would-it-be-possible-to-move-the-meeting.example-1",
+          "english": "A: Would it be possible to move the meeting? B: Sure, no problem.",
+          "korean": "A: 회의 시간을 옮길 수 있을까요? B: 물론이죠, 문제없어요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "requests.08-would-it-be-possible-to-move-the-meeting.example-2",
+          "english": "A: Would it be possible to move the meeting? B: I'd be happy to.",
+          "korean": "A: 회의 시간을 옮길 수 있을까요? B: 기꺼이 그럴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "requests.08-would-it-be-possible-to-move-the-meeting.example-3",
+          "english": "A: Would it be possible to move the meeting? B: Let me see what I can do.",
+          "korean": "A: 회의 시간을 옮길 수 있을까요? B: 제가 어떻게 할 수 있는지 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "requests.08-would-it-be-possible-to-move-the-meeting.variant-1",
+          "english": "Could you help me with this?",
+          "korean": "이것 좀 도와주시겠어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 부탁 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "requests.08-would-it-be-possible-to-move-the-meeting.reply-1",
+          "english": "Sure, no problem.",
+          "korean": "물론이죠, 문제없어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "requests.07-id-appreciate-it-if-you-kept-this-private",
+          "requests.01-could-you-help-me-with-this"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "requests.01-could-you-help-me-with-this"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Would it be possible to move the meeting?",
+        "lang": "en-US"
+      },
+      "sortKey": "032.001.008",
+      "releasedAt": "2026-08-08"
+    }
+  ]
+}

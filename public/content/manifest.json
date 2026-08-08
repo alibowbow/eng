@@ -1,0 +1,1069 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "2026.08.08",
+  "generatedAt": "2026-08-08T00:00:00.000Z",
+  "totalPatternCount": 520,
+  "packs": [
+    {
+      "packId": "core-conversation-001",
+      "titleKo": "핵심 대화 운영",
+      "titleEn": "Core Conversation",
+      "version": "1.0.0",
+      "url": "content/packs/core-conversation-001.json",
+      "hash": "sha256-745cee4a79555fd0eeb4a6ea8739b7639217391ca681989e13f55802d7e0468e",
+      "patternCount": 64,
+      "required": true,
+      "minAppVersion": "1.0.0",
+      "releasedAt": "2026-08-08",
+      "categoryIds": [
+        "ask-repeat",
+        "basic-questions",
+        "conversation-start",
+        "follow-up-questions",
+        "greetings",
+        "meaning-check",
+        "self-introduction",
+        "showing-interest"
+      ],
+      "situationIds": [
+        "conversation",
+        "daily",
+        "social"
+      ],
+      "tags": [
+        "관심 표현",
+        "다시 말해 달라고 하기",
+        "대화 시작",
+        "의미 확인",
+        "인사와 안부",
+        "자기소개",
+        "질문 만들기",
+        "추가 질문",
+        "핵심 표현",
+        "확장 표현"
+      ]
+    },
+    {
+      "packId": "meaning-description-001",
+      "titleKo": "의미·설명·묘사",
+      "titleEn": "Meaning and Description",
+      "version": "1.0.0",
+      "url": "content/packs/meaning-description-001.json",
+      "hash": "sha256-206abca9bd7d0b311ca7b721be5d05b96ed88b85df6125f5452fca7d9d040f78",
+      "patternCount": 64,
+      "required": true,
+      "minAppVersion": "1.0.0",
+      "releasedAt": "2026-08-08",
+      "categoryIds": [
+        "certainty",
+        "comparison",
+        "current-state",
+        "describing",
+        "examples",
+        "giving-reasons",
+        "guessing",
+        "opinions"
+      ],
+      "situationIds": [
+        "conversation",
+        "daily"
+      ],
+      "tags": [
+        "비교와 대조",
+        "사람과 사물 묘사",
+        "예시 들기",
+        "의견 표현",
+        "이유 설명",
+        "추측",
+        "핵심 표현",
+        "현재 상태",
+        "확신과 불확실성",
+        "확장 표현"
+      ]
+    },
+    {
+      "packId": "natural-spoken-001",
+      "titleKo": "자연스러운 구어체",
+      "titleEn": "Natural Spoken English",
+      "version": "1.0.0",
+      "url": "content/packs/natural-spoken-001.json",
+      "hash": "sha256-2a037ebc562c36c43b94310bd9b1cb8be9cc0647df28507721ea5e7eb4db09a6",
+      "patternCount": 56,
+      "required": true,
+      "minAppVersion": "1.0.0",
+      "releasedAt": "2026-08-08",
+      "categoryIds": [
+        "contractions",
+        "conversation-ending",
+        "fillers",
+        "idioms",
+        "phrasal-verbs",
+        "softening",
+        "topic-change"
+      ],
+      "situationIds": [
+        "conversation",
+        "daily"
+      ],
+      "tags": [
+        "대화 종료",
+        "완곡한 표현",
+        "일상적인 관용 표현",
+        "자연스러운 축약",
+        "자주 쓰는 구동사",
+        "필러와 말버릇",
+        "핵심 표현",
+        "화제 전환",
+        "확장 표현"
+      ]
+    },
+    {
+      "packId": "practical-situations-001",
+      "titleKo": "생활 상황 회화",
+      "titleEn": "Practical Situations",
+      "version": "1.0.0",
+      "url": "content/packs/practical-situations-001.json",
+      "hash": "sha256-e725d7e10a0a3216a80832fb6d168bf0c8930c12b09a3a248afebd801d8b9ad0",
+      "patternCount": 72,
+      "required": true,
+      "minAppVersion": "1.0.0",
+      "releasedAt": "2026-08-08",
+      "categoryIds": [
+        "emergency",
+        "hospital-pharmacy",
+        "phone-messages",
+        "restaurant-cafe",
+        "school-learning",
+        "shopping-payment",
+        "transport-directions",
+        "travel-hotel",
+        "work-meetings"
+      ],
+      "situationIds": [
+        "emergency",
+        "health",
+        "phone",
+        "restaurant",
+        "school",
+        "shopping",
+        "transport",
+        "travel",
+        "work"
+      ],
+      "tags": [
+        "교통과 길 찾기",
+        "병원과 약국",
+        "쇼핑과 결제",
+        "식당과 카페",
+        "여행과 숙박",
+        "응급 상황",
+        "전화와 메시지",
+        "직장과 회의",
+        "학교와 학습",
+        "핵심 표현",
+        "확장 표현"
+      ]
+    },
+    {
+      "packId": "repair-response-001",
+      "titleKo": "이해·반응·의견",
+      "titleEn": "Repair and Response",
+      "version": "1.0.0",
+      "url": "content/packs/repair-response-001.json",
+      "hash": "sha256-70da47de906f69c2b2cc80f726db05647c6bcddb3c0ba3d0121caab855d9933b",
+      "patternCount": 64,
+      "required": true,
+      "minAppVersion": "1.0.0",
+      "releasedAt": "2026-08-08",
+      "categoryIds": [
+        "agreement",
+        "correct-misunderstanding",
+        "empathy",
+        "partial-agreement",
+        "polite-disagreement",
+        "short-reactions",
+        "surprise",
+        "thinking-time"
+      ],
+      "situationIds": [
+        "conversation",
+        "social"
+      ],
+      "tags": [
+        "공감",
+        "놀람과 감탄",
+        "동의",
+        "부분 동의",
+        "생각할 시간 벌기",
+        "잘못 이해한 내용 수정",
+        "정중한 반대",
+        "짧은 반응",
+        "핵심 표현",
+        "확장 표현"
+      ]
+    },
+    {
+      "packId": "social-actions-001",
+      "titleKo": "부탁·제안·협상",
+      "titleEn": "Social Actions",
+      "version": "1.0.0",
+      "url": "content/packs/social-actions-001.json",
+      "hash": "sha256-2b4ecfa7aec02f6a98ba889c81406cb811a9fc18414dd264d1e0e18900b2b484",
+      "patternCount": 72,
+      "required": true,
+      "minAppVersion": "1.0.0",
+      "releasedAt": "2026-08-08",
+      "categoryIds": [
+        "accepting",
+        "advice",
+        "alternatives",
+        "invitations",
+        "negotiation",
+        "offering-help",
+        "permission",
+        "refusing",
+        "suggestions"
+      ],
+      "situationIds": [
+        "conversation",
+        "daily",
+        "social",
+        "work"
+      ],
+      "tags": [
+        "거절",
+        "권유",
+        "대안 제시",
+        "도움 제안",
+        "수락",
+        "제안",
+        "조언",
+        "핵심 표현",
+        "허락",
+        "협상",
+        "확장 표현"
+      ]
+    },
+    {
+      "packId": "social-care-001",
+      "titleKo": "감사·감정·문제",
+      "titleEn": "Social Care",
+      "version": "1.0.0",
+      "url": "content/packs/social-care-001.json",
+      "hash": "sha256-981207de4de6108bb345d6d3480fc64da08213442f0d3b741b13fc0e431d2bf5",
+      "patternCount": 64,
+      "required": true,
+      "minAppVersion": "1.0.0",
+      "releasedAt": "2026-08-08",
+      "categoryIds": [
+        "apologies",
+        "comfort",
+        "complaints",
+        "compliments",
+        "congratulations",
+        "raising-problems",
+        "returns-exchanges",
+        "thanks"
+      ],
+      "situationIds": [
+        "service",
+        "shopping",
+        "social",
+        "work"
+      ],
+      "tags": [
+        "감사",
+        "문제 제기",
+        "불만",
+        "사과",
+        "위로",
+        "축하",
+        "칭찬",
+        "핵심 표현",
+        "확장 표현",
+        "환불과 교환"
+      ]
+    },
+    {
+      "packId": "time-action-001",
+      "titleKo": "시간·경험·행동",
+      "titleEn": "Time and Action",
+      "version": "1.0.0",
+      "url": "content/packs/time-action-001.json",
+      "hash": "sha256-9f96a0dc3a9a681f2a89fef78ca62321b14892b32d0e6d6964c72c862bbd769e",
+      "patternCount": 64,
+      "required": true,
+      "minAppVersion": "1.0.0",
+      "releasedAt": "2026-08-08",
+      "categoryIds": [
+        "conditions",
+        "habits-frequency",
+        "hopes-intentions",
+        "past-experience",
+        "plans",
+        "promises",
+        "requests",
+        "storytelling"
+      ],
+      "situationIds": [
+        "conversation",
+        "daily",
+        "social"
+      ],
+      "tags": [
+        "계획과 예정",
+        "과거 경험",
+        "부탁",
+        "사건과 이야기",
+        "습관과 빈도",
+        "약속",
+        "조건",
+        "핵심 표현",
+        "확장 표현",
+        "희망과 의도"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "accepting",
+      "labelKo": "수락",
+      "labelEn": "Accepting",
+      "count": 8
+    },
+    {
+      "id": "advice",
+      "labelKo": "조언",
+      "labelEn": "Advice",
+      "count": 8
+    },
+    {
+      "id": "agreement",
+      "labelKo": "동의",
+      "labelEn": "Agreement",
+      "count": 8
+    },
+    {
+      "id": "alternatives",
+      "labelKo": "대안 제시",
+      "labelEn": "Offering alternatives",
+      "count": 8
+    },
+    {
+      "id": "apologies",
+      "labelKo": "사과",
+      "labelEn": "Apologies",
+      "count": 8
+    },
+    {
+      "id": "ask-repeat",
+      "labelKo": "다시 말해 달라고 하기",
+      "labelEn": "Asking for repetition",
+      "count": 8
+    },
+    {
+      "id": "basic-questions",
+      "labelKo": "질문 만들기",
+      "labelEn": "Building questions",
+      "count": 8
+    },
+    {
+      "id": "certainty",
+      "labelKo": "확신과 불확실성",
+      "labelEn": "Certainty and uncertainty",
+      "count": 8
+    },
+    {
+      "id": "comfort",
+      "labelKo": "위로",
+      "labelEn": "Comforting",
+      "count": 8
+    },
+    {
+      "id": "comparison",
+      "labelKo": "비교와 대조",
+      "labelEn": "Comparison and contrast",
+      "count": 8
+    },
+    {
+      "id": "complaints",
+      "labelKo": "불만",
+      "labelEn": "Complaints",
+      "count": 8
+    },
+    {
+      "id": "compliments",
+      "labelKo": "칭찬",
+      "labelEn": "Compliments",
+      "count": 8
+    },
+    {
+      "id": "conditions",
+      "labelKo": "조건",
+      "labelEn": "Conditions",
+      "count": 8
+    },
+    {
+      "id": "congratulations",
+      "labelKo": "축하",
+      "labelEn": "Congratulations",
+      "count": 8
+    },
+    {
+      "id": "contractions",
+      "labelKo": "자연스러운 축약",
+      "labelEn": "Natural contractions",
+      "count": 8
+    },
+    {
+      "id": "conversation-ending",
+      "labelKo": "대화 종료",
+      "labelEn": "Ending a conversation",
+      "count": 8
+    },
+    {
+      "id": "conversation-start",
+      "labelKo": "대화 시작",
+      "labelEn": "Starting a conversation",
+      "count": 8
+    },
+    {
+      "id": "correct-misunderstanding",
+      "labelKo": "잘못 이해한 내용 수정",
+      "labelEn": "Correcting misunderstandings",
+      "count": 8
+    },
+    {
+      "id": "current-state",
+      "labelKo": "현재 상태",
+      "labelEn": "Current state",
+      "count": 8
+    },
+    {
+      "id": "describing",
+      "labelKo": "사람과 사물 묘사",
+      "labelEn": "Describing people and things",
+      "count": 8
+    },
+    {
+      "id": "emergency",
+      "labelKo": "긴급 상황",
+      "labelEn": "Emergency",
+      "count": 8
+    },
+    {
+      "id": "empathy",
+      "labelKo": "공감",
+      "labelEn": "Empathy",
+      "count": 8
+    },
+    {
+      "id": "examples",
+      "labelKo": "예시 들기",
+      "labelEn": "Giving examples",
+      "count": 8
+    },
+    {
+      "id": "fillers",
+      "labelKo": "필러와 말버릇",
+      "labelEn": "Fillers and discourse markers",
+      "count": 8
+    },
+    {
+      "id": "follow-up-questions",
+      "labelKo": "추가 질문",
+      "labelEn": "Follow-up questions",
+      "count": 8
+    },
+    {
+      "id": "giving-reasons",
+      "labelKo": "이유 설명",
+      "labelEn": "Giving reasons",
+      "count": 8
+    },
+    {
+      "id": "greetings",
+      "labelKo": "인사와 안부",
+      "labelEn": "Greetings and well-being",
+      "count": 8
+    },
+    {
+      "id": "guessing",
+      "labelKo": "추측",
+      "labelEn": "Guessing",
+      "count": 8
+    },
+    {
+      "id": "habits-frequency",
+      "labelKo": "습관과 빈도",
+      "labelEn": "Habits and frequency",
+      "count": 8
+    },
+    {
+      "id": "hopes-intentions",
+      "labelKo": "희망과 의도",
+      "labelEn": "Hopes and intentions",
+      "count": 8
+    },
+    {
+      "id": "hospital-pharmacy",
+      "labelKo": "병원과 약국",
+      "labelEn": "Hospital and pharmacy",
+      "count": 8
+    },
+    {
+      "id": "idioms",
+      "labelKo": "일상적인 관용 표현",
+      "labelEn": "Everyday idioms",
+      "count": 8
+    },
+    {
+      "id": "invitations",
+      "labelKo": "권유",
+      "labelEn": "Invitations",
+      "count": 8
+    },
+    {
+      "id": "meaning-check",
+      "labelKo": "의미 확인",
+      "labelEn": "Checking meaning",
+      "count": 8
+    },
+    {
+      "id": "negotiation",
+      "labelKo": "협상",
+      "labelEn": "Negotiation",
+      "count": 8
+    },
+    {
+      "id": "offering-help",
+      "labelKo": "도움 제안",
+      "labelEn": "Offering help",
+      "count": 8
+    },
+    {
+      "id": "opinions",
+      "labelKo": "의견 표현",
+      "labelEn": "Expressing opinions",
+      "count": 8
+    },
+    {
+      "id": "partial-agreement",
+      "labelKo": "부분 동의",
+      "labelEn": "Partial agreement",
+      "count": 8
+    },
+    {
+      "id": "past-experience",
+      "labelKo": "과거 경험",
+      "labelEn": "Past experiences",
+      "count": 8
+    },
+    {
+      "id": "permission",
+      "labelKo": "허락",
+      "labelEn": "Permission",
+      "count": 8
+    },
+    {
+      "id": "phone-messages",
+      "labelKo": "전화와 메시지",
+      "labelEn": "Phone and messages",
+      "count": 8
+    },
+    {
+      "id": "phrasal-verbs",
+      "labelKo": "자주 쓰는 구동사",
+      "labelEn": "Everyday phrasal verbs",
+      "count": 8
+    },
+    {
+      "id": "plans",
+      "labelKo": "계획과 예정",
+      "labelEn": "Plans and arrangements",
+      "count": 8
+    },
+    {
+      "id": "polite-disagreement",
+      "labelKo": "정중한 반대",
+      "labelEn": "Polite disagreement",
+      "count": 8
+    },
+    {
+      "id": "promises",
+      "labelKo": "약속",
+      "labelEn": "Promises",
+      "count": 8
+    },
+    {
+      "id": "raising-problems",
+      "labelKo": "문제 제기",
+      "labelEn": "Raising problems",
+      "count": 8
+    },
+    {
+      "id": "refusing",
+      "labelKo": "거절",
+      "labelEn": "Refusing",
+      "count": 8
+    },
+    {
+      "id": "requests",
+      "labelKo": "부탁",
+      "labelEn": "Requests",
+      "count": 8
+    },
+    {
+      "id": "restaurant-cafe",
+      "labelKo": "식당과 카페",
+      "labelEn": "Restaurants and cafes",
+      "count": 8
+    },
+    {
+      "id": "returns-exchanges",
+      "labelKo": "환불과 교환",
+      "labelEn": "Returns and exchanges",
+      "count": 8
+    },
+    {
+      "id": "school-learning",
+      "labelKo": "학교와 학습",
+      "labelEn": "School and learning",
+      "count": 8
+    },
+    {
+      "id": "self-introduction",
+      "labelKo": "자기소개",
+      "labelEn": "Introducing yourself",
+      "count": 8
+    },
+    {
+      "id": "shopping-payment",
+      "labelKo": "쇼핑과 결제",
+      "labelEn": "Shopping and payment",
+      "count": 8
+    },
+    {
+      "id": "short-reactions",
+      "labelKo": "짧은 반응",
+      "labelEn": "Short reactions",
+      "count": 8
+    },
+    {
+      "id": "showing-interest",
+      "labelKo": "관심 표현",
+      "labelEn": "Showing interest",
+      "count": 8
+    },
+    {
+      "id": "softening",
+      "labelKo": "완곡한 표현",
+      "labelEn": "Softening language",
+      "count": 8
+    },
+    {
+      "id": "storytelling",
+      "labelKo": "사건과 이야기",
+      "labelEn": "Events and storytelling",
+      "count": 8
+    },
+    {
+      "id": "suggestions",
+      "labelKo": "제안",
+      "labelEn": "Suggestions",
+      "count": 8
+    },
+    {
+      "id": "surprise",
+      "labelKo": "놀람과 감탄",
+      "labelEn": "Surprise and exclamation",
+      "count": 8
+    },
+    {
+      "id": "thanks",
+      "labelKo": "감사",
+      "labelEn": "Thanks",
+      "count": 8
+    },
+    {
+      "id": "thinking-time",
+      "labelKo": "생각할 시간 벌기",
+      "labelEn": "Buying thinking time",
+      "count": 8
+    },
+    {
+      "id": "topic-change",
+      "labelKo": "화제 전환",
+      "labelEn": "Changing the subject",
+      "count": 8
+    },
+    {
+      "id": "transport-directions",
+      "labelKo": "교통과 길 찾기",
+      "labelEn": "Transport and directions",
+      "count": 8
+    },
+    {
+      "id": "travel-hotel",
+      "labelKo": "여행과 숙박",
+      "labelEn": "Travel and accommodation",
+      "count": 8
+    },
+    {
+      "id": "work-meetings",
+      "labelKo": "직장과 회의",
+      "labelEn": "Work and meetings",
+      "count": 8
+    }
+  ],
+  "situations": [
+    {
+      "id": "conversation",
+      "labelKo": "대화",
+      "labelEn": "Conversation",
+      "count": 160
+    },
+    {
+      "id": "daily",
+      "labelKo": "일상",
+      "labelEn": "Daily life",
+      "count": 144
+    },
+    {
+      "id": "emergency",
+      "labelKo": "긴급 상황",
+      "labelEn": "Emergency",
+      "count": 8
+    },
+    {
+      "id": "health",
+      "labelKo": "병원",
+      "labelEn": "Health",
+      "count": 8
+    },
+    {
+      "id": "phone",
+      "labelKo": "전화",
+      "labelEn": "Phone",
+      "count": 8
+    },
+    {
+      "id": "restaurant",
+      "labelKo": "식당",
+      "labelEn": "Restaurant",
+      "count": 8
+    },
+    {
+      "id": "school",
+      "labelKo": "학교",
+      "labelEn": "School",
+      "count": 8
+    },
+    {
+      "id": "service",
+      "labelKo": "서비스",
+      "labelEn": "Service",
+      "count": 8
+    },
+    {
+      "id": "shopping",
+      "labelKo": "쇼핑",
+      "labelEn": "Shopping",
+      "count": 16
+    },
+    {
+      "id": "social",
+      "labelKo": "사교",
+      "labelEn": "Social",
+      "count": 112
+    },
+    {
+      "id": "transport",
+      "labelKo": "교통",
+      "labelEn": "Transport",
+      "count": 8
+    },
+    {
+      "id": "travel",
+      "labelKo": "여행",
+      "labelEn": "Travel",
+      "count": 8
+    },
+    {
+      "id": "work",
+      "labelKo": "직장",
+      "labelEn": "Work",
+      "count": 24
+    }
+  ],
+  "tags": [
+    {
+      "id": "감사",
+      "count": 8
+    },
+    {
+      "id": "거절",
+      "count": 8
+    },
+    {
+      "id": "계획과 예정",
+      "count": 8
+    },
+    {
+      "id": "공감",
+      "count": 8
+    },
+    {
+      "id": "과거 경험",
+      "count": 8
+    },
+    {
+      "id": "관심 표현",
+      "count": 8
+    },
+    {
+      "id": "교통과 길 찾기",
+      "count": 8
+    },
+    {
+      "id": "권유",
+      "count": 8
+    },
+    {
+      "id": "놀람과 감탄",
+      "count": 8
+    },
+    {
+      "id": "다시 말해 달라고 하기",
+      "count": 8
+    },
+    {
+      "id": "대안 제시",
+      "count": 8
+    },
+    {
+      "id": "대화 시작",
+      "count": 8
+    },
+    {
+      "id": "대화 종료",
+      "count": 8
+    },
+    {
+      "id": "도움 제안",
+      "count": 8
+    },
+    {
+      "id": "동의",
+      "count": 8
+    },
+    {
+      "id": "문제 제기",
+      "count": 8
+    },
+    {
+      "id": "병원과 약국",
+      "count": 8
+    },
+    {
+      "id": "부분 동의",
+      "count": 8
+    },
+    {
+      "id": "부탁",
+      "count": 8
+    },
+    {
+      "id": "불만",
+      "count": 8
+    },
+    {
+      "id": "비교와 대조",
+      "count": 8
+    },
+    {
+      "id": "사건과 이야기",
+      "count": 8
+    },
+    {
+      "id": "사과",
+      "count": 8
+    },
+    {
+      "id": "사람과 사물 묘사",
+      "count": 8
+    },
+    {
+      "id": "생각할 시간 벌기",
+      "count": 8
+    },
+    {
+      "id": "쇼핑과 결제",
+      "count": 8
+    },
+    {
+      "id": "수락",
+      "count": 8
+    },
+    {
+      "id": "습관과 빈도",
+      "count": 8
+    },
+    {
+      "id": "식당과 카페",
+      "count": 8
+    },
+    {
+      "id": "약속",
+      "count": 8
+    },
+    {
+      "id": "여행과 숙박",
+      "count": 8
+    },
+    {
+      "id": "예시 들기",
+      "count": 8
+    },
+    {
+      "id": "완곡한 표현",
+      "count": 8
+    },
+    {
+      "id": "위로",
+      "count": 8
+    },
+    {
+      "id": "응급 상황",
+      "count": 8
+    },
+    {
+      "id": "의견 표현",
+      "count": 8
+    },
+    {
+      "id": "의미 확인",
+      "count": 8
+    },
+    {
+      "id": "이유 설명",
+      "count": 8
+    },
+    {
+      "id": "인사와 안부",
+      "count": 8
+    },
+    {
+      "id": "일상적인 관용 표현",
+      "count": 8
+    },
+    {
+      "id": "자기소개",
+      "count": 8
+    },
+    {
+      "id": "자연스러운 축약",
+      "count": 8
+    },
+    {
+      "id": "자주 쓰는 구동사",
+      "count": 8
+    },
+    {
+      "id": "잘못 이해한 내용 수정",
+      "count": 8
+    },
+    {
+      "id": "전화와 메시지",
+      "count": 8
+    },
+    {
+      "id": "정중한 반대",
+      "count": 8
+    },
+    {
+      "id": "제안",
+      "count": 8
+    },
+    {
+      "id": "조건",
+      "count": 8
+    },
+    {
+      "id": "조언",
+      "count": 8
+    },
+    {
+      "id": "직장과 회의",
+      "count": 8
+    },
+    {
+      "id": "질문 만들기",
+      "count": 8
+    },
+    {
+      "id": "짧은 반응",
+      "count": 8
+    },
+    {
+      "id": "추가 질문",
+      "count": 8
+    },
+    {
+      "id": "추측",
+      "count": 8
+    },
+    {
+      "id": "축하",
+      "count": 8
+    },
+    {
+      "id": "칭찬",
+      "count": 8
+    },
+    {
+      "id": "필러와 말버릇",
+      "count": 8
+    },
+    {
+      "id": "학교와 학습",
+      "count": 8
+    },
+    {
+      "id": "핵심 표현",
+      "count": 195
+    },
+    {
+      "id": "허락",
+      "count": 8
+    },
+    {
+      "id": "현재 상태",
+      "count": 8
+    },
+    {
+      "id": "협상",
+      "count": 8
+    },
+    {
+      "id": "화제 전환",
+      "count": 8
+    },
+    {
+      "id": "확신과 불확실성",
+      "count": 8
+    },
+    {
+      "id": "확장 표현",
+      "count": 325
+    },
+    {
+      "id": "환불과 교환",
+      "count": 8
+    },
+    {
+      "id": "희망과 의도",
+      "count": 8
+    }
+  ]
+}

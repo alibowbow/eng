@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">SayGrid</title>
+  <rect width="512" height="512" fill="#dbeaf3"/>
+  <g transform="translate(52 56) scale(.8)" fill="none" stroke="#537b91" stroke-width="28">
+    <rect x="82" y="86" width="348" height="270" rx="64" fill="#f7f3e9"/>
+    <path d="M174 356l-34 76 104-76" fill="#f7f3e9" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(52 56) scale(.8)" fill="#294756">
+    <circle cx="170" cy="220" r="22"/>
+    <circle cx="256" cy="220" r="22"/>
+    <circle cx="342" cy="220" r="22"/>
+  </g>
+</svg>

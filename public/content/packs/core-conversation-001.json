@@ -1,0 +1,5594 @@
+{
+  "schemaVersion": 1,
+  "packId": "core-conversation-001",
+  "titleKo": "핵심 대화 운영",
+  "titleEn": "Core Conversation",
+  "descriptionKo": "대화 시작 · 인사와 안부 · 자기소개 · 관심 표현 · 질문 만들기 · 추가 질문 · 의미 확인 · 다시 말해 달라고 하기 핵심 패턴",
+  "version": "1.0.0",
+  "contentVersion": 1,
+  "required": true,
+  "minAppVersion": "1.0.0",
+  "releasedAt": "2026-08-08",
+  "categories": [
+    {
+      "id": "ask-repeat",
+      "labelKo": "다시 말해 달라고 하기",
+      "labelEn": "Asking for repetition"
+    },
+    {
+      "id": "basic-questions",
+      "labelKo": "질문 만들기",
+      "labelEn": "Building questions"
+    },
+    {
+      "id": "conversation-start",
+      "labelKo": "대화 시작",
+      "labelEn": "Starting a conversation"
+    },
+    {
+      "id": "follow-up-questions",
+      "labelKo": "추가 질문",
+      "labelEn": "Follow-up questions"
+    },
+    {
+      "id": "greetings",
+      "labelKo": "인사와 안부",
+      "labelEn": "Greetings and well-being"
+    },
+    {
+      "id": "meaning-check",
+      "labelKo": "의미 확인",
+      "labelEn": "Checking meaning"
+    },
+    {
+      "id": "self-introduction",
+      "labelKo": "자기소개",
+      "labelEn": "Introducing yourself"
+    },
+    {
+      "id": "showing-interest",
+      "labelKo": "관심 표현",
+      "labelEn": "Showing interest"
+    }
+  ],
+  "situations": [
+    {
+      "id": "conversation",
+      "labelKo": "대화",
+      "labelEn": "Conversation"
+    },
+    {
+      "id": "daily",
+      "labelKo": "일상",
+      "labelEn": "Daily life"
+    },
+    {
+      "id": "social",
+      "labelKo": "사교",
+      "labelEn": "Social"
+    }
+  ],
+  "patterns": [
+    {
+      "id": "conversation-start.01-do-you-have-a-minute",
+      "familyId": "conversation-start.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Do you have a minute?",
+      "english": "Do you have a minute?",
+      "korean": "잠깐 시간 있어요?",
+      "intentKo": "대화 시작 상황에서 “잠깐 시간 있어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 대화 시작 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conversation-start"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "대화 시작",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conversation-start.01-do-you-have-a-minute.example-1",
+          "english": "A: Do you have a minute? B: Let me think for a second.",
+          "korean": "A: 잠깐 시간 있어요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-start.01-do-you-have-a-minute.example-2",
+          "english": "A: Do you have a minute? B: That's a good question.",
+          "korean": "A: 잠깐 시간 있어요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-start.01-do-you-have-a-minute.example-3",
+          "english": "A: Do you have a minute? B: I'll check and let you know.",
+          "korean": "A: 잠깐 시간 있어요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conversation-start.01-do-you-have-a-minute.variant-1",
+          "english": "Can I ask you something?",
+          "korean": "뭐 하나 물어봐도 돼요?",
+          "register": "neutral",
+          "nuanceKo": "같은 대화 시작 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conversation-start.01-do-you-have-a-minute.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conversation-start.08-so-what-brings-you-here",
+          "conversation-start.02-can-i-ask-you-something"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conversation-start.02-can-i-ask-you-something"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Do you have a minute?",
+        "lang": "en-US"
+      },
+      "sortKey": "001.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conversation-start.02-can-i-ask-you-something",
+      "familyId": "conversation-start.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Can I ask you something?",
+      "english": "Can I ask you something?",
+      "korean": "뭐 하나 물어봐도 돼요?",
+      "intentKo": "대화 시작 상황에서 “뭐 하나 물어봐도 돼요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 대화 시작 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conversation-start"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "대화 시작",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conversation-start.02-can-i-ask-you-something.example-1",
+          "english": "A: Can I ask you something? B: Let me think for a second.",
+          "korean": "A: 뭐 하나 물어봐도 돼요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-start.02-can-i-ask-you-something.example-2",
+          "english": "A: Can I ask you something? B: That's a good question.",
+          "korean": "A: 뭐 하나 물어봐도 돼요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-start.02-can-i-ask-you-something.example-3",
+          "english": "A: Can I ask you something? B: I'll check and let you know.",
+          "korean": "A: 뭐 하나 물어봐도 돼요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conversation-start.02-can-i-ask-you-something.variant-1",
+          "english": "There's something I'd like to talk about.",
+          "korean": "이야기하고 싶은 게 있어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 대화 시작 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conversation-start.02-can-i-ask-you-something.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conversation-start.01-do-you-have-a-minute",
+          "conversation-start.03-theres-something-id-like-to-talk-about"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conversation-start.03-theres-something-id-like-to-talk-about"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Can I ask you something?",
+        "lang": "en-US"
+      },
+      "sortKey": "001.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conversation-start.03-theres-something-id-like-to-talk-about",
+      "familyId": "conversation-start.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "There's something I'd like to talk about.",
+      "english": "There's something I'd like to talk about.",
+      "korean": "이야기하고 싶은 게 있어요.",
+      "intentKo": "대화 시작 상황에서 “이야기하고 싶은 게 있어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 대화 시작 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conversation-start"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "대화 시작",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conversation-start.03-theres-something-id-like-to-talk-about.example-1",
+          "english": "A: There's something I'd like to talk about. B: Let me think for a second.",
+          "korean": "A: 이야기하고 싶은 게 있어요. B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-start.03-theres-something-id-like-to-talk-about.example-2",
+          "english": "A: There's something I'd like to talk about. B: That's a good question.",
+          "korean": "A: 이야기하고 싶은 게 있어요. B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-start.03-theres-something-id-like-to-talk-about.example-3",
+          "english": "A: There's something I'd like to talk about. B: I'll check and let you know.",
+          "korean": "A: 이야기하고 싶은 게 있어요. B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conversation-start.03-theres-something-id-like-to-talk-about.variant-1",
+          "english": "How's your day going?",
+          "korean": "오늘 하루 어때요?",
+          "register": "neutral",
+          "nuanceKo": "같은 대화 시작 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conversation-start.03-theres-something-id-like-to-talk-about.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conversation-start.02-can-i-ask-you-something",
+          "conversation-start.04-hows-your-day-going"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conversation-start.04-hows-your-day-going"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "There's something I'd like to talk about.",
+        "lang": "en-US"
+      },
+      "sortKey": "001.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conversation-start.04-hows-your-day-going",
+      "familyId": "conversation-start.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "How's your day going?",
+      "english": "How's your day going?",
+      "korean": "오늘 하루 어때요?",
+      "intentKo": "대화 시작 상황에서 “오늘 하루 어때요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 대화 시작 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conversation-start"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "대화 시작",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conversation-start.04-hows-your-day-going.example-1",
+          "english": "A: How's your day going? B: Let me think for a second.",
+          "korean": "A: 오늘 하루 어때요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-start.04-hows-your-day-going.example-2",
+          "english": "A: How's your day going? B: That's a good question.",
+          "korean": "A: 오늘 하루 어때요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-start.04-hows-your-day-going.example-3",
+          "english": "A: How's your day going? B: I'll check and let you know.",
+          "korean": "A: 오늘 하루 어때요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conversation-start.04-hows-your-day-going.variant-1",
+          "english": "What have you been up to?",
+          "korean": "그동안 뭐 하고 지냈어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 대화 시작 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conversation-start.04-hows-your-day-going.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conversation-start.03-theres-something-id-like-to-talk-about",
+          "conversation-start.05-what-have-you-been-up-to"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conversation-start.05-what-have-you-been-up-to"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "How's your day going?",
+        "lang": "en-US"
+      },
+      "sortKey": "001.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conversation-start.05-what-have-you-been-up-to",
+      "familyId": "conversation-start.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "What have you been up to?",
+      "english": "What have you been up to?",
+      "korean": "그동안 뭐 하고 지냈어요?",
+      "intentKo": "대화 시작 상황에서 “그동안 뭐 하고 지냈어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 대화 시작 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conversation-start"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "대화 시작",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conversation-start.05-what-have-you-been-up-to.example-1",
+          "english": "A: What have you been up to? B: Let me think for a second.",
+          "korean": "A: 그동안 뭐 하고 지냈어요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-start.05-what-have-you-been-up-to.example-2",
+          "english": "A: What have you been up to? B: That's a good question.",
+          "korean": "A: 그동안 뭐 하고 지냈어요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-start.05-what-have-you-been-up-to.example-3",
+          "english": "A: What have you been up to? B: I'll check and let you know.",
+          "korean": "A: 그동안 뭐 하고 지냈어요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conversation-start.05-what-have-you-been-up-to.variant-1",
+          "english": "I don't think we've met.",
+          "korean": "우리 처음 보는 것 같아요.",
+          "register": "neutral",
+          "nuanceKo": "같은 대화 시작 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conversation-start.05-what-have-you-been-up-to.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conversation-start.04-hows-your-day-going",
+          "conversation-start.06-i-dont-think-weve-met"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conversation-start.06-i-dont-think-weve-met"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "What have you been up to?",
+        "lang": "en-US"
+      },
+      "sortKey": "001.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conversation-start.06-i-dont-think-weve-met",
+      "familyId": "conversation-start.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I don't think we've met.",
+      "english": "I don't think we've met.",
+      "korean": "우리 처음 보는 것 같아요.",
+      "intentKo": "대화 시작 상황에서 “우리 처음 보는 것 같아요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 대화 시작 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conversation-start"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "대화 시작",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conversation-start.06-i-dont-think-weve-met.example-1",
+          "english": "A: I don't think we've met. B: Let me think for a second.",
+          "korean": "A: 우리 처음 보는 것 같아요. B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-start.06-i-dont-think-weve-met.example-2",
+          "english": "A: I don't think we've met. B: That's a good question.",
+          "korean": "A: 우리 처음 보는 것 같아요. B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-start.06-i-dont-think-weve-met.example-3",
+          "english": "A: I don't think we've met. B: I'll check and let you know.",
+          "korean": "A: 우리 처음 보는 것 같아요. B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conversation-start.06-i-dont-think-weve-met.variant-1",
+          "english": "Mind if I join you?",
+          "korean": "같이 있어도 될까요?",
+          "register": "neutral",
+          "nuanceKo": "같은 대화 시작 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conversation-start.06-i-dont-think-weve-met.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conversation-start.05-what-have-you-been-up-to",
+          "conversation-start.07-mind-if-i-join-you"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conversation-start.07-mind-if-i-join-you"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I don't think we've met.",
+        "lang": "en-US"
+      },
+      "sortKey": "001.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conversation-start.07-mind-if-i-join-you",
+      "familyId": "conversation-start.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Mind if I join you?",
+      "english": "Mind if I join you?",
+      "korean": "같이 있어도 될까요?",
+      "intentKo": "대화 시작 상황에서 “같이 있어도 될까요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 대화 시작 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conversation-start"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "대화 시작",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conversation-start.07-mind-if-i-join-you.example-1",
+          "english": "A: Mind if I join you? B: Let me think for a second.",
+          "korean": "A: 같이 있어도 될까요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-start.07-mind-if-i-join-you.example-2",
+          "english": "A: Mind if I join you? B: That's a good question.",
+          "korean": "A: 같이 있어도 될까요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-start.07-mind-if-i-join-you.example-3",
+          "english": "A: Mind if I join you? B: I'll check and let you know.",
+          "korean": "A: 같이 있어도 될까요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conversation-start.07-mind-if-i-join-you.variant-1",
+          "english": "So, what brings you here?",
+          "korean": "그런데 여기엔 무슨 일로 오셨어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 대화 시작 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conversation-start.07-mind-if-i-join-you.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conversation-start.06-i-dont-think-weve-met",
+          "conversation-start.08-so-what-brings-you-here"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conversation-start.08-so-what-brings-you-here"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Mind if I join you?",
+        "lang": "en-US"
+      },
+      "sortKey": "001.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "conversation-start.08-so-what-brings-you-here",
+      "familyId": "conversation-start.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "So, what brings you here?",
+      "english": "So, what brings you here?",
+      "korean": "그런데 여기엔 무슨 일로 오셨어요?",
+      "intentKo": "대화 시작 상황에서 “그런데 여기엔 무슨 일로 오셨어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 대화 시작 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "conversation-start"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "대화 시작",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "conversation-start.08-so-what-brings-you-here.example-1",
+          "english": "A: So, what brings you here? B: Let me think for a second.",
+          "korean": "A: 그런데 여기엔 무슨 일로 오셨어요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-start.08-so-what-brings-you-here.example-2",
+          "english": "A: So, what brings you here? B: That's a good question.",
+          "korean": "A: 그런데 여기엔 무슨 일로 오셨어요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "conversation-start.08-so-what-brings-you-here.example-3",
+          "english": "A: So, what brings you here? B: I'll check and let you know.",
+          "korean": "A: 그런데 여기엔 무슨 일로 오셨어요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "conversation-start.08-so-what-brings-you-here.variant-1",
+          "english": "Do you have a minute?",
+          "korean": "잠깐 시간 있어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 대화 시작 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "conversation-start.08-so-what-brings-you-here.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "conversation-start.07-mind-if-i-join-you",
+          "conversation-start.01-do-you-have-a-minute"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "conversation-start.01-do-you-have-a-minute"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "So, what brings you here?",
+        "lang": "en-US"
+      },
+      "sortKey": "001.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "greetings.01-good-morning-how-are-you",
+      "familyId": "greetings.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Good morning. How are you?",
+      "english": "Good morning. How are you?",
+      "korean": "좋은 아침이에요. 잘 지내세요?",
+      "intentKo": "인사와 안부 상황에서 “좋은 아침이에요. 잘 지내세요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 인사와 안부 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "greetings"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "인사와 안부",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "greetings.01-good-morning-how-are-you.example-1",
+          "english": "A: Good morning. How are you? B: Hi! It's good to see you too.",
+          "korean": "A: 좋은 아침이에요. 잘 지내세요? B: 안녕하세요! 저도 만나서 반가워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "greetings.01-good-morning-how-are-you.example-2",
+          "english": "A: Good morning. How are you? B: I'm doing well, thanks.",
+          "korean": "A: 좋은 아침이에요. 잘 지내세요? B: 잘 지내요, 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "greetings.01-good-morning-how-are-you.example-3",
+          "english": "A: Good morning. How are you? B: You too. Take care!",
+          "korean": "A: 좋은 아침이에요. 잘 지내세요? B: 당신도요. 잘 지내요!",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "greetings.01-good-morning-how-are-you.variant-1",
+          "english": "It's good to see you.",
+          "korean": "만나서 반가워요.",
+          "register": "neutral",
+          "nuanceKo": "같은 인사와 안부 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "greetings.01-good-morning-how-are-you.reply-1",
+          "english": "Hi! It's good to see you too.",
+          "korean": "안녕하세요! 저도 만나서 반가워요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "greetings.08-take-care-on-your-way-home",
+          "greetings.02-its-good-to-see-you"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "greetings.02-its-good-to-see-you"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Good morning. How are you?",
+        "lang": "en-US"
+      },
+      "sortKey": "002.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "greetings.02-its-good-to-see-you",
+      "familyId": "greetings.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "It's good to see you.",
+      "english": "It's good to see you.",
+      "korean": "만나서 반가워요.",
+      "intentKo": "인사와 안부 상황에서 “만나서 반가워요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 인사와 안부 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "greetings"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "인사와 안부",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "greetings.02-its-good-to-see-you.example-1",
+          "english": "A: It's good to see you. B: Hi! It's good to see you too.",
+          "korean": "A: 만나서 반가워요. B: 안녕하세요! 저도 만나서 반가워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "greetings.02-its-good-to-see-you.example-2",
+          "english": "A: It's good to see you. B: I'm doing well, thanks.",
+          "korean": "A: 만나서 반가워요. B: 잘 지내요, 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "greetings.02-its-good-to-see-you.example-3",
+          "english": "A: It's good to see you. B: You too. Take care!",
+          "korean": "A: 만나서 반가워요. B: 당신도요. 잘 지내요!",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "greetings.02-its-good-to-see-you.variant-1",
+          "english": "Long time no see.",
+          "korean": "정말 오랜만이에요.",
+          "register": "neutral",
+          "nuanceKo": "같은 인사와 안부 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "greetings.02-its-good-to-see-you.reply-1",
+          "english": "Hi! It's good to see you too.",
+          "korean": "안녕하세요! 저도 만나서 반가워요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "greetings.01-good-morning-how-are-you",
+          "greetings.03-long-time-no-see"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "greetings.03-long-time-no-see"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "It's good to see you.",
+        "lang": "en-US"
+      },
+      "sortKey": "002.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "greetings.03-long-time-no-see",
+      "familyId": "greetings.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Long time no see.",
+      "english": "Long time no see.",
+      "korean": "정말 오랜만이에요.",
+      "intentKo": "인사와 안부 상황에서 “정말 오랜만이에요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 인사와 안부 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "greetings"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "인사와 안부",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "greetings.03-long-time-no-see.example-1",
+          "english": "A: Long time no see. B: Hi! It's good to see you too.",
+          "korean": "A: 정말 오랜만이에요. B: 안녕하세요! 저도 만나서 반가워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "greetings.03-long-time-no-see.example-2",
+          "english": "A: Long time no see. B: I'm doing well, thanks.",
+          "korean": "A: 정말 오랜만이에요. B: 잘 지내요, 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "greetings.03-long-time-no-see.example-3",
+          "english": "A: Long time no see. B: You too. Take care!",
+          "korean": "A: 정말 오랜만이에요. B: 당신도요. 잘 지내요!",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "greetings.03-long-time-no-see.variant-1",
+          "english": "How have you been?",
+          "korean": "그동안 어떻게 지냈어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 인사와 안부 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "greetings.03-long-time-no-see.reply-1",
+          "english": "Hi! It's good to see you too.",
+          "korean": "안녕하세요! 저도 만나서 반가워요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "greetings.02-its-good-to-see-you",
+          "greetings.04-how-have-you-been"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "greetings.04-how-have-you-been"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Long time no see.",
+        "lang": "en-US"
+      },
+      "sortKey": "002.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "greetings.04-how-have-you-been",
+      "familyId": "greetings.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "How have you been?",
+      "english": "How have you been?",
+      "korean": "그동안 어떻게 지냈어요?",
+      "intentKo": "인사와 안부 상황에서 “그동안 어떻게 지냈어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 인사와 안부 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "greetings"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "인사와 안부",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "greetings.04-how-have-you-been.example-1",
+          "english": "A: How have you been? B: Hi! It's good to see you too.",
+          "korean": "A: 그동안 어떻게 지냈어요? B: 안녕하세요! 저도 만나서 반가워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "greetings.04-how-have-you-been.example-2",
+          "english": "A: How have you been? B: I'm doing well, thanks.",
+          "korean": "A: 그동안 어떻게 지냈어요? B: 잘 지내요, 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "greetings.04-how-have-you-been.example-3",
+          "english": "A: How have you been? B: You too. Take care!",
+          "korean": "A: 그동안 어떻게 지냈어요? B: 당신도요. 잘 지내요!",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "greetings.04-how-have-you-been.variant-1",
+          "english": "I'm doing pretty well, thanks.",
+          "korean": "저는 꽤 잘 지내요, 고마워요.",
+          "register": "neutral",
+          "nuanceKo": "같은 인사와 안부 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "greetings.04-how-have-you-been.reply-1",
+          "english": "Hi! It's good to see you too.",
+          "korean": "안녕하세요! 저도 만나서 반가워요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "greetings.03-long-time-no-see",
+          "greetings.05-im-doing-pretty-well-thanks"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "greetings.05-im-doing-pretty-well-thanks"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "How have you been?",
+        "lang": "en-US"
+      },
+      "sortKey": "002.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "greetings.05-im-doing-pretty-well-thanks",
+      "familyId": "greetings.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm doing pretty well, thanks.",
+      "english": "I'm doing pretty well, thanks.",
+      "korean": "저는 꽤 잘 지내요, 고마워요.",
+      "intentKo": "인사와 안부 상황에서 “저는 꽤 잘 지내요, 고마워요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 인사와 안부 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "greetings"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "인사와 안부",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "greetings.05-im-doing-pretty-well-thanks.example-1",
+          "english": "A: I'm doing pretty well, thanks. B: Hi! It's good to see you too.",
+          "korean": "A: 저는 꽤 잘 지내요, 고마워요. B: 안녕하세요! 저도 만나서 반가워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "greetings.05-im-doing-pretty-well-thanks.example-2",
+          "english": "A: I'm doing pretty well, thanks. B: I'm doing well, thanks.",
+          "korean": "A: 저는 꽤 잘 지내요, 고마워요. B: 잘 지내요, 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "greetings.05-im-doing-pretty-well-thanks.example-3",
+          "english": "A: I'm doing pretty well, thanks. B: You too. Take care!",
+          "korean": "A: 저는 꽤 잘 지내요, 고마워요. B: 당신도요. 잘 지내요!",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "greetings.05-im-doing-pretty-well-thanks.variant-1",
+          "english": "Not bad. How about you?",
+          "korean": "나쁘지 않아요. 당신은요?",
+          "register": "neutral",
+          "nuanceKo": "같은 인사와 안부 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "greetings.05-im-doing-pretty-well-thanks.reply-1",
+          "english": "Hi! It's good to see you too.",
+          "korean": "안녕하세요! 저도 만나서 반가워요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "greetings.04-how-have-you-been",
+          "greetings.06-not-bad-how-about-you"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "greetings.06-not-bad-how-about-you"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm doing pretty well, thanks.",
+        "lang": "en-US"
+      },
+      "sortKey": "002.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "greetings.06-not-bad-how-about-you",
+      "familyId": "greetings.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Not bad. How about you?",
+      "english": "Not bad. How about you?",
+      "korean": "나쁘지 않아요. 당신은요?",
+      "intentKo": "인사와 안부 상황에서 “나쁘지 않아요. 당신은요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 인사와 안부 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "greetings"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "인사와 안부",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "greetings.06-not-bad-how-about-you.example-1",
+          "english": "A: Not bad. How about you? B: Hi! It's good to see you too.",
+          "korean": "A: 나쁘지 않아요. 당신은요? B: 안녕하세요! 저도 만나서 반가워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "greetings.06-not-bad-how-about-you.example-2",
+          "english": "A: Not bad. How about you? B: I'm doing well, thanks.",
+          "korean": "A: 나쁘지 않아요. 당신은요? B: 잘 지내요, 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "greetings.06-not-bad-how-about-you.example-3",
+          "english": "A: Not bad. How about you? B: You too. Take care!",
+          "korean": "A: 나쁘지 않아요. 당신은요? B: 당신도요. 잘 지내요!",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "greetings.06-not-bad-how-about-you.variant-1",
+          "english": "It's been a busy week.",
+          "korean": "바쁜 한 주였어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 인사와 안부 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "greetings.06-not-bad-how-about-you.reply-1",
+          "english": "Hi! It's good to see you too.",
+          "korean": "안녕하세요! 저도 만나서 반가워요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "greetings.05-im-doing-pretty-well-thanks",
+          "greetings.07-its-been-a-busy-week"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "greetings.07-its-been-a-busy-week"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Not bad. How about you?",
+        "lang": "en-US"
+      },
+      "sortKey": "002.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "greetings.07-its-been-a-busy-week",
+      "familyId": "greetings.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "It's been a busy week.",
+      "english": "It's been a busy week.",
+      "korean": "바쁜 한 주였어요.",
+      "intentKo": "인사와 안부 상황에서 “바쁜 한 주였어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 인사와 안부 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "greetings"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "인사와 안부",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "greetings.07-its-been-a-busy-week.example-1",
+          "english": "A: It's been a busy week. B: Hi! It's good to see you too.",
+          "korean": "A: 바쁜 한 주였어요. B: 안녕하세요! 저도 만나서 반가워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "greetings.07-its-been-a-busy-week.example-2",
+          "english": "A: It's been a busy week. B: I'm doing well, thanks.",
+          "korean": "A: 바쁜 한 주였어요. B: 잘 지내요, 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "greetings.07-its-been-a-busy-week.example-3",
+          "english": "A: It's been a busy week. B: You too. Take care!",
+          "korean": "A: 바쁜 한 주였어요. B: 당신도요. 잘 지내요!",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "greetings.07-its-been-a-busy-week.variant-1",
+          "english": "Take care on your way home.",
+          "korean": "조심해서 들어가세요.",
+          "register": "neutral",
+          "nuanceKo": "같은 인사와 안부 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "greetings.07-its-been-a-busy-week.reply-1",
+          "english": "Hi! It's good to see you too.",
+          "korean": "안녕하세요! 저도 만나서 반가워요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "greetings.06-not-bad-how-about-you",
+          "greetings.08-take-care-on-your-way-home"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "greetings.08-take-care-on-your-way-home"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "It's been a busy week.",
+        "lang": "en-US"
+      },
+      "sortKey": "002.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "greetings.08-take-care-on-your-way-home",
+      "familyId": "greetings.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Take care on your way home.",
+      "english": "Take care on your way home.",
+      "korean": "조심해서 들어가세요.",
+      "intentKo": "인사와 안부 상황에서 “조심해서 들어가세요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 인사와 안부 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "greetings"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "인사와 안부",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "greetings.08-take-care-on-your-way-home.example-1",
+          "english": "A: Take care on your way home. B: Hi! It's good to see you too.",
+          "korean": "A: 조심해서 들어가세요. B: 안녕하세요! 저도 만나서 반가워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "greetings.08-take-care-on-your-way-home.example-2",
+          "english": "A: Take care on your way home. B: I'm doing well, thanks.",
+          "korean": "A: 조심해서 들어가세요. B: 잘 지내요, 고마워요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "greetings.08-take-care-on-your-way-home.example-3",
+          "english": "A: Take care on your way home. B: You too. Take care!",
+          "korean": "A: 조심해서 들어가세요. B: 당신도요. 잘 지내요!",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "greetings.08-take-care-on-your-way-home.variant-1",
+          "english": "Good morning. How are you?",
+          "korean": "좋은 아침이에요. 잘 지내세요?",
+          "register": "neutral",
+          "nuanceKo": "같은 인사와 안부 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "greetings.08-take-care-on-your-way-home.reply-1",
+          "english": "Hi! It's good to see you too.",
+          "korean": "안녕하세요! 저도 만나서 반가워요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "greetings.07-its-been-a-busy-week",
+          "greetings.01-good-morning-how-are-you"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "greetings.01-good-morning-how-are-you"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Take care on your way home.",
+        "lang": "en-US"
+      },
+      "sortKey": "002.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "self-introduction.01-my-name-is-mina",
+      "familyId": "self-introduction.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "My name is Mina.",
+      "english": "My name is Mina.",
+      "korean": "제 이름은 미나예요.",
+      "intentKo": "자기소개 상황에서 “제 이름은 미나예요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 자기소개 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "self-introduction"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "자기소개",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "self-introduction.01-my-name-is-mina.example-1",
+          "english": "A: My name is Mina. B: I see what you mean.",
+          "korean": "A: 제 이름은 미나예요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "self-introduction.01-my-name-is-mina.example-2",
+          "english": "A: My name is Mina. B: That makes sense.",
+          "korean": "A: 제 이름은 미나예요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "self-introduction.01-my-name-is-mina.example-3",
+          "english": "A: My name is Mina. B: Thanks for telling me.",
+          "korean": "A: 제 이름은 미나예요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "self-introduction.01-my-name-is-mina.variant-1",
+          "english": "I'm from Busan.",
+          "korean": "저는 부산에서 왔어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 자기소개 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "self-introduction.01-my-name-is-mina.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "self-introduction.08-let-me-tell-you-a-little-about-myself",
+          "self-introduction.02-im-from-busan"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "self-introduction.02-im-from-busan"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "My name is Mina.",
+        "lang": "en-US"
+      },
+      "sortKey": "003.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "self-introduction.02-im-from-busan",
+      "familyId": "self-introduction.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm from Busan.",
+      "english": "I'm from Busan.",
+      "korean": "저는 부산에서 왔어요.",
+      "intentKo": "자기소개 상황에서 “저는 부산에서 왔어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 자기소개 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "self-introduction"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "자기소개",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "self-introduction.02-im-from-busan.example-1",
+          "english": "A: I'm from Busan. B: I see what you mean.",
+          "korean": "A: 저는 부산에서 왔어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "self-introduction.02-im-from-busan.example-2",
+          "english": "A: I'm from Busan. B: That makes sense.",
+          "korean": "A: 저는 부산에서 왔어요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "self-introduction.02-im-from-busan.example-3",
+          "english": "A: I'm from Busan. B: Thanks for telling me.",
+          "korean": "A: 저는 부산에서 왔어요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "self-introduction.02-im-from-busan.variant-1",
+          "english": "I work in healthcare.",
+          "korean": "저는 의료 분야에서 일해요.",
+          "register": "neutral",
+          "nuanceKo": "같은 자기소개 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "self-introduction.02-im-from-busan.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "self-introduction.01-my-name-is-mina",
+          "self-introduction.03-i-work-in-healthcare"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "self-introduction.03-i-work-in-healthcare"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm from Busan.",
+        "lang": "en-US"
+      },
+      "sortKey": "003.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "self-introduction.03-i-work-in-healthcare",
+      "familyId": "self-introduction.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I work in healthcare.",
+      "english": "I work in healthcare.",
+      "korean": "저는 의료 분야에서 일해요.",
+      "intentKo": "자기소개 상황에서 “저는 의료 분야에서 일해요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 자기소개 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "self-introduction"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "자기소개",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "self-introduction.03-i-work-in-healthcare.example-1",
+          "english": "A: I work in healthcare. B: I see what you mean.",
+          "korean": "A: 저는 의료 분야에서 일해요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "self-introduction.03-i-work-in-healthcare.example-2",
+          "english": "A: I work in healthcare. B: That makes sense.",
+          "korean": "A: 저는 의료 분야에서 일해요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "self-introduction.03-i-work-in-healthcare.example-3",
+          "english": "A: I work in healthcare. B: Thanks for telling me.",
+          "korean": "A: 저는 의료 분야에서 일해요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "self-introduction.03-i-work-in-healthcare.variant-1",
+          "english": "I'm here on vacation.",
+          "korean": "휴가차 여기 왔어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 자기소개 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "self-introduction.03-i-work-in-healthcare.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "self-introduction.02-im-from-busan",
+          "self-introduction.04-im-here-on-vacation"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "self-introduction.04-im-here-on-vacation"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I work in healthcare.",
+        "lang": "en-US"
+      },
+      "sortKey": "003.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "self-introduction.04-im-here-on-vacation",
+      "familyId": "self-introduction.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'm here on vacation.",
+      "english": "I'm here on vacation.",
+      "korean": "휴가차 여기 왔어요.",
+      "intentKo": "자기소개 상황에서 “휴가차 여기 왔어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 자기소개 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "self-introduction"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "자기소개",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "self-introduction.04-im-here-on-vacation.example-1",
+          "english": "A: I'm here on vacation. B: I see what you mean.",
+          "korean": "A: 휴가차 여기 왔어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "self-introduction.04-im-here-on-vacation.example-2",
+          "english": "A: I'm here on vacation. B: That makes sense.",
+          "korean": "A: 휴가차 여기 왔어요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "self-introduction.04-im-here-on-vacation.example-3",
+          "english": "A: I'm here on vacation. B: Thanks for telling me.",
+          "korean": "A: 휴가차 여기 왔어요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "self-introduction.04-im-here-on-vacation.variant-1",
+          "english": "I've just moved to this area.",
+          "korean": "저는 이 동네로 막 이사 왔어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 자기소개 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "self-introduction.04-im-here-on-vacation.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "self-introduction.03-i-work-in-healthcare",
+          "self-introduction.05-ive-just-moved-to-this-area"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "self-introduction.05-ive-just-moved-to-this-area"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'm here on vacation.",
+        "lang": "en-US"
+      },
+      "sortKey": "003.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "self-introduction.05-ive-just-moved-to-this-area",
+      "familyId": "self-introduction.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I've just moved to this area.",
+      "english": "I've just moved to this area.",
+      "korean": "저는 이 동네로 막 이사 왔어요.",
+      "intentKo": "자기소개 상황에서 “저는 이 동네로 막 이사 왔어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 자기소개 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "self-introduction"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "자기소개",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "self-introduction.05-ive-just-moved-to-this-area.example-1",
+          "english": "A: I've just moved to this area. B: I see what you mean.",
+          "korean": "A: 저는 이 동네로 막 이사 왔어요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "self-introduction.05-ive-just-moved-to-this-area.example-2",
+          "english": "A: I've just moved to this area. B: That makes sense.",
+          "korean": "A: 저는 이 동네로 막 이사 왔어요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "self-introduction.05-ive-just-moved-to-this-area.example-3",
+          "english": "A: I've just moved to this area. B: Thanks for telling me.",
+          "korean": "A: 저는 이 동네로 막 이사 왔어요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "self-introduction.05-ive-just-moved-to-this-area.variant-1",
+          "english": "This is my first time here.",
+          "korean": "여기는 처음이에요.",
+          "register": "neutral",
+          "nuanceKo": "같은 자기소개 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "self-introduction.05-ive-just-moved-to-this-area.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "self-introduction.04-im-here-on-vacation",
+          "self-introduction.06-this-is-my-first-time-here"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "self-introduction.06-this-is-my-first-time-here"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I've just moved to this area.",
+        "lang": "en-US"
+      },
+      "sortKey": "003.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "self-introduction.06-this-is-my-first-time-here",
+      "familyId": "self-introduction.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "This is my first time here.",
+      "english": "This is my first time here.",
+      "korean": "여기는 처음이에요.",
+      "intentKo": "자기소개 상황에서 “여기는 처음이에요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 자기소개 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "self-introduction"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "자기소개",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "self-introduction.06-this-is-my-first-time-here.example-1",
+          "english": "A: This is my first time here. B: I see what you mean.",
+          "korean": "A: 여기는 처음이에요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "self-introduction.06-this-is-my-first-time-here.example-2",
+          "english": "A: This is my first time here. B: That makes sense.",
+          "korean": "A: 여기는 처음이에요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "self-introduction.06-this-is-my-first-time-here.example-3",
+          "english": "A: This is my first time here. B: Thanks for telling me.",
+          "korean": "A: 여기는 처음이에요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "self-introduction.06-this-is-my-first-time-here.variant-1",
+          "english": "I don't know many people yet.",
+          "korean": "아직 아는 사람이 많지 않아요.",
+          "register": "neutral",
+          "nuanceKo": "같은 자기소개 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "self-introduction.06-this-is-my-first-time-here.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "self-introduction.05-ive-just-moved-to-this-area",
+          "self-introduction.07-i-dont-know-many-people-yet"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "self-introduction.07-i-dont-know-many-people-yet"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "This is my first time here.",
+        "lang": "en-US"
+      },
+      "sortKey": "003.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "self-introduction.07-i-dont-know-many-people-yet",
+      "familyId": "self-introduction.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I don't know many people yet.",
+      "english": "I don't know many people yet.",
+      "korean": "아직 아는 사람이 많지 않아요.",
+      "intentKo": "자기소개 상황에서 “아직 아는 사람이 많지 않아요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 자기소개 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "self-introduction"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "자기소개",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "self-introduction.07-i-dont-know-many-people-yet.example-1",
+          "english": "A: I don't know many people yet. B: I see what you mean.",
+          "korean": "A: 아직 아는 사람이 많지 않아요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "self-introduction.07-i-dont-know-many-people-yet.example-2",
+          "english": "A: I don't know many people yet. B: That makes sense.",
+          "korean": "A: 아직 아는 사람이 많지 않아요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "self-introduction.07-i-dont-know-many-people-yet.example-3",
+          "english": "A: I don't know many people yet. B: Thanks for telling me.",
+          "korean": "A: 아직 아는 사람이 많지 않아요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "self-introduction.07-i-dont-know-many-people-yet.variant-1",
+          "english": "Let me tell you a little about myself.",
+          "korean": "제 소개를 조금 해볼게요.",
+          "register": "neutral",
+          "nuanceKo": "같은 자기소개 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "self-introduction.07-i-dont-know-many-people-yet.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "self-introduction.06-this-is-my-first-time-here",
+          "self-introduction.08-let-me-tell-you-a-little-about-myself"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "self-introduction.08-let-me-tell-you-a-little-about-myself"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I don't know many people yet.",
+        "lang": "en-US"
+      },
+      "sortKey": "003.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "self-introduction.08-let-me-tell-you-a-little-about-myself",
+      "familyId": "self-introduction.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Let me tell you a little about myself.",
+      "english": "Let me tell you a little about myself.",
+      "korean": "제 소개를 조금 해볼게요.",
+      "intentKo": "자기소개 상황에서 “제 소개를 조금 해볼게요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 자기소개 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "self-introduction"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "자기소개",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "self-introduction.08-let-me-tell-you-a-little-about-myself.example-1",
+          "english": "A: Let me tell you a little about myself. B: I see what you mean.",
+          "korean": "A: 제 소개를 조금 해볼게요. B: 무슨 말인지 알겠어요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "self-introduction.08-let-me-tell-you-a-little-about-myself.example-2",
+          "english": "A: Let me tell you a little about myself. B: That makes sense.",
+          "korean": "A: 제 소개를 조금 해볼게요. B: 말이 되네요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "self-introduction.08-let-me-tell-you-a-little-about-myself.example-3",
+          "english": "A: Let me tell you a little about myself. B: Thanks for telling me.",
+          "korean": "A: 제 소개를 조금 해볼게요. B: 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "self-introduction.08-let-me-tell-you-a-little-about-myself.variant-1",
+          "english": "My name is Mina.",
+          "korean": "제 이름은 미나예요.",
+          "register": "neutral",
+          "nuanceKo": "같은 자기소개 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "self-introduction.08-let-me-tell-you-a-little-about-myself.reply-1",
+          "english": "I see what you mean.",
+          "korean": "무슨 말인지 알겠어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "self-introduction.07-i-dont-know-many-people-yet",
+          "self-introduction.01-my-name-is-mina"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "self-introduction.01-my-name-is-mina"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Let me tell you a little about myself.",
+        "lang": "en-US"
+      },
+      "sortKey": "003.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "showing-interest.01-really-tell-me-more",
+      "familyId": "showing-interest.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Really? Tell me more.",
+      "english": "Really? Tell me more.",
+      "korean": "정말요? 더 이야기해 주세요.",
+      "intentKo": "관심 표현 상황에서 “정말요? 더 이야기해 주세요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 관심 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "showing-interest"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "관심 표현",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "showing-interest.01-really-tell-me-more.example-1",
+          "english": "A: Really? Tell me more. B: I know, right?",
+          "korean": "A: 정말요? 더 이야기해 주세요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "showing-interest.01-really-tell-me-more.example-2",
+          "english": "A: Really? Tell me more. B: That's exactly how I feel.",
+          "korean": "A: 정말요? 더 이야기해 주세요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "showing-interest.01-really-tell-me-more.example-3",
+          "english": "A: Really? Tell me more. B: Thanks for saying that.",
+          "korean": "A: 정말요? 더 이야기해 주세요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "showing-interest.01-really-tell-me-more.variant-1",
+          "english": "That sounds interesting.",
+          "korean": "흥미롭게 들리네요.",
+          "register": "neutral",
+          "nuanceKo": "같은 관심 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "showing-interest.01-really-tell-me-more.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "showing-interest.08-go-on-im-listening",
+          "showing-interest.02-that-sounds-interesting"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "showing-interest.02-that-sounds-interesting"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Really? Tell me more.",
+        "lang": "en-US"
+      },
+      "sortKey": "004.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "showing-interest.02-that-sounds-interesting",
+      "familyId": "showing-interest.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "That sounds interesting.",
+      "english": "That sounds interesting.",
+      "korean": "흥미롭게 들리네요.",
+      "intentKo": "관심 표현 상황에서 “흥미롭게 들리네요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 관심 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "showing-interest"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "관심 표현",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "showing-interest.02-that-sounds-interesting.example-1",
+          "english": "A: That sounds interesting. B: I know, right?",
+          "korean": "A: 흥미롭게 들리네요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "showing-interest.02-that-sounds-interesting.example-2",
+          "english": "A: That sounds interesting. B: That's exactly how I feel.",
+          "korean": "A: 흥미롭게 들리네요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "showing-interest.02-that-sounds-interesting.example-3",
+          "english": "A: That sounds interesting. B: Thanks for saying that.",
+          "korean": "A: 흥미롭게 들리네요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "showing-interest.02-that-sounds-interesting.variant-1",
+          "english": "How did you get into that?",
+          "korean": "그건 어떻게 시작하게 됐어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 관심 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "showing-interest.02-that-sounds-interesting.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "showing-interest.01-really-tell-me-more",
+          "showing-interest.03-how-did-you-get-into-that"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "showing-interest.03-how-did-you-get-into-that"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "That sounds interesting.",
+        "lang": "en-US"
+      },
+      "sortKey": "004.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "showing-interest.03-how-did-you-get-into-that",
+      "familyId": "showing-interest.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "How did you get into that?",
+      "english": "How did you get into that?",
+      "korean": "그건 어떻게 시작하게 됐어요?",
+      "intentKo": "관심 표현 상황에서 “그건 어떻게 시작하게 됐어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 관심 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "showing-interest"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "관심 표현",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "showing-interest.03-how-did-you-get-into-that.example-1",
+          "english": "A: How did you get into that? B: I know, right?",
+          "korean": "A: 그건 어떻게 시작하게 됐어요? B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "showing-interest.03-how-did-you-get-into-that.example-2",
+          "english": "A: How did you get into that? B: That's exactly how I feel.",
+          "korean": "A: 그건 어떻게 시작하게 됐어요? B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "showing-interest.03-how-did-you-get-into-that.example-3",
+          "english": "A: How did you get into that? B: Thanks for saying that.",
+          "korean": "A: 그건 어떻게 시작하게 됐어요? B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "showing-interest.03-how-did-you-get-into-that.variant-1",
+          "english": "What do you like most about it?",
+          "korean": "그중에서 뭐가 가장 좋아요?",
+          "register": "neutral",
+          "nuanceKo": "같은 관심 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "showing-interest.03-how-did-you-get-into-that.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "showing-interest.02-that-sounds-interesting",
+          "showing-interest.04-what-do-you-like-most-about-it"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "showing-interest.04-what-do-you-like-most-about-it"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "How did you get into that?",
+        "lang": "en-US"
+      },
+      "sortKey": "004.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "showing-interest.04-what-do-you-like-most-about-it",
+      "familyId": "showing-interest.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "What do you like most about it?",
+      "english": "What do you like most about it?",
+      "korean": "그중에서 뭐가 가장 좋아요?",
+      "intentKo": "관심 표현 상황에서 “그중에서 뭐가 가장 좋아요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 관심 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "showing-interest"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "관심 표현",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "showing-interest.04-what-do-you-like-most-about-it.example-1",
+          "english": "A: What do you like most about it? B: I know, right?",
+          "korean": "A: 그중에서 뭐가 가장 좋아요? B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "showing-interest.04-what-do-you-like-most-about-it.example-2",
+          "english": "A: What do you like most about it? B: That's exactly how I feel.",
+          "korean": "A: 그중에서 뭐가 가장 좋아요? B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "showing-interest.04-what-do-you-like-most-about-it.example-3",
+          "english": "A: What do you like most about it? B: Thanks for saying that.",
+          "korean": "A: 그중에서 뭐가 가장 좋아요? B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "showing-interest.04-what-do-you-like-most-about-it.variant-1",
+          "english": "I'd love to hear the whole story.",
+          "korean": "이야기를 전부 듣고 싶어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 관심 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "showing-interest.04-what-do-you-like-most-about-it.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "showing-interest.03-how-did-you-get-into-that",
+          "showing-interest.05-id-love-to-hear-the-whole-story"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "showing-interest.05-id-love-to-hear-the-whole-story"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "What do you like most about it?",
+        "lang": "en-US"
+      },
+      "sortKey": "004.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "showing-interest.05-id-love-to-hear-the-whole-story",
+      "familyId": "showing-interest.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I'd love to hear the whole story.",
+      "english": "I'd love to hear the whole story.",
+      "korean": "이야기를 전부 듣고 싶어요.",
+      "intentKo": "관심 표현 상황에서 “이야기를 전부 듣고 싶어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 관심 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "showing-interest"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "관심 표현",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "showing-interest.05-id-love-to-hear-the-whole-story.example-1",
+          "english": "A: I'd love to hear the whole story. B: I know, right?",
+          "korean": "A: 이야기를 전부 듣고 싶어요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "showing-interest.05-id-love-to-hear-the-whole-story.example-2",
+          "english": "A: I'd love to hear the whole story. B: That's exactly how I feel.",
+          "korean": "A: 이야기를 전부 듣고 싶어요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "showing-interest.05-id-love-to-hear-the-whole-story.example-3",
+          "english": "A: I'd love to hear the whole story. B: Thanks for saying that.",
+          "korean": "A: 이야기를 전부 듣고 싶어요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "showing-interest.05-id-love-to-hear-the-whole-story.variant-1",
+          "english": "I've always wondered about that.",
+          "korean": "그게 늘 궁금했어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 관심 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "showing-interest.05-id-love-to-hear-the-whole-story.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "showing-interest.04-what-do-you-like-most-about-it",
+          "showing-interest.06-ive-always-wondered-about-that"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "showing-interest.06-ive-always-wondered-about-that"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I'd love to hear the whole story.",
+        "lang": "en-US"
+      },
+      "sortKey": "004.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "showing-interest.06-ive-always-wondered-about-that",
+      "familyId": "showing-interest.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I've always wondered about that.",
+      "english": "I've always wondered about that.",
+      "korean": "그게 늘 궁금했어요.",
+      "intentKo": "관심 표현 상황에서 “그게 늘 궁금했어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 관심 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "showing-interest"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "관심 표현",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "showing-interest.06-ive-always-wondered-about-that.example-1",
+          "english": "A: I've always wondered about that. B: I know, right?",
+          "korean": "A: 그게 늘 궁금했어요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "showing-interest.06-ive-always-wondered-about-that.example-2",
+          "english": "A: I've always wondered about that. B: That's exactly how I feel.",
+          "korean": "A: 그게 늘 궁금했어요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "showing-interest.06-ive-always-wondered-about-that.example-3",
+          "english": "A: I've always wondered about that. B: Thanks for saying that.",
+          "korean": "A: 그게 늘 궁금했어요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "showing-interest.06-ive-always-wondered-about-that.variant-1",
+          "english": "That's something I'm interested in too.",
+          "korean": "저도 관심 있는 분야예요.",
+          "register": "neutral",
+          "nuanceKo": "같은 관심 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "showing-interest.06-ive-always-wondered-about-that.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "showing-interest.05-id-love-to-hear-the-whole-story",
+          "showing-interest.07-thats-something-im-interested-in-too"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "showing-interest.07-thats-something-im-interested-in-too"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I've always wondered about that.",
+        "lang": "en-US"
+      },
+      "sortKey": "004.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "showing-interest.07-thats-something-im-interested-in-too",
+      "familyId": "showing-interest.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "That's something I'm interested in too.",
+      "english": "That's something I'm interested in too.",
+      "korean": "저도 관심 있는 분야예요.",
+      "intentKo": "관심 표현 상황에서 “저도 관심 있는 분야예요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 관심 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "showing-interest"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "관심 표현",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "showing-interest.07-thats-something-im-interested-in-too.example-1",
+          "english": "A: That's something I'm interested in too. B: I know, right?",
+          "korean": "A: 저도 관심 있는 분야예요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "showing-interest.07-thats-something-im-interested-in-too.example-2",
+          "english": "A: That's something I'm interested in too. B: That's exactly how I feel.",
+          "korean": "A: 저도 관심 있는 분야예요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "showing-interest.07-thats-something-im-interested-in-too.example-3",
+          "english": "A: That's something I'm interested in too. B: Thanks for saying that.",
+          "korean": "A: 저도 관심 있는 분야예요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "showing-interest.07-thats-something-im-interested-in-too.variant-1",
+          "english": "Go on. I'm listening.",
+          "korean": "계속 말해요. 듣고 있어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 관심 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "showing-interest.07-thats-something-im-interested-in-too.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "showing-interest.06-ive-always-wondered-about-that",
+          "showing-interest.08-go-on-im-listening"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "showing-interest.08-go-on-im-listening"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "That's something I'm interested in too.",
+        "lang": "en-US"
+      },
+      "sortKey": "004.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "showing-interest.08-go-on-im-listening",
+      "familyId": "showing-interest.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Go on. I'm listening.",
+      "english": "Go on. I'm listening.",
+      "korean": "계속 말해요. 듣고 있어요.",
+      "intentKo": "관심 표현 상황에서 “계속 말해요. 듣고 있어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 사교 대화에서 바로 쓸 수 있는 관심 표현 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "showing-interest"
+      ],
+      "situationIds": [
+        "social"
+      ],
+      "tags": [
+        "관심 표현",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "showing-interest.08-go-on-im-listening.example-1",
+          "english": "A: Go on. I'm listening. B: I know, right?",
+          "korean": "A: 계속 말해요. 듣고 있어요. B: 그러게 말이에요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "showing-interest.08-go-on-im-listening.example-2",
+          "english": "A: Go on. I'm listening. B: That's exactly how I feel.",
+          "korean": "A: 계속 말해요. 듣고 있어요. B: 제 기분도 딱 그래요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "showing-interest.08-go-on-im-listening.example-3",
+          "english": "A: Go on. I'm listening. B: Thanks for saying that.",
+          "korean": "A: 계속 말해요. 듣고 있어요. B: 그렇게 말해줘서 고마워요.",
+          "situationId": "social",
+          "noteKo": "사교에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "showing-interest.08-go-on-im-listening.variant-1",
+          "english": "Really? Tell me more.",
+          "korean": "정말요? 더 이야기해 주세요.",
+          "register": "neutral",
+          "nuanceKo": "같은 관심 표현 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "showing-interest.08-go-on-im-listening.reply-1",
+          "english": "I know, right?",
+          "korean": "그러게 말이에요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "showing-interest.07-thats-something-im-interested-in-too",
+          "showing-interest.01-really-tell-me-more"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "showing-interest.01-really-tell-me-more"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Go on. I'm listening.",
+        "lang": "en-US"
+      },
+      "sortKey": "004.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "basic-questions.01-what-do-you-mean",
+      "familyId": "basic-questions.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "What do you mean?",
+      "english": "What do you mean?",
+      "korean": "무슨 뜻이에요?",
+      "intentKo": "질문 만들기 상황에서 “무슨 뜻이에요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 질문 만들기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "basic-questions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "질문 만들기",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "basic-questions.01-what-do-you-mean.example-1",
+          "english": "A: What do you mean? B: Let me think for a second.",
+          "korean": "A: 무슨 뜻이에요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "basic-questions.01-what-do-you-mean.example-2",
+          "english": "A: What do you mean? B: That's a good question.",
+          "korean": "A: 무슨 뜻이에요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "basic-questions.01-what-do-you-mean.example-3",
+          "english": "A: What do you mean? B: I'll check and let you know.",
+          "korean": "A: 무슨 뜻이에요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "basic-questions.01-what-do-you-mean.variant-1",
+          "english": "Where did you get that?",
+          "korean": "그건 어디서 구했어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 질문 만들기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "basic-questions.01-what-do-you-mean.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "basic-questions.08-is-there-anything-else-i-should-know",
+          "basic-questions.02-where-did-you-get-that"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "basic-questions.02-where-did-you-get-that"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "What do you mean?",
+        "lang": "en-US"
+      },
+      "sortKey": "005.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "basic-questions.02-where-did-you-get-that",
+      "familyId": "basic-questions.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Where did you get that?",
+      "english": "Where did you get that?",
+      "korean": "그건 어디서 구했어요?",
+      "intentKo": "질문 만들기 상황에서 “그건 어디서 구했어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 질문 만들기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "basic-questions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "질문 만들기",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "basic-questions.02-where-did-you-get-that.example-1",
+          "english": "A: Where did you get that? B: Let me think for a second.",
+          "korean": "A: 그건 어디서 구했어요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "basic-questions.02-where-did-you-get-that.example-2",
+          "english": "A: Where did you get that? B: That's a good question.",
+          "korean": "A: 그건 어디서 구했어요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "basic-questions.02-where-did-you-get-that.example-3",
+          "english": "A: Where did you get that? B: I'll check and let you know.",
+          "korean": "A: 그건 어디서 구했어요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "basic-questions.02-where-did-you-get-that.variant-1",
+          "english": "When does it start?",
+          "korean": "언제 시작해요?",
+          "register": "neutral",
+          "nuanceKo": "같은 질문 만들기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "basic-questions.02-where-did-you-get-that.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "basic-questions.01-what-do-you-mean",
+          "basic-questions.03-when-does-it-start"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "basic-questions.03-when-does-it-start"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Where did you get that?",
+        "lang": "en-US"
+      },
+      "sortKey": "005.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "basic-questions.03-when-does-it-start",
+      "familyId": "basic-questions.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "When does it start?",
+      "english": "When does it start?",
+      "korean": "언제 시작해요?",
+      "intentKo": "질문 만들기 상황에서 “언제 시작해요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 질문 만들기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "basic-questions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "질문 만들기",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "basic-questions.03-when-does-it-start.example-1",
+          "english": "A: When does it start? B: Let me think for a second.",
+          "korean": "A: 언제 시작해요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "basic-questions.03-when-does-it-start.example-2",
+          "english": "A: When does it start? B: That's a good question.",
+          "korean": "A: 언제 시작해요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "basic-questions.03-when-does-it-start.example-3",
+          "english": "A: When does it start? B: I'll check and let you know.",
+          "korean": "A: 언제 시작해요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "basic-questions.03-when-does-it-start.variant-1",
+          "english": "Who told you about it?",
+          "korean": "그 이야기는 누구한테 들었어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 질문 만들기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "basic-questions.03-when-does-it-start.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "basic-questions.02-where-did-you-get-that",
+          "basic-questions.04-who-told-you-about-it"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "basic-questions.04-who-told-you-about-it"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "When does it start?",
+        "lang": "en-US"
+      },
+      "sortKey": "005.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "basic-questions.04-who-told-you-about-it",
+      "familyId": "basic-questions.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Who told you about it?",
+      "english": "Who told you about it?",
+      "korean": "그 이야기는 누구한테 들었어요?",
+      "intentKo": "질문 만들기 상황에서 “그 이야기는 누구한테 들었어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 질문 만들기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "basic-questions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "질문 만들기",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "basic-questions.04-who-told-you-about-it.example-1",
+          "english": "A: Who told you about it? B: Let me think for a second.",
+          "korean": "A: 그 이야기는 누구한테 들었어요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "basic-questions.04-who-told-you-about-it.example-2",
+          "english": "A: Who told you about it? B: That's a good question.",
+          "korean": "A: 그 이야기는 누구한테 들었어요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "basic-questions.04-who-told-you-about-it.example-3",
+          "english": "A: Who told you about it? B: I'll check and let you know.",
+          "korean": "A: 그 이야기는 누구한테 들었어요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "basic-questions.04-who-told-you-about-it.variant-1",
+          "english": "Why did you decide to go?",
+          "korean": "왜 가기로 결정했어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 질문 만들기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "basic-questions.04-who-told-you-about-it.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "basic-questions.03-when-does-it-start",
+          "basic-questions.05-why-did-you-decide-to-go"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "basic-questions.05-why-did-you-decide-to-go"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Who told you about it?",
+        "lang": "en-US"
+      },
+      "sortKey": "005.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "basic-questions.05-why-did-you-decide-to-go",
+      "familyId": "basic-questions.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Why did you decide to go?",
+      "english": "Why did you decide to go?",
+      "korean": "왜 가기로 결정했어요?",
+      "intentKo": "질문 만들기 상황에서 “왜 가기로 결정했어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 질문 만들기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "basic-questions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "질문 만들기",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "basic-questions.05-why-did-you-decide-to-go.example-1",
+          "english": "A: Why did you decide to go? B: Let me think for a second.",
+          "korean": "A: 왜 가기로 결정했어요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "basic-questions.05-why-did-you-decide-to-go.example-2",
+          "english": "A: Why did you decide to go? B: That's a good question.",
+          "korean": "A: 왜 가기로 결정했어요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "basic-questions.05-why-did-you-decide-to-go.example-3",
+          "english": "A: Why did you decide to go? B: I'll check and let you know.",
+          "korean": "A: 왜 가기로 결정했어요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "basic-questions.05-why-did-you-decide-to-go.variant-1",
+          "english": "How does this work?",
+          "korean": "이건 어떻게 작동해요?",
+          "register": "neutral",
+          "nuanceKo": "같은 질문 만들기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "basic-questions.05-why-did-you-decide-to-go.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "basic-questions.04-who-told-you-about-it",
+          "basic-questions.06-how-does-this-work"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "basic-questions.06-how-does-this-work"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Why did you decide to go?",
+        "lang": "en-US"
+      },
+      "sortKey": "005.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "basic-questions.06-how-does-this-work",
+      "familyId": "basic-questions.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "How does this work?",
+      "english": "How does this work?",
+      "korean": "이건 어떻게 작동해요?",
+      "intentKo": "질문 만들기 상황에서 “이건 어떻게 작동해요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 질문 만들기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "basic-questions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "질문 만들기",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "basic-questions.06-how-does-this-work.example-1",
+          "english": "A: How does this work? B: Let me think for a second.",
+          "korean": "A: 이건 어떻게 작동해요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "basic-questions.06-how-does-this-work.example-2",
+          "english": "A: How does this work? B: That's a good question.",
+          "korean": "A: 이건 어떻게 작동해요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "basic-questions.06-how-does-this-work.example-3",
+          "english": "A: How does this work? B: I'll check and let you know.",
+          "korean": "A: 이건 어떻게 작동해요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "basic-questions.06-how-does-this-work.variant-1",
+          "english": "Which one do you prefer?",
+          "korean": "어느 쪽이 더 좋아요?",
+          "register": "neutral",
+          "nuanceKo": "같은 질문 만들기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "basic-questions.06-how-does-this-work.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "How this works?",
+          "corrected": "How does this work?",
+          "explanationKo": "일반 의문문에서는 주어 앞에 조동사 does가 온다."
+        }
+      ],
+      "relations": {
+        "similar": [
+          "basic-questions.05-why-did-you-decide-to-go",
+          "basic-questions.07-which-one-do-you-prefer"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "basic-questions.07-which-one-do-you-prefer"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "How does this work?",
+        "lang": "en-US"
+      },
+      "sortKey": "005.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "basic-questions.07-which-one-do-you-prefer",
+      "familyId": "basic-questions.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Which one do you prefer?",
+      "english": "Which one do you prefer?",
+      "korean": "어느 쪽이 더 좋아요?",
+      "intentKo": "질문 만들기 상황에서 “어느 쪽이 더 좋아요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 질문 만들기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "basic-questions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "질문 만들기",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "basic-questions.07-which-one-do-you-prefer.example-1",
+          "english": "A: Which one do you prefer? B: Let me think for a second.",
+          "korean": "A: 어느 쪽이 더 좋아요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "basic-questions.07-which-one-do-you-prefer.example-2",
+          "english": "A: Which one do you prefer? B: That's a good question.",
+          "korean": "A: 어느 쪽이 더 좋아요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "basic-questions.07-which-one-do-you-prefer.example-3",
+          "english": "A: Which one do you prefer? B: I'll check and let you know.",
+          "korean": "A: 어느 쪽이 더 좋아요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "basic-questions.07-which-one-do-you-prefer.variant-1",
+          "english": "Is there anything else I should know?",
+          "korean": "제가 더 알아야 할 게 있나요?",
+          "register": "neutral",
+          "nuanceKo": "같은 질문 만들기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "basic-questions.07-which-one-do-you-prefer.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "basic-questions.06-how-does-this-work",
+          "basic-questions.08-is-there-anything-else-i-should-know"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "basic-questions.08-is-there-anything-else-i-should-know"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Which one do you prefer?",
+        "lang": "en-US"
+      },
+      "sortKey": "005.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "basic-questions.08-is-there-anything-else-i-should-know",
+      "familyId": "basic-questions.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Is there anything else I should know?",
+      "english": "Is there anything else I should know?",
+      "korean": "제가 더 알아야 할 게 있나요?",
+      "intentKo": "질문 만들기 상황에서 “제가 더 알아야 할 게 있나요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 질문 만들기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "basic-questions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "질문 만들기",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "basic-questions.08-is-there-anything-else-i-should-know.example-1",
+          "english": "A: Is there anything else I should know? B: Let me think for a second.",
+          "korean": "A: 제가 더 알아야 할 게 있나요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "basic-questions.08-is-there-anything-else-i-should-know.example-2",
+          "english": "A: Is there anything else I should know? B: That's a good question.",
+          "korean": "A: 제가 더 알아야 할 게 있나요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "basic-questions.08-is-there-anything-else-i-should-know.example-3",
+          "english": "A: Is there anything else I should know? B: I'll check and let you know.",
+          "korean": "A: 제가 더 알아야 할 게 있나요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "basic-questions.08-is-there-anything-else-i-should-know.variant-1",
+          "english": "What do you mean?",
+          "korean": "무슨 뜻이에요?",
+          "register": "neutral",
+          "nuanceKo": "같은 질문 만들기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "basic-questions.08-is-there-anything-else-i-should-know.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "basic-questions.07-which-one-do-you-prefer",
+          "basic-questions.01-what-do-you-mean"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "basic-questions.01-what-do-you-mean"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Is there anything else I should know?",
+        "lang": "en-US"
+      },
+      "sortKey": "005.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "follow-up-questions.01-what-happened-after-that",
+      "familyId": "follow-up-questions.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "What happened after that?",
+      "english": "What happened after that?",
+      "korean": "그다음에는 어떻게 됐어요?",
+      "intentKo": "추가 질문 상황에서 “그다음에는 어떻게 됐어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 추가 질문 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "follow-up-questions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "추가 질문",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "follow-up-questions.01-what-happened-after-that.example-1",
+          "english": "A: What happened after that? B: Let me think for a second.",
+          "korean": "A: 그다음에는 어떻게 됐어요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "follow-up-questions.01-what-happened-after-that.example-2",
+          "english": "A: What happened after that? B: That's a good question.",
+          "korean": "A: 그다음에는 어떻게 됐어요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "follow-up-questions.01-what-happened-after-that.example-3",
+          "english": "A: What happened after that? B: I'll check and let you know.",
+          "korean": "A: 그다음에는 어떻게 됐어요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "follow-up-questions.01-what-happened-after-that.variant-1",
+          "english": "How did that make you feel?",
+          "korean": "그 일로 기분이 어땠어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 추가 질문 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "follow-up-questions.01-what-happened-after-that.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "follow-up-questions.08-and-how-did-it-turn-out",
+          "follow-up-questions.02-how-did-that-make-you-feel"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "follow-up-questions.02-how-did-that-make-you-feel"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "What happened after that?",
+        "lang": "en-US"
+      },
+      "sortKey": "006.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "follow-up-questions.02-how-did-that-make-you-feel",
+      "familyId": "follow-up-questions.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "How did that make you feel?",
+      "english": "How did that make you feel?",
+      "korean": "그 일로 기분이 어땠어요?",
+      "intentKo": "추가 질문 상황에서 “그 일로 기분이 어땠어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 추가 질문 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "follow-up-questions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "추가 질문",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "follow-up-questions.02-how-did-that-make-you-feel.example-1",
+          "english": "A: How did that make you feel? B: Let me think for a second.",
+          "korean": "A: 그 일로 기분이 어땠어요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "follow-up-questions.02-how-did-that-make-you-feel.example-2",
+          "english": "A: How did that make you feel? B: That's a good question.",
+          "korean": "A: 그 일로 기분이 어땠어요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "follow-up-questions.02-how-did-that-make-you-feel.example-3",
+          "english": "A: How did that make you feel? B: I'll check and let you know.",
+          "korean": "A: 그 일로 기분이 어땠어요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "follow-up-questions.02-how-did-that-make-you-feel.variant-1",
+          "english": "What did you do next?",
+          "korean": "그다음엔 뭘 했어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 추가 질문 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "follow-up-questions.02-how-did-that-make-you-feel.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "follow-up-questions.01-what-happened-after-that",
+          "follow-up-questions.03-what-did-you-do-next"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "follow-up-questions.03-what-did-you-do-next"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "How did that make you feel?",
+        "lang": "en-US"
+      },
+      "sortKey": "006.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "follow-up-questions.03-what-did-you-do-next",
+      "familyId": "follow-up-questions.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "What did you do next?",
+      "english": "What did you do next?",
+      "korean": "그다음엔 뭘 했어요?",
+      "intentKo": "추가 질문 상황에서 “그다음엔 뭘 했어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 추가 질문 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "follow-up-questions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "추가 질문",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "follow-up-questions.03-what-did-you-do-next.example-1",
+          "english": "A: What did you do next? B: Let me think for a second.",
+          "korean": "A: 그다음엔 뭘 했어요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "follow-up-questions.03-what-did-you-do-next.example-2",
+          "english": "A: What did you do next? B: That's a good question.",
+          "korean": "A: 그다음엔 뭘 했어요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "follow-up-questions.03-what-did-you-do-next.example-3",
+          "english": "A: What did you do next? B: I'll check and let you know.",
+          "korean": "A: 그다음엔 뭘 했어요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "follow-up-questions.03-what-did-you-do-next.variant-1",
+          "english": "Why do you think that happened?",
+          "korean": "왜 그런 일이 생겼다고 생각해요?",
+          "register": "neutral",
+          "nuanceKo": "같은 추가 질문 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "follow-up-questions.03-what-did-you-do-next.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "follow-up-questions.02-how-did-that-make-you-feel",
+          "follow-up-questions.04-why-do-you-think-that-happened"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "follow-up-questions.04-why-do-you-think-that-happened"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "What did you do next?",
+        "lang": "en-US"
+      },
+      "sortKey": "006.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "follow-up-questions.04-why-do-you-think-that-happened",
+      "familyId": "follow-up-questions.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Why do you think that happened?",
+      "english": "Why do you think that happened?",
+      "korean": "왜 그런 일이 생겼다고 생각해요?",
+      "intentKo": "추가 질문 상황에서 “왜 그런 일이 생겼다고 생각해요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 추가 질문 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "follow-up-questions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "추가 질문",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "follow-up-questions.04-why-do-you-think-that-happened.example-1",
+          "english": "A: Why do you think that happened? B: Let me think for a second.",
+          "korean": "A: 왜 그런 일이 생겼다고 생각해요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "follow-up-questions.04-why-do-you-think-that-happened.example-2",
+          "english": "A: Why do you think that happened? B: That's a good question.",
+          "korean": "A: 왜 그런 일이 생겼다고 생각해요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "follow-up-questions.04-why-do-you-think-that-happened.example-3",
+          "english": "A: Why do you think that happened? B: I'll check and let you know.",
+          "korean": "A: 왜 그런 일이 생겼다고 생각해요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "follow-up-questions.04-why-do-you-think-that-happened.variant-1",
+          "english": "Could you give me an example?",
+          "korean": "예를 하나 들어줄 수 있어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 추가 질문 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "follow-up-questions.04-why-do-you-think-that-happened.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "follow-up-questions.03-what-did-you-do-next",
+          "follow-up-questions.05-could-you-give-me-an-example"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "follow-up-questions.05-could-you-give-me-an-example"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Why do you think that happened?",
+        "lang": "en-US"
+      },
+      "sortKey": "006.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "follow-up-questions.05-could-you-give-me-an-example",
+      "familyId": "follow-up-questions.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Could you give me an example?",
+      "english": "Could you give me an example?",
+      "korean": "예를 하나 들어줄 수 있어요?",
+      "intentKo": "추가 질문 상황에서 “예를 하나 들어줄 수 있어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 추가 질문 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "follow-up-questions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "추가 질문",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "follow-up-questions.05-could-you-give-me-an-example.example-1",
+          "english": "A: Could you give me an example? B: Let me think for a second.",
+          "korean": "A: 예를 하나 들어줄 수 있어요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "follow-up-questions.05-could-you-give-me-an-example.example-2",
+          "english": "A: Could you give me an example? B: That's a good question.",
+          "korean": "A: 예를 하나 들어줄 수 있어요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "follow-up-questions.05-could-you-give-me-an-example.example-3",
+          "english": "A: Could you give me an example? B: I'll check and let you know.",
+          "korean": "A: 예를 하나 들어줄 수 있어요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "follow-up-questions.05-could-you-give-me-an-example.variant-1",
+          "english": "What do you mean by that?",
+          "korean": "그 말은 무슨 뜻이에요?",
+          "register": "neutral",
+          "nuanceKo": "같은 추가 질문 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "follow-up-questions.05-could-you-give-me-an-example.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "follow-up-questions.04-why-do-you-think-that-happened",
+          "follow-up-questions.06-what-do-you-mean-by-that"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "follow-up-questions.06-what-do-you-mean-by-that"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Could you give me an example?",
+        "lang": "en-US"
+      },
+      "sortKey": "006.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "follow-up-questions.06-what-do-you-mean-by-that",
+      "familyId": "follow-up-questions.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "What do you mean by that?",
+      "english": "What do you mean by that?",
+      "korean": "그 말은 무슨 뜻이에요?",
+      "intentKo": "추가 질문 상황에서 “그 말은 무슨 뜻이에요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 추가 질문 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "follow-up-questions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "추가 질문",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "follow-up-questions.06-what-do-you-mean-by-that.example-1",
+          "english": "A: What do you mean by that? B: Let me think for a second.",
+          "korean": "A: 그 말은 무슨 뜻이에요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "follow-up-questions.06-what-do-you-mean-by-that.example-2",
+          "english": "A: What do you mean by that? B: That's a good question.",
+          "korean": "A: 그 말은 무슨 뜻이에요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "follow-up-questions.06-what-do-you-mean-by-that.example-3",
+          "english": "A: What do you mean by that? B: I'll check and let you know.",
+          "korean": "A: 그 말은 무슨 뜻이에요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "follow-up-questions.06-what-do-you-mean-by-that.variant-1",
+          "english": "Has that happened before?",
+          "korean": "전에도 그런 적이 있어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 추가 질문 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "follow-up-questions.06-what-do-you-mean-by-that.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "follow-up-questions.05-could-you-give-me-an-example",
+          "follow-up-questions.07-has-that-happened-before"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "follow-up-questions.07-has-that-happened-before"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "What do you mean by that?",
+        "lang": "en-US"
+      },
+      "sortKey": "006.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "follow-up-questions.07-has-that-happened-before",
+      "familyId": "follow-up-questions.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Has that happened before?",
+      "english": "Has that happened before?",
+      "korean": "전에도 그런 적이 있어요?",
+      "intentKo": "추가 질문 상황에서 “전에도 그런 적이 있어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 추가 질문 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "follow-up-questions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "추가 질문",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "follow-up-questions.07-has-that-happened-before.example-1",
+          "english": "A: Has that happened before? B: Let me think for a second.",
+          "korean": "A: 전에도 그런 적이 있어요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "follow-up-questions.07-has-that-happened-before.example-2",
+          "english": "A: Has that happened before? B: That's a good question.",
+          "korean": "A: 전에도 그런 적이 있어요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "follow-up-questions.07-has-that-happened-before.example-3",
+          "english": "A: Has that happened before? B: I'll check and let you know.",
+          "korean": "A: 전에도 그런 적이 있어요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "follow-up-questions.07-has-that-happened-before.variant-1",
+          "english": "And how did it turn out?",
+          "korean": "그래서 결과는 어떻게 됐어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 추가 질문 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "follow-up-questions.07-has-that-happened-before.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "follow-up-questions.06-what-do-you-mean-by-that",
+          "follow-up-questions.08-and-how-did-it-turn-out"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "follow-up-questions.08-and-how-did-it-turn-out"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Has that happened before?",
+        "lang": "en-US"
+      },
+      "sortKey": "006.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "follow-up-questions.08-and-how-did-it-turn-out",
+      "familyId": "follow-up-questions.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "And how did it turn out?",
+      "english": "And how did it turn out?",
+      "korean": "그래서 결과는 어떻게 됐어요?",
+      "intentKo": "추가 질문 상황에서 “그래서 결과는 어떻게 됐어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 추가 질문 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "follow-up-questions"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "추가 질문",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "follow-up-questions.08-and-how-did-it-turn-out.example-1",
+          "english": "A: And how did it turn out? B: Let me think for a second.",
+          "korean": "A: 그래서 결과는 어떻게 됐어요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "follow-up-questions.08-and-how-did-it-turn-out.example-2",
+          "english": "A: And how did it turn out? B: That's a good question.",
+          "korean": "A: 그래서 결과는 어떻게 됐어요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "follow-up-questions.08-and-how-did-it-turn-out.example-3",
+          "english": "A: And how did it turn out? B: I'll check and let you know.",
+          "korean": "A: 그래서 결과는 어떻게 됐어요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "follow-up-questions.08-and-how-did-it-turn-out.variant-1",
+          "english": "What happened after that?",
+          "korean": "그다음에는 어떻게 됐어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 추가 질문 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "follow-up-questions.08-and-how-did-it-turn-out.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "follow-up-questions.07-has-that-happened-before",
+          "follow-up-questions.01-what-happened-after-that"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "follow-up-questions.01-what-happened-after-that"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "And how did it turn out?",
+        "lang": "en-US"
+      },
+      "sortKey": "006.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "meaning-check.01-do-you-mean-this-one",
+      "familyId": "meaning-check.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Do you mean this one?",
+      "english": "Do you mean this one?",
+      "korean": "이걸 말하는 거예요?",
+      "intentKo": "의미 확인 상황에서 “이걸 말하는 거예요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 의미 확인 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "meaning-check"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "의미 확인",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "meaning-check.01-do-you-mean-this-one.example-1",
+          "english": "A: Do you mean this one? B: Let me think for a second.",
+          "korean": "A: 이걸 말하는 거예요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "meaning-check.01-do-you-mean-this-one.example-2",
+          "english": "A: Do you mean this one? B: That's a good question.",
+          "korean": "A: 이걸 말하는 거예요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "meaning-check.01-do-you-mean-this-one.example-3",
+          "english": "A: Do you mean this one? B: I'll check and let you know.",
+          "korean": "A: 이걸 말하는 거예요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "meaning-check.01-do-you-mean-this-one.variant-1",
+          "english": "Are you saying we should wait?",
+          "korean": "기다려야 한다는 말이에요?",
+          "register": "neutral",
+          "nuanceKo": "같은 의미 확인 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "meaning-check.01-do-you-mean-this-one.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "meaning-check.08-am-i-understanding-you-right",
+          "meaning-check.02-are-you-saying-we-should-wait"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "meaning-check.02-are-you-saying-we-should-wait"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Do you mean this one?",
+        "lang": "en-US"
+      },
+      "sortKey": "007.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "meaning-check.02-are-you-saying-we-should-wait",
+      "familyId": "meaning-check.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Are you saying we should wait?",
+      "english": "Are you saying we should wait?",
+      "korean": "기다려야 한다는 말이에요?",
+      "intentKo": "의미 확인 상황에서 “기다려야 한다는 말이에요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 의미 확인 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "meaning-check"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "의미 확인",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "meaning-check.02-are-you-saying-we-should-wait.example-1",
+          "english": "A: Are you saying we should wait? B: Let me think for a second.",
+          "korean": "A: 기다려야 한다는 말이에요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "meaning-check.02-are-you-saying-we-should-wait.example-2",
+          "english": "A: Are you saying we should wait? B: That's a good question.",
+          "korean": "A: 기다려야 한다는 말이에요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "meaning-check.02-are-you-saying-we-should-wait.example-3",
+          "english": "A: Are you saying we should wait? B: I'll check and let you know.",
+          "korean": "A: 기다려야 한다는 말이에요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "meaning-check.02-are-you-saying-we-should-wait.variant-1",
+          "english": "So, you mean it's already done?",
+          "korean": "그러니까 이미 끝났다는 뜻이에요?",
+          "register": "neutral",
+          "nuanceKo": "같은 의미 확인 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "meaning-check.02-are-you-saying-we-should-wait.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "meaning-check.01-do-you-mean-this-one",
+          "meaning-check.03-so-you-mean-its-already-done"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "meaning-check.03-so-you-mean-its-already-done"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Are you saying we should wait?",
+        "lang": "en-US"
+      },
+      "sortKey": "007.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "meaning-check.03-so-you-mean-its-already-done",
+      "familyId": "meaning-check.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "So, you mean it's already done?",
+      "english": "So, you mean it's already done?",
+      "korean": "그러니까 이미 끝났다는 뜻이에요?",
+      "intentKo": "의미 확인 상황에서 “그러니까 이미 끝났다는 뜻이에요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 의미 확인 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "meaning-check"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "의미 확인",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "meaning-check.03-so-you-mean-its-already-done.example-1",
+          "english": "A: So, you mean it's already done? B: Let me think for a second.",
+          "korean": "A: 그러니까 이미 끝났다는 뜻이에요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "meaning-check.03-so-you-mean-its-already-done.example-2",
+          "english": "A: So, you mean it's already done? B: That's a good question.",
+          "korean": "A: 그러니까 이미 끝났다는 뜻이에요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "meaning-check.03-so-you-mean-its-already-done.example-3",
+          "english": "A: So, you mean it's already done? B: I'll check and let you know.",
+          "korean": "A: 그러니까 이미 끝났다는 뜻이에요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "meaning-check.03-so-you-mean-its-already-done.variant-1",
+          "english": "If I understand correctly, we leave at six.",
+          "korean": "제가 맞게 이해했다면 6시에 출발하는 거죠.",
+          "register": "neutral",
+          "nuanceKo": "같은 의미 확인 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "meaning-check.03-so-you-mean-its-already-done.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "meaning-check.02-are-you-saying-we-should-wait",
+          "meaning-check.04-if-i-understand-correctly-we-leave-at-six"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "meaning-check.04-if-i-understand-correctly-we-leave-at-six"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "So, you mean it's already done?",
+        "lang": "en-US"
+      },
+      "sortKey": "007.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "meaning-check.04-if-i-understand-correctly-we-leave-at-six",
+      "familyId": "meaning-check.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "If I understand correctly, we leave at six.",
+      "english": "If I understand correctly, we leave at six.",
+      "korean": "제가 맞게 이해했다면 6시에 출발하는 거죠.",
+      "intentKo": "의미 확인 상황에서 “제가 맞게 이해했다면 6시에 출발하는 거죠.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 의미 확인 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "meaning-check"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "의미 확인",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "meaning-check.04-if-i-understand-correctly-we-leave-at-six.example-1",
+          "english": "A: If I understand correctly, we leave at six. B: Let me think for a second.",
+          "korean": "A: 제가 맞게 이해했다면 6시에 출발하는 거죠. B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "meaning-check.04-if-i-understand-correctly-we-leave-at-six.example-2",
+          "english": "A: If I understand correctly, we leave at six. B: That's a good question.",
+          "korean": "A: 제가 맞게 이해했다면 6시에 출발하는 거죠. B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "meaning-check.04-if-i-understand-correctly-we-leave-at-six.example-3",
+          "english": "A: If I understand correctly, we leave at six. B: I'll check and let you know.",
+          "korean": "A: 제가 맞게 이해했다면 6시에 출발하는 거죠. B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "meaning-check.04-if-i-understand-correctly-we-leave-at-six.variant-1",
+          "english": "When you say 'soon,' how soon?",
+          "korean": "곧이라고 하면 어느 정도를 말해요?",
+          "register": "neutral",
+          "nuanceKo": "같은 의미 확인 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "meaning-check.04-if-i-understand-correctly-we-leave-at-six.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "meaning-check.03-so-you-mean-its-already-done",
+          "meaning-check.05-when-you-say-soon-how-soon"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "meaning-check.05-when-you-say-soon-how-soon"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "If I understand correctly, we leave at six.",
+        "lang": "en-US"
+      },
+      "sortKey": "007.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "meaning-check.05-when-you-say-soon-how-soon",
+      "familyId": "meaning-check.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "When you say 'soon,' how soon?",
+      "english": "When you say 'soon,' how soon?",
+      "korean": "곧이라고 하면 어느 정도를 말해요?",
+      "intentKo": "의미 확인 상황에서 “곧이라고 하면 어느 정도를 말해요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 의미 확인 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "meaning-check"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "의미 확인",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "meaning-check.05-when-you-say-soon-how-soon.example-1",
+          "english": "A: When you say 'soon,' how soon? B: Let me think for a second.",
+          "korean": "A: 곧이라고 하면 어느 정도를 말해요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "meaning-check.05-when-you-say-soon-how-soon.example-2",
+          "english": "A: When you say 'soon,' how soon? B: That's a good question.",
+          "korean": "A: 곧이라고 하면 어느 정도를 말해요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "meaning-check.05-when-you-say-soon-how-soon.example-3",
+          "english": "A: When you say 'soon,' how soon? B: I'll check and let you know.",
+          "korean": "A: 곧이라고 하면 어느 정도를 말해요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "meaning-check.05-when-you-say-soon-how-soon.variant-1",
+          "english": "Does that mean I need an appointment?",
+          "korean": "그러면 예약이 필요하다는 뜻인가요?",
+          "register": "neutral",
+          "nuanceKo": "같은 의미 확인 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "meaning-check.05-when-you-say-soon-how-soon.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "meaning-check.04-if-i-understand-correctly-we-leave-at-six",
+          "meaning-check.06-does-that-mean-i-need-an-appointment"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "meaning-check.06-does-that-mean-i-need-an-appointment"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "When you say 'soon,' how soon?",
+        "lang": "en-US"
+      },
+      "sortKey": "007.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "meaning-check.06-does-that-mean-i-need-an-appointment",
+      "familyId": "meaning-check.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Does that mean I need an appointment?",
+      "english": "Does that mean I need an appointment?",
+      "korean": "그러면 예약이 필요하다는 뜻인가요?",
+      "intentKo": "의미 확인 상황에서 “그러면 예약이 필요하다는 뜻인가요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 의미 확인 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "meaning-check"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "의미 확인",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "meaning-check.06-does-that-mean-i-need-an-appointment.example-1",
+          "english": "A: Does that mean I need an appointment? B: Let me think for a second.",
+          "korean": "A: 그러면 예약이 필요하다는 뜻인가요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "meaning-check.06-does-that-mean-i-need-an-appointment.example-2",
+          "english": "A: Does that mean I need an appointment? B: That's a good question.",
+          "korean": "A: 그러면 예약이 필요하다는 뜻인가요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "meaning-check.06-does-that-mean-i-need-an-appointment.example-3",
+          "english": "A: Does that mean I need an appointment? B: I'll check and let you know.",
+          "korean": "A: 그러면 예약이 필요하다는 뜻인가요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "meaning-check.06-does-that-mean-i-need-an-appointment.variant-1",
+          "english": "Just to be clear, is this free?",
+          "korean": "확실히 하자면, 이건 무료인가요?",
+          "register": "neutral",
+          "nuanceKo": "같은 의미 확인 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "meaning-check.06-does-that-mean-i-need-an-appointment.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "meaning-check.05-when-you-say-soon-how-soon",
+          "meaning-check.07-just-to-be-clear-is-this-free"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "meaning-check.07-just-to-be-clear-is-this-free"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Does that mean I need an appointment?",
+        "lang": "en-US"
+      },
+      "sortKey": "007.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "meaning-check.07-just-to-be-clear-is-this-free",
+      "familyId": "meaning-check.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Just to be clear, is this free?",
+      "english": "Just to be clear, is this free?",
+      "korean": "확실히 하자면, 이건 무료인가요?",
+      "intentKo": "의미 확인 상황에서 “확실히 하자면, 이건 무료인가요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 의미 확인 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "meaning-check"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "의미 확인",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "meaning-check.07-just-to-be-clear-is-this-free.example-1",
+          "english": "A: Just to be clear, is this free? B: Let me think for a second.",
+          "korean": "A: 확실히 하자면, 이건 무료인가요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "meaning-check.07-just-to-be-clear-is-this-free.example-2",
+          "english": "A: Just to be clear, is this free? B: That's a good question.",
+          "korean": "A: 확실히 하자면, 이건 무료인가요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "meaning-check.07-just-to-be-clear-is-this-free.example-3",
+          "english": "A: Just to be clear, is this free? B: I'll check and let you know.",
+          "korean": "A: 확실히 하자면, 이건 무료인가요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "meaning-check.07-just-to-be-clear-is-this-free.variant-1",
+          "english": "Am I understanding you right?",
+          "korean": "제가 제대로 이해한 게 맞나요?",
+          "register": "neutral",
+          "nuanceKo": "같은 의미 확인 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "meaning-check.07-just-to-be-clear-is-this-free.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "meaning-check.06-does-that-mean-i-need-an-appointment",
+          "meaning-check.08-am-i-understanding-you-right"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "meaning-check.08-am-i-understanding-you-right"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Just to be clear, is this free?",
+        "lang": "en-US"
+      },
+      "sortKey": "007.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "meaning-check.08-am-i-understanding-you-right",
+      "familyId": "meaning-check.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Am I understanding you right?",
+      "english": "Am I understanding you right?",
+      "korean": "제가 제대로 이해한 게 맞나요?",
+      "intentKo": "의미 확인 상황에서 “제가 제대로 이해한 게 맞나요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 일상 대화에서 바로 쓸 수 있는 의미 확인 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "meaning-check"
+      ],
+      "situationIds": [
+        "daily"
+      ],
+      "tags": [
+        "의미 확인",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "meaning-check.08-am-i-understanding-you-right.example-1",
+          "english": "A: Am I understanding you right? B: Let me think for a second.",
+          "korean": "A: 제가 제대로 이해한 게 맞나요? B: 잠깐 생각해 볼게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "meaning-check.08-am-i-understanding-you-right.example-2",
+          "english": "A: Am I understanding you right? B: That's a good question.",
+          "korean": "A: 제가 제대로 이해한 게 맞나요? B: 좋은 질문이네요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "meaning-check.08-am-i-understanding-you-right.example-3",
+          "english": "A: Am I understanding you right? B: I'll check and let you know.",
+          "korean": "A: 제가 제대로 이해한 게 맞나요? B: 확인해서 알려드릴게요.",
+          "situationId": "daily",
+          "noteKo": "일상에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "meaning-check.08-am-i-understanding-you-right.variant-1",
+          "english": "Do you mean this one?",
+          "korean": "이걸 말하는 거예요?",
+          "register": "neutral",
+          "nuanceKo": "같은 의미 확인 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "meaning-check.08-am-i-understanding-you-right.reply-1",
+          "english": "Let me think for a second.",
+          "korean": "잠깐 생각해 볼게요.",
+          "type": "clarification"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "meaning-check.07-just-to-be-clear-is-this-free",
+          "meaning-check.01-do-you-mean-this-one"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "meaning-check.01-do-you-mean-this-one"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Am I understanding you right?",
+        "lang": "en-US"
+      },
+      "sortKey": "007.001.008",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "ask-repeat.01-could-you-say-that-again",
+      "familyId": "ask-repeat.family-01",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Could you say that again?",
+      "english": "Could you say that again?",
+      "korean": "다시 한 번 말씀해 주시겠어요?",
+      "intentKo": "다시 말해 달라고 하기 상황에서 “다시 한 번 말씀해 주시겠어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 다시 말해 달라고 하기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "ask-repeat"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "다시 말해 달라고 하기",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "ask-repeat.01-could-you-say-that-again.example-1",
+          "english": "A: Could you say that again? B: Sure, no problem.",
+          "korean": "A: 다시 한 번 말씀해 주시겠어요? B: 물론이죠, 문제없어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "ask-repeat.01-could-you-say-that-again.example-2",
+          "english": "A: Could you say that again? B: I'd be happy to.",
+          "korean": "A: 다시 한 번 말씀해 주시겠어요? B: 기꺼이 그럴게요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "ask-repeat.01-could-you-say-that-again.example-3",
+          "english": "A: Could you say that again? B: Let me see what I can do.",
+          "korean": "A: 다시 한 번 말씀해 주시겠어요? B: 제가 어떻게 할 수 있는지 볼게요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "ask-repeat.01-could-you-say-that-again.variant-1",
+          "english": "Sorry, I didn't catch that.",
+          "korean": "죄송하지만, 잘 못 들었어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 다시 말해 달라고 하기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "ask-repeat.01-could-you-say-that-again.reply-1",
+          "english": "Sure, no problem.",
+          "korean": "물론이죠, 문제없어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "Could you say again?",
+          "corrected": "Could you say that again?",
+          "explanationKo": "무엇을 다시 말하는지 나타내는 that을 함께 쓰는 것이 자연스럽다."
+        }
+      ],
+      "relations": {
+        "similar": [
+          "ask-repeat.08-can-you-run-that-by-me-one-more-time",
+          "ask-repeat.02-sorry-i-didnt-catch-that"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "ask-repeat.02-sorry-i-didnt-catch-that"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Could you say that again?",
+        "lang": "en-US"
+      },
+      "sortKey": "008.001.001",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "ask-repeat.02-sorry-i-didnt-catch-that",
+      "familyId": "ask-repeat.family-02",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Sorry, I didn't catch that.",
+      "english": "Sorry, I didn't catch that.",
+      "korean": "죄송하지만, 잘 못 들었어요.",
+      "intentKo": "다시 말해 달라고 하기 상황에서 “죄송하지만, 잘 못 들었어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 다시 말해 달라고 하기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "ask-repeat"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "다시 말해 달라고 하기",
+        "핵심 표현"
+      ],
+      "cefr": "A1",
+      "priority": "essential",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "ask-repeat.02-sorry-i-didnt-catch-that.example-1",
+          "english": "A: Sorry, I didn't catch that. B: Sure, no problem.",
+          "korean": "A: 죄송하지만, 잘 못 들었어요. B: 물론이죠, 문제없어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "ask-repeat.02-sorry-i-didnt-catch-that.example-2",
+          "english": "A: Sorry, I didn't catch that. B: I'd be happy to.",
+          "korean": "A: 죄송하지만, 잘 못 들었어요. B: 기꺼이 그럴게요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "ask-repeat.02-sorry-i-didnt-catch-that.example-3",
+          "english": "A: Sorry, I didn't catch that. B: Let me see what I can do.",
+          "korean": "A: 죄송하지만, 잘 못 들었어요. B: 제가 어떻게 할 수 있는지 볼게요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "ask-repeat.02-sorry-i-didnt-catch-that.variant-1",
+          "english": "Could you repeat the last part?",
+          "korean": "마지막 부분을 다시 말해 주시겠어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 다시 말해 달라고 하기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "ask-repeat.02-sorry-i-didnt-catch-that.reply-1",
+          "english": "Sure, no problem.",
+          "korean": "물론이죠, 문제없어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "ask-repeat.01-could-you-say-that-again",
+          "ask-repeat.03-could-you-repeat-the-last-part"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "ask-repeat.03-could-you-repeat-the-last-part"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Sorry, I didn't catch that.",
+        "lang": "en-US"
+      },
+      "sortKey": "008.001.002",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "ask-repeat.03-could-you-repeat-the-last-part",
+      "familyId": "ask-repeat.family-03",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Could you repeat the last part?",
+      "english": "Could you repeat the last part?",
+      "korean": "마지막 부분을 다시 말해 주시겠어요?",
+      "intentKo": "다시 말해 달라고 하기 상황에서 “마지막 부분을 다시 말해 주시겠어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 다시 말해 달라고 하기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "ask-repeat"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "다시 말해 달라고 하기",
+        "핵심 표현"
+      ],
+      "cefr": "A2",
+      "priority": "essential",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "ask-repeat.03-could-you-repeat-the-last-part.example-1",
+          "english": "A: Could you repeat the last part? B: Sure, no problem.",
+          "korean": "A: 마지막 부분을 다시 말해 주시겠어요? B: 물론이죠, 문제없어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "ask-repeat.03-could-you-repeat-the-last-part.example-2",
+          "english": "A: Could you repeat the last part? B: I'd be happy to.",
+          "korean": "A: 마지막 부분을 다시 말해 주시겠어요? B: 기꺼이 그럴게요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "ask-repeat.03-could-you-repeat-the-last-part.example-3",
+          "english": "A: Could you repeat the last part? B: Let me see what I can do.",
+          "korean": "A: 마지막 부분을 다시 말해 주시겠어요? B: 제가 어떻게 할 수 있는지 볼게요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "ask-repeat.03-could-you-repeat-the-last-part.variant-1",
+          "english": "Would you mind saying that more slowly?",
+          "korean": "조금 더 천천히 말씀해 주시겠어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 다시 말해 달라고 하기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "ask-repeat.03-could-you-repeat-the-last-part.reply-1",
+          "english": "Sure, no problem.",
+          "korean": "물론이죠, 문제없어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "ask-repeat.02-sorry-i-didnt-catch-that",
+          "ask-repeat.04-would-you-mind-saying-that-more-slowly"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "ask-repeat.04-would-you-mind-saying-that-more-slowly"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Could you repeat the last part?",
+        "lang": "en-US"
+      },
+      "sortKey": "008.001.003",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "ask-repeat.04-would-you-mind-saying-that-more-slowly",
+      "familyId": "ask-repeat.family-04",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Would you mind saying that more slowly?",
+      "english": "Would you mind saying that more slowly?",
+      "korean": "조금 더 천천히 말씀해 주시겠어요?",
+      "intentKo": "다시 말해 달라고 하기 상황에서 “조금 더 천천히 말씀해 주시겠어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 다시 말해 달라고 하기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "ask-repeat"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "다시 말해 달라고 하기",
+        "확장 표현"
+      ],
+      "cefr": "A2",
+      "priority": "common",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "ask-repeat.04-would-you-mind-saying-that-more-slowly.example-1",
+          "english": "A: Would you mind saying that more slowly? B: Sure, no problem.",
+          "korean": "A: 조금 더 천천히 말씀해 주시겠어요? B: 물론이죠, 문제없어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "ask-repeat.04-would-you-mind-saying-that-more-slowly.example-2",
+          "english": "A: Would you mind saying that more slowly? B: I'd be happy to.",
+          "korean": "A: 조금 더 천천히 말씀해 주시겠어요? B: 기꺼이 그럴게요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "ask-repeat.04-would-you-mind-saying-that-more-slowly.example-3",
+          "english": "A: Would you mind saying that more slowly? B: Let me see what I can do.",
+          "korean": "A: 조금 더 천천히 말씀해 주시겠어요? B: 제가 어떻게 할 수 있는지 볼게요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "ask-repeat.04-would-you-mind-saying-that-more-slowly.variant-1",
+          "english": "What was that again?",
+          "korean": "그게 뭐였죠?",
+          "register": "neutral",
+          "nuanceKo": "같은 다시 말해 달라고 하기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "ask-repeat.04-would-you-mind-saying-that-more-slowly.reply-1",
+          "english": "Sure, no problem.",
+          "korean": "물론이죠, 문제없어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "ask-repeat.03-could-you-repeat-the-last-part",
+          "ask-repeat.05-what-was-that-again"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "ask-repeat.05-what-was-that-again"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Would you mind saying that more slowly?",
+        "lang": "en-US"
+      },
+      "sortKey": "008.001.004",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "ask-repeat.05-what-was-that-again",
+      "familyId": "ask-repeat.family-05",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "What was that again?",
+      "english": "What was that again?",
+      "korean": "그게 뭐였죠?",
+      "intentKo": "다시 말해 달라고 하기 상황에서 “그게 뭐였죠?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 다시 말해 달라고 하기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "ask-repeat"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "다시 말해 달라고 하기",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "ask-repeat.05-what-was-that-again.example-1",
+          "english": "A: What was that again? B: Sure, no problem.",
+          "korean": "A: 그게 뭐였죠? B: 물론이죠, 문제없어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "ask-repeat.05-what-was-that-again.example-2",
+          "english": "A: What was that again? B: I'd be happy to.",
+          "korean": "A: 그게 뭐였죠? B: 기꺼이 그럴게요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "ask-repeat.05-what-was-that-again.example-3",
+          "english": "A: What was that again? B: Let me see what I can do.",
+          "korean": "A: 그게 뭐였죠? B: 제가 어떻게 할 수 있는지 볼게요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "ask-repeat.05-what-was-that-again.variant-1",
+          "english": "I missed what you said after that.",
+          "korean": "그다음에 한 말을 놓쳤어요.",
+          "register": "neutral",
+          "nuanceKo": "같은 다시 말해 달라고 하기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "ask-repeat.05-what-was-that-again.reply-1",
+          "english": "Sure, no problem.",
+          "korean": "물론이죠, 문제없어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "ask-repeat.04-would-you-mind-saying-that-more-slowly",
+          "ask-repeat.06-i-missed-what-you-said-after-that"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "ask-repeat.06-i-missed-what-you-said-after-that"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "What was that again?",
+        "lang": "en-US"
+      },
+      "sortKey": "008.001.005",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "ask-repeat.06-i-missed-what-you-said-after-that",
+      "familyId": "ask-repeat.family-06",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "I missed what you said after that.",
+      "english": "I missed what you said after that.",
+      "korean": "그다음에 한 말을 놓쳤어요.",
+      "intentKo": "다시 말해 달라고 하기 상황에서 “그다음에 한 말을 놓쳤어요.”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 다시 말해 달라고 하기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "ask-repeat"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "다시 말해 달라고 하기",
+        "확장 표현"
+      ],
+      "cefr": "B1",
+      "priority": "common",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "ask-repeat.06-i-missed-what-you-said-after-that.example-1",
+          "english": "A: I missed what you said after that. B: Sure, no problem.",
+          "korean": "A: 그다음에 한 말을 놓쳤어요. B: 물론이죠, 문제없어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "ask-repeat.06-i-missed-what-you-said-after-that.example-2",
+          "english": "A: I missed what you said after that. B: I'd be happy to.",
+          "korean": "A: 그다음에 한 말을 놓쳤어요. B: 기꺼이 그럴게요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "ask-repeat.06-i-missed-what-you-said-after-that.example-3",
+          "english": "A: I missed what you said after that. B: Let me see what I can do.",
+          "korean": "A: 그다음에 한 말을 놓쳤어요. B: 제가 어떻게 할 수 있는지 볼게요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "ask-repeat.06-i-missed-what-you-said-after-that.variant-1",
+          "english": "Could you spell that for me?",
+          "korean": "철자를 불러 주시겠어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 다시 말해 달라고 하기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "ask-repeat.06-i-missed-what-you-said-after-that.reply-1",
+          "english": "Sure, no problem.",
+          "korean": "물론이죠, 문제없어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "ask-repeat.05-what-was-that-again",
+          "ask-repeat.07-could-you-spell-that-for-me"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "ask-repeat.07-could-you-spell-that-for-me"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "I missed what you said after that.",
+        "lang": "en-US"
+      },
+      "sortKey": "008.001.006",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "ask-repeat.07-could-you-spell-that-for-me",
+      "familyId": "ask-repeat.family-07",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Could you spell that for me?",
+      "english": "Could you spell that for me?",
+      "korean": "철자를 불러 주시겠어요?",
+      "intentKo": "다시 말해 달라고 하기 상황에서 “철자를 불러 주시겠어요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 다시 말해 달라고 하기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "ask-repeat"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "다시 말해 달라고 하기",
+        "확장 표현"
+      ],
+      "cefr": "B2",
+      "priority": "extended",
+      "register": [
+        "neutral",
+        "polite"
+      ],
+      "examples": [
+        {
+          "id": "ask-repeat.07-could-you-spell-that-for-me.example-1",
+          "english": "A: Could you spell that for me? B: Sure, no problem.",
+          "korean": "A: 철자를 불러 주시겠어요? B: 물론이죠, 문제없어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "ask-repeat.07-could-you-spell-that-for-me.example-2",
+          "english": "A: Could you spell that for me? B: I'd be happy to.",
+          "korean": "A: 철자를 불러 주시겠어요? B: 기꺼이 그럴게요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "ask-repeat.07-could-you-spell-that-for-me.example-3",
+          "english": "A: Could you spell that for me? B: Let me see what I can do.",
+          "korean": "A: 철자를 불러 주시겠어요? B: 제가 어떻게 할 수 있는지 볼게요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "ask-repeat.07-could-you-spell-that-for-me.variant-1",
+          "english": "Can you run that by me one more time?",
+          "korean": "그걸 한 번만 더 설명해 줄래요?",
+          "register": "neutral",
+          "nuanceKo": "같은 다시 말해 달라고 하기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "ask-repeat.07-could-you-spell-that-for-me.reply-1",
+          "english": "Sure, no problem.",
+          "korean": "물론이죠, 문제없어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "ask-repeat.06-i-missed-what-you-said-after-that",
+          "ask-repeat.08-can-you-run-that-by-me-one-more-time"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "ask-repeat.08-can-you-run-that-by-me-one-more-time"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Could you spell that for me?",
+        "lang": "en-US"
+      },
+      "sortKey": "008.001.007",
+      "releasedAt": "2026-08-08"
+    },
+    {
+      "id": "ask-repeat.08-can-you-run-that-by-me-one-more-time",
+      "familyId": "ask-repeat.family-08",
+      "schemaVersion": 1,
+      "contentVersion": 1,
+      "pattern": "Can you run that by me one more time?",
+      "english": "Can you run that by me one more time?",
+      "korean": "그걸 한 번만 더 설명해 줄래요?",
+      "intentKo": "다시 말해 달라고 하기 상황에서 “그걸 한 번만 더 설명해 줄래요?”라는 의도를 자연스럽게 전달하기",
+      "nuanceKo": "실제 대화 대화에서 바로 쓸 수 있는 다시 말해 달라고 하기 표현이다. 말투와 억양에 따라 부드러움의 정도가 달라질 수 있다.",
+      "usageNoteKo": "대표 문장을 먼저 익힌 뒤 상대의 응답까지 한 덩어리로 소리 내어 연습한다.",
+      "categoryIds": [
+        "ask-repeat"
+      ],
+      "situationIds": [
+        "conversation"
+      ],
+      "tags": [
+        "다시 말해 달라고 하기",
+        "확장 표현"
+      ],
+      "cefr": "C1",
+      "priority": "extended",
+      "register": [
+        "neutral"
+      ],
+      "examples": [
+        {
+          "id": "ask-repeat.08-can-you-run-that-by-me-one-more-time.example-1",
+          "english": "A: Can you run that by me one more time? B: Sure, no problem.",
+          "korean": "A: 그걸 한 번만 더 설명해 줄래요? B: 물론이죠, 문제없어요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "ask-repeat.08-can-you-run-that-by-me-one-more-time.example-2",
+          "english": "A: Can you run that by me one more time? B: I'd be happy to.",
+          "korean": "A: 그걸 한 번만 더 설명해 줄래요? B: 기꺼이 그럴게요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        },
+        {
+          "id": "ask-repeat.08-can-you-run-that-by-me-one-more-time.example-3",
+          "english": "A: Can you run that by me one more time? B: Let me see what I can do.",
+          "korean": "A: 그걸 한 번만 더 설명해 줄래요? B: 제가 어떻게 할 수 있는지 볼게요.",
+          "situationId": "conversation",
+          "noteKo": "대화에서 이어지는 짧은 대화 예시"
+        }
+      ],
+      "variants": [
+        {
+          "id": "ask-repeat.08-can-you-run-that-by-me-one-more-time.variant-1",
+          "english": "Could you say that again?",
+          "korean": "다시 한 번 말씀해 주시겠어요?",
+          "register": "neutral",
+          "nuanceKo": "같은 다시 말해 달라고 하기 기능에서 선택할 수 있는 관련 표현"
+        }
+      ],
+      "replies": [
+        {
+          "id": "ask-repeat.08-can-you-run-that-by-me-one-more-time.reply-1",
+          "english": "Sure, no problem.",
+          "korean": "물론이죠, 문제없어요.",
+          "type": "positive"
+        }
+      ],
+      "commonMistakes": [],
+      "relations": {
+        "similar": [
+          "ask-repeat.07-could-you-spell-that-for-me",
+          "ask-repeat.01-could-you-say-that-again"
+        ],
+        "contrast": [],
+        "prerequisites": [],
+        "followUps": [
+          "ask-repeat.01-could-you-say-that-again"
+        ],
+        "responses": []
+      },
+      "audio": {
+        "ttsText": "Can you run that by me one more time?",
+        "lang": "en-US"
+      },
+      "sortKey": "008.001.008",
+      "releasedAt": "2026-08-08"
+    }
+  ]
+}
