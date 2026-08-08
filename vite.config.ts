@@ -3,7 +3,9 @@ import { defineConfig, loadEnv } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
 function normalizeBase(value: string | undefined): string {
-  const clean = (value || '/eng/').trim();
+  // Root hosting (Vercel, local preview, custom domains) is the safe default.
+  // GitHub Pages opts into the repository subpath in its workflow.
+  const clean = (value || '/').trim();
   if (clean === '/') return '/';
   return `/${clean.replace(/^\/+|\/+$/g, '')}/`;
 }

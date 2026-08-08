@@ -65,13 +65,13 @@ docs/                    콘텐츠 작성·스키마·업데이트 안내
 
 ## GitHub Pages 배포
 
-기본 Vite base와 PWA scope는 저장소 이름에 맞춘 `/eng/`입니다.
+기본 Vite base와 PWA scope는 Vercel·로컬·커스텀 도메인에서 바로 열리는 `/`입니다. GitHub Pages 워크플로는 저장소 경로에 맞게 `VITE_BASE_PATH=/eng/`를 지정합니다.
 
 ```bash
 npm run build
 ```
 
-정적 호스팅의 경로가 다르면 빌드 때 `VITE_BASE_PATH`로 덮어쓸 수 있습니다.
+다른 하위 경로에 배포할 때는 빌드 시 `VITE_BASE_PATH`로 덮어쓸 수 있습니다.
 
 ```bash
 VITE_BASE_PATH=/my-path/ npm run build
