@@ -75,6 +75,30 @@ interface RadialGestureState {
   drag: { x: number; y: number };
 }
 
+type PracticeVariationDeck = ReturnType<typeof buildPracticeVariationDeck>;
+
+const practiceVariationCache = new Map<
+  string,
+  { english: string; korean: string; deck: PracticeVariationDeck }
+>();
+
+function getPracticeVariationDeck(
+  pattern: Pick<ConversationPattern, "id" | "english" | "korean">,
+): PracticeVariationDeck {
+  const cached = practiceVariationCache.get(pattern.id);
+  if (cached?.english === pattern.english && cached.korean === pattern.korean) {
+    return cached.deck;
+  }
+
+  const deck = buildPracticeVariationDeck(pattern);
+  practiceVariationCache.set(pattern.id, {
+    english: pattern.english,
+    korean: pattern.korean,
+    deck,
+  });
+  return deck;
+}
+
 function clamp(value: number, minimum: number, maximum: number) {
   return Math.min(Math.max(value, minimum), maximum);
 }
@@ -138,14 +162,13 @@ function PatternCardComponent({
   const suppressNextClick = useRef(false);
   const gestureDirectionRef = useRef<RadialDirection | null>(null);
   const gestureActiveRef = useRef(false);
-  const unlockGestureScrollRef = useRef<(() => void) | null>(null);
   const previousPatternId = useRef(pattern.id);
   const [practiceOverride, setPracticeOverride] = useState<PracticeOverride | null>(null);
   const [radialGesture, setRadialGesture] = useState<RadialGestureState | null>(null);
   const mastery = masteryMeta(progress?.mastery);
   const variationDeck = useMemo(
-    () => buildPracticeVariationDeck(pattern),
-    [pattern],
+    () => getPracticeVariationDeck(pattern),
+    [pattern.english, pattern.id, pattern.korean],
   );
   const effectivePracticeOverride = selected ? practiceOverride : null;
   const activeReply = effectivePracticeOverride?.kind === "reply"
@@ -182,26 +205,19 @@ function PatternCardComponent({
     }
   }, []);
 
-  const unlockGestureScroll = useCallback(() => {
-    unlockGestureScrollRef.current?.();
-    unlockGestureScrollRef.current = null;
-  }, []);
-
   const closeRadialGesture = useCallback(() => {
     gestureActiveRef.current = false;
     gestureDirectionRef.current = null;
-    unlockGestureScroll();
     setRadialGesture(null);
-  }, [unlockGestureScroll]);
+  }, []);
 
   useEffect(
     () => () => {
       clearLongPress();
       gestureActiveRef.current = false;
       gestureDirectionRef.current = null;
-      unlockGestureScroll();
     },
-    [clearLongPress, unlockGestureScroll],
+    [clearLongPress],
   );
 
   useEffect(() => {
@@ -285,57 +301,6 @@ function PatternCardComponent({
     [cycleVariation, showReply, speakSlowly],
   );
 
-  const lockGestureScroll = useCallback(() => {
-    unlockGestureScroll();
-    const scroller = cardRef.current?.closest<HTMLElement>(".sg-virtual-grid__scroller") ?? null;
-    const lockedScrollTop = scroller?.scrollTop ?? 0;
-    const previous = scroller
-      ? {
-          overflow: scroller.style.overflow,
-          overscrollBehavior: scroller.style.overscrollBehavior,
-          scrollBehavior: scroller.style.scrollBehavior,
-          touchAction: scroller.style.touchAction,
-        }
-      : null;
-    const preventTouchScroll = (event: TouchEvent) => {
-      if (!gestureActiveRef.current) return;
-      event.preventDefault();
-    };
-    const pinScrollPosition = () => {
-      if (gestureActiveRef.current && scroller && scroller.scrollTop !== lockedScrollTop) {
-        scroller.scrollTop = lockedScrollTop;
-      }
-    };
-
-    document.documentElement.classList.add("sg-radial-gesture-open");
-    window.addEventListener("touchmove", preventTouchScroll, {
-      capture: true,
-      passive: false,
-    });
-    if (scroller && previous) {
-      scroller.classList.add("is-gesture-locked");
-      scroller.style.overflow = "hidden";
-      scroller.style.overscrollBehavior = "none";
-      scroller.style.scrollBehavior = "auto";
-      scroller.style.touchAction = "none";
-      scroller.addEventListener("scroll", pinScrollPosition, { passive: true });
-    }
-
-    unlockGestureScrollRef.current = () => {
-      document.documentElement.classList.remove("sg-radial-gesture-open");
-      window.removeEventListener("touchmove", preventTouchScroll, true);
-      if (scroller && previous) {
-        scroller.removeEventListener("scroll", pinScrollPosition);
-        scroller.classList.remove("is-gesture-locked");
-        scroller.style.overflow = previous.overflow;
-        scroller.style.overscrollBehavior = previous.overscrollBehavior;
-        scroller.style.scrollBehavior = previous.scrollBehavior;
-        scroller.style.touchAction = previous.touchAction;
-        scroller.scrollTop = lockedScrollTop;
-      }
-    };
-  }, [unlockGestureScroll]);
-
   const startRadialGesture = useCallback(() => {
     const origin = pointerOrigin.current;
     if (!origin || origin.moved) return;
@@ -344,7 +309,6 @@ function PatternCardComponent({
     suppressNextClick.current = true;
     gestureActiveRef.current = true;
     gestureDirectionRef.current = null;
-    lockGestureScroll();
 
     const rect = cardRef.current?.getBoundingClientRect();
     const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
@@ -364,7 +328,7 @@ function PatternCardComponent({
     onActivate?.(pattern);
     setRadialGesture({ center, direction: null, drag: { x: 0, y: 0 } });
     navigator.vibrate?.(10);
-  }, [lockGestureScroll, onActivate, pattern]);
+  }, [onActivate, pattern]);
 
   const handlePointerDown = useCallback(
     (event: PointerEvent<HTMLDivElement>) => {

@@ -7,7 +7,7 @@ export type DisplayMode =
   | "listening";
 
 export type GridDensity = "large" | "comfortable" | "compact" | "overview";
-export type AppView = "grid" | "random" | "review";
+export type AppView = "home" | "grid" | "random" | "review";
 
 export interface PatternProgressView {
   mastery: number;

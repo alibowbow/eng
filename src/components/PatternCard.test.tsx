@@ -59,20 +59,23 @@ describe("PatternCard", () => {
 
   it("uses the card body for speech and renders no standalone volume button", () => {
     const pattern = makePattern();
+    const onSpeak = vi.fn();
     const { container } = render(
       <PatternCard
         pattern={pattern}
         mode="all"
         density="comfortable"
-        onSpeak={vi.fn()}
+        onSpeak={onSpeak}
       />,
     );
 
     expect(container.querySelector('button[aria-label*="발음 듣기"]')).not.toBeInTheDocument();
     expect(container.querySelector(".sg-pattern-card__footer")).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: /발음 듣기$/ }));
+    expect(onSpeak).toHaveBeenCalledWith(pattern, undefined, pattern.id);
   });
 
-  it("keeps controls hidden until hold, locks scrolling, then paraphrases to the right", () => {
+  it("keeps vertical scrolling unlocked during hold-and-drag, then paraphrases to the right", () => {
     vi.useFakeTimers();
     const pattern = makePattern();
     const onActivate = vi.fn();
@@ -111,11 +114,18 @@ describe("PatternCard", () => {
     expect(screen.getByText("바꿔 말하기")).toBeInTheDocument();
     expect(screen.queryByText("예문")).not.toBeInTheDocument();
     const scroller = container.querySelector<HTMLElement>(".sg-virtual-grid__scroller")!;
-    expect(scroller).toHaveClass("is-gesture-locked");
-    expect(scroller.style.overflow).toBe("hidden");
+    expect(scroller).not.toHaveClass("is-gesture-locked");
+    expect(scroller.style.overflow).toBe("auto");
+    expect(scroller.style.overscrollBehavior).toBe("");
+    expect(scroller.style.scrollBehavior).toBe("");
+    expect(scroller.style.touchAction).toBe("");
+    expect(document.documentElement).not.toHaveClass("sg-radial-gesture-open");
     const touchMove = new Event("touchmove", { bubbles: true, cancelable: true });
     window.dispatchEvent(touchMove);
-    expect(touchMove.defaultPrevented).toBe(true);
+    expect(touchMove.defaultPrevented).toBe(false);
+    scroller.scrollTop = 64;
+    fireEvent.scroll(scroller);
+    expect(scroller.scrollTop).toBe(64);
 
     fireEvent.pointerMove(answer, { pointerId: 2, pointerType: "touch", clientX: 150, clientY: 61 });
     expect(document.querySelector(".sg-radial-menu__action.is-right.is-active")).toBeInTheDocument();
@@ -129,6 +139,7 @@ describe("PatternCard", () => {
     expect(document.querySelector(".sg-radial-menu")).not.toBeInTheDocument();
     expect(scroller).not.toHaveClass("is-gesture-locked");
     expect(scroller.style.overflow).toBe("auto");
+    expect(scroller.scrollTop).toBe(64);
   });
 
   it("drags up for a reply and down to replay the current sentence slowly", () => {
