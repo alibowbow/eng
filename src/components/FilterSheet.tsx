@@ -41,7 +41,6 @@ function activeFilterCount(filters: FilterState) {
     filters.cefr.length +
     filters.register.length +
     filters.mastery.length +
-    Number(filters.favoritesOnly) +
     Number(filters.reviewDueOnly) +
     Number(filters.newOnly)
   );
@@ -165,7 +164,6 @@ function FilterSheetComponent({
         {(
           [
             ["reviewDueOnly", "복습 예정"],
-            ["favoritesOnly", "즐겨찾기"],
             ["newOnly", "새 표현"],
           ] as const
         ).map(([key, label]) => (

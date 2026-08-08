@@ -11,7 +11,7 @@ import {
   type RefObject,
 } from "react";
 import type { ConversationPattern } from "../content/schema";
-import { PatternCard } from "./PatternCard";
+import { PatternCard, type RelatedPatternCardItem } from "./PatternCard";
 import type {
   DisplayMode,
   GridDensity,
@@ -19,17 +19,17 @@ import type {
 } from "./types";
 
 const MIN_COLUMN_WIDTH: Record<GridDensity, number> = {
-  large: 286,
-  comfortable: 224,
-  compact: 184,
-  overview: 144,
+  large: 268,
+  comfortable: 208,
+  compact: 172,
+  overview: 136,
 };
 
 const ESTIMATED_ROW_HEIGHT: Record<GridDensity, number> = {
-  large: 260,
-  comfortable: 228,
-  compact: 190,
-  overview: 142,
+  large: 212,
+  comfortable: 168,
+  compact: 142,
+  overview: 116,
 };
 
 function getColumnCount(width: number, density: GridDensity) {
@@ -67,11 +67,17 @@ export interface VirtualPatternGridProps {
   density: GridDensity;
   getProgress?: (pattern: ConversationPattern) => PatternProgressView | undefined;
   revealedIds?: ReadonlySet<string>;
+  selectedPatternId?: string;
   speakingId?: string;
   autoScrollSpeaking?: boolean;
   onRevealChange?: (patternId: string, revealed: boolean) => void;
-  onSpeak: (pattern: ConversationPattern) => void;
-  onToggleFavorite?: (pattern: ConversationPattern) => void;
+  getRelatedPatterns?: (pattern: ConversationPattern) => readonly RelatedPatternCardItem[];
+  onActivatePattern?: (pattern: ConversationPattern) => void;
+  onSpeak: (
+    pattern: ConversationPattern,
+    textOverride?: string,
+    visualPatternId?: string,
+  ) => void;
   onOpenDetails?: (pattern: ConversationPattern) => void;
   initialScrollIndex?: number;
   onVisibleRangeChange?: (startIndex: number, endIndex: number) => void;
@@ -85,11 +91,13 @@ function VirtualPatternGridComponent({
   density,
   getProgress,
   revealedIds,
+  selectedPatternId,
   speakingId,
   autoScrollSpeaking = true,
   onRevealChange,
+  getRelatedPatterns,
+  onActivatePattern,
   onSpeak,
-  onToggleFavorite,
   onOpenDetails,
   initialScrollIndex = 0,
   onVisibleRangeChange,
@@ -98,6 +106,7 @@ function VirtualPatternGridComponent({
 }: VirtualPatternGridProps) {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const autoScrollPausedUntil = useRef(0);
+  const initialScrollApplied = useRef(false);
   const width = useElementWidth(scrollerRef);
   const columns = getColumnCount(width, density);
   const rowCount = Math.ceil(patterns.length / columns);
@@ -125,11 +134,13 @@ function VirtualPatternGridComponent({
   }, [columns, density, rowVirtualizer]);
 
   useEffect(() => {
-    if (initialScrollIndex <= 0 || patterns.length === 0) return;
+    if (initialScrollApplied.current || width <= 0 || patterns.length === 0) return;
+    initialScrollApplied.current = true;
+    if (initialScrollIndex <= 0) return;
     rowVirtualizer.scrollToIndex(Math.floor(initialScrollIndex / columns), {
       align: "start",
     });
-  }, [columns, initialScrollIndex, patterns.length, rowVirtualizer]);
+  }, [columns, initialScrollIndex, patterns.length, rowVirtualizer, width]);
 
   useEffect(() => {
     if (!speakingId || !autoScrollSpeaking || Date.now() < autoScrollPausedUntil.current) return;
@@ -214,12 +225,13 @@ function VirtualPatternGridComponent({
                   density={density}
                   progress={getProgress?.(pattern)}
                   revealed={activeRevealedIds.has(pattern.id)}
+                  selected={selectedPatternId === pattern.id}
+                  relatedPatterns={selectedPatternId === pattern.id ? getRelatedPatterns?.(pattern) : undefined}
+                  resolveRelatedPatterns={getRelatedPatterns}
                   isSpeaking={speakingId === pattern.id}
-                  onRevealChange={(nextRevealed) =>
-                    handleRevealChange(pattern.id, nextRevealed)
-                  }
+                  onRevealChange={handleRevealChange}
+                  onActivate={onActivatePattern}
                   onSpeak={onSpeak}
-                  onToggleFavorite={onToggleFavorite}
                   onOpenDetails={onOpenDetails}
                 />
               ))}

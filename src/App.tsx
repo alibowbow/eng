@@ -51,6 +51,7 @@ import {
   type PersonalNote,
 } from "./lib/db";
 import { sampleUniqueBy } from "./lib/random";
+import { createRelatedPatternResolver } from "./lib/related";
 import { isReviewDue } from "./lib/review";
 import { searchPatterns, type MasteryFilter } from "./lib/search";
 
@@ -97,7 +98,6 @@ function countActiveFilters(filters: FilterState) {
     filters.cefr.length +
     filters.register.length +
     filters.mastery.length +
-    Number(filters.favoritesOnly) +
     Number(filters.reviewDueOnly) +
     Number(filters.newOnly) +
     Number(Boolean(filters.query.trim()))
@@ -126,11 +126,13 @@ export function App() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [revealedIds, setRevealedIds] = useState<ReadonlySet<string>>(() => new Set());
   const [progressById, setProgressById] = useState<Map<string, LearningProgress>>(() => new Map());
-  const [favoriteIds, setFavoriteIds] = useState<ReadonlySet<string>>(() => new Set());
   const [notesById, setNotesById] = useState<Map<string, string>>(() => new Map());
+  const [activePatternId, setActivePatternId] = useState<string | null>(null);
   const [selectedPatternId, setSelectedPatternId] = useState<string | null>(null);
+  const [speakingPatternId, setSpeakingPatternId] = useState<string | null>(null);
   const [randomSession, setRandomSession] = useState<RandomSessionState | null>(null);
   const [initialScrollIndex, setInitialScrollIndex] = useState(0);
+  const [scrollRestoreVersion, setScrollRestoreVersion] = useState(0);
   const [toasts, setToasts] = useState<ToastItem[]>([]);
   const [listeningSettings, setListeningSettings] = useState<ListeningSettings>(
     DEFAULT_LISTENING_SETTINGS,
@@ -154,6 +156,14 @@ export function App() {
   const patternById = useMemo(
     () => new Map(patterns.map((pattern) => [pattern.id, pattern])),
     [patterns],
+  );
+  const relatedPatternResolver = useMemo(
+    () => createRelatedPatternResolver(patterns, content?.packs ?? []),
+    [content?.packs, patterns],
+  );
+  const getRelatedPatterns = useCallback(
+    (pattern: ConversationPattern) => relatedPatternResolver.get(pattern),
+    [relatedPatternResolver],
   );
 
   const dismissToast = useCallback((id: string) => {
@@ -184,17 +194,15 @@ export function App() {
     setLoading(true);
     setLoadError(null);
     try {
-      const [loadedContent, progress, settings, favorites, notes, position] = await Promise.all([
+      const [loadedContent, progress, settings, notes, position] = await Promise.all([
         loadContent({ includeOptional: true }),
         getProgressMap(),
         getSettings(),
-        db.getAll("favorites"),
         db.getAll("personalNotes"),
         db.get("lastGridPosition", "main"),
       ]);
       setContent(loadedContent);
       setProgressById(progress);
-      setFavoriteIds(new Set(favorites.map((record) => record.patternId)));
       setNotesById(new Map(notes.map((record) => [record.patternId, record.text])));
       setMode(settings.hideMode);
       setDensity(mapDensity(settings.gridDensity));
@@ -207,12 +215,15 @@ export function App() {
         highContrast: settings.highContrast,
         reduceMotion: settings.reducedMotion,
       });
+      let restoredIndex = 0;
       if (position?.anchorPatternId) {
         const anchorIndex = loadedContent.patterns.findIndex(
           (pattern) => pattern.id === position.anchorPatternId,
         );
-        if (anchorIndex >= 0) setInitialScrollIndex(anchorIndex);
+        if (anchorIndex >= 0) restoredIndex = anchorIndex;
       }
+      setInitialScrollIndex(restoredIndex);
+      setScrollRestoreVersion((current) => current + 1);
       loadedContent.errors.forEach((message) => pushToast(message, "warning"));
       if (loadedContent.updates.newPatternCount > 0) {
         pushToast(
@@ -311,26 +322,20 @@ export function App() {
         cefr: filters.cefr as ConversationPattern["cefr"][],
         register: filters.register as ConversationPattern["register"],
         mastery,
-        favoritesOnly: filters.favoritesOnly,
         newOnly: filters.newOnly,
       },
       progressById,
       notesById,
-      favoriteIds,
       now: clock,
       newSince: clock - NEW_WINDOW_MS,
     });
-  }, [clock, deferredQuery, favoriteIds, filters, notesById, patterns, progressById]);
+  }, [clock, deferredQuery, filters, notesById, patterns, progressById]);
 
   const duePatterns = useMemo(
     () => filteredPatterns.filter((pattern) => isReviewDue(progressById.get(pattern.id), clock)),
     [clock, filteredPatterns, progressById],
   );
-  const savedPatterns = useMemo(
-    () => filteredPatterns.filter((pattern) => favoriteIds.has(pattern.id)),
-    [favoriteIds, filteredPatterns],
-  );
-  const scopedPatterns = view === "review" ? duePatterns : view === "saved" ? savedPatterns : filteredPatterns;
+  const scopedPatterns = view === "review" ? duePatterns : filteredPatterns;
   const displayedPatterns = view === "random" && randomSession ? randomSession.patterns : scopedPatterns;
 
   const categoryOptions = useMemo<FilterOption[]>(() => {
@@ -388,19 +393,25 @@ export function App() {
     setContinuousOptions({ rate: listeningSettings.rate, repeat: repeatListening });
   }, [listeningSettings.rate, repeatListening, setContinuousOptions]);
 
-  const getProgressView = useCallback(
-    (pattern: ConversationPattern): PatternProgressView => {
+  const progressViewById = useMemo(() => {
+    const next = new Map<string, PatternProgressView>();
+    for (const pattern of patterns) {
       const progress = progressById.get(pattern.id);
-      return {
+      next.set(pattern.id, {
         mastery: progress?.mastery ?? 0,
         due: isReviewDue(progress, clock),
-        bookmarked: favoriteIds.has(pattern.id),
         isNew: Boolean(
           pattern.releasedAt && new Date(pattern.releasedAt).getTime() >= clock - NEW_WINDOW_MS,
         ),
-      };
-    },
-    [clock, favoriteIds, progressById],
+      });
+    }
+    return next;
+  }, [clock, patterns, progressById]);
+
+  const getProgressView = useCallback(
+    (pattern: ConversationPattern): PatternProgressView | undefined =>
+      progressViewById.get(pattern.id),
+    [progressViewById],
   );
 
   const handleModeChange = useCallback((nextMode: DisplayMode) => {
@@ -424,40 +435,34 @@ export function App() {
   }, []);
 
   const handleSpeak = useCallback(
-    async (pattern: ConversationPattern) => {
+    async (
+      pattern: ConversationPattern,
+      textOverride?: string,
+      visualPatternId = pattern.id,
+    ) => {
       stopContinuous();
       const token = speakingToken.current + 1;
       speakingToken.current = token;
+      setSpeakingPatternId(visualPatternId);
       const result = await speak({
-        text: pattern.audio?.ttsText || pattern.english,
+        text: textOverride || pattern.audio?.ttsText || pattern.english,
         lang: pattern.audio?.lang || "en-US",
-        audioUrl: pattern.audio?.audioUrl,
-        slowAudioUrl: pattern.audio?.slowAudioUrl,
+        audioUrl: textOverride ? undefined : pattern.audio?.audioUrl,
+        slowAudioUrl: textOverride ? undefined : pattern.audio?.slowAudioUrl,
       });
       if (token === speakingToken.current && result === "unsupported") {
         pushToast("이 브라우저에서는 음성 재생을 사용할 수 없습니다.", "warning");
       } else if (token === speakingToken.current && result === "error") {
         pushToast("음성을 재생하지 못했습니다. 다른 목소리를 선택해 보세요.", "error");
       }
+      if (token === speakingToken.current) setSpeakingPatternId(null);
     },
     [pushToast, speak, stopContinuous],
   );
 
-  const handleToggleFavorite = useCallback(
-    (pattern: ConversationPattern) => {
-      const isFavorite = favoriteIds.has(pattern.id);
-      setFavoriteIds((current) => {
-        const next = new Set(current);
-        if (isFavorite) next.delete(pattern.id);
-        else next.add(pattern.id);
-        return next;
-      });
-      if (isFavorite) void db.delete("favorites", pattern.id);
-      else void db.put("favorites", { patternId: pattern.id, createdAt: new Date().toISOString() });
-      pushToast(isFavorite ? "보관함에서 뺐습니다." : "보관함에 추가했습니다.", "success");
-    },
-    [favoriteIds, pushToast],
-  );
+  const handleActivatePattern = useCallback((pattern: ConversationPattern) => {
+    setActivePatternId(pattern.id);
+  }, []);
 
   const handleOpenDetails = useCallback((pattern: ConversationPattern) => {
     setSelectedPatternId(pattern.id);
@@ -509,6 +514,7 @@ export function App() {
       }
       setRandomSession({ patterns: selected });
       setView("random");
+      setActivePatternId(null);
       setRevealedIds(new Set());
       stopContinuous();
     },
@@ -518,6 +524,7 @@ export function App() {
   const exitRandom = useCallback(() => {
     setRandomSession(null);
     setView("grid");
+    setActivePatternId(null);
     setRevealedIds(new Set());
     stopContinuous();
   }, [stopContinuous]);
@@ -526,6 +533,7 @@ export function App() {
     (nextView: AppView) => {
       if (nextView !== "random") setRandomSession(null);
       setView(nextView);
+      setActivePatternId(null);
       setRevealedIds(new Set());
       stopContinuous();
     },
@@ -608,10 +616,9 @@ export function App() {
   }, [pushToast]);
 
   const handleResetLearning = useCallback(async () => {
-    if (!window.confirm("진도, 복습 일정, 즐겨찾기와 메모를 모두 지울까요? 이 작업은 되돌릴 수 없습니다.")) return;
+    if (!window.confirm("진도, 복습 일정과 메모를 모두 지울까요? 이 작업은 되돌릴 수 없습니다.")) return;
     await resetLearningData();
     setProgressById(new Map());
-    setFavoriteIds(new Set());
     setNotesById(new Map());
     pushToast("학습 기록을 초기화했습니다.", "success");
   }, [pushToast]);
@@ -642,7 +649,9 @@ export function App() {
   const currentListeningPattern = continuousState.currentId
     ? patternById.get(continuousState.currentId)
     : undefined;
-  const speakingId = continuousActive ? continuousState.currentId ?? undefined : undefined;
+  const speakingId = continuousActive
+    ? continuousState.currentId ?? undefined
+    : speakingPatternId ?? undefined;
 
   return (
     <div className="sg-app" data-view={view}>
@@ -683,27 +692,31 @@ export function App() {
         ) : null}
         {!loading && !loadError && !(view === "random" && !randomSession) ? (
           <VirtualPatternGrid
+            key={scrollRestoreVersion}
             patterns={displayedPatterns}
             mode={mode}
             density={density}
             getProgress={getProgressView}
             revealedIds={revealedIds}
+            selectedPatternId={activePatternId ?? undefined}
             speakingId={speakingId}
-            autoScrollSpeaking={listeningSettings.autoScroll}
+            autoScrollSpeaking={continuousActive && listeningSettings.autoScroll}
             onRevealChange={handleRevealChange}
-            onSpeak={(pattern) => void handleSpeak(pattern)}
-            onToggleFavorite={handleToggleFavorite}
+            getRelatedPatterns={getRelatedPatterns}
+            onActivatePattern={handleActivatePattern}
+            onSpeak={handleSpeak}
             onOpenDetails={handleOpenDetails}
             initialScrollIndex={initialScrollIndex}
             onVisibleRangeChange={handleVisibleRangeChange}
             emptyState={
               <EmptyState
-                title={view === "review" ? "지금 복습할 표현이 없어요" : view === "saved" ? "보관한 표현이 없어요" : undefined}
+                title={view === "review" ? "지금 복습할 표현이 없어요" : undefined}
                 description={view === "review" ? "다음 복습 시간이 되면 여기에 자동으로 모입니다." : undefined}
                 actionLabel="전체 그리드 보기"
                 onAction={() => {
                   setFilters({ ...EMPTY_FILTERS });
                   setView("grid");
+                  setActivePatternId(null);
                 }}
               />
             }
@@ -738,6 +751,7 @@ export function App() {
         onChange={(next) => startTransition(() => setFilters(next))}
         onApply={(next) => {
           setInitialScrollIndex(0);
+          setActivePatternId(null);
           startTransition(() => setFilters(next));
         }}
         onClose={() => setFilterOpen(false)}
@@ -747,11 +761,12 @@ export function App() {
         open={Boolean(selectedPattern)}
         pattern={selectedPattern}
         progress={selectedPattern ? getProgressView(selectedPattern) : undefined}
-        relatedPatterns={patterns}
+        relatedPatterns={selectedPattern
+          ? relatedPatternResolver.get(selectedPattern).map((item) => item.pattern)
+          : []}
         note={selectedPattern ? notesById.get(selectedPattern.id) : ""}
         onClose={handleCloseDetails}
         onSpeak={(pattern) => void handleSpeak(pattern)}
-        onToggleFavorite={handleToggleFavorite}
         onSaveNote={handleSaveNote}
         onSelectRelated={handleSelectRelated}
       />

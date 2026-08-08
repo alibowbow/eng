@@ -1,9 +1,9 @@
 import {
   ArrowRight,
-  Bookmark,
   CheckCircle2,
   CircleAlert,
   MessageCircleReply,
+  PencilLine,
   Sparkles,
   Volume2,
 } from "lucide-react";
@@ -20,7 +20,6 @@ export interface PatternDetailDrawerProps {
   note?: string;
   onClose: () => void;
   onSpeak: (pattern: ConversationPattern) => void;
-  onToggleFavorite?: (pattern: ConversationPattern) => void;
   onSaveNote?: (patternId: string, note: string) => void;
   onSelectRelated?: (patternId: string) => void;
 }
@@ -40,7 +39,6 @@ function PatternDetailDrawerComponent({
   note = "",
   onClose,
   onSpeak,
-  onToggleFavorite,
   onSaveNote,
   onSelectRelated,
 }: PatternDetailDrawerProps) {
@@ -50,13 +48,7 @@ function PatternDetailDrawerComponent({
 
   if (!pattern) return null;
 
-  const relationIds = new Set([
-    ...pattern.relations.similar,
-    ...pattern.relations.contrast,
-    ...pattern.relations.followUps,
-    ...pattern.relations.responses,
-  ]);
-  const visibleRelated = relatedPatterns.filter((item) => relationIds.has(item.id));
+  const visibleRelated = relatedPatterns.filter((item) => item.id !== pattern.id).slice(0, 5);
 
   return (
     <OverlaySheet
@@ -82,16 +74,6 @@ function PatternDetailDrawerComponent({
         <div className="sg-detail-hero__actions">
           <button type="button" className="sg-primary-button" onClick={() => onSpeak(pattern)}>
             <Volume2 aria-hidden="true" /> 발음 듣기
-          </button>
-          <button
-            type="button"
-            className={`sg-secondary-button${progress?.bookmarked ? " is-active" : ""}`}
-            aria-pressed={Boolean(progress?.bookmarked)}
-            onClick={() => onToggleFavorite?.(pattern)}
-            disabled={!onToggleFavorite}
-          >
-            <Bookmark aria-hidden="true" fill={progress?.bookmarked ? "currentColor" : "none"} />
-            {progress?.bookmarked ? "보관됨" : "보관하기"}
           </button>
         </div>
       </div>
@@ -197,7 +179,7 @@ function PatternDetailDrawerComponent({
       ) : null}
 
       <section className="sg-detail-section">
-        <div className="sg-detail-section__title"><Bookmark aria-hidden="true" /><h3>내 메모</h3></div>
+        <div className="sg-detail-section__title"><PencilLine aria-hidden="true" /><h3>내 메모</h3></div>
         <textarea
           className="sg-note-field"
           value={draftNote}

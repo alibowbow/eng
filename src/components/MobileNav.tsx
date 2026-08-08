@@ -1,4 +1,4 @@
-import { Bookmark, Clock3, Grid2X2, Shuffle } from "lucide-react";
+import { Clock3, Grid2X2, Shuffle } from "lucide-react";
 import { memo } from "react";
 import type { AppView } from "./types";
 
@@ -12,7 +12,6 @@ const ITEMS: Array<{ value: AppView; label: string; Icon: typeof Grid2X2 }> = [
   { value: "grid", label: "그리드", Icon: Grid2X2 },
   { value: "random", label: "랜덤", Icon: Shuffle },
   { value: "review", label: "복습", Icon: Clock3 },
-  { value: "saved", label: "보관함", Icon: Bookmark },
 ];
 
 function MobileNavComponent({ value, onChange, reviewCount = 0 }: MobileNavProps) {
@@ -29,7 +28,7 @@ function MobileNavComponent({ value, onChange, reviewCount = 0 }: MobileNavProps
             onClick={() => onChange(itemValue)}
           >
             <span>
-              <Icon aria-hidden="true" fill={itemValue === "saved" && active ? "currentColor" : "none"} />
+              <Icon aria-hidden="true" />
               {itemValue === "review" && reviewCount > 0 ? <b>{reviewCount > 99 ? "99+" : reviewCount}</b> : null}
             </span>
             {label}
