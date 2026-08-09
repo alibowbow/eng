@@ -139,13 +139,6 @@ function modulo(value: number, size: number) {
   return ((value % size) + size) % size;
 }
 
-function cardTone(pattern: ConversationPattern) {
-  const source = pattern.categoryIds[0] ?? pattern.familyId ?? pattern.id;
-  let hash = 0;
-  for (const character of source) hash = (hash * 31 + character.charCodeAt(0)) >>> 0;
-  return hash % 6;
-}
-
 function PatternCardComponent({
   pattern,
   mode,
@@ -509,7 +502,6 @@ function PatternCardComponent({
       ref={cardRef}
       className={`sg-pattern-card sg-density-${density}${revealed ? " is-revealed" : ""}${selected ? " is-selected" : ""}${isSpeaking ? " is-speaking" : ""}${radialGesture ? " is-gesture-active" : ""}`}
       data-pattern-id={pattern.id}
-      data-card-tone={cardTone(pattern)}
       data-mastery={mastery.level}
       data-favorite={favorite ? "true" : "false"}
       data-practice-kind={practiceOverride?.kind ?? "base"}
