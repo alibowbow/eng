@@ -1,0 +1,7 @@
+<<<<<<< SEARCH
+  const taxonomyLabel = pattern.tags.slice(0, 2).join(" · ");
+  const toplineLabel = transformedLabel ?? (showPatternFormula ? formula : taxonomyLabel);
+=======
+  const taxonomyLabel = pattern.tags.filter(tag => tag !== "핵심 표현" && tag !== "확장 표현" && tag !== "핵심" && tag !== "확장" && tag !== "표현").slice(0, 2).join(" · ");
+  const toplineLabel = transformedLabel ?? (showPatternFormula ? formula : taxonomyLabel);
+>>>>>>> REPLACE
