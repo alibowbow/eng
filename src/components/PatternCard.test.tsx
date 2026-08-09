@@ -2,11 +2,14 @@
 
 import "@testing-library/jest-dom/vitest";
 import { act, cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import { useState } from "react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { makePattern } from "../test/fixtures";
-import styles from "../styles.css?raw";
 import { PatternCard } from "./PatternCard";
+
+const styles = readFileSync(resolve(process.cwd(), "src/styles.css"), "utf8");
 
 afterEach(() => {
   vi.useRealTimers();
@@ -477,11 +480,17 @@ describe("PatternCard", () => {
     expect(screen.queryByText("핵심 표현")).not.toBeInTheDocument();
   });
 
-  it("uses a plain hidden-answer surface without diagonal hatch decoration", () => {
+  it("uses a plain white card, layered shadow, and colorless hidden-answer surface", () => {
+    const cardRule = styles.match(/\.sg-pattern-card\s*\{[^{}]*\}/)?.[0] ?? "";
     const hiddenAnswerRules = styles
       .match(/[^{}]*\.sg-hidden-answer[^{}]*\{[^{}]*\}/g)
       ?.join("\n") ?? "";
 
+    expect(cardRule).toContain("background: #ffffff");
+    expect(cardRule).toContain("box-shadow: var(--sg-shadow-grid)");
+    expect(cardRule).not.toContain("colored-paper-atlas");
     expect(hiddenAnswerRules).not.toContain("repeating-linear-gradient");
+    expect(hiddenAnswerRules).not.toContain("color-mix");
+    expect(hiddenAnswerRules).toContain("background: transparent");
   });
 });

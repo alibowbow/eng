@@ -2,12 +2,26 @@
 
 import "@testing-library/jest-dom/vitest";
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { AppToolbar, type AppToolbarProps } from "./AppToolbar";
 
+const styles = readFileSync(resolve(process.cwd(), "src/styles.css"), "utf8");
+
 afterEach(cleanup);
 
-describe("AppToolbar favorites", () => {
+describe("AppToolbar", () => {
+  it("uses solid menu surfaces instead of washed-out gradients", () => {
+    const toolbarRule = styles.match(/\.sg-toolbar\s*\{[^{}]*\}/)?.[0] ?? "";
+    const activeModeRule = styles.match(/\.sg-mode-switch button\.is-active\s*\{[^{}]*\}/)?.[0] ?? "";
+
+    expect(toolbarRule).toContain("background: var(--sg-toolbar-surface)");
+    expect(toolbarRule).not.toContain("gradient");
+    expect(activeModeRule).toContain("background: var(--sg-toolbar-active)");
+    expect(activeModeRule).not.toContain("gradient");
+  });
+
   it("exposes the favorite count and pressed state through one toggle", () => {
     const onToggleFavoritesOnly = vi.fn();
     const props: AppToolbarProps = {
