@@ -481,14 +481,21 @@ describe("PatternCard", () => {
   });
 
   it("uses a plain white card, layered shadow, and colorless hidden-answer surface", () => {
+    const rootRule = styles.match(/:root\s*\{[^{}]*\}/)?.[0] ?? "";
     const cardRule = styles.match(/\.sg-pattern-card\s*\{[^{}]*\}/)?.[0] ?? "";
+    const pressedCardRule = styles.match(/\.sg-pattern-card:has\(\.sg-pattern-card__answer:active\)\s*\{[^{}]*\}/)?.[0] ?? "";
     const hiddenAnswerRules = styles
       .match(/[^{}]*\.sg-hidden-answer[^{}]*\{[^{}]*\}/g)
       ?.join("\n") ?? "";
 
+    expect(rootRule).toContain("--sg-shadow-grid-lift");
+    expect(rootRule).toContain("--sg-shadow-grid-pressed");
+    expect(rootRule).toContain("0 3px 0 rgba(72, 64, 52, 0.17)");
     expect(cardRule).toContain("background: #ffffff");
     expect(cardRule).toContain("box-shadow: var(--sg-shadow-grid)");
     expect(cardRule).not.toContain("colored-paper-atlas");
+    expect(pressedCardRule).toContain("box-shadow: var(--sg-shadow-grid-pressed)");
+    expect(pressedCardRule).toContain("transform: translateY(2px)");
     expect(hiddenAnswerRules).not.toContain("repeating-linear-gradient");
     expect(hiddenAnswerRules).not.toContain("color-mix");
     expect(hiddenAnswerRules).toContain("background: transparent");
