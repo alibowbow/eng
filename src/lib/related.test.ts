@@ -215,7 +215,7 @@ describe("related pattern index", () => {
       english: "Rain stopped overnight.",
       categoryIds: ["weather-report"],
       situationIds: ["outdoors"],
-      tags: ["핵심 표현", "일상"],
+      tags: ["표현", "일상"],
       relations: {
         similar: [anchor.id],
         contrast: [],
@@ -226,7 +226,7 @@ describe("related pattern index", () => {
     });
     const taggedAnchor = {
       ...anchor,
-      tags: ["핵심 표현", "일상"],
+      tags: ["표현", "일상"],
       relations: {
         ...anchor.relations,
         similar: [genericTagOnly.id],

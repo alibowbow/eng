@@ -452,7 +452,7 @@ function PatternCardComponent({
   const transformedLabel = effectivePracticeOverride
     ? `${practiceLabel} ${modulo(effectivePracticeOverride.index, Math.max(1, activeLaneLength)) + 1}/${Math.max(1, activeLaneLength)}`
     : null;
-  const taxonomyLabel = pattern.tags.slice(0, 2).join(" · ");
+  const taxonomyLabel = pattern.tags.filter(tag => !["핵심표현", "확장표현", "핵심 표현", "확장 표현", "핵심", "확장", "표현"].includes(tag)).slice(0, 2).join(" · ");
   const toplineLabel = transformedLabel ?? (showPatternFormula ? formula : taxonomyLabel);
   const toplineLanguage = transformedLabel || !showPatternFormula ? "ko" : "en";
   const instructionId = `sg-pattern-${pattern.id}-instructions`;

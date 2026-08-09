@@ -542,7 +542,7 @@ export function createRelatedPatternResolver(
       );
 
       // Tags and CEFR intentionally do not qualify a candidate. Content tags
-      // such as "핵심 표현" are too broad, and level alone says nothing about
+      // such as "표현" are too broad, and level alone says nothing about
       // what should be practised together. Likewise, broad situations such as
       // "conversation" only help rank an existing connection; they cannot
       // connect otherwise unrelated cards by themselves.
