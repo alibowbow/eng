@@ -267,8 +267,8 @@ function PatternCardComponent({
     onActivate?.(pattern);
     if (practiceItem) onSpeak(pattern, practiceItem.english, pattern.id);
     else onSpeak(pattern, undefined, pattern.id);
-    if (answerIsHidden) onRevealChange?.(pattern.id, true);
-  }, [answerIsHidden, onActivate, onRevealChange, onSpeak, pattern, practiceItem?.english]);
+    if (answerIsHidden && mode !== "listening") onRevealChange?.(pattern.id, true);
+  }, [answerIsHidden, mode, onActivate, onRevealChange, onSpeak, pattern, practiceItem?.english]);
 
   const cycleVariation = useCallback(
     (kind: PracticeVariationKind) => {
@@ -318,8 +318,8 @@ function PatternCardComponent({
       pattern.id,
       { slow: true },
     );
-    if (answerIsHidden) onRevealChange?.(pattern.id, true);
-  }, [answerIsHidden, onActivate, onRevealChange, onSpeak, pattern, practiceItem?.english]);
+    if (answerIsHidden && mode !== "listening") onRevealChange?.(pattern.id, true);
+  }, [answerIsHidden, mode, onActivate, onRevealChange, onSpeak, pattern, practiceItem?.english]);
 
   const performRadialAction = useCallback(
     (direction: RadialDirection) => {
@@ -499,7 +499,7 @@ function PatternCardComponent({
   const transformedLabel = effectivePracticeOverride
     ? `${practiceLabel} ${modulo(effectivePracticeOverride.index, Math.max(1, activeLaneLength)) + 1}/${Math.max(1, activeLaneLength)}`
     : null;
-  const taxonomyLabel = pattern.tags.slice(0, 2).join(" · ");
+  const taxonomyLabel = pattern.tags.filter(tag => !["핵심표현", "확장표현", "핵심 표현", "확장 표현", "핵심", "확장", "표현"].includes(tag)).slice(0, 2).join(" · ");
   const toplineLabel = transformedLabel ?? (showPatternFormula ? formula : taxonomyLabel);
   const toplineLanguage = transformedLabel || !showPatternFormula ? "ko" : "en";
   const instructionId = `sg-pattern-${pattern.id}-instructions`;

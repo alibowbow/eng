@@ -48,7 +48,7 @@ export function migratePattern(input: unknown): unknown {
     intentKo: typeof input.intentKo === "string" ? input.intentKo : korean,
     categoryIds: Array.isArray(input.categoryIds) ? input.categoryIds : ["daily-core"],
     situationIds: Array.isArray(input.situationIds) ? input.situationIds : ["daily"],
-    tags: Array.isArray(input.tags) ? input.tags : ["핵심 표현"],
+    tags: Array.isArray(input.tags) ? input.tags : ["표현"],
     cefr: typeof input.cefr === "string" ? input.cefr : "A2",
     priority: typeof input.priority === "string" ? input.priority : "common",
     register: Array.isArray(input.register) ? input.register : ["neutral"],
