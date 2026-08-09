@@ -37,6 +37,7 @@ const LONG_PRESS_MS = 360;
 const GESTURE_TRIGGER_PX = 28;
 const GESTURE_VISUAL_DISTANCE_PX = 38;
 const RADIAL_SAFE_MARGIN_PX = 98;
+const HIDDEN_TAXONOMY_TAGS = new Set(["핵심 표현", "확장 표현"]);
 
 export interface PatternCardProps {
   pattern: ConversationPattern;
@@ -499,7 +500,10 @@ function PatternCardComponent({
   const transformedLabel = effectivePracticeOverride
     ? `${practiceLabel} ${modulo(effectivePracticeOverride.index, Math.max(1, activeLaneLength)) + 1}/${Math.max(1, activeLaneLength)}`
     : null;
-  const taxonomyLabel = pattern.tags.slice(0, 2).join(" · ");
+  const taxonomyLabel = pattern.tags
+    .filter((tag) => !HIDDEN_TAXONOMY_TAGS.has(tag))
+    .slice(0, 2)
+    .join(" · ");
   const toplineLabel = transformedLabel ?? (showPatternFormula ? formula : taxonomyLabel);
   const toplineLanguage = transformedLabel || !showPatternFormula ? "ko" : "en";
   const instructionId = `sg-pattern-${pattern.id}-instructions`;
