@@ -28,7 +28,7 @@ const MIN_COLUMN_WIDTH: Record<GridDensity, number> = {
 
 const ESTIMATED_ROW_HEIGHT: Record<GridDensity, number> = {
   large: 156,
-  comfortable: 116,
+  comfortable: 128,
   compact: 100,
   overview: 86,
 };

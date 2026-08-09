@@ -5,6 +5,7 @@ import { act, cleanup, fireEvent, render, screen } from "@testing-library/react"
 import { useState } from "react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { makePattern } from "../test/fixtures";
+import styles from "../styles.css?raw";
 import { PatternCard } from "./PatternCard";
 
 afterEach(() => {
@@ -446,5 +447,41 @@ describe("PatternCard", () => {
     );
     expect(screen.getByText(distinct.pattern)).toBeInTheDocument();
     expect(screen.getByText(distinct.english)).toBeInTheDocument();
+  });
+
+  it("omits core and extended taxonomy markers while keeping the useful topic tag", () => {
+    const pattern = makePattern({
+      pattern: "I'm about to leave.",
+      tags: ["계획과 예정", "확장 표현"],
+    });
+    const { rerender } = render(
+      <PatternCard
+        pattern={pattern}
+        mode="all"
+        density="comfortable"
+        onSpeak={vi.fn()}
+      />,
+    );
+
+    expect(screen.getByText("계획과 예정")).toBeInTheDocument();
+    expect(screen.queryByText("확장 표현")).not.toBeInTheDocument();
+
+    rerender(
+      <PatternCard
+        pattern={{ ...pattern, tags: ["핵심 표현"] }}
+        mode="all"
+        density="comfortable"
+        onSpeak={vi.fn()}
+      />,
+    );
+    expect(screen.queryByText("핵심 표현")).not.toBeInTheDocument();
+  });
+
+  it("uses a plain hidden-answer surface without diagonal hatch decoration", () => {
+    const hiddenAnswerRules = styles
+      .match(/[^{}]*\.sg-hidden-answer[^{}]*\{[^{}]*\}/g)
+      ?.join("\n") ?? "";
+
+    expect(hiddenAnswerRules).not.toContain("repeating-linear-gradient");
   });
 });
