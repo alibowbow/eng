@@ -1207,7 +1207,9 @@ input[type="range"]:not(:disabled) {
 
 /* Pattern card */
 .sg-pattern-card {
-  --sg-card-accent: #526159;
+  --sg-card-accent: #8d563e;
+  --sg-card-paper: #f9cbb8;
+  --sg-card-paper-position: 0% 0%;
   position: relative;
   display: flex;
   height: 128px;
@@ -1215,13 +1217,53 @@ input[type="range"]:not(:disabled) {
   flex-direction: column;
   align-self: stretch;
   overflow: hidden;
-  border: 1px solid rgba(44, 39, 32, 0.14);
+  border: 1px solid color-mix(in srgb, var(--sg-card-accent) 8%, #d9d0c1);
   border-radius: 12px;
-  background: #ffffff;
+  background-color: var(--sg-card-paper);
+  background-image: url("./assets/colored-paper-atlas.webp");
+  background-position: var(--sg-card-paper-position);
+  background-repeat: no-repeat;
+  background-size: 300% auto;
   box-shadow: var(--sg-shadow-grid);
   contain: layout paint style;
   isolation: isolate;
   transition: border-color 150ms ease, box-shadow 160ms ease, transform 130ms var(--sg-ease);
+}
+
+.sg-pattern-card[data-card-tone="0"] {
+  --sg-card-accent: #8d563e;
+  --sg-card-paper: #f9cbb8;
+  --sg-card-paper-position: 0% 0%;
+}
+
+.sg-pattern-card[data-card-tone="1"] {
+  --sg-card-accent: #4f7080;
+  --sg-card-paper: #d0e0ee;
+  --sg-card-paper-position: 50% 0%;
+}
+
+.sg-pattern-card[data-card-tone="2"] {
+  --sg-card-accent: #5b704f;
+  --sg-card-paper: #d9e1c9;
+  --sg-card-paper-position: 100% 0%;
+}
+
+.sg-pattern-card[data-card-tone="3"] {
+  --sg-card-accent: #706184;
+  --sg-card-paper: #e5d2e9;
+  --sg-card-paper-position: 0% 100%;
+}
+
+.sg-pattern-card[data-card-tone="4"] {
+  --sg-card-accent: #80672c;
+  --sg-card-paper: #fae2ac;
+  --sg-card-paper-position: 50% 100%;
+}
+
+.sg-pattern-card[data-card-tone="5"] {
+  --sg-card-accent: #855562;
+  --sg-card-paper: #f0c8cf;
+  --sg-card-paper-position: 100% 100%;
 }
 
 .sg-pattern-card::before {
@@ -1241,20 +1283,19 @@ input[type="range"]:not(:disabled) {
 }
 
 .sg-pattern-card:hover {
-  border-color: rgba(44, 39, 32, 0.2);
+  border-color: color-mix(in srgb, var(--sg-card-accent) 23%, #d8cdbc);
   box-shadow: var(--sg-shadow-grid-lift);
   transform: translateY(-2px);
 }
 
 .sg-pattern-card.is-revealed {
-  border-color: rgba(30, 29, 64, 0.14);
+  border-color: color-mix(in srgb, var(--sg-card-accent) 28%, white);
 }
 
 .sg-pattern-card.is-selected {
-  border: 1px solid rgba(37, 41, 37, 0.52);
-  background: #ffffff;
+  border: 1px solid color-mix(in srgb, var(--sg-card-accent) 42%, white);
   box-shadow:
-    0 0 0 2px rgba(37, 41, 37, 0.1),
+    0 0 0 2px color-mix(in srgb, var(--sg-card-accent) 13%, transparent),
     var(--sg-shadow-grid);
 }
 
@@ -1319,10 +1360,9 @@ input[type="range"]:not(:disabled) {
 }
 
 .sg-pattern-card.is-speaking {
-  border-color: rgba(82, 97, 89, 0.58);
-  background: #ffffff;
+  border-color: color-mix(in srgb, var(--sg-card-accent) 48%, white);
   box-shadow:
-    0 0 0 2px rgba(82, 97, 89, 0.11),
+    0 0 0 2px color-mix(in srgb, var(--sg-card-accent) 15%, transparent),
     var(--sg-shadow-grid);
 }
 
@@ -1339,8 +1379,7 @@ input[type="range"]:not(:disabled) {
 
 .sg-pattern-card.is-gesture-active {
   z-index: 2;
-  border-color: rgba(37, 41, 37, 0.42);
-  background: #ffffff;
+  border-color: color-mix(in srgb, var(--sg-card-accent) 40%, white);
   box-shadow: var(--sg-shadow-grid-pressed);
   transform: translateY(2px) scale(0.985);
 }
